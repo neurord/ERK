@@ -1,0 +1,14 @@
+<StimulationSet>
+
+    <!-- unsure whether this will work if there is no injection at all -->
+   
+<InjectionStim specieID="CamCa4" injectionSite="pointA">
+        <onset>               5000          </onset>
+        <duration>            10         </duration> 
+        <rate>                1000            </rate>
+  </InjectionStim>
+
+</StimulationSet>
+
+
+
