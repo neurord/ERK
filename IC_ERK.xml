@@ -3,15 +3,34 @@
     <ConcentrationSet>
     <!-- these apply to everything unless overridden -->
 <!-- many of these are membrane molecules and should be zero except in spines and submembrane -->
-        <NanoMolarity specieID="CamCa4" value="0"/>
+        <NanoMolarity specieID="CamCa4"         value="0"/>
 	<NanoMolarity specieID="RasGRF"         value="100"     />
-	<NanoMolarity specieID="CamCa4RasGRF"         value="0"     />
-        <NanoMolarity specieID="RasGDP"         value="0"     />
+	<NanoMolarity specieID="CamCa4RasGRF"   value="0"     />
+        <NanoMolarity specieID="RasGDP"         value="100"     />
         <NanoMolarity specieID="RasGTP"         value="0"     />
-        <NanoMolarity specieID="RasGDP.pShc"         value="0"     />
-     
-
-
+        <NanoMolarity specieID="RasGDPpShc"     value="0"     />
+        <NanoMolarity specieID="bRafRasGTP"     value="0"     />
+        <NanoMolarity specieID="bRaf"           value="0"     />
+        <NanoMolarity specieID="Rap1GTP"        value="0"     />
+        <NanoMolarity specieID="bRafRap1GTP"    value="0"     />
+        <NanoMolarity specieID="Rap1Gap"        value="0"     />
+        <NanoMolarity specieID="bRafRap1GTPGap" value="0"     />
+        <NanoMolarity specieID="bRafRap1Gap"    value="0"     />
+        <NanoMolarity specieID="Rap1"           value="0"     />
+        <NanoMolarity specieID="MAPKK"          value="0"     />
+        <NanoMolarity specieID="pMAPKK"         value="0"     />
+        <NanoMolarity specieID="ppMAPKK"        value="0"     />
+        <NanoMolarity specieID="PP2A"           value="0"     />
+        <NanoMolarity specieID="ERK"            value="0"     />
+        <NanoMolarity specieID="pERK"           value="0"     />
+        <NanoMolarity specieID="ppERK"          value="0"     />
+        <NanoMolarity specieID="MKP1"           value="0"     />
+        <NanoMolarity specieID="PKA"           value="0"     />
+        <NanoMolarity specieID="Src"            value="0"     />
+        <NanoMolarity specieID="PKASrc"           value="0"     />
+        <NanoMolarity specieID="Src*"          value="0"     />
+        <NanoMolarity specieID="Cbl"           value="0"     />
+        <NanoMolarity specieID="Cbl*"           value="0"     />
     </ConcentrationSet> 
 
 

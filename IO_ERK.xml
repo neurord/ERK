@@ -23,8 +23,31 @@
     <OutputSpecie name="CamCa4"/>
     <OutputSpecie name="RasGRF"/>
     <OutputSpecie name="CamCa4RasGRF"/>
-
-    
+    <OutputSpecie name="RasGDP"/>
+    <OutputSpecie name="RasGTP"/>
+    <OutputSpecie name="RasGDPpShc"/>
+    <OutputSpecie name="bRafRasGTP"/>
+    <OutputSpecie name="bRaf"/>
+    <OutputSpecie name="Rap1GTP"/>
+    <OutputSpecie name="bRafRap1GTP"/>
+    <OutputSpecie name="Rap1Gap"/>
+    <OutputSpecie name="bRafRap1GTPGap"/>
+    <OutputSpecie name="bRafRap1Gap"/>
+    <OutputSpecie name="Rap1"/>
+    <OutputSpecie name="MAPKK"/>
+    <OutputSpecie name="pMAPKK"/> 
+    <OutputSpecie name="ppMAPKK"/>
+    <OutputSpecie name="PP2A"/>
+    <OutputSpecie name="ERK"/> 
+    <OutputSpecie name="pERK"/> 
+    <OutputSpecie name="ppERK"/>
+    <OutputSpecie name="MKP1"/>
+    <OutputSpecie name="PKA"/>
+    <OutputSpecie name="Src"/> 
+    <OutputSpecie name="PKASrc"/> 
+    <OutputSpecie name="Src*"/>
+    <OutputSpecie name="Cbl"/>
+    <OutputSpecie name="Cbl*"/>
 
   </OutputSet>
 
