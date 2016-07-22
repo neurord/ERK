@@ -25,14 +25,19 @@
         <NanoMolarity specieID="pERK"           value="0"     />
         <NanoMolarity specieID="ppERK"          value="0"     />
         <NanoMolarity specieID="MKP1"           value="0"     />
-        <NanoMolarity specieID="PKA"           value="0"     />
+        <NanoMolarity specieID="PKA"            value="0"     />
         <NanoMolarity specieID="Src"            value="0"     />
-        <NanoMolarity specieID="PKASrc"           value="0"     />
-        <NanoMolarity specieID="Src*"          value="0"     />
-        <NanoMolarity specieID="Cbl"           value="0"     />
+        <NanoMolarity specieID="PKASrc"         value="0"     />
+        <NanoMolarity specieID="Src*"           value="0"     />
+        <NanoMolarity specieID="Cbl"            value="0"     />
         <NanoMolarity specieID="Cbl*"           value="0"     />
+        <NanoMolarity specieID="CRK"            value="0"     />
+        <NanoMolarity specieID="C3G"            value="0"     />
+        <NanoMolarity specieID="CRKC3G"         value="0"     />
+        <NanoMolarity specieID="CRKC3GCbl*_clx" value="0"     />
+        <NanoMolarity specieID="Rap1GDP"        value="0"     />
+        <NanoMolarity specieID="Rap1GTPGap"     value="0"     />
     </ConcentrationSet> 
-
 
     <!-- number densities are in particles per cubic micron. You
          get about one particles per cubic micron in a 1.6 nM solution -->

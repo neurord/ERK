@@ -48,6 +48,13 @@
     <OutputSpecie name="Src*"/>
     <OutputSpecie name="Cbl"/>
     <OutputSpecie name="Cbl*"/>
+    <OutputSpecie name="CRK"/>
+    <OutputSpecie name="C3G"/> 
+    <OutputSpecie name="CRKC3G"/> 
+    <OutputSpecie name="CRKC3GCbl*_clx"/>
+    <OutputSpecie name="Rap1GDP"/>
+    <OutputSpecie name="Rap1GTPGap"/>
+
 
   </OutputSet>
 
