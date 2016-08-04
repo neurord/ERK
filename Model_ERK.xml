@@ -21,7 +21,7 @@ results (also, 3D may not work yet...)  -->
 
 
     <!-- run time for the calculation, milliseconds -->
-    <runtime>          14000         </runtime>
+    <runtime>          5000         </runtime>
 <!-- 100001 -->
     <!-- set the seed to get the same spines each time testing -->
     <spineSeed>          123          </spineSeed>
@@ -53,6 +53,6 @@ results (also, 3D may not work yet...)  -->
     <tolerance>           0.001       </tolerance>
     <!-- calculation types include GRID_STEPPED_STOCHASTIC and GRID_STEPPED_CONTINUOUS for 
 	 reaction-diffusion systems. Single mixed pool calculations should be listed here too (TODO) -->
-    <calculation>GRID_STEPPED_STOCHASTIC</calculation>
+    <calculation>GRID_ADAPTIVE</calculation>
 
 </SDRun>

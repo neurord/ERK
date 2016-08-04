@@ -4,11 +4,11 @@
    
 <InjectionStim specieID="CamCa4" injectionSite="pointA">
         <onset>               5000          </onset>
-        <duration>            10         </duration> 
-        <rate>                1000            </rate>
+        <duration>            1000         </duration> 
+        <rate>                20000            </rate>
   </InjectionStim>
 
 </StimulationSet>
 
-
+<!--onset and duration in ms, rate in particles/ms-->
 
