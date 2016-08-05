@@ -25,7 +25,7 @@
     <OutputSpecie name="CamCa4RasGRF"/>
     <OutputSpecie name="RasGDP"/>
     <OutputSpecie name="RasGTP"/>
-    <OutputSpecie name="CamCa4RasGRFRas"/>
+    <OutputSpecie name="CamCa4RasGRFRasGDP"/>
     <OutputSpecie name="bRafRasGTP"/>
     <OutputSpecie name="bRafRasGTPMAPKK"/>
     <OutputSpecie name="bRafRasGTPpMAPKK"/>

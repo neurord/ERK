@@ -9,7 +9,7 @@
     <Specie name="RasGRF"                id="RasGRF"                kdiff="0"     kdiffunit="mu2/s"/>
     <Specie name="CamCa4RasGRF"          id="CamCa4RasGRF"          kdiff="174.3" kdiffunit="mu2/s"/>
     <Specie name="RasGDP"                id="RasGDP"                kdiff="0"     kdiffunit="mu2/s"/>
-    <Specie name="CamCa4RasGRFRas"       id="CamCa4RasGRFRas"       kdiff="174.3" kdiffunit="mu2/s"/>
+    <Specie name="CamCa4RasGRFRasGDP"    id="CamCa4RasGRFRasGDP"    kdiff="174.3" kdiffunit="mu2/s"/>
     <Specie name="RasGTP"                id="RasGTP"                kdiff="174.3" kdiffunit="mu2/s"/>
     <Specie name="bRaf"                  id="bRaf"                  kdiff="0"     kdiffunit="mu2/s"/>
     <Specie name="bRafRasGTP"            id="bRafRasGTP"            kdiff="174.3" kdiffunit="mu2/s"/>
@@ -66,19 +66,19 @@
         
     </Reaction>
 
-<!--(active RasGRF activates Ras)CamCa4RasGRF +RasGDP <-> CamCa4RasGRFRas <-> CamCa4RasGRF + RasGTP-->
-    <Reaction name = "CamCa4RasGRF+RasGDP--CamCa4RasGRFRas" id="CamCa4RasGRF+RasGDP--CamCa4RasGRFRas">
+<!--(active RasGRF activates Ras)CamCa4RasGRF +RasGDP <-> CamCa4RasGRFRasGDP <-> CamCa4RasGRF + RasGTP-->
+    <Reaction name = "CamCa4RasGRF+RasGDP--CamCa4RasGRFRasGDP" id="CamCa4RasGRF+RasGDP--CamCa4RasGRFRasGDP">
         <Reactant specieID="CamCa4RasGRF"           />
         <Reactant specieID="RasGDP"              />
-        <Product  specieID="CamCa4RasGRFRas"               />
+        <Product  specieID="CamCa4RasGRFRasGDP"               />
 
         <forwardRate> 0.000198  </forwardRate>
         <reverseRate> 0.08        </reverseRate>
         
     </Reaction>
 
-    <Reaction name = "CamCa4RasGRFRas--CamCa4RasGRF+RasGTP" id="CamCa4RasGRFRas--CamCa4RasGRF+RasGTP">
-        <Reactant specieID="CamCa4RasGRFRas"               />
+    <Reaction name = "CamCa4RasGRFRasGDP--CamCa4RasGRF+RasGTP" id="CamCa4RasGRFRasGDP--CamCa4RasGRF+RasGTP">
+        <Reactant specieID="CamCa4RasGRFRasGDP"               />
         <Product specieID="CamCa4RasGRF"             />
         <Product specieID="RasGTP"               />
 
@@ -193,8 +193,9 @@
         <reverseRate> 80        </reverseRate>
      
     </Reaction> 
-    <Reaction name = "PKAcSrc--pSrc" id="PKAcSrc--pSrc">
+    <Reaction name = "PKAcSrc--PKAc+pSrc" id="PKAcSrc--PKAc+pSrc">
         <Reactant specieID="PKAcSrc"           />
+        <Product  specieID="PKAc"              />
         <Product  specieID="pSrc"               />
 
         <forwardRate> 20   </forwardRate>

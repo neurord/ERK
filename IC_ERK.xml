@@ -8,7 +8,7 @@
 	<NanoMolarity specieID="CamCa4RasGRF"        value="0"     />
         <NanoMolarity specieID="RasGDP"              value="500"     />
         <NanoMolarity specieID="RasGTP"              value="0"     />
-        <NanoMolarity specieID="CamCa4RasGRFRas"     value="0"     />
+        <NanoMolarity specieID="CamCa4RasGRFRasGDP"  value="0"     />
         <NanoMolarity specieID="bRafRasGTP"          value="0"     />
         <NanoMolarity specieID="bRafRasGTPMAPKK"     value="0"     />
         <NanoMolarity specieID="bRafRasGTPpMAPKK"    value="0"     />
@@ -41,7 +41,7 @@
         <NanoMolarity specieID="Cbl"                 value="500"     />
         <NanoMolarity specieID="CblpSrc"             value="0"     />
         <NanoMolarity specieID="pCbl"                value="0"     />
-        <NanoMolarity specieID="CRKC3G"              value="500"     />
+        <NanoMolarity specieID="CRKC3G"              value="0"     />
         <NanoMolarity specieID="CRKC3GpCbl"          value="0"     />
         <NanoMolarity specieID="CRKC3GpCblRap1"      value="0"     />
         <NanoMolarity specieID="Rap1GDP"             value="200"     />
