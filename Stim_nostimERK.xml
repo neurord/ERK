@@ -8,17 +8,17 @@
         <rate>                20000            </rate>
   </InjectionStim>
 
-<!--<InjectionStim specieID="CRKC3G" injectionSite="pointA">
-        <onset>               5000          </onset>
+<InjectionStim specieID="CRKC3G" injectionSite="pointA">
+        <onset>               1000          </onset>
         <duration>            1000         </duration> 
         <rate>                20000            </rate>
   </InjectionStim>
 
-<InjectionStim specieID="PKA" injectionSite="pointA">
-        <onset>               5000          </onset>
+<InjectionStim specieID="PKAc" injectionSite="pointA">
+        <onset>               1000          </onset>
         <duration>            1000         </duration> 
         <rate>                20000            </rate>
-  </InjectionStim> -->
+  </InjectionStim> 
 </StimulationSet>
 
 <!--onset and duration in ms, rate in particles/ms-->

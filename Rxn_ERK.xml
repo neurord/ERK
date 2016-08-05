@@ -169,7 +169,7 @@
         <reverseRate> 24        </reverseRate>
       
     </Reaction> 
-    <Reaction name = "pMAPKKPP2A--MAPKK+PP2A" id="pMAPKKPP2A--pMAPKK+PP2A">
+    <Reaction name = "pMAPKKPP2A--MAPKK+PP2A" id="pMAPKKPP2A--MAPKK+PP2A">
         <Reactant specieID="pMAPKKPP2A"           />
         <Product  specieID="MAPKK"               />
         <Product  specieID="PP2A"               />

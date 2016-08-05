@@ -7,7 +7,7 @@
           <xi:include href="Morph1comp.xml" />        
           <xi:include href="Stim_nostimERK.xml" />
           <xi:include href="IC_ERK.xml" />
-          <xi:include href="IO_ERK.xml" />
+         <!--<xi:include href="IO_ERK.xml" />-->
 
     <!--2D means the morphology is interpreted like a flatworm, 3D for
 	roundworms. The 2D case is good for testing as it is eas/Stry to visualize the
@@ -21,7 +21,7 @@ results (also, 3D may not work yet...)  -->
 
 
     <!-- run time for the calculation, milliseconds -->
-    <runtime>          5000         </runtime>
+    <runtime>          3500         </runtime>
 <!-- 100001 -->
     <!-- set the seed to get the same spines each time testing -->
     <spineSeed>          123          </spineSeed>
@@ -47,7 +47,7 @@ results (also, 3D may not work yet...)  -->
     <fixedStepDt>         0.005       </fixedStepDt>
 
     <!-- interval at which stuff should be saved to the output file(s) -->
-    <outputInterval>      200   </outputInterval>
+    <outputInterval>      20   </outputInterval>
 
     <!-- the tolerace is not used yet -->
     <tolerance>           0.001       </tolerance>

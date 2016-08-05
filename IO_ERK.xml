@@ -18,7 +18,7 @@
     "morph" (regions) and "model" (dt).
 -->
 
-  <OutputSet filename = "all"  dt="100.0">
+  <OutputSet filename = "all"  dt="20.0">
 
     <OutputSpecie name="CamCa4"/>
     <OutputSpecie name="RasGRF"/>
