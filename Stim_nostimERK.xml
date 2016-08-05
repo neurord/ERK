@@ -3,11 +3,22 @@
     <!-- unsure whether this will work if there is no injection at all -->
    
 <InjectionStim specieID="CamCa4" injectionSite="pointA">
+        <onset>               1000          </onset>
+        <duration>            1000         </duration> 
+        <rate>                20000            </rate>
+  </InjectionStim>
+
+<!--<InjectionStim specieID="CRKC3G" injectionSite="pointA">
         <onset>               5000          </onset>
         <duration>            1000         </duration> 
         <rate>                20000            </rate>
   </InjectionStim>
 
+<InjectionStim specieID="PKA" injectionSite="pointA">
+        <onset>               5000          </onset>
+        <duration>            1000         </duration> 
+        <rate>                20000            </rate>
+  </InjectionStim> -->
 </StimulationSet>
 
 <!--onset and duration in ms, rate in particles/ms-->
