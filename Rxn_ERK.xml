@@ -48,7 +48,11 @@
     <Specie name="CRKC3GpCblRap1"        id="CRKC3GpCblRap1"        kdiff="174.3" kdiffunit="mu2/s"/>
     <Specie name="Rap1GDP"               id="Rap1GDP"               kdiff="0"     kdiffunit="mu2/s"/>
     <Specie name="Rap1GTPGap"            id="Rap1GTPGap"            kdiff="174.3" kdiffunit="mu2/s"/>
-
+    <Specie name="Epac"                  id="Epac"                  kdiff="" kdiffunit="mu2/s"/>
+    <Specie name="camp"                  id="camp"                  kdiff=""     kdiffunit="mu2/s"/>
+    <Specie name="Epacamp"               id="Epacamp"               kdiff="" kdiffunit="mu2/s"/>
+    <Specie name="EpacRap1"              id="EpacRap1"              kdiff="" kdiffunit="mu2/s"/>
+  
 <!--*************************************************************************
     Now, the reactions themselves 
     **************************************************************************-->
@@ -255,6 +259,8 @@
       
     </Reaction> 
 
+<!--TWO WAYS TO ACTIVATE Rap1-->
+
 <!--(Rap activation by Crk (GEF)) Rap1GDP + CRKC3GpCbl <-> CRKC3GpCblRap1 <-> Rap1GTP + CRKC3GpCbl-->
     <Reaction name = "Rap1GDP+CRKC3GpCbl--CRKC3GpCblRap1" id="Rap1GDP+CRKC3GpCbl--CRKC3GpCblRap1">
         <Reactant specieID="Rap1GDP"           />
@@ -274,7 +280,36 @@
         <reverseRate> 0       </reverseRate>
      
     </Reaction> 
+<!--(Epac binding) Epac + camp <-> Epacamp-->
+    <Reaction name = "Epac+camp--Epacamp" id="Epac+camp--Epacamp">
+        <Reactant specieID="Epac"           />
+        <Reactant  specieID="camp"               />
+        <Product  specieID="Epacamp"               />
 
+        <forwardRate>    </forwardRate>
+        <reverseRate>        </reverseRate>
+     
+    </Reaction>     
+
+<!--(Epac(GEF) activates Rap1) Epacamp + Rap1<-> EpacRap1 <-> Epacamp + Rap1GTP-->
+    <Reaction name = "Epacamp+Rap1--EpacRap1" id="Epacamp+Rap1--EpacRap1">
+        <Reactant specieID="Epacamp"           />
+        <Reactant specieID="Rap1"              />
+        <Product  specieID="EpacRap1"               />
+
+        <forwardRate>    </forwardRate>
+        <reverseRate>         </reverseRate>
+     
+    </Reaction> 
+    <Reaction name = "EpacRap1--Epacamp+Rap1GTP" id="EpacRap1--Epacamp+Rap1GTP">
+        <Reactant specieID="EpacRap1"           />
+        <Product  specieID="Epacamp"               />
+        <Product  specieID="Rap1GTP"               />
+
+        <forwardRate>    </forwardRate>
+        <reverseRate>        </reverseRate>
+     
+    </Reaction> 
 <!--(inactivation of Rap1 without Gap) Rap1GTP <-> Rap1GDP-->
     <Reaction name = "Rap1GTP--Rap1GDP" id="Rap1GTP--Rap1GDP">
         <Reactant specieID="Rap1GTP"           />

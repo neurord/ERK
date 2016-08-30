@@ -63,7 +63,10 @@
     <OutputSpecie name="CRKC3GpCblRap1"/>
     <OutputSpecie name="Rap1GDP"/>
     <OutputSpecie name="Rap1GTPGap"/>
-
+    <OutputSpecie name="Epac"/>
+    <OutputSpecie name="camp"/>
+    <OutputSpecie name="Epacamp"/>
+    <OutputSpecie name="EpacRap1"/>
 
   </OutputSet>
 
