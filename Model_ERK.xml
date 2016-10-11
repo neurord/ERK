@@ -5,24 +5,23 @@
 
           <xi:include href="Rxn_ERK.xml" />
           <xi:include href="Morph1comp.xml" />        
-          <xi:include href="Stim_nostimERK.xml" />
-          <xi:include href="IC_ERK.xml" />
-         <!--<xi:include href="IO_ERK.xml" />-->
-
+          <xi:include href="IC_ERKtemp.xml" />
+          <xi:include href="Stim_test.xml" />
+          <xi:include href="Out_ERK.xml" />
+ 
     <!--2D means the morphology is interpreted like a flatworm, 3D for
-	roundworms. The 2D case is good for testing as it is eas/Stry to visualize the
-results (also, 3D may not work yet...)  -->
+	roundworms. The 2D case is good for testing as it is easy to visualize the
+results. depth 2D units are microns  -->
     <geometry>          2D           </geometry>
-    <depth2D>           8          </depth2D>
+    <depth2D>           8.0          </depth2D>
     <distribution>      BINOMIAL     </distribution>
     <algorithm>         INDEPENDENT  </algorithm>
     <simulationSeed>    123       </simulationSeed>
-    <outputQuantity>NUMBER</outputQuantity>
 
 
     <!-- run time for the calculation, milliseconds -->
-    <runtime>          1000         </runtime>
-<!-- 100001 -->
+    <runtime>          10000         </runtime>
+
     <!-- set the seed to get the same spines each time testing -->
     <spineSeed>          123          </spineSeed>
 
@@ -30,29 +29,15 @@ results (also, 3D may not work yet...)  -->
 	<!-- default largest size for elements in bulk volumes (dendrites), microns -->	
        <defaultMaxElementSide>8.0</defaultMaxElementSide> 
         
-	<!-- discretization for spines, microns -->
-	<spineDeltaX>   0.1           </spineDeltaX>
-
-	<!-- This specifies the surface layers, first implemented in v.2.1.7 -->
-	<!--surfaceLayers>0.1, 0.2</surfaceLayers-->
-
-	<!-- override the default for a particular region. -->
-	<!-- Matches against id or regionClass in the morphology file -->
-<!--
-        <MaxElementSide region="PSD">0.1</MaxElementSide>
--->
     </discretization>
 
-    <!-- timestep used in fixed step calculations, in milliseconds -->
-    <fixedStepDt>         0.005       </fixedStepDt>
+    <outputInterval>      20.0   </outputInterval>
 
-    <!-- interval at which stuff should be saved to the output file(s) -->
-    <outputInterval>      20   </outputInterval>
-
-    <!-- the tolerace is not used yet -->
-    <tolerance>           0.001       </tolerance>
-    <!-- calculation types include GRID_STEPPED_STOCHASTIC and GRID_STEPPED_CONTINUOUS for 
-	 reaction-diffusion systems. Single mixed pool calculations should be listed here too (TODO) -->
+    <!-- the tolerace is used for adaptive sims -->
+    <tolerance>           0.01       </tolerance>
+    <!-- calculation types include
+	 GRID_STEPPED_STOCHASTIC (old fixedStep tau-leap),
+	 GRID_STEPPED_CONTINUOUS (deterministic), and
+	 GRID_ADAPTIVE (new adaptive (asynchronous tau-leap).-->
     <calculation>GRID_ADAPTIVE</calculation>
-
 </SDRun>
