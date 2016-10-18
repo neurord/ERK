@@ -5,7 +5,7 @@
 
           <xi:include href="Rxn_ERK.xml" />
           <xi:include href="Morph1comp.xml" />        
-          <xi:include href="IC_ERKtemp.xml" />
+          <xi:include href="IC_ERK.xml" />
           <xi:include href="Stim_test.xml" />
           <xi:include href="Out_ERK.xml" />
  
@@ -29,6 +29,7 @@ results. depth 2D units are microns  -->
 	<!-- default largest size for elements in bulk volumes (dendrites), microns -->	
        <defaultMaxElementSide>8.0</defaultMaxElementSide> 
         
+       <!--surfaceLayers>0.1,0.2</surfaceLayers-->
     </discretization>
 
     <outputInterval>      20.0   </outputInterval>

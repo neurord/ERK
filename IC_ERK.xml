@@ -46,7 +46,7 @@
         <NanoMolarity specieID="CRKC3GpCblRap1"      value="0"     />
         <NanoMolarity specieID="Rap1GDP"             value="200"     />
         <NanoMolarity specieID="Rap1GTPGap"          value="0"     />
-        <NanoMolarity specieID="Epac"                value="0"     />
+        <NanoMolarity specieID="Epac"                value="500"     />
         <NanoMolarity specieID="camp"                value="0"     />
         <NanoMolarity specieID="Epacamp"             value="0"     />
         <NanoMolarity specieID="EpacRap1"            value="0"     />
