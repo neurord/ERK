@@ -100,7 +100,21 @@
         <forwardRate> 0.06e-3 </forwardRate>
         <reverseRate> 0.5e-3        </reverseRate>
       
-    </Reaction> 
+    </Reaction>
+
+    <!--(Inactivation of Ras) RasGTP+SynGap <-> RasGTPGap -> SynGap + RasGDP -->
+
+<!--Reaction name = "RasGTP+SynGap-RasGTPGap" id="RasGTP+SynGap-RasGTPGap">
+  <Reactant specieID="RasGTP" />
+  <Reactant specieID="SynGap" />
+  <Product specieID="RasGTPGap" />
+
+  <forwardRate>0.02e-3</forwardRate>
+  <reverseRate>6.4e-3</reverseRate>
+
+</Reaction-->
+
+    
 
 <!--(MAPKK phos1 by bRaf-Ras) MAPKK + bRafRasGTP <-> bRafRasGTPMAPKK <-> pMAPKK + bRafRasGTP-->
     <Reaction name = "MAPKK+bRafRasGTP--bRafRasGTPMAPKK" id="MAPKK+bRafRasGTP--bRafRasGTPMAPKK">

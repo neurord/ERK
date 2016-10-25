@@ -1,8 +1,9 @@
+
 <Morphology>
 
     <Segment   id="seg1"    region="dend">
-        <start x="0.0"    y="0.0" z="0.0" r="4" />
-        <end   x="8.0"    y="0.0" z="0.0" r="4" label="pointA"/>
+        <start x="0.0"    y="1.5" z="0.0" r="0.50"/>
+        <end   x="3.0"    y="1.5" z="0.0" r="0.50" label="pointA"/>
     </Segment>
 
 </Morphology>
