@@ -48,10 +48,16 @@
     <Specie name="CRKC3GpCblRap1"        id="CRKC3GpCblRap1"        kdiff="174.3" kdiffunit="mu2/s"/>
     <Specie name="Rap1GDP"               id="Rap1GDP"               kdiff="0"     kdiffunit="mu2/s"/>
     <Specie name="Rap1GTPGap"            id="Rap1GTPGap"            kdiff="174.3" kdiffunit="mu2/s"/>
-    <Specie name="Epac"                  id="Epac"                  kdiff="0" kdiffunit="mu2/s"/>
+    <Specie name="Epac"                  id="Epac"                  kdiff="0"     kdiffunit="mu2/s"/>
     <Specie name="camp"                  id="camp"                  kdiff="0"     kdiffunit="mu2/s"/>
-    <Specie name="Epacamp"               id="Epacamp"               kdiff="0" kdiffunit="mu2/s"/>
-    <Specie name="EpacRap1"              id="EpacRap1"              kdiff="0" kdiffunit="mu2/s"/>
+    <Specie name="Epacamp"               id="Epacamp"               kdiff="0"     kdiffunit="mu2/s"/>
+    <Specie name="EpacRap1"              id="EpacRap1"              kdiff="0"     kdiffunit="mu2/s"/>
+    <Specie name="SynGap"                id="SynGap"                kdiff="0"     kdiffunit="mu2/s"/>
+    <Specie name="pSynGap"               id="pSynGap"               kdiff="0"     kdiffunit="mu2/s"/>
+    <Specie name="RasGTPGap"             id="RasGTPGap"             kdiff="0"     kdiffunit="mu2/s"/>
+    <Specie name="CKpCamCa4"             id="CKpCamCa4"             kdiff="0"     kdiffunit="mu2/s"/>
+    <Specie name="CKpCamCa4SynGap"       id="CKpCamCa4SynGap"       kdiff="0"     kdiffunit="mu2/s"/>
+    
   
 <!--*************************************************************************
     Now, the reactions themselves 
@@ -102,9 +108,9 @@
       
     </Reaction>
 
-    <!--(Inactivation of Ras) RasGTP+SynGap <-> RasGTPGap -> SynGap + RasGDP -->
+<!--(Inactivation of Ras by SynGAP) RasGTP+SynGap <-> RasGTPGap -> SynGap + RasGDP -->
 
-<!--Reaction name = "RasGTP+SynGap-RasGTPGap" id="RasGTP+SynGap-RasGTPGap">
+<Reaction name = "RasGTP+SynGap--RasGTPGap" id="RasGTP+SynGap--RasGTPGap">
   <Reactant specieID="RasGTP" />
   <Reactant specieID="SynGap" />
   <Product specieID="RasGTPGap" />
@@ -112,9 +118,104 @@
   <forwardRate>0.02e-3</forwardRate>
   <reverseRate>6.4e-3</reverseRate>
 
-</Reaction-->
+</Reaction>
 
+<Reaction name = "RasGTPGap--SynGap+RasGDP" id = "RasGTPGap--SynGap+RasGDP">
+  <Reactant specieID="RasGTPGap" />
+  <Product specieID="SynGap" />
+  <Product specieID="RasGDP" />
+
+  <forwardRate>1.6e-3</forwardRate>
+  <reverseRate>400e-3</reverseRate>
+
+</Reaction>
+
+<!--(Inactivation of Rap by SynGAP) Rap1GTP+SynGap <-> Rap1GTPGap -> SynGap + Rap1GDP -->
+
+<Reaction name = "Rap1GTP+SynGap--Rap1GTPGap" id="Rap1GTP+SynGap--Rap1GTPGap">
+  <Reactant specieID="Rap1GTP" />
+  <Reactant specieID="SynGap" />
+  <Product specieID="Rap1GTPGap" />
+
+  <forwardRate>0 </forwardRate>
+  <reverseRate>0 </reverseRate>
+
+</Reaction>
+
+<Reaction name = "Rap1GTPGap--SynGap+Rap1GDP" id = "Rap1GTPGap--SynGap+Rap1GDP">
+  <Reactant specieID="Rap1GTPGap" />
+  <Product specieID="SynGap" />
+  <Product specieID="Rap1GDP" />
+
+  <forwardRate>0 </forwardRate>
+  <reverseRate>0 </reverseRate>
+
+</Reaction>
+
+<!-- (Phosphorylation of SynGAP by CaMKII) CKpCamCa4+SynGap <-> CKpCamCa4SynGap -> CKpCamCa4+pSynGap -->
+ <Reaction name = "CKpCamCa4+SynGap--CKpCamCa4SynGap" id="CKpCamCa4+SynGap--CKpCamCa4SynGap">
+  <Reactant specieID="CKpCamCa4" />
+  <Reactant specieID="SynGap" />
+  <Product specieID="CKpCamCa4SynGap" />
+
+  <forwardRate>0 </forwardRate>
+  <reverseRate>0 </reverseRate>
+
+ </Reaction>
+
+ <Reaction name = "CKpCamCa4SynGap -- CKpCamCa4+pSynGap" id="CKpCamCa4SynGap -- CKpCamCa4+pSynGap">
+  <Reactant specieID="CKpCamCa4SynGap" />
+  <Product specieID="pSynGap" />
+  <Product specieID="CKpCamCa4" />
+
+  <forwardRate>0 </forwardRate>
+  <reverseRate>0 </reverseRate>
+
+ </Reaction>
+
+<!--(Inactivation of Ras by pSynGAP) RasGTP+pSynGap <-> RasGTPGap -> pSynGap + RasGDP -->
+
+<Reaction name = "RasGTP+pSynGap--RasGTPGap" id="RasGTP+pSynGap--RasGTPGap">
+  <Reactant specieID="RasGTP" />
+  <Reactant specieID="pSynGap" />
+  <Product specieID="RasGTPGap" />
+
+  <forwardRate>0 </forwardRate>
+  <reverseRate>0 </reverseRate>
+
+</Reaction>
+
+<Reaction name = "RasGTPGap--pSynGap+RasGDP" id = "RasGTPGap--pSynGap+RasGDP">
+  <Reactant specieID="RasGTPGap" />
+  <Product specieID="pSynGap" />
+  <Product specieID="RasGDP" />
+
+  <forwardRate>0 </forwardRate>
+  <reverseRate>0 </reverseRate>
+
+</Reaction>
     
+<!--(Inactivation of Rap by pSynGAP) Rap1GTP+pSynGap <-> Rap1GTPGap -> pSynGap + Rap1GDP -->
+
+<Reaction name = "Rap1GTP+pSynGap--Rap1GTPGap" id="Rap1GTP+pSynGap--Rap1GTPGap">
+  <Reactant specieID="Rap1GTP" />
+  <Reactant specieID="pSynGap" />
+  <Product specieID="Rap1GTPGap" />
+
+  <forwardRate>0 </forwardRate>
+  <reverseRate>0 </reverseRate>
+
+</Reaction>
+
+<Reaction name = "Rap1GTPGap--pSynGap+Rap1GDP" id = "Rap1GTPGap--pSynGap+Rap1GDP">
+  <Reactant specieID="Rap1GTPGap" />
+  <Product specieID="pSynGap" />
+  <Product specieID="Rap1GDP" />
+
+  <forwardRate>0 </forwardRate>
+  <reverseRate>0 </reverseRate>
+
+</Reaction>
 
 <!--(MAPKK phos1 by bRaf-Ras) MAPKK + bRafRasGTP <-> bRafRasGTPMAPKK <-> pMAPKK + bRafRasGTP-->
     <Reaction name = "MAPKK+bRafRasGTP--bRafRasGTPMAPKK" id="MAPKK+bRafRasGTP--bRafRasGTPMAPKK">
