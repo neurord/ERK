@@ -1,0 +1,14 @@
+<StimulationSet>
+
+<!--onset and duration in ms, rate in particles/ms-->
+  
+<InjectionStim specieID="CKpCamCa4" injectionSite="pointA">
+        <onset>               500          </onset>
+        <duration>            1000         </duration> 
+        <rate>                2000            </rate>
+  </InjectionStim>
+
+
+</StimulationSet> 
+
+

@@ -1,0 +1,40 @@
+<ReactionScheme>
+<!-- First version of merges Gq Gs coupled pathway reactions
+     when reactions differ between the models, notes indicate which was source.
+     Either StriatumCRCNS/StochasticSP1/MSPNfinalxml/MSPNreactions_4spine_new50.xml for Gs
+     or MURI/BoHung/FinalMarch2012/mglu_2ag_reac12mar20desens025.xml for Gq
+     phosphatase reactions take from revision of Gs to improve Ca dep dphos of Dp32-->
+<!-- calcium stuff first -->
+      
+    <Specie name="SynGap"                id="SynGap"                kdiff="0"     kdiffunit="mu2/s"/>
+    <Specie name="pSynGap"               id="pSynGap"               kdiff="0"     kdiffunit="mu2/s"/>
+    <Specie name="CKpCamCa4"             id="CKpCamCa4"             kdiff="0"     kdiffunit="mu2/s"/>
+    <Specie name="CKpCamCa4SynGap"       id="CKpCamCa4SynGap"       kdiff="0"     kdiffunit="mu2/s"/>
+    
+  
+<!--*************************************************************************
+    Now, the reactions themselves 
+    **************************************************************************-->
+
+<!-- (Phosphorylation of SynGAP by CaMKII) CKpCamCa4+SynGap <-> CKpCamCa4SynGap -> CKpCamCa4+pSynGap -->
+ <Reaction name = "CKpCamCa4+SynGap--CKpCamCa4SynGap" id="CKpCamCa4+SynGap--CKpCamCa4SynGap">
+  <Reactant specieID="CKpCamCa4" />
+  <Reactant specieID="SynGap" />
+  <Product specieID="CKpCamCa4SynGap" />
+
+  <forwardRate>0 </forwardRate>
+  <reverseRate>0 </reverseRate>
+
+ </Reaction>
+
+ <Reaction name = "CKpCamCa4SynGap -- CKpCamCa4+pSynGap" id="CKpCamCa4SynGap -- CKpCamCa4+pSynGap">
+  <Reactant specieID="CKpCamCa4SynGap" />
+  <Product specieID="pSynGap" />
+  <Product specieID="CKpCamCa4" />
+
+  <forwardRate>0 </forwardRate>
+  <reverseRate>0 </reverseRate>
+
+ </Reaction>
+
+ </ReactionScheme>
