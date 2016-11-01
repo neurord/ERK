@@ -29,7 +29,7 @@ results. depth 2D units are microns  -->
 	<!-- default largest size for elements in bulk volumes (dendrites), microns -->	
        <defaultMaxElementSide>8</defaultMaxElementSide> 
         
-    <surfaceLayers>0.1</surfaceLayers>
+   <!-- surfaceLayers> 0.1 </surfaceLayers -->
     </discretization>
 
     <outputInterval>      20.0   </outputInterval>
