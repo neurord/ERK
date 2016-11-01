@@ -1,0 +1,73 @@
+<OutputScheme>
+<!--
+     Each file will have a set of concentrations in compartments
+     sampled according to a specific dt
+-->
+
+<!--
+    Every Output block must have in its definition one (and only)
+    instance of:
+     * filename
+    And might have one (and only) instance of:
+     * region or
+     * dt
+    If "region" is ommited then the concs for the whole system will be
+    saved.
+    If "dt" is ommited than the concs will be written at each time step.
+    So the "io file" will be dependent on information stated in the
+    "morph" (regions) and "model" (dt).
+-->
+
+  <OutputSet filename = "all"  dt="20.0">
+
+    <OutputSpecie name="CamCa4"/>
+    <OutputSpecie name="RasGRF"/>
+    <OutputSpecie name="CamCa4RasGRF"/>
+    <OutputSpecie name="RasGDP"/>
+    <OutputSpecie name="RasGTP"/>
+    <OutputSpecie name="CamCa4RasGRFRasGDP"/>
+    <OutputSpecie name="bRafRasGTP"/>
+    <OutputSpecie name="bRafRasGTPMAPKK"/>
+    <OutputSpecie name="bRafRasGTPpMAPKK"/>
+    <OutputSpecie name="bRaf"/>
+    <OutputSpecie name="Rap1GTP"/>
+    <OutputSpecie name="bRafRap1GTP"/>
+    <OutputSpecie name="bRafRap1GTPMAPKK"/>
+    <OutputSpecie name="bRafRap1GTPpMAPKK"/>
+    <OutputSpecie name="Rap1Gap"/>
+    <OutputSpecie name="bRafRap1GTPGap"/>
+    <OutputSpecie name="bRafRap1Gap"/>
+    <OutputSpecie name="MAPKK"/>
+    <OutputSpecie name="pMAPKK"/> 
+    <OutputSpecie name="pMAPKKPP2A"/>
+    <OutputSpecie name="ppMAPKK"/> 
+    <OutputSpecie name="ppMAPKKPP2A"/>
+    <OutputSpecie name="PP2A"/>
+    <OutputSpecie name="ERK"/> 
+    <OutputSpecie name="pERK"/> 
+    <OutputSpecie name="ppMAPKKERK"/> 
+    <OutputSpecie name="ppMAPKKpERK"/> 
+    <OutputSpecie name="ppERK"/>
+    <OutputSpecie name="MKP1"/>
+    <OutputSpecie name="pERKMKP1"/>
+    <OutputSpecie name="ppERKMKP1"/>
+    <OutputSpecie name="PKAc"/>
+    <OutputSpecie name="Src"/> 
+    <OutputSpecie name="PKAcSrc"/> 
+    <OutputSpecie name="pSrc"/>
+    <OutputSpecie name="Cbl"/>
+    <OutputSpecie name="CblpSrc"/>
+    <OutputSpecie name="pCbl"/>
+    <OutputSpecie name="CRKC3G"/> 
+    <OutputSpecie name="CRKC3GpCbl"/>
+    <OutputSpecie name="CRKC3GpCblRap1"/>
+    <OutputSpecie name="Rap1GDP"/>
+    <OutputSpecie name="Rap1GTPGap"/>
+    <OutputSpecie name="Epac"/>
+    <OutputSpecie name="camp"/>
+    <OutputSpecie name="Epacamp"/>
+    <OutputSpecie name="EpacRap1"/>
+
+  </OutputSet>
+
+</OutputScheme>
