@@ -20,7 +20,7 @@ results. depth 2D units are microns  -->
 
 
     <!-- run time for the calculation, milliseconds -->
-    <runtime>          100       </runtime>
+    <runtime>          1000       </runtime>
 
     <!-- set the seed to get the same spines each time testing -->
     <spineSeed>          123          </spineSeed>
@@ -29,7 +29,7 @@ results. depth 2D units are microns  -->
 	<!-- default largest size for elements in bulk volumes (dendrites), microns -->	
        <defaultMaxElementSide>8</defaultMaxElementSide> 
         
-   <!-- surfaceLayers> 0.1 </surfaceLayers -->
+    <surfaceLayers> 0.1 </surfaceLayers>
     </discretization>
 
     <outputInterval>      20.0   </outputInterval>
