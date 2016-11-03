@@ -1,0 +1,70 @@
+<InitialConditions>
+
+    <ConcentrationSet>
+    <!-- these apply to everything unless overridden -->
+<!-- many of these are membrane molecules and should be zero except in spines and submembrane -->
+        <NanoMolarity specieID="CamCa4"              value="0"/>
+
+	<NanoMolarity specieID="CamCa4RasGRF"        value="0"     />
+	<NanoMolarity specieID="RasGRF"              value="0"     />
+        <NanoMolarity specieID="RasGDP"              value="500"     />
+        <NanoMolarity specieID="RasGTP"              value="0"     />
+        <NanoMolarity specieID="CamCa4RasGRFRasGDP"  value="0"     />
+        <NanoMolarity specieID="bRafRasGTP"          value="0"     />
+        <NanoMolarity specieID="bRafRasGTPMAPKK"     value="0"     />
+        <NanoMolarity specieID="bRafRasGTPpMAPKK"    value="0"     />
+        <NanoMolarity specieID="bRaf"                value="200"     />
+        <NanoMolarity specieID="Rap1GTP"             value="0"     />
+        <NanoMolarity specieID="bRafRap1GTP"         value="0"     />
+        <NanoMolarity specieID="bRafRap1GTPMAPKK"    value="0"     />
+        <NanoMolarity specieID="bRafRap1GTPpMAPKK"   value="0"     />
+        <NanoMolarity specieID="Rap1Gap"             value="12"     />
+        <NanoMolarity specieID="bRafRap1GTPGap"      value="0"     />
+        <NanoMolarity specieID="bRafRap1Gap"         value="0"     />
+        <NanoMolarity specieID="MAPKK"               value="180"     />
+        <NanoMolarity specieID="pMAPKK"              value="0"     />
+        <NanoMolarity specieID="pMAPKKPP2A"          value="0"     />
+        <NanoMolarity specieID="ppMAPKK"             value="0"     />
+        <NanoMolarity specieID="ppMAPKKPP2A"         value="0"     />
+        <NanoMolarity specieID="PP2A"                value="150"     />
+        <NanoMolarity specieID="ERK"                 value="360"     />
+        <NanoMolarity specieID="pERK"                value="0"     />
+        <NanoMolarity specieID="ppMAPKKERK"          value="0"     />
+        <NanoMolarity specieID="ppMAPKKpERK"         value="0"     />
+        <NanoMolarity specieID="ppERK"               value="0"     />
+        <NanoMolarity specieID="MKP1"                value="15"     />
+        <NanoMolarity specieID="pERKMKP1"            value="0"     />
+        <NanoMolarity specieID="ppERKMKP1"           value="0"     />
+        <NanoMolarity specieID="PKAc"                value="0"     />
+        <NanoMolarity specieID="Src"                 value="20"     />
+        <NanoMolarity specieID="PKAcSrc"             value="0"     />
+        <NanoMolarity specieID="pSrc"                value="0"     />
+        <NanoMolarity specieID="Cbl"                 value="500"     />
+        <NanoMolarity specieID="CblpSrc"             value="0"     />
+        <NanoMolarity specieID="pCbl"                value="0"     />
+        <NanoMolarity specieID="CRKC3G"              value="0"     />
+        <NanoMolarity specieID="CRKC3GpCbl"          value="0"     />
+        <NanoMolarity specieID="CRKC3GpCblRap1"      value="0"     />
+        <NanoMolarity specieID="Rap1GDP"             value="200"     />
+        <NanoMolarity specieID="Rap1GTPGap"          value="0"     />
+        <NanoMolarity specieID="Epac"                value="500"     />
+        <NanoMolarity specieID="camp"                value="0"     />
+        <NanoMolarity specieID="Epacamp"             value="0"     />
+        <NanoMolarity specieID="EpacRap1"            value="0"     />
+
+    </ConcentrationSet> 
+
+    <!-- number densities are in particles per cubic micron. You
+         get about one particles per cubic micron in a 1.6 nM solution -->
+
+    <!-- surface concentrations for membrane-bound species. The value attribute for
+         a PicoSD element is the number of picomoles per square metre. For comparison
+         with the volume concentrations, a surface density of 1 picomole/m^2, if spread
+         over a layer 1 micron deep, gives a 1 nanoMolar solution, so to average one
+         particle per square micron you need a PicoSD value of about 1.6. -->
+    <SurfaceDensitySet region="dend">
+    	<PicoSD specieID="RasGRF"              value="100"     />
+    </SurfaceDensitySet>
+    
+    
+</InitialConditions>

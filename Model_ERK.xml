@@ -5,7 +5,7 @@
 
           <xi:include href="Rxn_ERK.xml" />
           <xi:include href="Morph1comp.xml" />        
-          <xi:include href="IC_ERK.xml" />
+          <xi:include href="IC_ERK3.xml" />
           <xi:include href="Stim_test.xml" />
           <xi:include href="Out_ERK.xml" />
  
