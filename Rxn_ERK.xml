@@ -7,58 +7,59 @@
 <!-- calcium stuff first -->
     <Specie name="CamCa4"                id="CamCa4"                kdiff="11"    kdiffunit="mu2/s"/>
     <Specie name="RasGRF"                id="RasGRF"                kdiff="0"     kdiffunit="mu2/s"/>
-    <Specie name="CamCa4RasGRF"          id="CamCa4RasGRF"          kdiff="174.3" kdiffunit="mu2/s"/>
+    <Specie name="CamCa4RasGRF"          id="CamCa4RasGRF"          kdiff="0"     kdiffunit="mu2/s"/>
     <Specie name="RasGDP"                id="RasGDP"                kdiff="0"     kdiffunit="mu2/s"/>
-    <Specie name="CamCa4RasGRFRasGDP"    id="CamCa4RasGRFRasGDP"    kdiff="174.3" kdiffunit="mu2/s"/>
-    <Specie name="RasGTP"                id="RasGTP"                kdiff="174.3" kdiffunit="mu2/s"/>
+    <Specie name="CamCa4RasGRFRasGDP"    id="CamCa4RasGRFRasGDP"    kdiff="0"     kdiffunit="mu2/s"/>
+    <Specie name="RasGTP"                id="RasGTP"                kdiff="0"     kdiffunit="mu2/s"/>
     <Specie name="bRaf"                  id="bRaf"                  kdiff="0"     kdiffunit="mu2/s"/>
-    <Specie name="bRafRasGTP"            id="bRafRasGTP"            kdiff="174.3" kdiffunit="mu2/s"/>
-    <Specie name="bRafRasGTPMAPKK"       id="bRafRasGTPMAPKK"       kdiff="174.3" kdiffunit="mu2/s"/>
-    <Specie name="bRafRasGTPpMAPKK"      id="bRafRasGTPpMAPKK"      kdiff="174.3" kdiffunit="mu2/s"/>
-    <Specie name="Rap1GTP"               id="Rap1GTP"               kdiff="174.3" kdiffunit="mu2/s"/>
-    <Specie name="bRafRap1GTP"           id="bRafRap1GTP"           kdiff="174.3" kdiffunit="mu2/s"/> 
-    <Specie name="bRafRap1GTPMAPKK"      id="bRafRap1GTPMAPKK"      kdiff="174.3" kdiffunit="mu2/s"/> 
-    <Specie name="bRafRap1GTPpMAPKK"     id="bRafRap1GTPpMAPKK"     kdiff="174.3" kdiffunit="mu2/s"/> 
+    <Specie name="bRafRasGTP"            id="bRafRasGTP"            kdiff="0"     kdiffunit="mu2/s"/>
+    <Specie name="bRafRasGTPMAPKK"       id="bRafRasGTPMAPKK"       kdiff="0"     kdiffunit="mu2/s"/>
+    <Specie name="bRafRasGTPpMAPKK"      id="bRafRasGTPpMAPKK"      kdiff="0"     kdiffunit="mu2/s"/>
+    <Specie name="Rap1GTP"               id="Rap1GTP"               kdiff="0"     kdiffunit="mu2/s"/>
+    <Specie name="bRafRap1GTP"           id="bRafRap1GTP"           kdiff="0"     kdiffunit="mu2/s"/> 
+    <Specie name="bRafRap1GTPMAPKK"      id="bRafRap1GTPMAPKK"      kdiff="0"     kdiffunit="mu2/s"/> 
+    <Specie name="bRafRap1GTPpMAPKK"     id="bRafRap1GTPpMAPKK"     kdiff="0"     kdiffunit="mu2/s"/> 
     <Specie name="Rap1Gap"               id="Rap1Gap"               kdiff="0"     kdiffunit="mu2/s"/>
-    <Specie name="bRafRap1GTPGap"        id="bRafRap1GTPGap"        kdiff="174.3" kdiffunit="mu2/s"/>
-    <Specie name="bRafRap1Gap"           id="bRafRap1Gap"           kdiff="174.3" kdiffunit="mu2/s"/>
-    <Specie name="MAPKK"                 id="MAPKK"                 kdiff="0"     kdiffunit="mu2/s"/>
-    <Specie name="pMAPKK"                id="pMAPKK"                kdiff="174.3" kdiffunit="mu2/s"/>
-    <Specie name="pMAPKKPP2A"            id="pMAPKKPP2A"            kdiff="174.3" kdiffunit="mu2/s"/>
-    <Specie name="ppMAPKK"               id="ppMAPKK"               kdiff="174.3" kdiffunit="mu2/s"/>
-    <Specie name="ppMAPKKPP2A"           id="ppMAPKKPP2A"           kdiff="174.3" kdiffunit="mu2/s"/>
-    <Specie name="PP2A"                  id="PP2A"                  kdiff="174.3" kdiffunit="mu2/s"/>
-    <Specie name="ERK"                   id="ERK"                   kdiff="174.3" kdiffunit="mu2/s"/>
-    <Specie name="pERK"                  id="pERK"                  kdiff="174.3" kdiffunit="mu2/s"/>
-    <Specie name="ppMARPKKERK"           id="ppMAPKKERK"            kdiff="174.3" kdiffunit="mu2/s"/>
-    <Specie name="ppMAPKKpERK"           id="ppMAPKKpERK"           kdiff="174.3" kdiffunit="mu2/s"/>
-    <Specie name="ppERK"                 id="ppERK"                 kdiff="174.3" kdiffunit="mu2/s"/>
-    <Specie name="MKP1"                  id="MKP1"                  kdiff="174.3" kdiffunit="mu2/s"/>
-    <Specie name="pERKMKP1"              id="pERKMKP1"              kdiff="174.3" kdiffunit="mu2/s"/>
-    <Specie name="ppERKMKP1"             id="ppERKMKP1"             kdiff="174.3" kdiffunit="mu2/s"/>
-    <Specie name="PKAc"                  id="PKAc"                  kdiff=".836"  kdiffunit="mu2/s"/>
-    <Specie name="Src"                   id="Src"                   kdiff="0"     kdiffunit="mu2/s"/>
-    <Specie name="PKAcSrc"               id="PKAcSrc"               kdiff="174.3" kdiffunit="mu2/s"/>
-    <Specie name="pSrc"                  id="pSrc"                  kdiff="174.3" kdiffunit="mu2/s"/>
+    <Specie name="bRafRap1GTPGap"        id="bRafRap1GTPGap"        kdiff="0"     kdiffunit="mu2/s"/>
+    <Specie name="bRafRap1Gap"           id="bRafRap1Gap"           kdiff="0"     kdiffunit="mu2/s"/>
+    <Specie name="MAPKK"                 id="MAPKK"                 kdiff="7"     kdiffunit="mu2/s"/>
+    <Specie name="pMAPKK"                id="pMAPKK"                kdiff="7"     kdiffunit="mu2/s"/>
+    <Specie name="pMAPKKPP2A"            id="pMAPKKPP2A"            kdiff="7"     kdiffunit="mu2/s"/>
+    <Specie name="ppMAPKK"               id="ppMAPKK"               kdiff="7"     kdiffunit="mu2/s"/>
+    <Specie name="ppMAPKKPP2A"           id="ppMAPKKPP2A"           kdiff="7"     kdiffunit="mu2/s"/>
+    <Specie name="PP2A"                  id="PP2A"                  kdiff="7"     kdiffunit="mu2/s"/>
+    <Specie name="ERK"                   id="ERK"                   kdiff="7"     kdiffunit="mu2/s"/>
+    <Specie name="pERK"                  id="pERK"                  kdiff="7"     kdiffunit="mu2/s"/>
+    <Specie name="ppMARPKKERK"           id="ppMAPKKERK"            kdiff="7"     kdiffunit="mu2/s"/>
+    <Specie name="ppMAPKKpERK"           id="ppMAPKKpERK"           kdiff="7"     kdiffunit="mu2/s"/>
+    <Specie name="ppERK"                 id="ppERK"                 kdiff="7"     kdiffunit="mu2/s"/>
+    <Specie name="MKP1"                  id="MKP1"                  kdiff="7"     kdiffunit="mu2/s"/>
+    <Specie name="pERKMKP1"              id="pERKMKP1"              kdiff="7"     kdiffunit="mu2/s"/>
+    <Specie name="ppERKMKP1"             id="ppERKMKP1"             kdiff="7"     kdiffunit="mu2/s"/>
+    <Specie name="PKAc"                  id="PKAc"                  kdiff="0.836" kdiffunit="mu2/s"/>
+    <Specie name="Src"                   id="Src"                   kdiff="10"    kdiffunit="mu2/s"/>
+    <Specie name="PKAcSrc"               id="PKAcSrc"               kdiff="0.836" kdiffunit="mu2/s"/>
+    <Specie name="pSrc"                  id="pSrc"                  kdiff="1"     kdiffunit="mu2/s"/>
     <Specie name="Cbl"                   id="Cbl"                   kdiff="0"     kdiffunit="mu2/s"/>
     <Specie name="CblpSrc"               id="CblpSrc"               kdiff="0"     kdiffunit="mu2/s"/>
-    <Specie name="pCbl"                  id="pCbl"                  kdiff="174.3" kdiffunit="mu2/s"/>
-    <Specie name="CRKC3G"                id="CRKC3G"                kdiff="147.3" kdiffunit="mu2/s"/>
-    <Specie name="CRKC3GpCbl"            id="CRKC3GpCbl"            kdiff="174.3" kdiffunit="mu2/s"/>
-    <Specie name="CRKC3GpCblRap1"        id="CRKC3GpCblRap1"        kdiff="174.3" kdiffunit="mu2/s"/>
+    <Specie name="pCbl"                  id="pCbl"                  kdiff="0"     kdiffunit="mu2/s"/>
+    <Specie name="CRKC3G"                id="CRKC3G"                kdiff="0"     kdiffunit="mu2/s"/>
+    <Specie name="CRKC3GpCbl"            id="CRKC3GpCbl"            kdiff="0"     kdiffunit="mu2/s"/>
+    <Specie name="CRKC3GpCblRap1"        id="CRKC3GpCblRap1"        kdiff="0"     kdiffunit="mu2/s"/>
     <Specie name="Rap1GDP"               id="Rap1GDP"               kdiff="0"     kdiffunit="mu2/s"/>
-    <Specie name="Rap1GTPGap"            id="Rap1GTPGap"            kdiff="174.3" kdiffunit="mu2/s"/>
+    <Specie name="Rap1GTPGap"            id="Rap1GTPGap"            kdiff="0"     kdiffunit="mu2/s"/>
     <Specie name="Epac"                  id="Epac"                  kdiff="0"     kdiffunit="mu2/s"/>
-    <Specie name="camp"                  id="camp"                  kdiff="0"     kdiffunit="mu2/s"/>
-    <Specie name="Epacamp"               id="Epacamp"               kdiff="0"     kdiffunit="mu2/s"/>
-    <Specie name="EpacRap1"              id="EpacRap1"              kdiff="0"     kdiffunit="mu2/s"/>
+    <Specie name="camp"                  id="camp"                  kdiff="86.4"  kdiffunit="mu2/s"/>
+    <Specie name="Epacamp"               id="Epacamp"               kdiff="10"    kdiffunit="mu2/s"/>
+    <Specie name="EpacRap1"              id="EpacRap1"              kdiff="0.6"   kdiffunit="mu2/s"/>
     <Specie name="SynGap"                id="SynGap"                kdiff="0"     kdiffunit="mu2/s"/>
     <Specie name="pSynGap"               id="pSynGap"               kdiff="0"     kdiffunit="mu2/s"/>
     <Specie name="RasGTPGap"             id="RasGTPGap"             kdiff="0"     kdiffunit="mu2/s"/>
     <Specie name="CKpCamCa4"             id="CKpCamCa4"             kdiff="0"     kdiffunit="mu2/s"/>
     <Specie name="CKpCamCa4SynGap"       id="CKpCamCa4SynGap"       kdiff="0"     kdiffunit="mu2/s"/>
+    <Specie name="GbgSrc"                id="GbgSrc"                kdiff="0"     kdiffunit="mu2/s"/> 
+    <Specie name="CblGbgSrc"             id="CblGbgSrc"             kdiff="0"     kdiffunit="mu2/s"/>
     
-  
 <!--*************************************************************************
     Now, the reactions themselves 
     **************************************************************************-->
@@ -613,7 +614,36 @@
         <forwardRate> 4e-3   </forwardRate>
         <reverseRate> 0        </reverseRate>
        
-    </Reaction> 
+    </Reaction>
+
+<!--(Gibg recruits kinase) Src Gbg+Src-GbgSrc-->
+<Reaction name = "Gbg+Src--GbgSrc">
+      <Reactant specieID="Gbg"/>
+      <Reactant specieID="Src"/>
+      <Reactant specieID="GbgSrc"/>
+
+      <forwardRate> 0.0002e-3   </forwardRate>
+      <reverseRate> 0.1e-3     </reverseRate>
+      <Reaction>
+
+<!--(GbgSrc activates Cbl) -->
+<Reaction name = "Cbl+GbgSrc--CblGbgSrc">
+      <Reactant specieID="Gbg"/>
+      <Reactant specieID="Src"/>
+      <Product specieID="GbgSrc"/>
+
+      <forwardRate> 0.08e-3   </forwardRate>
+      <reverseRate> 0.1e-3     </reverseRate>
+      <Reaction>
+
+<Reaction name = "CblGbgSrc--pCbl+GbgSrc">
+      <Reactant specieID="pCblGbgSrc"/>
+      <Product specieID="pCbl"/>
+      <Product specieID="GbgSrc"/>
+
+      <forwardRate> 40e-3   </forwardRate>
+      <reverseRate>0    </reverseRate>
+      <Reaction>
 
 
  </ReactionScheme>
