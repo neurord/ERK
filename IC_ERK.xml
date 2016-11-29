@@ -35,21 +35,37 @@
         <NanoMolarity specieID="pERKMKP1"            value="0"     />
         <NanoMolarity specieID="ppERKMKP1"           value="0"     />
         <NanoMolarity specieID="PKAc"                value="0"     />
+	<NanoMolarity specieID="PKAr"                value="0"     />
+	<NanoMolarity specieID="PKA"                value="500"     />
         <NanoMolarity specieID="Src"                 value="20"     />
         <NanoMolarity specieID="PKAcSrc"             value="0"     />
         <NanoMolarity specieID="pSrc"                value="0"     />
         <NanoMolarity specieID="Cbl"                 value="500"     />
         <NanoMolarity specieID="CblpSrc"             value="0"     />
         <NanoMolarity specieID="pCbl"                value="0"     />
-        <NanoMolarity specieID="CRKC3G"              value="0"     />
+        <NanoMolarity specieID="CRKC3G"              value="500"     />
         <NanoMolarity specieID="CRKC3GpCbl"          value="0"     />
         <NanoMolarity specieID="CRKC3GpCblRap1"      value="0"     />
         <NanoMolarity specieID="Rap1GDP"             value="200"     />
         <NanoMolarity specieID="Rap1GTPGap"          value="0"     />
         <NanoMolarity specieID="Epac"                value="500"     />
         <NanoMolarity specieID="camp"                value="0"     />
+	<NanoMolarity specieID="PKAcamp2"            value="0"     />
+	<NanoMolarity specieID="PKAcamp4"            value="0"     />
         <NanoMolarity specieID="Epacamp"             value="0"     />
+	<NanoMolarity specieID="Rap1"                value="200"     />
         <NanoMolarity specieID="EpacRap1"            value="0"     />
+	<NanoMolarity specieID="SynGap"              value="140"     />
+	<NanoMolarity specieID="RasGTPGap"           value="0"     />
+	<NanoMolarity specieID="pSynGap"             value="0"     />
+	<NanoMolarity specieID="CKpCamCa4SynGap"     value="0"  />
+	<NanoMolarity specieID="Gbg"                 value="0"  />	
+	<NanoMolarity specieID="GbgSrc"              value="0"  />
+	<NanoMolarity specieID="CblGbgSrc"           value="0"  />
+	<NanoMolarity specieID="CK"                  value="500"     />
+	<NanoMolarity specieID="CKp"                 value="0"     />
+	<NanoMolarity specieID="CKCamCa4"            value="0"     />
+	<NanoMolarity specieID="CKpCamca4"           value="0"     />
 
     </ConcentrationSet> 
 

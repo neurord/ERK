@@ -8,19 +8,19 @@
         <rate>                2000            </rate>
   </InjectionStim>
 
-<InjectionStim specieID="PKAc" injectionSite="pointA">
+<InjectionStim specieID="PKA" injectionSite="pointA">
         <onset>               500          </onset>
         <duration>            1000         </duration> 
         <rate>                2000            </rate>
   </InjectionStim>
 
- <InjectionStim specieID="CRKC3G" injectionSite="pointA">
+  <InjectionStim specieID="camp" injectionSite="pointA">
         <onset>               500          </onset>
         <duration>            1000         </duration> 
         <rate>                2000            </rate>
   </InjectionStim>
 
- <InjectionStim specieID="camp" injectionSite="pointA">
+   <InjectionStim specieID="Gbg" injectionSite="pointA">
         <onset>               500          </onset>
         <duration>            1000         </duration> 
         <rate>                2000            </rate>

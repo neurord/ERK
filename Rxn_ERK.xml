@@ -37,6 +37,8 @@
     <Specie name="pERKMKP1"              id="pERKMKP1"              kdiff="7"     kdiffunit="mu2/s"/>
     <Specie name="ppERKMKP1"             id="ppERKMKP1"             kdiff="7"     kdiffunit="mu2/s"/>
     <Specie name="PKAc"                  id="PKAc"                  kdiff="0.836" kdiffunit="mu2/s"/>
+    <Specie name="PKAr"                  id="PKAr"                  kdiff="0.836" kdiffunit="mu2/s"/>
+    <Specie name="PKA"                   id="PKA"                   kdiff="0.836" kdiffunit="mu2/s"/>
     <Specie name="Src"                   id="Src"                   kdiff="10"    kdiffunit="mu2/s"/>
     <Specie name="PKAcSrc"               id="PKAcSrc"               kdiff="0.836" kdiffunit="mu2/s"/>
     <Specie name="pSrc"                  id="pSrc"                  kdiff="1"     kdiffunit="mu2/s"/>
@@ -50,15 +52,23 @@
     <Specie name="Rap1GTPGap"            id="Rap1GTPGap"            kdiff="0"     kdiffunit="mu2/s"/>
     <Specie name="Epac"                  id="Epac"                  kdiff="0"     kdiffunit="mu2/s"/>
     <Specie name="camp"                  id="camp"                  kdiff="86.4"  kdiffunit="mu2/s"/>
+    <Specie name="PKAcamp2"              id="PKAcamp2"              kdiff="0.836" kdiffunit="mu2/s"/>
+    <Specie name="PKAcamp4"              id="PKAcamp4"              kdiff="0.836" kdiffunit="mu2/s"/>
     <Specie name="Epacamp"               id="Epacamp"               kdiff="10"    kdiffunit="mu2/s"/>
+    <Specie name="Rap1"                  id="Rap1"                  kdiff="0.6"   kdiffunit="mu2/s"/>
     <Specie name="EpacRap1"              id="EpacRap1"              kdiff="0.6"   kdiffunit="mu2/s"/>
     <Specie name="SynGap"                id="SynGap"                kdiff="0"     kdiffunit="mu2/s"/>
     <Specie name="pSynGap"               id="pSynGap"               kdiff="0"     kdiffunit="mu2/s"/>
     <Specie name="RasGTPGap"             id="RasGTPGap"             kdiff="0"     kdiffunit="mu2/s"/>
     <Specie name="CKpCamCa4"             id="CKpCamCa4"             kdiff="0"     kdiffunit="mu2/s"/>
     <Specie name="CKpCamCa4SynGap"       id="CKpCamCa4SynGap"       kdiff="0"     kdiffunit="mu2/s"/>
+    <Specie name="Gbg"                id="Gbg"                   kdiff="0"     kdiffunit="mu2/s"/> 
     <Specie name="GbgSrc"                id="GbgSrc"                kdiff="0"     kdiffunit="mu2/s"/> 
     <Specie name="CblGbgSrc"             id="CblGbgSrc"             kdiff="0"     kdiffunit="mu2/s"/>
+    <Specie name="CK"                    id="CK"                    kdiff="0"     kdiffunit="mu2/s"/>
+    <Specie name="CKp"                   id="CKp"                   kdiff="0"     kdiffunit="mu2/s"/>
+    <Specie name="CKCamCa4"              id="CKCamCa4"              kdiff="0"     kdiffunit="mu2/s"/>
+    <Specie name="CKpCamCa4"             id="CKpCamCa4"             kdiff="0"     kdiffunit="mu2/s"/>
     
 <!--*************************************************************************
     Now, the reactions themselves 
@@ -616,6 +626,7 @@
        
     </Reaction>
 
+    
 <!--(Gibg recruits kinase) Src Gbg+Src-GbgSrc-->
 <Reaction name = "Gbg+Src--GbgSrc">
       <Reactant specieID="Gbg"/>
@@ -646,4 +657,95 @@
       <Reaction>
 
 
+	---
+
+<!-- ******* PKA from Asia Hippo Model ********* -->     
+    <!--1) PKA + 2camp <-> PKAcAMP2 -->
+    <Reaction name = "PKA_bind" id="PKA_bind">
+	<Reactant specieID="PKA"/>
+        <Reactant specieID="camp" n="2"/>
+	<Product specieID="PKAcamp2"/>
+
+
+        <forwardRate>0.261e-06</forwardRate>
+	<reverseRate>0.060e-03</reverseRate>
+    </Reaction>
+
+    <!--2) PKAcAMP2 + 2camp <-> PKAcAMP4 -->
+    <Reaction name = "PKAcamp2_bind" id="PKAcAMP2_bind">
+	<Reactant specieID="PKAcamp2"/>
+        <Reactant specieID="camp" n="2"/>
+	<Product specieID="PKAcamp4"/>
+
+	<forwardRate>0.35e-06</forwardRate>
+	<reverseRate>0.6e-3</reverseRate>
+    </Reaction>
+
+<!--3) PKAcAMP4 <-> 2PKAr(as dimer) + 2PKAc(monomers) -->
+    <Reaction name = "PKAcamp4_diss" id="PKAcamp4_diss">
+	<Reactant specieID="PKAcamp4"/>
+	<Product specieID="PKAr" />
+	<Product specieID="PKAc" n="2"/>  
+
+	<forwardRate>0.24e-03</forwardRate>
+	<reverseRate>0.0255e-03</reverseRate>
+    </Reaction>
+
+ 
+ <!--*************** CamKII ************* ReDo/simplify with higher order Rxn-->
+
+  <!--1) CamCa4 + CK <-> CKCamCa4  -->
+    <Reaction name = "CK bind" id="CK_bind">
+        <Reactant specieID="CamCa4"                 />
+        <Reactant specieID="CK"                     />
+        <Product  specieID="CKCamCa4"               />
+
+        <forwardRate> 0.01e-3   </forwardRate>
+        <reverseRate> 3e-3      </reverseRate>
+        <!--0.8 from ode file
+	    reverseRate> 0.8e-3      </reverseRate-->
+    </Reaction>
+
+<!--2a) 3 CKCamCa4 + 1 CKCamCa4 <-> 3  CKCamCa4 + 1 CKpCamCa4-->
+    <Reaction name = "CKCam bind" id="CKCam_bind">
+        <Reactant specieID="CKCamCa4"  power="4"        />
+        <Product  specieID="CKCamCa4"   power="3"         />
+        <Product  specieID="CKpCamCa4"           />
+
+        <forwardRate> 13.0e-18 </forwardRate>
+        <reverseRate> 0e-3     </reverseRate>
+    </Reaction>
+
+<!--2b)  2 CKCamCa4 + 1 CKCamCa4 <-> 2 CKCamCa4 + 1 CKpCamCa4-->
+    <Reaction name = "CKCam bind" id="CKCam_bind">
+        <Reactant specieID="CKCamCa4"  power="3"        />
+        <Product  specieID="CKCamCa4"  power="2"         />
+        <Product  specieID="CKpCamCa4"           />
+
+        <forwardRate> 2.0e-12 </forwardRate>
+        <reverseRate> 0e-3     </reverseRate>
+    </Reaction>
+
+<!--2c)  2 CKpCamCa4 + 2 CKCamCa4 <-> 3 CKpCamCa4 + 1 CKCamCa4-->
+    <Reaction name = "CKCam bind" id="CKCam_bind">
+        <Reactant specieID="CKpCamCa4"  power="2"        />
+        <Reactant specieID="CKCamCa4"  power="2"        />
+        <Product  specieID="CKCamCa4"           />
+        <Product  specieID="CKpCamCa4" power="3"         />
+
+        <forwardRate> 27.1e-18 </forwardRate>
+        <reverseRate> 0e-3     </reverseRate>
+    </Reaction>
+
+  <!-- CKpCamCa4 <-> CKp + CamCa4 -->
+    <Reaction name = "CKp auto" id="CKp_auto">
+        <Reactant specieID="CKpCamCa4"              />
+        <Product  specieID="CamCa4"                 />
+        <Product  specieID="CKp"                    />
+
+        <forwardRate> 0.0008e-3 </forwardRate>
+        <reverseRate> 0.01e-3   </reverseRate>
+    </Reaction>
+
+    
  </ReactionScheme>
