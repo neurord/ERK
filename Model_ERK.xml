@@ -5,7 +5,7 @@
 
           <xi:include href="Rxn_ERK.xml" />
           <xi:include href="Morph1comp.xml" />        
-          <xi:include href="IC_ERK3.xml" />
+          <xi:include href="IC_ERK.xml" />
           <xi:include href="Stim_test.xml" />
           <xi:include href="Out_ERK.xml" />
  
@@ -20,7 +20,7 @@ results. depth 2D units are microns  -->
 
 
     <!-- run time for the calculation, milliseconds -->
-    <runtime>          1000       </runtime>
+    <runtime>          100000       </runtime>
 
     <!-- set the seed to get the same spines each time testing -->
     <spineSeed>          123          </spineSeed>

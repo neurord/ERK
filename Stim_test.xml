@@ -1,30 +1,27 @@
 <StimulationSet>
 
 <!--onset and duration in ms, rate in particles/ms-->
+
   
 <InjectionStim specieID="CamCa4" injectionSite="pointA">
         <onset>               500          </onset>
         <duration>            1000         </duration> 
-        <rate>                2000            </rate>
+        <rate>                0          </rate>
   </InjectionStim>
 
-<InjectionStim specieID="PKA" injectionSite="pointA">
-        <onset>               500          </onset>
-        <duration>            1000         </duration> 
-        <rate>                2000            </rate>
-  </InjectionStim>
 
   <InjectionStim specieID="camp" injectionSite="pointA">
         <onset>               500          </onset>
         <duration>            1000         </duration> 
-        <rate>                2000            </rate>
+        <rate>                0            </rate>
   </InjectionStim>
 
    <InjectionStim specieID="Gbg" injectionSite="pointA">
         <onset>               500          </onset>
         <duration>            1000         </duration> 
-        <rate>                2000            </rate>
- </InjectionStim>
+        <rate>                0            </rate>
+      </InjectionStim>
+
  
 </StimulationSet> 
 

@@ -55,21 +55,19 @@
     <Specie name="PKAcamp2"              id="PKAcamp2"              kdiff="0.836" kdiffunit="mu2/s"/>
     <Specie name="PKAcamp4"              id="PKAcamp4"              kdiff="0.836" kdiffunit="mu2/s"/>
     <Specie name="Epacamp"               id="Epacamp"               kdiff="10"    kdiffunit="mu2/s"/>
-    <Specie name="Rap1"                  id="Rap1"                  kdiff="0.6"   kdiffunit="mu2/s"/>
     <Specie name="EpacRap1"              id="EpacRap1"              kdiff="0.6"   kdiffunit="mu2/s"/>
     <Specie name="SynGap"                id="SynGap"                kdiff="0"     kdiffunit="mu2/s"/>
     <Specie name="pSynGap"               id="pSynGap"               kdiff="0"     kdiffunit="mu2/s"/>
     <Specie name="RasGTPGap"             id="RasGTPGap"             kdiff="0"     kdiffunit="mu2/s"/>
     <Specie name="CKpCamCa4"             id="CKpCamCa4"             kdiff="0"     kdiffunit="mu2/s"/>
     <Specie name="CKpCamCa4SynGap"       id="CKpCamCa4SynGap"       kdiff="0"     kdiffunit="mu2/s"/>
-    <Specie name="Gbg"                id="Gbg"                   kdiff="0"     kdiffunit="mu2/s"/> 
+    <Specie name="Gbg"                   id="Gbg"                   kdiff="0"     kdiffunit="mu2/s"/> 
     <Specie name="GbgSrc"                id="GbgSrc"                kdiff="0"     kdiffunit="mu2/s"/> 
     <Specie name="CblGbgSrc"             id="CblGbgSrc"             kdiff="0"     kdiffunit="mu2/s"/>
     <Specie name="CK"                    id="CK"                    kdiff="0"     kdiffunit="mu2/s"/>
     <Specie name="CKp"                   id="CKp"                   kdiff="0"     kdiffunit="mu2/s"/>
     <Specie name="CKCamCa4"              id="CKCamCa4"              kdiff="0"     kdiffunit="mu2/s"/>
-    <Specie name="CKpCamCa4"             id="CKpCamCa4"             kdiff="0"     kdiffunit="mu2/s"/>
-    
+       
 <!--*************************************************************************
     Now, the reactions themselves 
     **************************************************************************-->
@@ -82,7 +80,7 @@
         <Reactant specieID="RasGRF"              />
         <Product  specieID="CamCa4RasGRF"               />
 
-        <forwardRate> 0.06e-3 </forwardRate>
+        <forwardRate> 0.006e-3 </forwardRate>
         <reverseRate> 1e-3        </reverseRate>
         
     </Reaction>
@@ -148,8 +146,8 @@
   <Reactant specieID="SynGap" />
   <Product specieID="Rap1GTPGap" />
 
-  <forwardRate>0 </forwardRate>
-  <reverseRate>0 </reverseRate>
+  <forwardRate>0.02e-3 </forwardRate>
+  <reverseRate>6.4e-3 </reverseRate>
 
 </Reaction>
 
@@ -158,8 +156,8 @@
   <Product specieID="SynGap" />
   <Product specieID="Rap1GDP" />
 
-  <forwardRate>0 </forwardRate>
-  <reverseRate>0 </reverseRate>
+  <forwardRate>1.6e-3</forwardRate>
+  <reverseRate>400e-3</reverseRate>
 
 </Reaction>
 
@@ -191,8 +189,8 @@
   <Reactant specieID="pSynGap" />
   <Product specieID="RasGTPGap" />
 
-  <forwardRate>0 </forwardRate>
-  <reverseRate>0 </reverseRate>
+  <forwardRate>0.02e-3 </forwardRate>
+  <reverseRate>6.4e-3  </reverseRate>
 
 </Reaction>
 
@@ -201,8 +199,8 @@
   <Product specieID="pSynGap" />
   <Product specieID="RasGDP" />
 
-  <forwardRate>0 </forwardRate>
-  <reverseRate>0 </reverseRate>
+  <forwardRate>1.6e-3 </forwardRate>
+  <reverseRate>0e-3 </reverseRate>
 
 </Reaction>
     
@@ -213,8 +211,8 @@
   <Reactant specieID="pSynGap" />
   <Product specieID="Rap1GTPGap" />
 
-  <forwardRate>0 </forwardRate>
-  <reverseRate>0 </reverseRate>
+  <forwardRate>0.02e-3 </forwardRate>
+  <reverseRate>6.4e-3 </reverseRate>
 
 </Reaction>
 
@@ -223,8 +221,8 @@
   <Product specieID="pSynGap" />
   <Product specieID="Rap1GDP" />
 
-  <forwardRate>0 </forwardRate>
-  <reverseRate>0 </reverseRate>
+  <forwardRate>1.6e-3 </forwardRate>
+  <reverseRate>0e-3 </reverseRate>
 
 </Reaction>
 
@@ -340,7 +338,7 @@
         <Product  specieID="Src"               />
 
         <forwardRate> 100e-3   </forwardRate>
-        <reverseRate> 0.1e-3        </reverseRate>
+        <reverseRate> 0.0        </reverseRate>
    
     </Reaction> 
 
@@ -371,7 +369,7 @@
         <Product  specieID="Cbl"               />
 
         <forwardRate> 10e-3   </forwardRate>
-        <reverseRate> 0.01e-3     </reverseRate>
+        <reverseRate> 0     </reverseRate>
      
     </Reaction>
 
@@ -420,7 +418,7 @@
     </Reaction>     
 
 <!--(Epac(GEF) activates Rap1) Epacamp + Rap1<-> EpacRap1 <-> Epacamp + Rap1GTP-->
-    <Reaction name = "Epacamp+Rap1GTP--EpacRap1" id="Epacamp+Rap1--EpacRap1">
+    <Reaction name = "Epacamp+Rap1GDP--EpacRap1" id="Epacamp+Rap1--EpacRap1">
         <Reactant specieID="Epacamp"           />
         <Reactant specieID="Rap1GDP"              />
         <Product  specieID="EpacRap1"               />
@@ -631,33 +629,32 @@
 <Reaction name = "Gbg+Src--GbgSrc">
       <Reactant specieID="Gbg"/>
       <Reactant specieID="Src"/>
-      <Reactant specieID="GbgSrc"/>
+      <Product specieID="GbgSrc"/>
 
       <forwardRate> 0.0002e-3   </forwardRate>
       <reverseRate> 0.1e-3     </reverseRate>
-      <Reaction>
+</Reaction>
 
 <!--(GbgSrc activates Cbl) -->
 <Reaction name = "Cbl+GbgSrc--CblGbgSrc">
-      <Reactant specieID="Gbg"/>
-      <Reactant specieID="Src"/>
-      <Product specieID="GbgSrc"/>
+      <Reactant specieID="Cbl"/>
+      <Reactant specieID="GbgSrc"/>
+      <Product specieID="CblGbgSrc"/>
 
       <forwardRate> 0.08e-3   </forwardRate>
       <reverseRate> 0.1e-3     </reverseRate>
-      <Reaction>
+</Reaction>
 
 <Reaction name = "CblGbgSrc--pCbl+GbgSrc">
-      <Reactant specieID="pCblGbgSrc"/>
+      <Reactant specieID="CblGbgSrc"/>
       <Product specieID="pCbl"/>
       <Product specieID="GbgSrc"/>
 
       <forwardRate> 40e-3   </forwardRate>
       <reverseRate>0    </reverseRate>
-      <Reaction>
+</Reaction>
 
 
-	---
 
 <!-- ******* PKA from Asia Hippo Model ********* -->     
     <!--1) PKA + 2camp <-> PKAcAMP2 -->
@@ -748,4 +745,4 @@
     </Reaction>
 
     
- </ReactionScheme>
+  </ReactionScheme>
