@@ -80,7 +80,7 @@
         <Reactant specieID="RasGRF"              />
         <Product  specieID="CamCa4RasGRF"               />
 
-        <forwardRate> 0.006e-3 </forwardRate>
+        <forwardRate> 0.06e-3 </forwardRate>
         <reverseRate> 1e-3        </reverseRate>
         
     </Reaction>
@@ -135,7 +135,7 @@
   <Product specieID="RasGDP" />
 
   <forwardRate>1.6e-3</forwardRate>
-  <reverseRate>400e-3</reverseRate>
+  <reverseRate>0e-3</reverseRate>
 
 </Reaction>
 
@@ -157,7 +157,7 @@
   <Product specieID="Rap1GDP" />
 
   <forwardRate>1.6e-3</forwardRate>
-  <reverseRate>400e-3</reverseRate>
+  <reverseRate>0e-3</reverseRate>
 
 </Reaction>
 
