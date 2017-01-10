@@ -4,7 +4,7 @@
     <!-- these apply to everything unless overridden -->
 <!-- many of these are membrane molecules and should be zero except in spines and submembrane -->
         <NanoMolarity specieID="CamCa4"              value="0"/>
-	<NanoMolarity specieID="RasGRF"              value="100"     />
+        <NanoMolarity specieID="RasGRF"              value="100"     />
 	<NanoMolarity specieID="CamCa4RasGRF"        value="0"     />
         <NanoMolarity specieID="RasGDP"              value="500"     />
         <NanoMolarity specieID="RasGTP"              value="0"     />

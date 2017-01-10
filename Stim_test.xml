@@ -6,20 +6,20 @@
 <InjectionStim specieID="CamCa4" injectionSite="pointA">
         <onset>               500          </onset>
         <duration>            100         </duration> 
-        <rate>                0          </rate>
+        <rate>                200          </rate>
   </InjectionStim>
 
 
   <InjectionStim specieID="camp" injectionSite="pointA">
         <onset>               500          </onset>
         <duration>            100         </duration> 
-        <rate>                1500         </rate>
+        <rate>                20000         </rate>
   </InjectionStim>
 
    <InjectionStim specieID="Gbg" injectionSite="pointA">
         <onset>               500          </onset>
         <duration>            100         </duration> 
-        <rate>                1500            </rate>
+        <rate>                20000            </rate>
       </InjectionStim>
 
  

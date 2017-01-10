@@ -5,7 +5,7 @@
      or MURI/BoHung/FinalMarch2012/mglu_2ag_reac12mar20desens025.xml for Gq
      phosphatase reactions take from revision of Gs to improve Ca dep dphos of Dp32-->
 <!-- calcium stuff first -->
-    <Specie name="CamCa4"                id="CamCa4"                kdiff="11"    kdiffunit="mu2/s"/>
+    <Specie name="CamCa4"                id="CamCa4"                kdiff="11"    kdiffunit="mu2/s"/>       
     <Specie name="RasGRF"                id="RasGRF"                kdiff="0"     kdiffunit="mu2/s"/>
     <Specie name="CamCa4RasGRF"          id="CamCa4RasGRF"          kdiff="0"     kdiffunit="mu2/s"/>
     <Specie name="RasGDP"                id="RasGDP"                kdiff="0"     kdiffunit="mu2/s"/>
