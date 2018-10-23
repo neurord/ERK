@@ -1,0 +1,101 @@
+<InitialConditions>
+
+    <ConcentrationSet>
+    <!-- these apply to everything unless overridden -->
+<!-- many of these are membrane molecules and should be zero except in spines and submembrane -->
+<NanoMolarity specieID="ERK"                          value="360"/>
+<NanoMolarity specieID="pERK"                         value="0"/>
+<NanoMolarity specieID="ppERK"                        value="0"/>
+<NanoMolarity specieID="MKP1"                         value="30"/>
+<NanoMolarity specieID="pERKMKP1"                     value="0"/>
+<NanoMolarity specieID="ppERKMKP1"                    value="0"/>
+<NanoMolarity specieID="ppMAPKKERK"                   value="0"/>
+<NanoMolarity specieID="ppMAPKKpERK"                  value="0"/>
+<NanoMolarity specieID="MAPKK"                        value="600"/>
+<NanoMolarity specieID="pMAPKK"                       value="0"/>
+<NanoMolarity specieID="ppMAPKK"                      value="0"/>
+<NanoMolarity specieID="PP2A"                         value="50"/>
+<NanoMolarity specieID="pMAPKKPP2A"                   value="0"/>
+<NanoMolarity specieID="ppMAPKKPP2A"                  value="0"/>
+<NanoMolarity specieID="bRaf"                         value="200"/>
+<NanoMolarity specieID="pbRaf"                         value="0"/>
+<NanoMolarity specieID="bRafRap1GTPMAPKK"             value="0"/>
+<NanoMolarity specieID="bRafRap1GTPMAPKK"             value="0"/>
+<NanoMolarity specieID="pbRafRap1GTPMAPKK"             value="0"/>
+<NanoMolarity specieID="pbRafRap1GTPMAPKK"             value="0"/>
+<NanoMolarity specieID="bRafRap1GTP"                  value="0"/>
+<NanoMolarity specieID="pbRafRap1GTP"                  value="0"/>
+<NanoMolarity specieID="Rap1GTP"                      value="0"/>
+<NanoMolarity specieID="Rap1GDP"                      value="200"/>
+<NanoMolarity specieID="Epac"                         value="200"/>
+<NanoMolarity specieID="EpacRap1"                     value="0"/>
+<NanoMolarity specieID="cAMP"                         value="320"/>
+<NanoMolarity specieID="buff"                         value="20"/>
+<NanoMolarity specieID="cAMPbuff"                     value="0"/>
+<NanoMolarity specieID="EpacAMP"                      value="0"/>
+<NanoMolarity specieID="PKAcAMP2"                     value="0"/>
+<NanoMolarity specieID="PKAcAMP4"                     value="0"/>
+<NanoMolarity specieID="PKA"                          value="1000"/>
+<NanoMolarity specieID="PKAc"                         value="0"/>
+<NanoMolarity specieID="PKAr"                         value="0"/>
+<NanoMolarity specieID="Src"                          value="20"/>
+<NanoMolarity specieID="PKAcSrc"                      value="0"/>
+<NanoMolarity specieID="pSrc"                         value="0"/>
+<NanoMolarity specieID="CblpSrc"                      value="0"/>
+<NanoMolarity specieID="Cbl"                          value="500"/>
+<NanoMolarity specieID="pCbl"                         value="0"/>
+<NanoMolarity specieID="CRKC3G"                       value="500"/>
+<NanoMolarity specieID="CRKC3GpCbl"                   value="0"/>
+<NanoMolarity specieID="CRKC3GpCblRap1"               value="0"/>
+<NanoMolarity specieID="Rap1GTPGap"                   value="0"/>
+<NanoMolarity specieID="Rap1GTPpGap"                   value="0"/>
+<NanoMolarity specieID="SynGap"                       value="250"/>
+<NanoMolarity specieID="pSynGap"                      value="0"/>
+<NanoMolarity specieID="CK"                           value="15000"/>
+<NanoMolarity specieID="CKp"                          value="5000"/>
+<NanoMolarity specieID="CamCa4"                       value="1500"/>
+<NanoMolarity specieID="Cambuff"                      value="700"/>
+<NanoMolarity specieID="CamCa4buff"                   value="0"/>
+<NanoMolarity specieID="CKCamCa4"                     value="0"/>
+<NanoMolarity specieID="CKpCamCa4"                    value="0"/>
+<NanoMolarity specieID="CKpCamCa4SynGap"              value="0"/>
+<NanoMolarity specieID="PP1"                    value="1000"/>
+<NanoMolarity specieID="CKpPP1"                    value="0"/>
+<NanoMolarity specieID="CKpCamCa4PP1"                    value="0"/>
+<NanoMolarity specieID="Gbg"              value="15"/>
+<NanoMolarity specieID="SrcGbg"              value="0"/>
+<NanoMolarity specieID="Sos"              value="100"/>
+<NanoMolarity specieID="Grb2"              value="100"/>
+<NanoMolarity specieID="Grb2Sos"              value="0"/>
+<NanoMolarity specieID="ppERKGrb2Sos"              value="0"/>
+<NanoMolarity specieID="Shc"              value="150"/>
+<NanoMolarity specieID="SrcGbgShc"              value="0"/>
+<NanoMolarity specieID="pShcGrb2Sos"              value="0"/>
+<NanoMolarity specieID="pShcGrb2SosRasGDP"              value="0"/>
+<NanoMolarity specieID="RasGRF"              value="200"/>
+<NanoMolarity specieID="CamCa4RasGRF"              value="0"/>
+<NanoMolarity specieID="CamCa4RasGRFRasGDP"              value="0"/>
+<NanoMolarity specieID="Raf1"              value="200"/>
+<NanoMolarity specieID="bRafPKAc"              value="0"/>
+<NanoMolarity specieID="Raf1RasGTPMAPKK"              value="0"/>
+<NanoMolarity specieID="Raf1RasGTPpMAPKK"              value="0"/>
+<NanoMolarity specieID="Raf1RasGTP"              value="0"/>
+<NanoMolarity specieID="bRafRasGTP"              value="0"/>
+<NanoMolarity specieID="bRafRasGTPMAPKK"              value="0"/>
+<NanoMolarity specieID="bRafRasGTPpMAPKK"              value="0"/>
+<NanoMolarity specieID="RasGTP"              value="0"/>
+<NanoMolarity specieID="RasGDP"              value="500"/>
+<NanoMolarity specieID="RasGTPGap"              value="0"/>
+<NanoMolarity specieID="RasGTPpGap"              value="0"/>
+
+  </ConcentrationSet> 
+
+    <!-- number densities are in particles per cubic micron. You
+         get about one particles per cubic micron in a 1.6 nM solution -->
+
+    <!-- surface concentrations for membrane-bound species. The value attribute for
+         a PicoSD element is the number of picomoles per square metre. For comparison
+         with the volume concentrations, a surface density of 1 picomole/m^2, if spread
+         over a layer 1 micron deep, gives a 1 nanoMolar solution, so to average one
+         particle per square micron you need a PicoSD value of about 1.6. -->
+</InitialConditions>
