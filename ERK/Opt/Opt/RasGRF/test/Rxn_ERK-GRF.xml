@@ -1,0 +1,35 @@
+<ReactionScheme>
+<!-- First version of merges Gq Gs coupled pathway reactions
+     when reactions differ between the models, notes indicate which was source.
+     Either StriatumCRCNS/StochasticSP1/MSPNfinalxml/MSPNreactions_4spine_new50.xml for Gs
+     or MURI/BoHung/FinalMarch2012/mglu_2ag_reac12mar20desens025.xml for Gq
+phosphatase reactions take from revision of Gs to improve Ca dep dphos of Dp32-->
+
+<!-- Molecules species and diffusion constants -->
+<Specie name="RasGRF" id="RasGRF"                                         kdiff="0"    kdiffunit="mu2/s"/>
+<Specie name="RasGDP" id="RasGDP"                                         kdiff="0"    kdiffunit="mu2/s"/>
+<Specie name="RasGRFRasGDP" id="RasGRFRasGDP"                             kdiff="0"    kdiffunit="mu2/s"/>
+<Specie name="RasGTP" id="RasGTP"                                         kdiff="0"    kdiffunit="mu2/s"/>
+
+
+ <!--( RasGRF activates Ras)RasGRF +RasGDP <-> RasGRFRasGDP <-> RasGRF + RasGTP-->
+    <Reaction name = "RasGRF+RasGDP--RasGRFRasGDP" id="RasGRF+RasGDP--RasGRFRasGDP">
+        <Reactant specieID="RasGRF"           />
+        <Reactant specieID="RasGDP"              />
+        <Product  specieID="RasGRFRasGDP"               />
+
+        <forwardRate> 5.07198401734e-8  </forwardRate>
+        <reverseRate> 6.03408114207e-6  </reverseRate>
+        
+    </Reaction>
+
+    <Reaction name = "RasGRFRasGDP--RasGRF+RasGTP" id="RasGRFRasGDP--RasGRF+RasGTP">
+        <Reactant specieID="RasGRFRasGDP"               />
+        <Product specieID="RasGRF"             />
+        <Product specieID="RasGTP"               />
+
+        <forwardRate> 1.90185889031e-6  </forwardRate>
+        <reverseRate> 0 </reverseRate>
+       
+</Reaction>
+   </ReactionScheme>

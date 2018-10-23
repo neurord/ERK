@@ -1,0 +1,32 @@
+<ReactionScheme>
+<!-- Molecule species and diffusion constants -->
+    <Specie name="RasGRF"                id="RasGRF"                kdiff="0"     kdiffunit="mu2/s"/>
+    <Specie name="RasGDP"                id="RasGDP"                kdiff="0"     kdiffunit="mu2/s"/>
+    <Specie name="RasGRFRasGDP"          id="RasGRFRasGDP"          kdiff="0"     kdiffunit="mu2/s"/>
+    <Specie name="RasGTP"                id="RasGTP"                kdiff="0"     kdiffunit="mu2/s"/>
+ 
+<!--*************************************************************************
+    Now, the reactions themselves 
+    **************************************************************************-->
+
+ <!-- (RasGDP to RasGTP by RasGRF ) RasGRF+RasGDP <-> RasGRFRasGDP -> RasGRF+RasGTP -->
+ <Reaction name = "RasGRF+RasGDP -- RasGRFRasGDP" id="RasGRF+RasGDP -- RasGRFRasGDP">
+  <Reactant specieID="RasGRF" />
+  <Reactant specieID="RasGDP" />
+  <Product specieID="RasGRFRasGDP" />
+
+  <forwardRate> </forwardRate>
+  <reverseRate> </reverseRate>
+ </Reaction>
+
+ <Reaction name = "RasGRFRasGDP -- RasGRF+RasGTP" id="RasGRFRasGDP -- RasGRF+RasGTP">
+  <Reactant specieID="RasGRFRasGDP" />
+  <Product specieID="RasGRF" />
+  <Product specieID="RasGTP" />
+
+  <forwardRate> </forwardRate>
+  <reverseRate>0 </reverseRate>
+ </Reaction>
+
+
+</ReactionScheme>

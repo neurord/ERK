@@ -1,0 +1,43 @@
+<ReactionScheme>
+<!-- Molecule species and diffusion constants -->
+    <Specie name="SynGap"                id="RasGRF"                kdiff="0"     kdiffunit="mu2/s"/>
+    <Specie name="CKpCamCa4"             id="CKpCamCa4"             kdiff="0"     kdiffunit="mu2/s"/>
+    <Specie name="CKpCamCa4SynGap"       id="CKpCamCa4RasGRF"       kdiff="0"     kdiffunit="mu2/s"/>
+    <Specie name="RasGTPGap"             id="RasGTP"             kdiff="0"     kdiffunit="mu2/s"/>
+    <Specie name="RasGDP"                id="RasGDP"                kdiff="0"     kdiffunit="mu2/s"/>
+ 
+<!--*************************************************************************
+    Now, the reactions themselves 
+    **************************************************************************-->
+
+<!-- (Activation of RasGRF by CaMKII) CKpCamCa4+RasGRF <-> CKpCamCa4RasGRF  -->
+ <Reaction name = "CKpCamCa4+RasGRF--CKpCamCa4RasGRF" id="CKpCamCa4+RasGRF--CKpCamCa4RasGRF">
+  <Reactant specieID="CKpCamCa4" />
+  <Reactant specieID="RasGRF" />
+  <Product specieID="CKpCamCa4RasGRF" />
+
+  <forwardRate> </forwardRate>
+  <reverseRate> </reverseRate>
+ </Reaction>
+
+ <!-- (RasGDP to RasGTP by CKpCamCa4RasGRF ) CKpCamCa4RasGRF+RasGDP <-> RasGRFRasGDP -> CKpCamCa4RasGRF + RasGTP -->
+ <Reaction name = "CKpCamCa4RasGRF+RasGDP -- RasGRFRasGDP" id="CKpCamCa4RasGRF+RasGDP -- RasGRFRasGDP">
+  <Reactant specieID="CKpCamCa4RasGRF" />
+  <Reactant specieID="RasGDP" />
+  <Product specieID="RasGRFRasGDP" />
+
+  <forwardRate> </forwardRate>
+  <reverseRate> </reverseRate>
+ </Reaction>
+
+ <Reaction name = "RasGRFRasGDP -- CKpCamCa4RasGRF+RasGTP" id="RasGRFRasGDP -- CKpCamCa4RasGRF+RasGTP">
+  <Reactant specieID="RasGRFRasGDP" />
+  <Product specieID="CKpCamCa4RasGRF" />
+  <Product specieID="RasGTP" />
+
+  <forwardRate> </forwardRate>
+  <reverseRate>0 </reverseRate>
+ </Reaction>
+
+
+</ReactionScheme>

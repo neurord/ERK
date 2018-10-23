@@ -1,0 +1,28 @@
+<ReactionScheme>
+<!-- Molecule species and diffusion constants -->
+    <Specie name="RasGRF"                id="RasGRF"                kdiff="0"     kdiffunit="mu2/s"/>
+    <Specie name="CamCa4RasGRF"          id="CamCa4RasGRF"          kdiff="0"     kdiffunit="mu2/s"/>
+    <Specie name="CamCa4"                id="CamCa4"                kdiff="0"     kdiffunit="mu2/s"/>
+
+ 
+<!--*************************************************************************
+    Now, the reactions themselves 
+    **************************************************************************-->
+
+
+
+  <!-- (CamCa4 binds to RasGRF ) RasGRF+CamCa4 <-> CamCa4RasGRF -->
+ <Reaction name = "RasGRF+CamCa4 -- CamCa4RasGRF" id="RasGRF+CamCa4 -- CamCa4RasGRF">
+  <Reactant specieID="RasGRF" />
+  <Reactant specieID="CamCa4" />
+  <Product specieID="CamCa4RasGRF" />
+
+  <forwardRate> </forwardRate>
+  <reverseRate> </reverseRate>
+ </Reaction>
+
+ 
+
+
+
+</ReactionScheme>

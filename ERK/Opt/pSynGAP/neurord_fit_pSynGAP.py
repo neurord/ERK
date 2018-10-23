@@ -15,13 +15,14 @@ dirname='./'  #where data and model are stored.  Multiple datafiles allowed
 model_set='Model_syngap'
 exp_name='walkup_JBC_2015' #name of data file selected from dirname; each file may contain several molecules
 mol=['pSynGap'] #which molecule(s) to match in optimization
-tmpdir='/tmp/syngap'
+tmpdir='/tmp/psyngapL'
 
 # number of iterations, use 1 for testing
 # default popsize=8, use 3 for testing
 iterations=25
 popsize=8
 test_size=25
+seed= 567840
 
 os.chdir(dirname)
 exp=loadconc.CSV_conc_set(exp_name)
@@ -47,7 +48,7 @@ fit = aju.optimize.Fit(tmpdir, exp, model_set, None, fitness, params,
                        _make_simulation=aju.xml.NeurordSimulation.make,
                        _result_constructor=aju.xml.NeurordResult)
 fit.load()
-fit.do_fit(iterations, popsize=popsize,sigma=0.3)
+fit.do_fit(iterations, popsize=popsize,sigma=0.3,seed=seed)
 mean_dict,std_dict,CV=converge.iterate_fit(fit,test_size,popsize)
 
 ########################################### Done with fitting

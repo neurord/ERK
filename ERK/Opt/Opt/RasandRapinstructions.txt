@@ -1,0 +1,2 @@
+pSynGAP_Rap and pSynGAP_Ras folders are not used (useless) because we were not sure of the GDP initial concentration and were not able to match the rate of the graph.
+But figure 5 gave us the rates and we needed not to optimized. 

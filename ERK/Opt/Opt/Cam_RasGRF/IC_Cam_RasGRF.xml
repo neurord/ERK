@@ -1,0 +1,20 @@
+<InitialConditions>
+
+    <ConcentrationSet>
+    <!-- these apply to everything unless overridden -->
+<!-- many of these are membrane molecules and should be zero except in spines and submembrane -->
+
+      <!-- Jin JBC 2014 uses RasGRF=75 uM, CamCa4 based on figure7B mole ratio-->
+       <NanoMolarity specieID="RasGRF"              value="75000"     />
+       <NanoMolarity specieID="CamCa4RasGRF"        value="0"     />
+       <NanoMolarity specieID="CamCa4"              value="75000"     />
+       
+
+    </ConcentrationSet> 
+
+    <!-- surface concentrations for membrane-bound species. The value attribute for
+         a PicoSD element is the number of picomoles per square metre. For comparison
+         with the volume concentrations, a surface density of 1 picomole/m^2, if spread
+         over a layer 1 micron deep, gives a 1 nanoMolar solution, so to average one
+         particle per square micron you need a PicoSD value of about 1.6. -->
+</InitialConditions>

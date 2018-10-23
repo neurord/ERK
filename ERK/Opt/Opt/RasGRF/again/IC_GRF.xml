@@ -1,0 +1,20 @@
+<InitialConditions>
+
+    <ConcentrationSet>
+    <!-- these apply to everything unless overridden -->
+<!-- many of these are membrane molecules and should be zero except in spines and submembrane -->
+
+      <!-- Gotoh JBC 1997 uses 100 nM of RapGDP and 100 nM RasGRF-->
+       <NanoMolarity specieID="RasGRF"              value="100"     />
+       <NanoMolarity specieID="RasGDP   "           value="100"     />
+       <NanoMolarity specieID="RasGRFRasGDP"        value="0"     />
+        <NanoMolarity specieID="RasGTP   "           value="0"     />
+
+    </ConcentrationSet> 
+
+    <!-- surface concentrations for membrane-bound species. The value attribute for
+         a PicoSD element is the number of picomoles per square metre. For comparison
+         with the volume concentrations, a surface density of 1 picomole/m^2, if spread
+         over a layer 1 micron deep, gives a 1 nanoMolar solution, so to average one
+         particle per square micron you need a PicoSD value of about 1.6. -->
+</InitialConditions>
