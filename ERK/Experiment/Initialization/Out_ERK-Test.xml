@@ -38,12 +38,12 @@
 <OutputSpecie name="ppMAPKKPP2A"/>
 <OutputSpecie name="bRaf"/>
 <OutputSpecie name="pbRaf"/>
-<OutputSpecie name="bRafRap1GTPMAPKK"/>
-<OutputSpecie name="bRafRap1GTPpMAPKK"/>
-<OutputSpecie name="pbRafRap1GTPMAPKK"/>
-<OutputSpecie name="pbRafRap1GTPpMAPKK"/>
-<OutputSpecie name="bRafRap1GTP"/>
-<OutputSpecie name="pbRafRap1GTP"/>
+<OutputSpecie name="bRafRap1MAPKK"/>
+<OutputSpecie name="bRafRap1pMAPKK"/>
+<OutputSpecie name="pbRafRap1MAPKK"/>
+<OutputSpecie name="pbRafRap1pMAPKK"/>
+<OutputSpecie name="bRafRap1"/>
+<OutputSpecie name="pbRafRap1"/>
 <OutputSpecie name="Raf1Rap1"/>
 <OutputSpecie name="Rap1GTP"/>
 <OutputSpecie name="Rap1GDP"/>
@@ -67,8 +67,8 @@
 <OutputSpecie name="CRKC3G"/>
 <OutputSpecie name="CRKC3GpCbl"/>
 <OutputSpecie name="CRKC3GpCblRap1"/>
-<OutputSpecie name="Rap1GTPGap"/>
-<OutputSpecie name="Rap1GTPpGap"/>
+<OutputSpecie name="Rap1Gap"/>
+<OutputSpecie name="Rap1pGap"/>
 <OutputSpecie name="SynGap"/>
 <OutputSpecie name="pSynGap"/>
 <OutputSpecie name="CK"/>
@@ -78,7 +78,7 @@
 <OutputSpecie name="CamCa4buff"/>
 <OutputSpecie name="CKCamCa4"/>
 <OutputSpecie name="CKpCamCa4"/>
-<OutputSpecie name="CKpCamCa4SynGap"/>
+<OutputSpecie name="CKpCamCa4Gap"/>
 <OutputSpecie name="PP1"/>
 <OutputSpecie name="CKpPP1"/>
 <OutputSpecie name="CKpCamCa4PP1"/>
@@ -95,20 +95,20 @@
 <OutputSpecie name="pShcGrb2SosRasGDP"/>
 <OutputSpecie name="RasGRF"/>
 <OutputSpecie name="RasGRFRasGDP"/>
-<OutputSpecie name="CamCa4RasGRF"/>
-<OutputSpecie name="CamCa4RasGRFRasGDP"/>
+<OutputSpecie name="CamCa4GRF"/>
+<OutputSpecie name="CamCa4GRFRasGDP"/>
 <OutputSpecie name="bRafPKAc"/>
-<OutputSpecie name="Raf1RasGTPMAPKK"/>
-<OutputSpecie name="Raf1RasGTPpMAPKK"/>
-<OutputSpecie name="Raf1RasGTP"/>
+<OutputSpecie name="Raf1RasMAPKK"/>
+<OutputSpecie name="Raf1RaspMAPKK"/>
+<OutputSpecie name="Raf1Ras"/>
 <OutputSpecie name="Raf1"/>
-<OutputSpecie name="bRafRasGTP"/>
-<OutputSpecie name="bRafRasGTPMAPKK"/>
-<OutputSpecie name="bRafRasGTPpMAPKK"/>
+<OutputSpecie name="bRafRas"/>
+<OutputSpecie name="bRafRasMAPKK"/>
+<OutputSpecie name="bRafRaspMAPKK"/>
 <OutputSpecie name="RasGTP"/>
 <OutputSpecie name="RasGDP"/>
-<OutputSpecie name="RasGTPGap"/>
-<OutputSpecie name="RasGTPpGap"/>
+<OutputSpecie name="RasGap"/>
+<OutputSpecie name="RaspGap"/>
 
   </OutputSet>
 
