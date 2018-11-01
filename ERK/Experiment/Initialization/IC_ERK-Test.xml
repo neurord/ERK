@@ -6,15 +6,15 @@
 <NanoMolarity specieID="ERK"                          value="360"/>
 <NanoMolarity specieID="pERK"                         value="0"/>
 <NanoMolarity specieID="ppERK"                        value="0"/>
-<NanoMolarity specieID="MKP1"                         value="120"/>
+<NanoMolarity specieID="MKP1"                         value="100"/>
 <NanoMolarity specieID="pERKMKP1"                     value="0"/>
 <NanoMolarity specieID="ppERKMKP1"                    value="0"/>
 <NanoMolarity specieID="ppMAPKKERK"                   value="0"/>
 <NanoMolarity specieID="ppMAPKKpERK"                  value="0"/>
-<NanoMolarity specieID="MAPKK"                        value="400"/>
+<NanoMolarity specieID="MAPKK"                        value="600"/>
 <NanoMolarity specieID="pMAPKK"                       value="0"/>
 <NanoMolarity specieID="ppMAPKK"                      value="0"/>
-<NanoMolarity specieID="PP2A"                         value="2200"/>
+<NanoMolarity specieID="PP2A"                         value="1200"/>
 <NanoMolarity specieID="pMAPKKPP2A"                   value="0"/>
 <NanoMolarity specieID="ppMAPKKPP2A"                  value="0"/>
 <NanoMolarity specieID="bRaf"                         value="200"/>
@@ -30,7 +30,7 @@
 <NanoMolarity specieID="Epac"                         value="100"/>
 <NanoMolarity specieID="EpacRap1"                     value="0"/>
 <NanoMolarity specieID="cAMP"                         value="320"/>
-<NanoMolarity specieID="buff"                         value="20"/>
+<NanoMolarity specieID="buff"                         value="25"/>
 <NanoMolarity specieID="cAMPbuff"                     value="0"/>
 <NanoMolarity specieID="EpacAMP"                      value="0"/>
 <NanoMolarity specieID="PKAcAMP2"                     value="0"/>
@@ -38,7 +38,7 @@
 <NanoMolarity specieID="PKA"                          value="1000"/>
 <NanoMolarity specieID="PKAc"                         value="0"/>
 <NanoMolarity specieID="PKAr"                         value="0"/>
-<NanoMolarity specieID="Src"                          value="20"/>
+<NanoMolarity specieID="Src"                          value="50"/>
 <NanoMolarity specieID="PKAcSrc"                      value="0"/>
 <NanoMolarity specieID="pSrc"                         value="0"/>
 <NanoMolarity specieID="CblpSrc"                      value="0"/>
@@ -49,7 +49,7 @@
 <NanoMolarity specieID="CRKC3GpCblRap1"               value="0"/>
 <NanoMolarity specieID="Rap1Gap"                   value="0"/>
 <NanoMolarity specieID="Rap1pGap"                   value="0"/>
-<NanoMolarity specieID="SynGap"                       value="1200"/>
+<NanoMolarity specieID="SynGap"                       value="1000"/>
 <NanoMolarity specieID="pSynGap"                      value="0"/>
 <NanoMolarity specieID="CK"                           value="15000"/>
 <NanoMolarity specieID="CKp"                          value="4000"/>
@@ -59,7 +59,7 @@
 <NanoMolarity specieID="CKCamCa4"                     value="0"/>
 <NanoMolarity specieID="CKpCamCa4"                    value="0"/>
 <NanoMolarity specieID="CKpCamCa4Gap"              value="0"/>
-<NanoMolarity specieID="PP1"                    value="1100"/>
+<NanoMolarity specieID="PP1"                    value="1200"/>
 <NanoMolarity specieID="CKpPP1"                    value="0"/>
 <NanoMolarity specieID="CKpCamCa4PP1"                    value="0"/>
 <NanoMolarity specieID="Gbg"              value="15"/>
@@ -87,7 +87,7 @@
 <NanoMolarity specieID="bRafRasMAPKK"              value="0"/>
 <NanoMolarity specieID="bRafRaspMAPKK"              value="0"/>
 <NanoMolarity specieID="RasGTP"              value="0"/>
-<NanoMolarity specieID="RasGDP"              value="300"/>
+<NanoMolarity specieID="RasGDP"              value="400"/>
 <NanoMolarity specieID="RasGap"              value="0"/>
 <NanoMolarity specieID="RaspGap"              value="0"/>
 
