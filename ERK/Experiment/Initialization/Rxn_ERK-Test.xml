@@ -450,7 +450,7 @@ phosphatase reactions take from revision of Gs to improve Ca dep dphos of Dp32--
         <Reactant specieID="pSrc"           />
         <Product  specieID="Src"               />
 
-        <forwardRate> 0.1e-3   </forwardRate>
+        <forwardRate> 100e-3   </forwardRate>
         <reverseRate> 0  </reverseRate>
    
     </Reaction> 
@@ -481,7 +481,7 @@ phosphatase reactions take from revision of Gs to improve Ca dep dphos of Dp32--
         <Reactant specieID="pCbl"           />
         <Product  specieID="Cbl"               />
 
-        <forwardRate> 0.01e-3  </forwardRate>
+        <forwardRate> 100e-3  </forwardRate>
         <reverseRate> 0  </reverseRate>
    
     </Reaction> 
@@ -524,7 +524,7 @@ phosphatase reactions take from revision of Gs to improve Ca dep dphos of Dp32--
         <Reactant specieID="Rap1GTP"           />
         <Product  specieID="Rap1GDP"               />
 
-        <forwardRate> 0.0001e-3   </forwardRate>
+        <forwardRate> 0.001e-3   </forwardRate>
         <reverseRate> 0           </reverseRate>
       
     </Reaction>
@@ -537,7 +537,7 @@ phosphatase reactions take from revision of Gs to improve Ca dep dphos of Dp32--
   <Reactant specieID="SynGap" />
   <Product specieID="Rap1Gap" />
 
-  <forwardRate> 0.0000105556e-3 </forwardRate>
+  <forwardRate> 0.0105556e-3 </forwardRate>
   <reverseRate> 15.2e-3 </reverseRate>
 
 </Reaction>
@@ -559,7 +559,7 @@ phosphatase reactions take from revision of Gs to improve Ca dep dphos of Dp32--
   <Reactant specieID="pSynGap" />
   <Product specieID="Rap1pGap"/>
 
-  <forwardRate> 0.0000131667e-3 </forwardRate>
+  <forwardRate> 0.0131667e-3 </forwardRate>
   <reverseRate> 18.96e-3 </reverseRate>
 
 </Reaction>
@@ -602,7 +602,7 @@ phosphatase reactions take from revision of Gs to improve Ca dep dphos of Dp32--
 	  <Reactant specieID="pSynGap"/>
 	  <Product specieID="SynGap"/>
 
-        <forwardRate> 0.1e-3 </forwardRate>
+        <forwardRate> 100e-3 </forwardRate>
 	<reverseRate> 0 </reverseRate>
     </Reaction>
 	  
@@ -1067,19 +1067,19 @@ phosphatase reactions take from revision of Gs to improve Ca dep dphos of Dp32--
       
     <!--Syngap activity on Ras -->
   
-<!--(Inactivation of RasGTP by pSynGAP) RasGTP+pSynGap <-> RasGTPpGap -> pSynGap + RasGDP -->
+<!--(Inactivation of RasGTP by SynGAP) RasGTP+SynGap <-> RasGTPGap -> SynGap + RasGDP -->
 
-<Reaction name = "RasGTP+pSynGap--RaspGap" id="RasGTP+pSynGap--RaspGap">
+<Reaction name = "RasGTP+SynGap--RasGap" id="RasGTP+SynGap--RasGap">
   <Reactant specieID="RasGTP" />
-  <Reactant specieID="pSynGap" />
-  <Product specieID="RaspGap" />
+  <Reactant specieID="SynGap" />
+  <Product specieID="RasGap" />
 
-  <forwardRate> 0.0000009375e-3 </forwardRate>
+  <forwardRate> 0.0009375e-3 </forwardRate>
   <reverseRate> 0.48e-3  </reverseRate>
 
 </Reaction>
 
-<Reaction name = "RasGap--pSynGap+RasGDP" id = "RasGap--pSynGap+RasGDP">
+<Reaction name = "RasGap--SynGap+RasGDP" id = "RasGap--SynGap+RasGDP">
   <Reactant specieID="RasGap" />
   <Product specieID="pSynGap" />
   <Product specieID="RasGDP" />
@@ -1091,19 +1091,19 @@ phosphatase reactions take from revision of Gs to improve Ca dep dphos of Dp32--
 
 <!--(Inactivation of Ras by SynGAP) RasGTP+SynGap <-> RasGTPGap -> SynGap + RasGDP -->
 
-<Reaction name = "RasGTP+SynGap--RasGap" id="RasGTP+SynGap--RasGap">
+<Reaction name = "RasGTP+pSynGap--RaspGap" id="RasGTP+pSynGap--RaspGap">
   <Reactant specieID="RasGTP" />
-  <Reactant specieID="SynGap" />
-  <Product specieID="RasGap" />
+  <Reactant specieID="pSynGap" />
+  <Product specieID="RaspGap" />
 
-  <forwardRate> 0.0000084375e-3 </forwardRate>
+  <forwardRate> 0.0084375e-3 </forwardRate>
   <reverseRate> 4.32e-3 </reverseRate>
 
 </Reaction>
 
-<Reaction name = "RasGap--SynGap+RasGDP" id = "RasGap--SynGap+RasGDP">
-  <Reactant specieID="RasGap" />
-  <Product specieID="SynGap" />
+<Reaction name = "RaspGap--pSynGap+RasGDP" id = "RaspGap--pSynGap+RasGDP">
+  <Reactant specieID="RaspGap" />
+  <Product specieID="pSynGap" />
   <Product specieID="RasGDP" />
 
   <forwardRate> 1.08e-3  </forwardRate>
