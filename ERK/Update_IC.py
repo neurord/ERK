@@ -1,8 +1,25 @@
+##Change your parameters first
+##1. input your input_filename which is your IC_file.xml
+##2. input your h5filename which is you Model_file.h5
+##then specify your time in second (range of time that you want to get the baseline) 
+
 from lxml import etree
 from xml.etree import ElementTree as ET
 import os
 import numpy as np
 import h5py as h5
+
+
+#parameters
+input_filename='IC_FILE.xml'
+h5filename='Model_FILE.h5'
+
+#time args
+time_args="  "
+
+
+
+
 
 def decode(table):
     return np.array([s.decode('utf-8') for s in table])
@@ -49,16 +66,9 @@ def get_mol_index(simData,outputset,molecule):
 
 
 
-#parameters
-input_filename='IC_ERK-Test.xml'
-h5filename='Model_ERK-Test.h5'
-
-#time args
-time_args="0 100"
-
 #automatically name the output file
 input_name=os.path.split(input_filename)[-1]
-outfile=input_name.split('.')[0]+'_new.xml'
+outfile=input_name.split('.')[0]+'_basal3.xml'
 
 #1 get list of molecules
 data=h5.File(h5filename,"r")
