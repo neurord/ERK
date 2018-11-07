@@ -63,9 +63,11 @@ phosphatase reactions take from revision of Gs to improve Ca dep dphos of Dp32--
 <Specie name="CamCa4"                              id="CamCa4"                kdiff="0"     kdiffunit="mu2/s"/>
 <Specie name="Cambuff"                             id="Cambuff"                kdiff="0"     kdiffunit="mu2/s"/>
 <Specie name="CamCa4buff"                          id="CamCa4buff"                kdiff="0"     kdiffunit="mu2/s"/>
+<Specie name="Cambuffslow"                         id="Cambuffslow"                kdiff="0"     kdiffunit="mu2/s"/>
+<Specie name="CamCa4buffslow"                      id="CamCa4buffslow"                kdiff="0"     kdiffunit="mu2/s"/>
 <Specie name="CKCamCa4"                            id="CKCamCa4"              kdiff="0"     kdiffunit="mu2/s"/>
 <Specie name="CKpCamCa4"                           id="CKpCamCa4"             kdiff="0"     kdiffunit="mu2/s"/>
-<Specie name="CKpCamCa4Gap"                     id="CKpCamCa4Gap"       kdiff="0"     kdiffunit="mu2/s"/>
+<Specie name="CKpCamCa4Gap"                        id="CKpCamCa4Gap"       kdiff="0"     kdiffunit="mu2/s"/>
 <Specie name="PP1"                                 id="PP1"               kdiff="0"    kdiffunit="mu2/s"/>
 <Specie name="CKpPP1"                              id="CKpPP1"            kdiff="0"    kdiffunit="mu2/s"/>
 <Specie name="CKpCamCa4PP1"                        id="CKpCamCa4PP1"      kdiff="0"    kdiffunit="mu2/s"/>
@@ -584,7 +586,7 @@ phosphatase reactions take from revision of Gs to improve Ca dep dphos of Dp32--
   <Reactant specieID="pSynGap" />
   <Product specieID="Rap1pGap"/>
 
-  <forwardRate> 0.0131667e-3 </forwardRate>
+  <forwardRate> 0.05267e-3 </forwardRate>
   <reverseRate> 18.96e-3 </reverseRate>
 
 </Reaction>
@@ -609,7 +611,7 @@ phosphatase reactions take from revision of Gs to improve Ca dep dphos of Dp32--
   <forwardRate> 0.0657145585798 </forwardRate>
   <reverseRate> 0.00185264674538 </reverseRate>
 
- </Reaction>
+  </Reaction>
 
  <Reaction name = "CKpCamCa4Gap--CKpCamCa4+pSynGap" id="CKpCamCa4Gap--CKpCamCa4+pSynGap">
   <Reactant specieID="CKpCamCa4Gap" />
@@ -681,6 +683,17 @@ phosphatase reactions take from revision of Gs to improve Ca dep dphos of Dp32--
 	      <Product specieID="CamCa4buff"/>
 
         <forwardRate> 0.01e-3 </forwardRate>
+	<reverseRate> 0 </reverseRate>
+</Reaction>
+
+
+  <!-- Inactivation of CamCa4 2 -->
+<Reaction name ="CamCa4+Cambuffslow--CamCa4buffslow" id="CamCa4+Cambuffslow--CamCa4buffslow">
+              <Reactant specieID="CamCa4"/>
+              <Reactant specieID="Cambuffslow"/>
+	      <Product specieID="CamCa4buffslow"/>
+
+        <forwardRate> 0.001e-3 </forwardRate>
 	<reverseRate> 0 </reverseRate>
     </Reaction>
     
@@ -1121,7 +1134,7 @@ phosphatase reactions take from revision of Gs to improve Ca dep dphos of Dp32--
   <Reactant specieID="pSynGap" />
   <Product specieID="RaspGap" />
 
-  <forwardRate> 0.0084375e-3 </forwardRate>
+  <forwardRate> 0.0113e-3 </forwardRate>
   <reverseRate> 4.32e-3 </reverseRate>
 
 </Reaction>

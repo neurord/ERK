@@ -78,6 +78,8 @@
 <OutputSpecie name="CamCa4"/>
 <OutputSpecie name="Cambuff"/>
 <OutputSpecie name="CamCa4buff"/>
+<OutputSpecie name="Cambuffslow"/>
+<OutputSpecie name="CamCa4buffslow"/>
 <OutputSpecie name="CKCamCa4"/>
 <OutputSpecie name="CKpCamCa4"/>
 <OutputSpecie name="CKpCamCa4Gap"/>
