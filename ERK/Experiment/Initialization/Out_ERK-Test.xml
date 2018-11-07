@@ -68,6 +68,8 @@
 <OutputSpecie name="CRKC3GpCbl"/>
 <OutputSpecie name="CRKC3GpCblRap1"/>
 <OutputSpecie name="Rap1Gap"/>
+<OutputSpecie name="Rap1GAP"/>
+<OutputSpecie name="Rap1GTPGAP"/>
 <OutputSpecie name="Rap1pGap"/>
 <OutputSpecie name="SynGap"/>
 <OutputSpecie name="pSynGap"/>
@@ -76,6 +78,8 @@
 <OutputSpecie name="CamCa4"/>
 <OutputSpecie name="Cambuff"/>
 <OutputSpecie name="CamCa4buff"/>
+<OutputSpecie name="Cambuffslow"/>
+<OutputSpecie name="CamCa4buffslow"/>
 <OutputSpecie name="CKCamCa4"/>
 <OutputSpecie name="CKpCamCa4"/>
 <OutputSpecie name="CKpCamCa4Gap"/>
@@ -108,6 +112,8 @@
 <OutputSpecie name="RasGTP"/>
 <OutputSpecie name="RasGDP"/>
 <OutputSpecie name="RasGap"/>
+<OutputSpecie name="RasGAP"/>
+<OutputSpecie name="RasGTPGAP"/>
 <OutputSpecie name="RaspGap"/>
 
   </OutputSet>
