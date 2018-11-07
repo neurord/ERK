@@ -4,42 +4,50 @@
 
   
 <InjectionStim specieID="CamCa4" injectionSite="pointA">
-        <onset>               10000          </onset>
+        <onset>               1000          </onset>
         <duration>            1000         </duration> 
-        <rate>                3595         </rate>
+        <rate>                3500         </rate>
+	
   </InjectionStim>
 
 
 
 <InjectionStim specieID="Cambuff" injectionSite="pointA">
-        <onset>               12000          </onset>
-        <duration>            1000         </duration> 
+        <onset>               3000          </onset>
+        <duration>            250         </duration> 
         <rate>                690          </rate>
   </InjectionStim>
 
 
+<InjectionStim specieID="Cambuffslow" injectionSite="pointA">
+        <onset>               3000          </onset>
+        <duration>            1000         </duration> 
+        <rate>                2810         </rate>
 
+  </InjectionStim>
 
 
   <InjectionStim specieID="cAMP" injectionSite="pointA">
-        <onset>               10000          </onset>
+        <onset>               1000          </onset>
         <duration>            1000         </duration> 
         <rate>                4100         </rate>
+
   </InjectionStim>
 
 
 
 <InjectionStim specieID="buff" injectionSite="pointA">
-        <onset>               12000         </onset>
+        <onset>               3000         </onset>
         <duration>            1000         </duration> 
         <rate>                3700          </rate>
+
 </InjectionStim>
 
 
 
 
 
-
+-->
 
 
 
