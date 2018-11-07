@@ -1,0 +1,78 @@
+<StimulationSet>
+
+<!--onset and duration in ms, rate in particles/ms-->
+
+  
+<InjectionStim specieID="CamCa4" injectionSite="pointA">
+        <onset>               1000          </onset>
+        <duration>            1000         </duration> 
+        <rate>                3500         </rate>
+	<period>             12000              </period>
+    <end>                37000             </end>
+    <interTrainInterval>  4000           </interTrainInterval>
+    <numTrains>           2               </numTrains>
+  </InjectionStim>
+
+
+
+<InjectionStim specieID="Cambuff" injectionSite="pointA">
+       <onset>               3000          </onset>
+        <duration>            250         </duration> 
+        <rate>                690         </rate>
+	<period>             13250              </period>
+    <end>                40000            </end>
+    <interTrainInterval>  4000           </interTrainInterval>
+    <numTrains>           2               </numTrains>
+  </InjectionStim>
+
+<InjectionStim specieID="Cambuffslow" injectionSite="pointA">
+        <onset>               3000          </onset>
+        <duration>            1000         </duration> 
+        <rate>                 2810         </rate>
+<period>             14000              </period>
+    <end>                43000             </end>
+    <interTrainInterval>  4000           </interTrainInterval>
+    <numTrains>           2               </numTrains>
+  </InjectionStim>
+
+  <InjectionStim specieID="cAMP" injectionSite="pointA">
+        <onset>               1000          </onset>
+        <duration>            1000         </duration> 
+        <rate>                4100         </rate>
+<period>             12000              </period>
+    <end>                37000             </end>
+    <interTrainInterval>  4000           </interTrainInterval>
+    <numTrains>           2               </numTrains>
+  </InjectionStim>
+
+
+<InjectionStim specieID="buff" injectionSite="pointA">
+        <onset>               3000         </onset>
+        <duration>            1000         </duration> 
+        <rate>                3700          </rate>
+<period>             14000              </period>
+    <end>                43000             </end>
+    <interTrainInterval>  4000           </interTrainInterval>
+    <numTrains>           2               </numTrains>
+  </InjectionStim>
+
+
+
+
+
+<!--
+<InjectionStim specieID="Gbg" injectionSite="pointA">
+        <onset>               500          </onset>
+        <duration>            100         </duration> 
+        <rate>                20000            </rate>
+      </InjectionStim>
+
+ <InjectionStim specieID="Gbuff" injectionSite="pointA">
+        <onset>               500          </onset>
+        <duration>            100         </duration> 
+        <rate>                20000            </rate>
+      </InjectionStim>
+-->
+
+</StimulationSet> 
+
