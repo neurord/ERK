@@ -15,23 +15,24 @@ dirname='./'  #where data and model are stored.  Multiple datafiles allowed
 model_set='Model_syngap'
 exp_name='walkup_JBC_2015' #name of data file selected from dirname; each file may contain several molecules
 mol=['pSynGap'] #which molecule(s) to match in optimization
-tmpdir='/tmp/psyngapL'
+tmpdir='/tmp/pSyngap1'
 
 # number of iterations, use 1 for testing
 # default popsize=8, use 3 for testing
 iterations=25
 popsize=8
 test_size=25
-seed= 567840
+seed= 291984
+
 
 os.chdir(dirname)
 exp=loadconc.CSV_conc_set(exp_name)
 
 P = aju.xml.XMLParam
 #list of parameters to change/optimize
-params = aju.optimize.ParamSet(P('phos_fwd_rate', 0, min=0, max=1, xpath='//Reaction[@id="CKpCamCa4+SynGap--CKpCamCa4SynGap"]/forwardRate'),
-                               P('phos_rev_rate', 0, min=0, max=1, xpath='//Reaction[@id="CKpCamCa4+SynGap--CKpCamCa4SynGap"]/reverseRate'),
-                               P('phos_kcat_rate', 0, min=0, max=1, xpath='//Reaction[@id="CKpCamCa4SynGap--CKpCamCa4+pSynGap"]/forwardRate'))
+params = aju.optimize.ParamSet(P('phos_fwd_rate',0, min=0, max=1, xpath='//Reaction[@id="CKpCamCa4+SynGap--CKpCamCa4SynGap"]/forwardRate'),
+                               P('phos_rev_rate',0, min=0, max=1, xpath='//Reaction[@id="CKpCamCa4+SynGap--CKpCamCa4SynGap"]/reverseRate'),
+                               P('phos_kcat_rate',0, min=0, max=1, xpath='//Reaction[@id="CKpCamCa4SynGap--CKpCamCa4+pSynGap"]/forwardRate'))
 
 ###################### END CUSTOMIZATION #######################################
 
@@ -54,8 +55,8 @@ mean_dict,std_dict,CV=converge.iterate_fit(fit,test_size,popsize)
 ########################################### Done with fitting
 
 #to look at centroid [0] or stdev [6] of cloud of good results:
-for i,p in enumerate(fit.params.unscale(fit.optimizer.result()[0])):
-    print(fit.param_names()[i],'=',p, '+/-', fit.params.unscale(fit.optimizer.result()[6])[i])
+for i,p in enumerate(fit.params.unscale(fit.optimizer.result[0])):
+    print(fit.param_names()[i],'=',p, '+/-', fit.params.unscale(fit.optimizer.result[6])[i])
 
 #to look at fit history
 aju.drawing.plot_history(fit,fit.measurement)
