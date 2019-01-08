@@ -31,8 +31,7 @@
 <NanoMolarity specieID="cAMPbuff"                     value="0"/>
 <NanoMolarity specieID="buffslow"                     value="0"/>
 <NanoMolarity specieID="cAMPextbuffslow"                 value="0"/>
-<NanoMolarity specieID="EpacAMP"                      value="0"/>
-<NanoMolarity specieID="PKAcAMP2"                     value="0"/>
+<NanoMolarity specieID="EpacAMP"                      value="0"/<NanoMolarity specieID="PKAcAMP2"                     value="0"/>
 <NanoMolarity specieID="PKAcAMP4"                     value="0"/>
 <NanoMolarity specieID="PKA"                          value="1000"/>
 <NanoMolarity specieID="PKAc"                         value="0"/>
