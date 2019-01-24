@@ -1,0 +1,141 @@
+<OutputScheme>
+<!--
+     Each file will have a set of concentrations in compartments
+     sampled according to a specific dt
+-->
+
+<!--
+    Every Output block must have in its definition one (and only)
+    instance of:
+     * filename
+    And might have one (and only) instance of:
+     * region or
+     * dt
+    If "region" is ommited then the concs for the whole system will be
+    saved.
+    If "dt" is ommited than the concs will be written at each time step.
+    So the "io file" will be dependent on information stated in the
+    "morph" (regions) and "model" (dt).
+-->
+<!-- how do you choose the dt -->
+
+<OutputSet filename = "all"  dt="20.0">
+
+
+<OutputSpecie name="ERK"/>
+<OutputSpecie name="pERK"/>
+<OutputSpecie name="ppERK"/>
+<OutputSpecie name="MKP1"/>
+<OutputSpecie name="pERKMKP1"/>
+<OutputSpecie name="ppERKMKP1"/>
+<OutputSpecie name="ppMEKERK"/>
+<OutputSpecie name="ppMEKpERK"/>
+<OutputSpecie name="MEK"/>
+<OutputSpecie name="pMEK"/>
+<OutputSpecie name="ppMEK"/>
+<OutputSpecie name="PP2A"/>
+<OutputSpecie name="pMEKPP2A"/>
+<OutputSpecie name="ppMEKPP2A"/>
+<OutputSpecie name="bRaf"/>
+<OutputSpecie name="bRafRap1MEK"/>
+<OutputSpecie name="bRafRap1pMEK"/>
+<OutputSpecie name="bRafRap1"/>
+<OutputSpecie name="Raf1Rap1"/>
+<OutputSpecie name="Rap1GTP"/>
+<OutputSpecie name="Rap1GDP"/>
+<OutputSpecie name="Epac"/>
+<OutputSpecie name="EpacRap1"/>
+<OutputSpecie name="cAMP"/>
+<OutputSpecie name="cAMPext"/>
+<OutputSpecie name="buff"/>
+<OutputSpecie name="cAMPbuff"/>
+<OutputSpecie name="buffslow"/>
+<OutputSpecie name="cAMPextbuffslow"/>
+<OutputSpecie name="EpacAMP"/>
+<OutputSpecie name="PKAcAMP2"/>
+
+<OutputSpecie name="PKAcAMP4"/>
+<OutputSpecie name="PKA"/>
+<OutputSpecie name="PKAr"/>
+<OutputSpecie name="PKAc"/>
+<OutputSpecie name="Src"/>
+<OutputSpecie name="PKAcSrc"/>
+<OutputSpecie name="pSrc"/>
+<OutputSpecie name="Cbl"/>
+<OutputSpecie name="CblpSrc"/>
+<OutputSpecie name="pCbl"/>
+<OutputSpecie name="CRKC3G"/>
+<OutputSpecie name="CRKC3GpCbl"/>
+<OutputSpecie name="CRKC3GpCblRap1"/>
+
+<OutputSpecie name="Rap1Gap"/>
+<OutputSpecie name="Rap1GAP"/>
+<OutputSpecie name="Rap1GTPGAP"/>
+<OutputSpecie name="Rap1pGap"/>
+
+<OutputSpecie name="SynGap"/>
+<OutputSpecie name="pSynGap"/>
+<OutputSpecie name="CK"/>
+<OutputSpecie name="CKp"/>
+<OutputSpecie name="CamCa4"/>
+<OutputSpecie name="CKCamCa4"/>
+<OutputSpecie name="CKpCamCa4"/>
+<OutputSpecie name="CKpCamCa4Gap"/>
+<OutputSpecie name="PP1"/>
+<OutputSpecie name="CKpPP1"/>
+<OutputSpecie name="CKpCamCa4PP1"/>
+
+<OutputSpecie name="Gbg"/>
+<OutputSpecie name="Gbgext"/>
+<OutputSpecie name="Gbuff"/>
+<OutputSpecie name="Gbgbuff"/>
+<OutputSpecie name="Gbuffslow"/>
+<OutputSpecie name="Gbgextbuffslow"/>
+<OutputSpecie name="SrcGbg"/>
+<OutputSpecie name="Shc"/>
+<OutputSpecie name="pShc"/>
+<OutputSpecie name="Grb2"/>
+<OutputSpecie name="Sos"/>
+<OutputSpecie name="pSos"/>
+<OutputSpecie name="Grb2Sos"/>
+<OutputSpecie name="ppERKGrb2Sos"/>
+<OutputSpecie name="SrcGbgShc"/>
+<OutputSpecie name="pShcGrb2Sos"/>
+<OutputSpecie name="pShcGrb2SosRasGDP"/>
+
+<OutputSpecie name="RasGRF"/>
+<OutputSpecie name="CamCa4GRF"/>
+<OutputSpecie name="CamCa4GRFRasGDP"/>
+
+<OutputSpecie name="Raf1RasMEK"/>
+<OutputSpecie name="Raf1RaspMEK"/>
+<OutputSpecie name="Raf1Ras"/>
+<OutputSpecie name="Raf1"/>
+<OutputSpecie name="bRafRas"/>
+<OutputSpecie name="bRafRasMEK"/>
+<OutputSpecie name="bRafRaspMEK"/>
+<OutputSpecie name="RasGTP"/>
+<OutputSpecie name="RasGDP"/>
+<OutputSpecie name="RasGap"/>
+<OutputSpecie name="RasGAP"/>
+<OutputSpecie name="RasGTPGAP"/>
+<OutputSpecie name="RaspGap"/>
+
+<OutputSpecie name="Ca"/>
+<OutputSpecie name="Caext"/>
+<OutputSpecie name="CaextLeak"/>
+<OutputSpecie name="Leak"/>
+<OutputSpecie name="pmca"/>
+<OutputSpecie name="pmcaCa"/>
+<OutputSpecie name="ncx"/>
+<OutputSpecie name="ncxCa"/>
+<OutputSpecie name="Calbin"/>
+<OutputSpecie name="CalbinC"/>
+
+<OutputSpecie name="Cam"/>
+<OutputSpecie name="CamCa2C"/>
+<OutputSpecie name="CamCa2N"/>
+
+</OutputSet>
+
+</OutputScheme>
