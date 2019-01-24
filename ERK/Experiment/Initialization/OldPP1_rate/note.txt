@@ -1,0 +1,23 @@
+check old PP1 rate to see if it was bistable too
+
+
+1. copy PP1 rates data from neuroRD_fit, for Camold  rxn file into the ERK model
+
+2. run the simulation for an hour
+
+3. copy new IC (IC_ERK-Test_basal)
+
+4. Stimulate the model with new IC file
+
+(bistability was seen when added 100nm of Ca for a duration of 1000s)
+(used the same data which are rate of 75 for a duration of 800000ms)
+
+
+Result:
+CamKII doest not comes back to basal after Ca out (none or 100%0
+
+Conclusion:
+the rates are not cause of bistable
+
+Next step:
+Try higher pp1 rate to see if different

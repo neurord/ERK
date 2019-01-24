@@ -7,6 +7,7 @@
           <xi:include href="Morph.xml" />        
           <xi:include href="IC_ERK-Test_basal.xml" />
           <xi:include href="Out_ERK-Test.xml" />
+	  <xi:include href="Stim_ERK-Test.xml" />
  
     <!--2D means the morphology is interpreted like a flatworm, 3D for
 	roundworms. The 2D case is good for testing as it is easy to visualize the

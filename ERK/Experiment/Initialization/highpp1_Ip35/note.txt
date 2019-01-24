@@ -1,0 +1,24 @@
+
+increase  PP1 concentration to see if it it stays bistable too
+
+
+1. add PP1 inhibitor rxn, and [Ip35]=500 nm 
+
+2. run the simulation for an hour
+
+3. copy new IC (IC_ERK-Test_basal)
+
+4. Stimulate the model with new IC file
+
+(bistability was seen when added 100nm of Ca for a duration of 1000s)
+(used the same data which are rate of 75 for a duration of 800000ms)
+
+
+Result:
+CamKII doest comes back to basal after Ca out
+
+Conclusion:
+the amount of pp1 may play a role in bistability 
+
+Next step:
+Try using PP1 inhibitor along with 2000 nm PP1

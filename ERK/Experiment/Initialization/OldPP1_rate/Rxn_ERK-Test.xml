@@ -842,6 +842,7 @@ phosphatase reactions take from revision of Gs to improve Ca dep dphos of Dp32--
      Vmax=5.7 umol/min gives kcat=3.5 sec-1 & kb=14 sec-1 -->
     <!-- kf=0.000039,kb=0.34,kcat=0.086 /sec for CKp only from Myungs paper 2010 PloS -->
     <!-- kf=0.6e-9,kb=0.34e-3,kcat=0.086e-3 /msec for CKp and CKpCam from Myungs Stoch sims-->
+    
    <!-- CKp + PP1 <-> CKpPP1 --> 
     <Reaction name = "CKp_bind" id="CKp_bind">
 	<Reactant specieID="CKp"/>
@@ -884,7 +885,9 @@ phosphatase reactions take from revision of Gs to improve Ca dep dphos of Dp32--
 <forwardRate> 0.086e-3 </forwardRate>
 	<reverseRate> 0 </reverseRate>
     </Reaction>
+    
 
+    
     <!--MAPKK ACTIVATION BY Raf1RasGTP-->
     
 <!--(MAPKK phos by Raf1RasGTP) MAPKK + Raf1RasGTP <-> Raf1RasGTPMAPKK <-> pMAPKK + Raf1RasGTP-->

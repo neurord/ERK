@@ -76,11 +76,16 @@
 <OutputSpecie name="SynGap"/>
 <OutputSpecie name="pSynGap"/>
 <OutputSpecie name="pSynden"/>
-<OutputSpecie name="CK"/>
-<OutputSpecie name="CKp"/>
-<OutputSpecie name="CamCa4"/>
-<OutputSpecie name="CKCamCa4"/>
-<OutputSpecie name="CKpCamCa4"/>
+
+        <OutputSpecie       name="Camout"       />
+        <OutputSpecie       name="CamCa4"      />
+        <OutputSpecie       name="CK"          />
+        <OutputSpecie       name="CKCamCa4"       />        
+        <OutputSpecie       name="CKpCamCa4"      />
+        <OutputSpecie       name="CKp"      />
+        <OutputSpecie       name="Complex"     />
+        <OutputSpecie name="pComplex" />
+
 <OutputSpecie name="CKpCamCa4Gap"/>
 <OutputSpecie name="PP1"/>
 <OutputSpecie name="CKpPP1"/>

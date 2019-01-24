@@ -54,15 +54,19 @@
 <NanoMolarity specieID="SynGap"                       value="100"/>
 <NanoMolarity specieID="pSynGap"                       value="0"/>
 <NanoMolarity specieID="pSynden"                      value="0"/>
+
 <NanoMolarity specieID="CK"                           value="20000"/>
 <NanoMolarity specieID="CKp"                          value="600"/>
 <NanoMolarity specieID="CamCa4"                       value="300"/>
 <NanoMolarity specieID="CKCamCa4"                     value="300"/>
 <NanoMolarity specieID="CKpCamCa4"                    value="100"/>
 <NanoMolarity specieID="CKpCamCa4Gap"              value="0"/>
-<NanoMolarity specieID="PP1"                    value="900"/>
+<NanoMolarity specieID="PP1"                    value="2000"/>
 <NanoMolarity specieID="CKpPP1"                    value="0"/>
 <NanoMolarity specieID="CKpCamCa4PP1"                    value="0"/>
+
+<NanoMolarity specieID="Ip35"                    value="500"/>
+<NanoMolarity specieID="Ip35PP1"                    value="0"/>
 
 <NanoMolarity specieID="Gbg"              value="100"/>
 <NanoMolarity specieID="Gbgext"              value="10000"/>
