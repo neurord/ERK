@@ -1,0 +1,75 @@
+For Calcium 
+get 100 nm of Ca  for 50s 100s and 1000s
+
+inject rate of 150 for 20000ms to get about 100 nm for a duration of 50s
+
+inject rate of 100 for 65000ms to get about 100 nm for a duration for 100s
+
+inject rate of 75 for 800000ms to get about 100 nm for a duration for 1000s
+
+
+
+get 500 nm of Ca  for 50s 100s and 1000s
+
+inject rate of 1360 for 15000ms to get about 500 nm for a duration of 50s
+
+inject rate of 535 for 80000ms to get about 500 nm for a duration for 100s
+
+inject rate of 500 for 800000ms to get about 500 nm for a duration for 1000s
+
+
+
+
+For cAMP 
+get 100 nm of Ca  for 50s 100s and 1000s
+
+
+              onset 		duration 		rate 
+cAMP          1000		25000			3		C100-d50
+
+        
+
+Buff          40000             25000			2		C100-d50
+	      90000   							C100-d100
+              900000							C100-d1000
+
+slow buff    40000		25000			1
+             90000
+             900000
+
+
+
+
+
+              onset 		duration 		rate 
+cAMP          1000		26000			13		C100-d50
+
+        
+
+Buff          40000             26000			8		C500-d50
+	      90000   							C500-d100
+              900000							C500-d1000
+
+slow buff    40000		26000			5
+             90000
+             900000
+
+
+
+..HAVE TO REDO 1000 BECAUSE GOES BELOW BASAL FOR A LONG TIME... 
+HAVE TO ASK DR. BLACKWELL IF I CAN CHANGE RATE FOR THAT PERIOD???????
+
+
+
+
+pERK ppERK ppMEK bRafRap1 Raf1Rap1 Rap1GTP Rap1GDP EpacRap1 cAMP' 'cAMPext' 'buff' 'buffslow' PKAc Rap1pGap' 'Rap1GAP' 'Rap1GTPGAP' 'SynGap'
+ 'pSynGap' 'pSynden' 'CK' 'CKp' 'CamCa4' 'CKCamCa4' 'CKpCamCa4'
+ 'CKpCamCa4Gap' 'PP1' 'CKpPP1' 'CKpCamCa4PP1' 'Gbg' 'Gbgext' 'Gbuff'
+ 'Gbgbuff' 'Gbuffslow' 'Gbgextbuffslow' 'SrcGbg' 'Grb2' 'Sos' 'pSos'
+ 'Grb2Sos' 'ppERKGrb2Sos' 'SrcGbgShc' 'Shc' 'pShc' 'pShcGrb2Sos'
+ 'pShcGrb2SosRasGDP' 'RasGRF' 'CamCa4GRF Raf1Ras bRafRas RasGTP RasGDP RaspGap Ca Caext Cam
+
+
+
+ARGS="Model_ERKCa,R t,Ca pSynGap pSynden Cam CKpCamCa4 CamCa4GRF RasGTP RaspGap Rap1GTP Rap1pGap bRafRas Raf1Ras bRafRap1 Raf1Rap1 ppMEK pERK ppERK,0 600"
+

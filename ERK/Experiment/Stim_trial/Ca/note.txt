@@ -1,0 +1,25 @@
+For Calcium 
+get 100 nm of Ca  for 50s 100s and 1000s
+
+inject rate of 150 for 20000ms to get about 100 nm for a duration of 50s
+
+inject rate of 100 for 65000ms to get about 100 nm for a duration for 100s
+
+inject rate of 95 for 300000ms to get about 100 nm for a duration for about 500s
+
+inject rate of 80 for 900000ms to get about 100 nm for a duration for 1000s
+
+
+
+
+get 500 nm of Ca  for 50s and 500s
+
+inject rate of 1360 for 2000ms to get about 500 nm for a duration of 50s
+
+inject rate of 500 for 900000ms to get about 500 nm for a duration for 500s
+
+
+
+       	    Result/conclusion: no Dr. Blackwell
+	    Temporal effect is observed
+	    

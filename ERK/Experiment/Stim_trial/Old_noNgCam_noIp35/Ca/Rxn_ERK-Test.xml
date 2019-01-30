@@ -57,7 +57,6 @@ phosphatase reactions take from revision of Gs to improve Ca dep dphos of Dp32--
 <Specie name="SynGap"                              id="SynGap"                kdiff="0"     kdiffunit="mu2/s"/>
 <Specie name="pSynGap"                             id="pSynGap"               kdiff="0"     kdiffunit="mu2/s"/>
 <Specie name="pSynden"                             id="pSynden"               kdiff="0"     kdiffunit="mu2/s"/>
-
 <Specie name="CK"                                  id="CK"                    kdiff="0"     kdiffunit="mu2/s"/>
 <Specie name="CKp"                                 id="CKp"                   kdiff="0"     kdiffunit="mu2/s"/>
 <Specie name="CamCa4"                              id="CamCa4"                kdiff="0"     kdiffunit="mu2/s"/>
@@ -67,12 +66,6 @@ phosphatase reactions take from revision of Gs to improve Ca dep dphos of Dp32--
 <Specie name="PP1"                                 id="PP1"               kdiff="0"    kdiffunit="mu2/s"/>
 <Specie name="CKpPP1"                              id="CKpPP1"            kdiff="0"    kdiffunit="mu2/s"/>
 <Specie name="CKpCamCa4PP1"                        id="CKpCamCa4PP1"      kdiff="0"    kdiffunit="mu2/s"/>
-
-<Specie name="Ip35"                                 id="Ip35"               kdiff="0"    kdiffunit="mu2/s"/>
-<Specie name="Ip35PP1"                              id="Ip35PP1"            kdiff="0"    kdiffunit="mu2/s"/>
-<Specie name="Ng"                                 id="Ng"                   kdiff="0"     kdiffunit="mu2/s"/>
-<Specie name="NgCam"                              id="NgCam"                kdiff="0"     kdiffunit="mu2/s"/>
-
 <Specie name="Gbg" id="Gbg"                                               kdiff="0"    kdiffunit="mu2/s"/>
 <Specie name="Gbgext" id="Gbgext"                                               kdiff="0"    kdiffunit="mu2/s"/>
 <Specie name="Gbuff" id="Gbuff"                                               kdiff="0"    kdiffunit="mu2/s"/>
@@ -475,8 +468,8 @@ phosphatase reactions take from revision of Gs to improve Ca dep dphos of Dp32--
   <Reactant specieID="Rap1GAP" />
   <Product specieID="Rap1GTPGAP" />
 
-  <forwardRate> 0.02e-3 </forwardRate>
-  <reverseRate> 2000e-3 </reverseRate>
+  <forwardRate> 0.2e-3 </forwardRate>
+  <reverseRate> 200e-3 </reverseRate>
 
 </Reaction>
 
@@ -892,36 +885,6 @@ phosphatase reactions take from revision of Gs to improve Ca dep dphos of Dp32--
 	<reverseRate> 0 </reverseRate>
     </Reaction>
 
-
-    <!-- PP1 inhibitor -->
-    
- <!-- Ip35 + PP1 <-> Ip35PP1 -->
-    <Reaction name = "Ip35+PP1" id="Ip35+PP1">
-	<Reactant specieID="Ip35"/>
-        <Reactant specieID="PP1"/>
-`	<Product specieID="Ip35PP1"/>
-
-	
-    <forwardRate> 1.00e-6 </forwardRate>
-        <reverseRate> 1.10e-6 </reverseRate>
-    </Reaction>
-
-    
-    <!-- Ng binding to Cam -->
-    
- <!-- Ng+Cam <-> NgCam -->
-    <Reaction name = "Ng+Cam" id="Ng+Cam">
-	<Reactant specieID="Ng"/>
-        <Reactant specieID="Cam"/>
-`	<Product specieID="NgCam"/>
-
-	
-    <forwardRate> 2.80e-5 </forwardRate>
-        <reverseRate> 3.60e-2 </reverseRate>
-    </Reaction>
-
-
-    
     <!--MAPKK ACTIVATION BY Raf1RasGTP-->
     
 <!--(MAPKK phos by Raf1RasGTP) MAPKK + Raf1RasGTP <-> Raf1RasGTPMAPKK <-> pMAPKK + Raf1RasGTP-->

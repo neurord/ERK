@@ -9,12 +9,7 @@
 
   </InjectionStim>
 
-  <InjectionStim specieID="cAMP" injectionSite="pointA">
-        <onset>               1000          </onset>
-        <duration>            100         </duration> 
-        <rate>                3200         </rate>
 
-  </InjectionStim>
 
 <InjectionStim specieID="buff" injectionSite="pointA">
         <onset>               1100         </onset>
