@@ -1,5 +1,5 @@
 
-increase  PP1 concentration to see if it it stays bistable too
+Keep high PP1 and Ip3 and add  to see if it it stays bistable too
 
 
 1. add PP1 inhibitor rxn, and [Ip35]=500 nm 
@@ -18,7 +18,36 @@ Result:
 CamKII doest comes back to basal after Ca out
 
 Conclusion:
-the amount of pp1 may play a role in bistability 
+Even with high pp1, we cannot get rid of the bistability
 
 Next step:
-Try using PP1 inhibitor along with 2000 nm PP1
+Try using Ng binding to Cam to compete with camkII 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
