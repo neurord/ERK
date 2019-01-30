@@ -11,11 +11,11 @@ import h5py as h5
 
 
 #parameters
-input_filename='IC_FILE.xml'
-h5filename='Model_FILE.h5'
+input_filename='IC_ERK-Test.xml'
+h5filename='Model_ERKNgCam-OldCam.h5'
 
 #time args
-time_args="  "
+time_args="1700 1800"
 
 
 
@@ -68,7 +68,7 @@ def get_mol_index(simData,outputset,molecule):
 
 #automatically name the output file
 input_name=os.path.split(input_filename)[-1]
-outfile=input_name.split('.')[0]+'_basal3.xml'
+outfile=input_name.split('.')[0]+'_basal.xml'
 
 #1 get list of molecules
 data=h5.File(h5filename,"r")

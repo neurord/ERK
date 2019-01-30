@@ -16,10 +16,11 @@ try to suck up the Cam by adding neurogranin
 
 
 Result:
-CamKII doest comes back to basal after Ca out
+CamKII does come back to basal after Ca out
 
 Conclusion:
-Even with high pp1, we cannot get rid of the bistability
+Bistability was removed with Ng???? 
+then we might not get enough RasGRF activity because Cam-Ng
 
 Next step:
-Try using Ng binding to Cam to compete with camkII 
+Try adding NgCam already bound in order to give a pool of Cam for GRF

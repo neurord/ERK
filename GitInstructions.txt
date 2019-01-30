@@ -38,7 +38,7 @@ git branch -a -> to show both remote and local
 
 git show branchname:filename -> to show the filename
 git show branchname:filename > filenm will create a local copy, then you can copy stuff to a different branch
-git checkout branchname --filename will overout/replace filename - easier, but less safe if you only want some things updated
+git checkout branchname --filename will overout/replace filename - easier, but less safe if you only want some things updatedg
 git merge branchname - will replace all files from branch into your master branch - more automatic, but more dangerous.  best to commit or stash your changes first
 
 then, to swich between branches (say you want to work on different branches0
@@ -74,3 +74,13 @@ git stash apply or git pop
 git stash drop - clears the last stash
 
 wget url to download just a single file
+
+
+##############################
+git commit file
+press enter
+write msg
+press esc
+:
+type wq
+press enter

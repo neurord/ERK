@@ -4,6 +4,7 @@
 
   <InjectionStim specieID="cAMP" injectionSite="pointA">
         <onset>               1000          </onset>
+<<<<<<< HEAD
         <duration>            100         </duration> 
         <rate>                3200         </rate>
 
@@ -20,13 +21,32 @@
         <onset>               1100         </onset>
         <duration>            100         </duration> 
         <rate>                3000          </rate>
+=======
+        <duration>            1000         </duration> 
+        <rate>                200         </rate>
+
+  </InjectionStim>
+
+
+
+<InjectionStim specieID="buff" injectionSite="pointA">
+        <onset>               3000         </onset>
+        <duration>            1000         </duration> 
+        <rate>                140          </rate>
+>>>>>>> 73cc2669fe2ccc8894aab57c82892f6db2402aaa
 
 </InjectionStim>
 
 <InjectionStim specieID="buffslow" injectionSite="pointA">
+<<<<<<< HEAD
         <onset>               1100         </onset>
         <duration>            100         </duration> 
        <rate>                200          </rate>
+=======
+        <onset>               3000         </onset>
+        <duration>            1000         </duration> 
+        <rate>                60          </rate>
+>>>>>>> 73cc2669fe2ccc8894aab57c82892f6db2402aaa
 
 </InjectionStim>
 </StimulationSet> 

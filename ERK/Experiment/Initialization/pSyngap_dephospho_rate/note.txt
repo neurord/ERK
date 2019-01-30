@@ -1,7 +1,0 @@
-added psyn dispersion
-
-Kf=Kb= 0.016
-
-Change pSyngap dephospho from 0.1 to 1 because all was being phospho and no Syngap left
-
-
