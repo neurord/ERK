@@ -56,8 +56,11 @@ phosphatase reactions take from revision of Gs to improve Ca dep dphos of Dp32--
 <Specie name="Rap1GTPGAP"                          id="Rap1GTPGAP"            kdiff="0"     kdiffunit="mu2/s"/>
 <Specie name="SynGap"                              id="SynGap"                kdiff="0"     kdiffunit="mu2/s"/>
 <Specie name="pSynGap"                             id="pSynGap"               kdiff="0"     kdiffunit="mu2/s"/>
+<<<<<<< HEAD
 <Specie name="pSynden"                             id="pSynden"               kdiff="0"     kdiffunit="mu2/s"/>
 
+=======
+>>>>>>> 73cc2669fe2ccc8894aab57c82892f6db2402aaa
 <Specie name="CK"                                  id="CK"                    kdiff="0"     kdiffunit="mu2/s"/>
 <Specie name="CKp"                                 id="CKp"                   kdiff="0"     kdiffunit="mu2/s"/>
 <Specie name="CamCa4"                              id="CamCa4"                kdiff="0"     kdiffunit="mu2/s"/>
@@ -67,12 +70,15 @@ phosphatase reactions take from revision of Gs to improve Ca dep dphos of Dp32--
 <Specie name="PP1"                                 id="PP1"               kdiff="0"    kdiffunit="mu2/s"/>
 <Specie name="CKpPP1"                              id="CKpPP1"            kdiff="0"    kdiffunit="mu2/s"/>
 <Specie name="CKpCamCa4PP1"                        id="CKpCamCa4PP1"      kdiff="0"    kdiffunit="mu2/s"/>
+<<<<<<< HEAD
 
 <Specie name="Ip35"                                 id="Ip35"               kdiff="0"    kdiffunit="mu2/s"/>
 <Specie name="Ip35PP1"                              id="Ip35PP1"            kdiff="0"    kdiffunit="mu2/s"/>
 <Specie name="Ng"                                 id="Ng"                   kdiff="0"     kdiffunit="mu2/s"/>
 <Specie name="NgCam"                              id="NgCam"                kdiff="0"     kdiffunit="mu2/s"/>
 
+=======
+>>>>>>> 73cc2669fe2ccc8894aab57c82892f6db2402aaa
 <Specie name="Gbg" id="Gbg"                                               kdiff="0"    kdiffunit="mu2/s"/>
 <Specie name="Gbgext" id="Gbgext"                                               kdiff="0"    kdiffunit="mu2/s"/>
 <Specie name="Gbuff" id="Gbuff"                                               kdiff="0"    kdiffunit="mu2/s"/>
@@ -475,8 +481,13 @@ phosphatase reactions take from revision of Gs to improve Ca dep dphos of Dp32--
   <Reactant specieID="Rap1GAP" />
   <Product specieID="Rap1GTPGAP" />
 
+<<<<<<< HEAD
+  <forwardRate> 0.02e-3 </forwardRate>
+  <reverseRate> 2000e-3 </reverseRate>
+=======
   <forwardRate> 0.2e-3 </forwardRate>
   <reverseRate> 200e-3 </reverseRate>
+>>>>>>> 73cc2669fe2ccc8894aab57c82892f6db2402aaa
 
 </Reaction>
 
@@ -497,9 +508,9 @@ phosphatase reactions take from revision of Gs to improve Ca dep dphos of Dp32--
   <Reactant specieID="SynGap" />
   <Product specieID="Rap1Gap" />
 
-  <forwardRate> 4.43e-6 </forwardRate>
-  <reverseRate> 3.95e-5 </reverseRate>
-  
+  <forwardRate> 0.0105556e-3 </forwardRate>
+  <reverseRate> 15.2e-3 </reverseRate>
+
 </Reaction>
 
 <Reaction name = "Rap1Gap--SynGap+Rap1GDP" id = "Rap1Gap--SynGap+Rap1GDP">
@@ -507,8 +518,8 @@ phosphatase reactions take from revision of Gs to improve Ca dep dphos of Dp32--
   <Product specieID="SynGap" />
   <Product specieID="Rap1GDP" />
 
- <forwardRate> 9.87e-6 </forwardRate>
-  <reverseRate>0</reverseRate>
+  <forwardRate> 3.8e-3 </forwardRate>
+  <reverseRate>  0  </reverseRate>
 
 </Reaction>
 
@@ -518,10 +529,10 @@ phosphatase reactions take from revision of Gs to improve Ca dep dphos of Dp32--
   <Reactant specieID="Rap1GTP" />
   <Reactant specieID="pSynGap" />
   <Product specieID="Rap1pGap"/>
-  
- <forwardRate> 4.39e-3 </forwardRate>
-  <reverseRate> 4.49e-4 </reverseRate>
- 
+
+  <forwardRate> 0.0131667e-3 </forwardRate>
+  <reverseRate> 18.96e-3 </reverseRate>
+
 </Reaction>
 
 <Reaction name = "Rap1pGap--pSynGap+Rap1GDP" id = "Rap1pGap--pSynGap+Rap1GDP">
@@ -529,20 +540,25 @@ phosphatase reactions take from revision of Gs to improve Ca dep dphos of Dp32--
   <Product specieID="pSynGap" />
   <Product specieID="Rap1GDP" />
 
-   <forwardRate> 1.12e-4 </forwardRate>
-  <reverseRate> 0 </reverseRate>
+  <forwardRate> 4.74e-3 </forwardRate>
+  <reverseRate> 0   </reverseRate>
 
 </Reaction>
 
  <!-- (Phosphorylation of SynGAP by CaMKII) CKpCamCa4+SynGap <-> CKpCamCa4Gap -> CKpCamCa4+pSynGap -->
     
-  <Reaction name = "CKpCamCa4+SynGap--CKpCamCa4Gap" id="CKpCamCa4+SynGap--CKpCamCa4Gap">
+ <Reaction name = "CKpCamCa4+SynGap--CKpCamCa4Gap" id="CKpCamCa4+SynGap--CKpCamCa4Gap">
   <Reactant specieID="CKpCamCa4" />
   <Reactant specieID="SynGap" />
   <Product specieID="CKpCamCa4Gap" />
 
+<<<<<<< HEAD
   <forwardRate> 0.3067258192987457e-3</forwardRate>
   <reverseRate> 0.058715155531797236 </reverseRate>
+=======
+  <forwardRate> 0.44939e-3</forwardRate>
+  <reverseRate> 0.052462</reverseRate>
+>>>>>>> 73cc2669fe2ccc8894aab57c82892f6db2402aaa
 
  </Reaction>
 
@@ -551,6 +567,7 @@ phosphatase reactions take from revision of Gs to improve Ca dep dphos of Dp32--
   <Product specieID="pSynGap" />
   <Product specieID="CKpCamCa4" />
 
+<<<<<<< HEAD
   <forwardRate> 0.0006484330410680531</forwardRate>
   <reverseRate> 0 </reverseRate>
 
@@ -566,15 +583,32 @@ phosphatase reactions take from revision of Gs to improve Ca dep dphos of Dp32--
 </Reaction>
 
   <!-- inactivation of pSynGAP) pSynGap -> SynGap -->
+=======
+  <forwardRate> 0.99894e-3</forwardRate>
+  <reverseRate> 0 </reverseRate>
+
+ </Reaction>
+
+  
+<!-- (inactivation of pSyngap) pSynGap -> SynGap -->
+>>>>>>> 73cc2669fe2ccc8894aab57c82892f6db2402aaa
 <Reaction name ="pSynGap--SynGap" id="pSynGap--SynGap">
 	  <Reactant specieID="pSynGap"/>
 	  <Product specieID="SynGap"/>
 
-        <forwardRate> 0.1e-3 </forwardRate>
+<<<<<<< HEAD
+        <forwardRate> 1e-3 </forwardRate>
 	<reverseRate> 0 </reverseRate>
     </Reaction>
   
 	  		    
+=======
+        <forwardRate> 0.1e-3 </forwardRate>
+	<reverseRate> 0 </reverseRate>
+    </Reaction>
+	  
+		    
+>>>>>>> 73cc2669fe2ccc8894aab57c82892f6db2402aaa
 <!-- ******* PKA from Asia Hippo Model ********* -->     
     <!--1) PKA + 2camp <-> PKAcAMP2 -->
     <Reaction name = "PKA_bind" id="PKA_bind">
@@ -892,6 +926,7 @@ phosphatase reactions take from revision of Gs to improve Ca dep dphos of Dp32--
 	<reverseRate> 0 </reverseRate>
     </Reaction>
 
+<<<<<<< HEAD
 
     <!-- PP1 inhibitor -->
     
@@ -922,6 +957,8 @@ phosphatase reactions take from revision of Gs to improve Ca dep dphos of Dp32--
 
 
     
+=======
+>>>>>>> 73cc2669fe2ccc8894aab57c82892f6db2402aaa
     <!--MAPKK ACTIVATION BY Raf1RasGTP-->
     
 <!--(MAPKK phos by Raf1RasGTP) MAPKK + Raf1RasGTP <-> Raf1RasGTPMAPKK <-> pMAPKK + Raf1RasGTP-->
@@ -1227,8 +1264,13 @@ phosphatase reactions take from revision of Gs to improve Ca dep dphos of Dp32--
         <Reactant specieID="pSos"           />
         <Product  specieID="Sos"               />
 
+<<<<<<< HEAD
         <forwardRate> 0.01e-3   </forwardRate>
         <reverseRate> 0  </reverseRate>
+=======
+        <forwardRate> 0.001e-3   </forwardRate>
+        <reverseRate> 0.1e-3  </reverseRate>
+>>>>>>> 73cc2669fe2ccc8894aab57c82892f6db2402aaa
    
     </Reaction> 
     <!--Syngap activity on Ras -->
@@ -1240,8 +1282,8 @@ phosphatase reactions take from revision of Gs to improve Ca dep dphos of Dp32--
   <Reactant specieID="SynGap" />
   <Product specieID="RasGap" />
 
- <forwardRate>1.3636564890477755e-07 </forwardRate>
-  <reverseRate>2.385323837260018e-06   </reverseRate>
+  <forwardRate> 0.0009375e-3 </forwardRate>
+  <reverseRate> 0.48e-3  </reverseRate>
 
 </Reaction>
 
@@ -1250,8 +1292,8 @@ phosphatase reactions take from revision of Gs to improve Ca dep dphos of Dp32--
   <Product specieID="SynGap" />
   <Product specieID="RasGDP" />
 
- <forwardRate> 2.013728886604505e-06 </forwardRate>
-  <reverseRate>0</reverseRate>
+  <forwardRate> 0.12e-3    </forwardRate>
+  <reverseRate>  0  </reverseRate>
 
 </Reaction>
 
@@ -1261,9 +1303,9 @@ phosphatase reactions take from revision of Gs to improve Ca dep dphos of Dp32--
   <Reactant specieID="RasGTP" />
   <Reactant specieID="pSynGap" />
   <Product specieID="RaspGap" />
-  
-  <forwardRate> 9.93503583897884e-06 </forwardRate>
-  <reverseRate>4.392936888332602e-06  </reverseRate>
+
+  <forwardRate> 0.0084375e-3 </forwardRate>
+  <reverseRate> 4.32e-3 </reverseRate>
 
 </Reaction>
 
@@ -1272,8 +1314,8 @@ phosphatase reactions take from revision of Gs to improve Ca dep dphos of Dp32--
   <Product specieID="pSynGap" />
   <Product specieID="RasGDP" />
 
-  <forwardRate> 2.041581887595946e-05 </forwardRate>
-  <reverseRate>0 </reverseRate>
+  <forwardRate> 1.08e-3  </forwardRate>
+  <reverseRate> 0  </reverseRate>
 
 </Reaction>
 

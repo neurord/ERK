@@ -75,8 +75,11 @@
 
 <OutputSpecie name="SynGap"/>
 <OutputSpecie name="pSynGap"/>
+<<<<<<< HEAD
 <OutputSpecie name="pSynden"/>
 
+=======
+>>>>>>> 73cc2669fe2ccc8894aab57c82892f6db2402aaa
 <OutputSpecie name="CK"/>
 <OutputSpecie name="CKp"/>
 <OutputSpecie name="CamCa4"/>
@@ -87,11 +90,14 @@
 <OutputSpecie name="CKpPP1"/>
 <OutputSpecie name="CKpCamCa4PP1"/>
 
+<<<<<<< HEAD
 <OutputSpecie name="Ip35"/>
 <OutputSpecie name="Ip35PP1"/>
 <OutputSpecie name="Ng"/>
 <OutputSpecie name="NgCam"/>
 
+=======
+>>>>>>> 73cc2669fe2ccc8894aab57c82892f6db2402aaa
 <OutputSpecie name="Gbg"/>
 <OutputSpecie name="Gbgext"/>
 <OutputSpecie name="Gbuff"/>
