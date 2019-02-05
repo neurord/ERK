@@ -93,11 +93,8 @@
 <OutputSpecie name="NgCam"/>
 
 <OutputSpecie name="Gbg"/>
-<OutputSpecie name="Gbgext"/>
 <OutputSpecie name="Gbuff"/>
 <OutputSpecie name="Gbgbuff"/>
-<OutputSpecie name="Gbuffslow"/>
-<OutputSpecie name="Gbgextbuffslow"/>
 <OutputSpecie name="SrcGbg"/>
 <OutputSpecie name="Shc"/>
 <OutputSpecie name="pShc"/>
@@ -105,7 +102,8 @@
 <OutputSpecie name="Sos"/>
 <OutputSpecie name="pSos"/>
 <OutputSpecie name="Grb2Sos"/>
-<OutputSpecie name="ppERKGrb2Sos"/>
+<OutputSpecie name="ppERKpShcGrb2Sos"/>
+<OutputSpecie name="pShcGrb2"/>
 <OutputSpecie name="SrcGbgShc"/>
 <OutputSpecie name="pShcGrb2Sos"/>
 <OutputSpecie name="pShcGrb2SosRasGDP"/>
