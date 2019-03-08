@@ -1,0 +1,24 @@
+check old Cam model to see if it was bistable too
+
+
+1. copy Cam data from neuroRD_fit, for Cam old (have Complex) into the ERK model
+
+2. run the simulation for an hour
+
+3. copy new IC (IC_ERK-Test_basal)
+
+4. Stimulate the model with new IC file
+
+(bistability was seen when added 100nm of Ca for a duration of 1000s)
+(used the same data which are rate of 75 for a duration of 800000ms)
+
+
+Result:
+CamKII comes back to basal after Ca out
+
+Conclusion:
+the old model is not bistable
+
+Next step:
+why the new one is then bistable?
+Try old pp1 rate to see if different

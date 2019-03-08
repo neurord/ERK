@@ -1,0 +1,34 @@
+fix syngap activity
+
+used new article (pena et al. 2008) to get syngap data
+
+runned with previous concentrations
+ low activity of SynGap
+********************
+try with [rasGap]=[rap1Gap]=0
+SynGap activity is pretty low..
+*****************
+increase [Syngap]=1000
+
+looks better
+******************
+keep SynGap
+and went to old epac rate
+reduce pp2A=450 (from 800)
+epac activity is high
+********************
+decrease epac afinity by increasing the kb rate to 9.6e-3 again...
+ MEKis still a bit high (about 70 pMEK and 10 ppMEK)
+
+*********************
+add RasGAP and Rap1GAP amd keep [PP2A]=450 nm
+:::Model_ERKbasal-PP2A450-Gapadd
+
+RasGAP and Rap1GAP amd keep [PP2A]=550
+::::Model_ERKbasal-PP2A550
+
+
+adding the classical Gap does not really affect (great)
+
+lower PP2A is causing an high ppMEK
+550 nm is better
