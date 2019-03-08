@@ -1,0 +1,9 @@
+see the effect of Syngap in model validation (high gap activity maybe???)
+
+used data from bhalla folder (no init Gbg)
+
+_zero Syngap or pSyngap activity towards ras and rap
+_allowed Syngap binding to CamkII (or else lot of cam available to RasGRF, nope)
+
+
+
