@@ -5,8 +5,8 @@
 <!--firts injection to reach desire concentration -->
   <InjectionStim specieID="cAMP" injectionSite="pointA">
         <onset>               0          </onset>
-        <duration>           25000         </duration> 
-        <rate>                 5       </rate>
+        <duration>           18000         </duration> 
+        <rate>                 3.5       </rate>
 
   </InjectionStim>
 
@@ -15,7 +15,7 @@
 <InjectionStim specieID="cAMP" injectionSite="pointA">
         <onset>               18050          </onset>
         <duration>            18000         </duration> 
-        <rate>                 0     </rate>
+        <rate>                 1     </rate>
 
   </InjectionStim>
 
@@ -50,16 +50,14 @@
         <duration>            18000         </duration> 
         <rate>                0    </rate>
 
-</InjectionStim>
-
-
+  </InjectionStim>
 
 <!--Buffer injection to bring back molecules to basal concentration -->
   
 <InjectionStim specieID="buff" injectionSite="pointA">
         <onset>               40000         </onset>
-        <duration>           25000         </duration> 
-        <rate>               2          </rate>
+        <duration>           18000         </duration> 
+        <rate>               3          </rate>
 
 </InjectionStim>
 
@@ -67,9 +65,9 @@
 
 
 <InjectionStim specieID="buffslow" injectionSite="pointA">
-        <onset>               40000         </onset>
-        <duration>            25000         </duration> 
-        <rate>                3        </rate>
+        <onset>               50000         </onset>
+        <duration>            18000         </duration> 
+        <rate>                1.5        </rate>
 
 
       </InjectionStim>

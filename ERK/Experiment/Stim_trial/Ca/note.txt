@@ -1,0 +1,20 @@
+stim inject Ca
+NB: CamKII enhance ERK activity through Raf1 but inhibit ERK activity through SynGap
+
+
+
+1. see effect of [Ca]=100nm for different set of duration time (temporal effect)
+
+
+
+inject rate of ### for #### ms to get about 100 nm for a duration of 50s
+
+
+
+
+Result:
+
+
+
+ARGS="Model_ERKCa,C100 d,Ca pSynGap CamCa4GRF Rap1Gap Rap1pGap RasGap RaspGap RasGTP bRafRas Raf1Ras Rap1GTP bRafRap1 Raf1Rap1 ppMEK pERK ppERK EpacRap1 CRKC3GpCbl,0 600"
+

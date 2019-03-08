@@ -68,10 +68,10 @@
 <OutputSpecie name="CRKC3GpCbl"/>
 <OutputSpecie name="CRKC3GpCblRap1"/>
 
-<OutputSpecie name="Rap1SynGap"/>
-<OutputSpecie name="rap1Gap"/>
-<OutputSpecie name="Rap1GTPGap"/>
-<OutputSpecie name="Rap1pSynGap"/>
+<OutputSpecie name="Rap1Gap"/>
+<OutputSpecie name="Rap1GAP"/>
+<OutputSpecie name="Rap1GTPGAP"/>
+<OutputSpecie name="Rap1pGap"/>
 
 <OutputSpecie name="SynGap"/>
 <OutputSpecie name="pSynGap"/>
@@ -82,7 +82,7 @@
 <OutputSpecie name="CamCa4"/>
 <OutputSpecie name="CKCamCa4"/>
 <OutputSpecie name="CKpCamCa4"/>
-<OutputSpecie name="CKpCamCa4SynGap"/>
+<OutputSpecie name="CKpCamCa4Gap"/>
 <OutputSpecie name="PP1"/>
 <OutputSpecie name="CKpPP1"/>
 <OutputSpecie name="CKpCamCa4PP1"/>
@@ -106,27 +106,25 @@
 <OutputSpecie name="pShcGrb2"/>
 <OutputSpecie name="SrcGbgShc"/>
 <OutputSpecie name="pShcGrb2Sos"/>
-<OutputSpecie name="pShcGrb2SosRas"/>
+<OutputSpecie name="pShcGrb2SosRasGDP"/>
 
 <OutputSpecie name="RasGRF"/>
 <OutputSpecie name="CamCa4GRF"/>
-<OutputSpecie name="CamCa4GRFRas"/>
+<OutputSpecie name="CamCa4GRFRasGDP"/>
 
-<OutputSpecie name="dRaf1RasMEK"/>
-<OutputSpecie name="dRaf1RaspMEK"/>
-<OutputSpecie name="dRaf1Ras"/>
+<OutputSpecie name="Raf1RasMEK"/>
+<OutputSpecie name="Raf1RaspMEK"/>
 <OutputSpecie name="Raf1Ras"/>
 <OutputSpecie name="Raf1"/>
-
 <OutputSpecie name="bRafRas"/>
 <OutputSpecie name="bRafRasMEK"/>
 <OutputSpecie name="bRafRaspMEK"/>
 <OutputSpecie name="RasGTP"/>
 <OutputSpecie name="RasGDP"/>
-<OutputSpecie name="RasSynGap"/>
-<OutputSpecie name="rasGap"/>
-<OutputSpecie name="RasGTPGap"/>
-<OutputSpecie name="RaspSynGap"/>
+<OutputSpecie name="RasGap"/>
+<OutputSpecie name="RasGAP"/>
+<OutputSpecie name="RasGTPGAP"/>
+<OutputSpecie name="RaspGap"/>
 
 <OutputSpecie name="Ca"/>
 <OutputSpecie name="Caext"/>

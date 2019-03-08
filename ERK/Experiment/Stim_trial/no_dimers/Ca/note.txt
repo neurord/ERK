@@ -1,0 +1,36 @@
+stim inject Ca
+NB: CamKII enhance ERK activity through Raf1 but inhibit ERK activity through SynGap
+
+
+
+1. see effect of [Ca]=100nm for different set of duration time (temporal effect)
+
+
+
+inject rate of 245 for 10000ms to get about 100 nm for a duration of 50s
+
+inject rate of 100 for 65000ms to get about 100 nm for a duration for 100s
+
+inject rate of 95 for 300000ms to get about 100 nm for a duration for 500s
+
+
+
+Result:
+enough RasGRF for Cam to bind ( because we added NgCam to contribute)
+overall: degradtion of ppERK by a fold
+because RaP1GTP is being degraded because of pSynGap activity.
+There is no change for RasGTP but toward the end of the 500s RasGTP was starting to get a little higher
+
+
+EpacRap1 in increasing while CRKC3GpCbl is decreasing?????
+does Epac contribute more than PKA route?????
+
+
+I believe that the Rap1 pathway contribute more than the Ras pathway to ERK 
+
+
+
+
+
+ARGS="Model_ERKCa,C100 d,Ca pSynGap CamCa4GRF Rap1Gap Rap1pGap RasGap RaspGap RasGTP bRafRas Raf1Ras Rap1GTP bRafRap1 Raf1Rap1 ppMEK pERK ppERK EpacRap1 CRKC3GpCbl,0 600"
+
