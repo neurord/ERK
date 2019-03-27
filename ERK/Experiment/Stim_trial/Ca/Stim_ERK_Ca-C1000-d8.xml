@@ -17,16 +17,16 @@
 
 <InjectionStim specieID="Cbuff" injectionSite="pointA">
 
-    <onset>               10900          </onset>
+    <onset>               8900          </onset>
         <duration>        50         </duration> 
      	<rate>            330000          </rate>
    </InjectionStim>
 
  <InjectionStim specieID="ext" injectionSite="pointA">
 
-    <onset>               11000          </onset>
+    <onset>               9000          </onset>
         <duration>        350        </duration> 
-	<rate>              34000       </rate>
+	<rate>              32000       </rate>
       </InjectionStim>
 
 

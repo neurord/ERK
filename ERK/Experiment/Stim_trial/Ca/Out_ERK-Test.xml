@@ -17,11 +17,19 @@
     So the "io file" will be dependent on information stated in the
     "morph" (regions) and "model" (dt).
 -->
-<!-- how do you choose the dt -->
+<!-- Res stands for Resolution-->
 
-<OutputSet filename = "all"  dt="20.0">
+<OutputSet filename = "highRes"  dt="20.0">
+  <OutputSpecie name="Ca"/>
+   
+   <OutputSpecie name="cAMP"/>
+   <OutputSpecie name="ext"/>
+  
+  </OutputSet>
+  
 
-
+  <OutputSet filename = "lowRes"  dt="100.0">
+    <OutputSpecie name="Cbuff"/>
 <OutputSpecie name="ERK"/>
 <OutputSpecie name="pERK"/>
 <OutputSpecie name="ppERK"/>
@@ -45,7 +53,7 @@
 <OutputSpecie name="Rap1GDP"/>
 <OutputSpecie name="Epac"/>
 <OutputSpecie name="EpacRap1"/>
-<OutputSpecie name="cAMP"/>
+
 <OutputSpecie name="cAMPext"/>
 <OutputSpecie name="buff"/>
 <OutputSpecie name="cAMPbuff"/>
@@ -118,6 +126,11 @@
 <OutputSpecie name="Raf1Ras"/>
 <OutputSpecie name="Raf1"/>
 
+
+<OutputSpecie name="dRaf1bRafMEK"/>
+<OutputSpecie name="dRaf1bRafpMEK"/>
+<OutputSpecie name="dRaf1bRaf"/>
+
 <OutputSpecie name="bRafRas"/>
 <OutputSpecie name="bRafRasMEK"/>
 <OutputSpecie name="bRafRaspMEK"/>
@@ -128,7 +141,7 @@
 <OutputSpecie name="RasGTPGap"/>
 <OutputSpecie name="RaspSynGap"/>
 
-<OutputSpecie name="Ca"/>
+
 <OutputSpecie name="Caext"/>
 <OutputSpecie name="CaextLeak"/>
 <OutputSpecie name="Leak"/>
