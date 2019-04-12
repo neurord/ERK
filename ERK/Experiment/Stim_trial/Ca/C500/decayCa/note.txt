@@ -1,0 +1,11 @@
+how does Ca impact the pathway and production of ERK
+
+_Inject a certain amount of Ca and let it sit for different set of time (decay)
+
+
+_have a plateau because of CamKIi effect
+_competition between Rap and Ras is observed????????????
+   
+
+_shift from basal after buff because of compex dissociation
+_when sustained ERK or SynGap, dissociation becomes slower 
