@@ -23,14 +23,14 @@
   <OutputSpecie name="Ca"/>
    
    <OutputSpecie name="cAMP"/>
-   <OutputSpecie name="ext"/>
+  
   
   </OutputSet>
   
 
   <OutputSet filename = "lowRes"  dt="100.0">
-<OutputSpecie name="Cbuff"/>
-    <OutputSpecie name="out"/>
+    <OutputSpecie name="Cbuff"/>
+    <OutputSpecie name="Cbuffslow"/>
 <OutputSpecie name="ERK"/>
 <OutputSpecie name="pERK"/>
 <OutputSpecie name="ppERK"/>

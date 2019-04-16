@@ -41,12 +41,7 @@ phosphatase reactions take from revision of Gs to improve Ca dep dphos of Dp32--
 
 <Specie name="cAMP"                                id="cAMP"                kdiff="86.4"    kdiffunit="mu2/s"/>
 <Specie name="cAMPext"                                id="cAMPext"                kdiff="0"    kdiffunit="mu2/s"/>
-
 <Specie name="buff"                                id="buff"                kdiff="86.4"    kdiffunit="mu2/s"/>
-<Specie name="out"                                id="out"                kdiff="86.4"    kdiffunit="mu2/s"/>
-<Specie name="buffout"                                id="buffout"                kdiff="86.4"    kdiffunit="mu2/s"/>
-
-
 <Specie name="buffslow"                                id="buffslow"                kdiff="86.4"    kdiffunit="mu2/s"/>
 <Specie name="cAMPbuff"                                id="cAMPbuff"                kdiff="86.4"    kdiffunit="mu2/s"/>
 <Specie name="cAMPextbuffslow"                                id="cAMPextbuffslow"                kdiff="86.4"    kdiffunit="mu2/s"/>
@@ -152,8 +147,8 @@ phosphatase reactions take from revision of Gs to improve Ca dep dphos of Dp32--
 
 <Specie name="Cabuff"                id="Cabuff"                kdiff="174.3" kdiffunit="mu2/s"/>
 <Specie name="Cbuff"                id="Cbuff"                kdiff="174.3" kdiffunit="mu2/s"/>
-<Specie name="extbuff"                id="extbuff"                kdiff="174.3" kdiffunit="mu2/s"/>
-<Specie name="ext"                id="ext"                kdiff="174.3" kdiffunit="mu2/s"/>
+<Specie name="Cbuffslow"                id="Cbuffslow"                kdiff="174.3" kdiffunit="mu2/s"/>
+<Specie name="Caextbuffslow"                id="Caextbuffslow"                kdiff="174.3" kdiffunit="mu2/s"/>
 
 
 <!-- CaM from Gq files, with either C or N site binding first -->
@@ -669,20 +664,6 @@ phosphatase reactions take from revision of Gs to improve Ca dep dphos of Dp32--
 	<reverseRate> 0 </reverseRate>
 </Reaction>
 
-<!-- remove exess buff  -->
-<Reaction name ="cAMP+buff--cAMPbuff" id="cAMP+buff--cAMPbuff">
-              <Reactant specieID="out"/>
-              <Reactant specieID="buff"/>
-	      <Product specieID="buffout"/>
-
-<forwardRate> 0.1e-3 </forwardRate>
-<reverseRate> 0 </reverseRate>
-
-</Reaction>
-
-
-
-
 <!-- Inactivation of cAMPext -->
 <Reaction name ="cAMPext+buffslow--cAMPextbuffslow" id="cAMPext+cAMPbuffslow--cAMPbuffslow">
               <Reactant specieID="cAMPext"/>
@@ -701,17 +682,17 @@ phosphatase reactions take from revision of Gs to improve Ca dep dphos of Dp32--
               <Reactant specieID="Cbuff"/>
 	      <Product specieID="Cabuff"/>
 
-        <forwardRate> 0.01e-3 </forwardRate>
+        <forwardRate> 0.1e-3 </forwardRate>
 	<reverseRate> 0 </reverseRate>
 </Reaction>
 
 <!-- remove exess buff  -->
-<Reaction name ="ext+cbuff--cabuff" id="ca+cbuff--cabuff">
-              <Reactant specieID="ext"/>
-              <Reactant specieID="Cbuff"/>
-	      <Product specieID="extbuff"/>
+<Reaction name ="Cbuffslow+Caext--ext" id="Cbuffslow+Caext--ext">
+              <Reactant specieID="Cbuffslow"/>
+              <Reactant specieID="Caext"/>
+	      <Product specieID="Caextbuffslow"/>
 
-        <forwardRate> 0.1e-3 </forwardRate>
+        <forwardRate> 0.001e-3 </forwardRate>
 	<reverseRate> 0 </reverseRate>
 </Reaction>
 

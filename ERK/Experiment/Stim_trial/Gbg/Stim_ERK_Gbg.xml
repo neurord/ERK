@@ -11,13 +11,18 @@
 </InjectionStim>
 
 
+<InjectionStim specieID="Gbg" injectionSite="pointA">
+        <onset>               1850          </onset>
+        <duration>            800         </duration> 
+        <rate>               0.05           </rate>
+</InjectionStim>
 
 
 
  <InjectionStim specieID="Gbuff" injectionSite="pointA">
-        <onset>               7900          </onset>
+        <onset>               109850          </onset>
         <duration>            150         </duration> 
-        <rate>                80            </rate>
+        <rate>                500            </rate>
  </InjectionStim>
  
 </StimulationSet> 
