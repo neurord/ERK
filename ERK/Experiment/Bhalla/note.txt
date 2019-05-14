@@ -1,0 +1,21 @@
+test model with bhalla protocol
+
+_no Gbg contribution
+_used one dimer IC and Rxn files from basal folder
+
+_ Injected Ca to get [Ca]= 2000nm for a sec
+_ Injected cAMP to get [cAMP]= 1000nm for a sec
+
+Runned for an hours and check data
+
+_fold_change of about 1.30 which is closer to experiment than Bhalla stim
+_ Have a plato almost like the Expemient which bhalla does not have
+
+Model is closer to exp than bhalla
+
+_why about 1.5 lower?
+_what is missing or higher???
+
+
+
+

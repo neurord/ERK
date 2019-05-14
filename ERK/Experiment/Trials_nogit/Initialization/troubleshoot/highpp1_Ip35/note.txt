@@ -1,0 +1,53 @@
+
+Keep high PP1 and Ip3 and add  to see if it it stays bistable too
+
+
+1. add PP1 inhibitor rxn, and [Ip35]=500 nm 
+
+2. run the simulation for an hour
+
+3. copy new IC (IC_ERK-Test_basal)
+
+4. Stimulate the model with new IC file
+
+(bistability was seen when added 100nm of Ca for a duration of 1000s)
+(used the same data which are rate of 75 for a duration of 800000ms)
+
+
+Result:
+CamKII doest comes back to basal after Ca out
+
+Conclusion:
+Even with high pp1, we cannot get rid of the bistability
+
+Next step:
+Try using Ng binding to Cam to compete with camkII 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

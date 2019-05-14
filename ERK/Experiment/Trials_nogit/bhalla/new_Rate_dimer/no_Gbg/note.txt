@@ -1,0 +1,34 @@
+test model with bhalla protocol
+
+_zero Gbg basal
+_stim with Ca and cAMP (CC) and Gbg (CCG)
+
+
+                    onset      dur     rate
+[Ca]=2000 nm        1000       500     44150
+Cbuff             1500       475     44150
+
+
+[cAMP]= 1000 nm   1000       500     500
+        buff        1500       380     390
+buffslow          0
+
+
+
+[Gbg]=5nm         1000       200     4
+ 0.25%                 1400       500     2
+
+
+
+[Gbg]=50nm         1000       200     40
+2.5%                  1400       500     16
+
+
+
+bhalla stim with 2000 nM of Ca.
+In his model Ca produce cAMP
+So to imitate his model, we injected 1000 nM of cAMP
+Ca also produce Gbg, we used 0.25% or 2.5% of the injected Ca for Gbg
+
+
+graph in folder.... 

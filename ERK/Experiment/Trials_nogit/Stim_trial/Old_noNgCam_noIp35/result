@@ -1,0 +1,5 @@
+ARGS="Model_ERKCa,R t,Ca pSynGap pSynden Cam CKpCamCa4 CamCa4GRF RasGTP RaspGap Rap1GTP Rap1pGap bRafRas Raf1Ras bRafRap1 Raf1Rap1 ppMEK pERK ppERK,0 600"
+  Ca result 
+
+C100 d 50, 100 and 1000 
+pSynGap RasGTP CKpCamCa4  RasGTP  bRafRas Raf1Ras  ppMEK     pERK       ppERK

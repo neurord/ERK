@@ -1,0 +1,26 @@
+3/8/2019
+
+Test why lost the constant part when stim using Bhalla data:
+
+_only change that I remenber making is the rate of the dimer binding
+
+_runned three simulations:
+
+1: Model_ERKbasal-R63 is where the rate are differents (first p is 0.6 and 2nd p is 0.3) (reverse cooperative) 
+
+2. Model_ERKbasal-R33: rates are the same (non-cooperative) 
+
+
+2. Model_ERKbasal-R36: (first p is 0.3 and 2nd p is 0.6) (cooperative)
+
+
+_ copy data with Update_IC
+_Stim with Stim_ERK_Bhalla (nogbg) 
+
+the constant part was not observed..
+
+*******************
+next step:
+rerun using old stim file (did in bat_trial) 
+
+

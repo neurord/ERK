@@ -1,0 +1,11 @@
+get basal concentration
+
+_run to get basal 
+_ set up 2 differents model files with different rxn files:
+   _1: Model_ERK-d.xml is used with only one dimer (dRaf1Ras)
+   _2: Model_ERK-dd.xml is used with two dimers (dRaf1Ras and dRaf1bRaf)
+_copy new IC
+
+
+Result:
+good basal

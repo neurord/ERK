@@ -1,6 +1,0 @@
-double the dimer (dRaf1Ras) rate
-
-_previous data, forgot to double the dimer rate (literature states that the dimer has more affinity than the mono)
-_here, double the kcat value for dimer activation of MEK
-_kept the same Km
-_higher RasGTP basal (contribute more)

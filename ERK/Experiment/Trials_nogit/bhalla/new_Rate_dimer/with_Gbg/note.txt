@@ -1,0 +1,12 @@
+test model validation with bhalla data
+
+_used data from initialisation/basal/withgbg
+_stim with Ca and cAMP (CC) and with Gbg(CCG)
+_ runned for an hour and checked
+
+Result:
+high level of gbg cause a depression of ERK
+maybe due to the negative feedback..
+
+
+try without the negative feedback and see if the same...............
