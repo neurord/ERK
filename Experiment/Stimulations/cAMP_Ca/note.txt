@@ -1,0 +1,13 @@
+Synergic activation of ERK by Ca and cAMP
+
+Method:
+_below and above threhold of Ca (Ca duration of 10 and 2 sec) 
+_below and above sustained ERK (cAMP duration of 500 and 10 sec)
+_ used regular IC basal and Rxn file from initiation file
+
+
+Result:(figures are in fig folder in same folder) 
+_sublinear activation of ERK: higher production of ERK than single but not addition
+_cAMP faster onset
+_Ca slow onset 
+_cAMP basal shift in dual input 

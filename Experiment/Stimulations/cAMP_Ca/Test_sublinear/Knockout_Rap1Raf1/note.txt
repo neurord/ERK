@@ -1,0 +1,19 @@
+Test synergic activation of ERK with Ca and cAMP by blocking Rap1GTP-Raf1 interaction; hypothesis ; competitive effect between Ras and Rap
+
+Method:
+_below and above threhold of Ca (Ca duration of 10 and 2 sec) 
+_below and above sustained ERK (cAMP duration of 500 and 10 sec)
+_ block Rap1 binding to Raf then run for basal
+
+
+Result:
+Same result as test itself
+     _sublinear activation of ERK: higher production of ERK than single but not addition
+     _cAMP faster onset
+     _Ca slow onset 
+     _cAMP basal shift in dual input
+_slighly higher than previous (about 2nM more or less) 
+
+
+Conclusion:
+competition between Ras and Rap do not affect the ERK activation even though a large amount is found in the inactive complex.
