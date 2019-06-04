@@ -1,0 +1,29 @@
+Hypothesis test 1:
+Is CamKII affinity to syngap high? Do we have an high amount of SynGap? 
+
+
+Method:
+_Use 100X rxn file
+_change SynGap conc to 500 or 700 or keep 1000 (original)
+_run for basal
+_stimulate with Stim_ERK_Ca-C500-d10
+
+
+Result:
+_Slight change in basal due to Syngap phosphorylation (not so significant, fig ModelCaSyn_Kb.png)
+_ Block then stim:
+  _Blue are Syn 1000:
+  when Cam SynGAp is blocked. ppERK stay at basal
+  _redish and black; Syn 700
+  higher basal ERK compare to Syn 1000
+  same fold change as Syn 1000
+  _greenish coler : Syn 500
+  diff in basal; pSynGap block have a low basal compare to control and pSynden
+  same fold change as syn 1000
+
+
+
+Conclusion:
+Kinetic of SynGap and CK inluence (is critical) ppERK amplitude and duration, not the amount of SynGap present 
+SynGap concentration is not the cause of sustained ERK.
+High kinetic is require for higher amplitude of ERK and keep it sustained above a Ca threhold

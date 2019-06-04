@@ -15,4 +15,4 @@ _Ras GTP goes up but comes below basal befor getting back to basal. due to synga
 
 Conclusion:
 Rap is the main contributor
-syngap is require for ERK activation in our model 
+autophoaphorylation of Ck and psyngap are require for ERK activation in our model
