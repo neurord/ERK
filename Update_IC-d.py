@@ -12,10 +12,10 @@ import h5py as h5
 
 #parameters
 input_filename='IC_ERK-Test.xml'
-h5filename='Model_ERK-d.h5'
+h5filename='Model_ERK-PDE2.h5'
 
 #time args
-time_args="3550 3600"
+time_args="3000 3500"
 
 #automatically name the output file
 input_name=os.path.split(input_filename)[-1]
