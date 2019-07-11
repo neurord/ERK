@@ -1,7 +1,8 @@
-##Change your parameters first
-##1. input your input_filename which is your IC_file.xml
-##2. input your h5filename which is you Model_file.h5
-##then specify your time in second (range of time that you want to get the baseline) 
+#in python, type ARGS="IC_file name,h5_file name ,sstart ssend" then execfile('path/to/file/Update_IC')
+##DO NOT PUT ANY SPACES NEXT TO THE COMMAS, DO NOT USE TABS
+#IC_file name is the exact name of the Initial condition file that you wish to update
+#h5_file name is the file that have the new data that you desire to use
+#sstart ssend are the time array you desire to avarage the data
 
 from lxml import etree
 from xml.etree import ElementTree as ET
@@ -10,17 +11,33 @@ import numpy as np
 import h5py as h5
 
 
-#parameters
-input_filename='IC_ERK-Test.xml'
-h5filename='Model_ERK-d.h5'
 
-#time args
-time_args="3550 3600"
+
+##################################################################
+#set up args
+try:
+    args = ARGS.split(",")
+    print("ARGS =", ARGS, "commandline=", args)
+    do_exit = False
+except NameError: #NameError refers to an undefined variable (in this case ARGS)
+    args = sys.argv[1:]
+    print("commandline =", args)
+    do_exit = True
+
+try:
+    data.close()
+except Exception:
+    pass
+
+    
+#define params file and time
+input_filename=args[0]
+h5filename=args[1]
+time_args=args[2]
 
 #automatically name the output file
 input_name=os.path.split(input_filename)[-1]
 outfile=input_name.split('.')[0]+'_basald.xml'
-
 
 
 
@@ -80,6 +97,7 @@ mol_per_nM_u3=Avogadro*1e-15 #0.6022 = PUVC
 
 
 #2 get mean concentration of every molecules in the list
+#define params
 trials=[a for a in data.keys() if 'trial' in a]
 arraysize=len(trials)
 outputsets=data[trials[0]]['output'].keys()
@@ -95,12 +113,12 @@ for mol in molecules:
     start_time=int(float(time_args.split(" ")[0])//dt[imol])
     end_time=int(float(time_args.split(" ")[1])//dt[imol])
     tempConc=np.zeros((len(trials),out_location[mol]['samples']))
-    tempConc=data[trials[0]]['output'][outset]['population'][:,voxel,imol]/TotVol/mol_per_nM_u3
+    tempConc=data[trials[0]]['output'][outset]['population'][:,voxel,imol]/TotVol/mol_per_nM_u3  
     molec_conc_ic[mol]=np.round(np.mean(tempConc[start_time:end_time,:]),3)
             
 
 #read in the xml file
-tree =ET.parse(input_filename)
+tree=ET.parse(input_filename)
 root=tree.getroot()
 for elem in root:
             if elem.tag=='ConcentrationSet':
