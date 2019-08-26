@@ -1,8 +1,0 @@
-
-
-#stimulate one dimer 
-
-java -jar /home/nadia/neurord-3.2.4-all-deps.jar -t 3600000 Model_ERK-stimd-C50-d10.xml Model_ERKcAMP-C60-d1min
-
-
-
