@@ -1,10 +1,10 @@
 Experiment robutness 
 
-1: swap new CamKII with old CamKII model: check if bistability is needed 
+1: swap new CamKII with old CamKII model: check if bistability is needed OR is fiffernce is observed becose of the rate that was tunes. Tune old model and see if it is the same. 
 
-2. increase pp1A concentration 
+2. increase ration of CamK to pp1  might influenc the bistability
 
-3.role of syngap dispersion but not allowing the pSyngap to disperse
+3.role of syngap dispersion by not allowing the pSyngap to disperse (done)
  
 4.adjust epac rate againt rap1 to see the effect
 
@@ -17,5 +17,8 @@ however, pCRaf being actif itself is not 100% sure
 
 8. swap with new PKA model 
 
+9. (similar to 4,5, and 6) chnage sensible molucles rate by + or -10%   and see output change
+
+10. Set o parameters we wna tto tune data and see if affect results 
 
 
