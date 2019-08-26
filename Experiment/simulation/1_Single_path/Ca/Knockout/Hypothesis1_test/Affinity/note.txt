@@ -1,0 +1,21 @@
+Hypothesis test 1:
+Is CamKII affinity to syngap high?
+
+Method:
+_increase Kb by 10X and 100X
+_run for basal
+_stimulate with Stim_ERK_Ca-C500-d10
+
+
+Result:
+_Still high level of Syngap bound to CK
+    _10X and 1X have the same quantity bound but different duration: 10X decay faster which is expected
+    _100X is about half bound
+
+
+_The amount and duration bound of syngap and CK dictate the amplitude and duration of ERK
+
+
+
+Conclusion:
+Kinetic of SynGap and CK inluence (is critical) ppERK amplitude and duration.

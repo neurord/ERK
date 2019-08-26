@@ -1,0 +1,44 @@
+<StimulationSet>
+
+<!--onset and duration in ms, rate in particles/ms-->
+
+<InjectionStim specieID="cAMP" injectionSite="pointA">
+        <onset>               11000          </onset>
+        <duration>        100         </duration> 
+       	<rate>               8200      </rate>
+   
+	
+</InjectionStim>
+
+
+
+ <InjectionStim specieID="cAMP" injectionSite="pointA">
+        <onset>               11100          </onset>
+        <duration>       900        </duration> 
+       	<rate>              500       </rate>
+   
+	
+</InjectionStim>
+
+
+
+<InjectionStim specieID="buff" injectionSite="pointA">
+
+    <onset>               12000          </onset>
+        <duration>        10         </duration> 
+     	<rate>            75900        </rate>
+   </InjectionStim>
+
+
+<InjectionStim specieID="buffslow" injectionSite="pointA">
+
+    <onset>               12000          </onset>
+    <duration>        10         </duration>
+    <rate>            0        </rate>
+    <!--rate>            51100        </rate-->
+   </InjectionStim>
+
+
+
+   
+</StimulationSet>

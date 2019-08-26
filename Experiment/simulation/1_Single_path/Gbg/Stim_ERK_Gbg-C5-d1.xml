@@ -1,0 +1,33 @@
+
+<StimulationSet>
+
+  <!--onset and duration in ms, rate in particles/ms-->
+  
+<InjectionStim specieID="Gbg" injectionSite="pointA">
+        <onset>               11000     </onset>
+        <duration>            10      </duration> 
+        <rate>                7.9     </rate>
+</InjectionStim>
+
+
+
+<InjectionStim specieID="Gbg" injectionSite="pointA">
+        <onset>               11010         </onset>
+        <duration>            990       </duration> 
+        <rate>               0.001        </rate>
+</InjectionStim>
+
+
+
+ <InjectionStim specieID="Gbuff" injectionSite="pointA">
+        <onset>               12000          </onset>
+        <duration>            5         </duration> 
+        <rate>                15.8      </rate>
+ </InjectionStim>
+ 
+</StimulationSet> 
+
+
+
+
+

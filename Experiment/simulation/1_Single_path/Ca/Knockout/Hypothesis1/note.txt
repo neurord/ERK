@@ -1,0 +1,53 @@
+Hypothesis:
+Ca above threshold through autophosphorylation of CamKII and syngap dispersion (by CamKII) cause prolong ERK
+
+Method:
+__Set desire knockout Kf to '0'
+_run to get new basal
+_copy new IC
+_Delivered a single pulse of [Ca]=500 nM
+_ Added more Ca to keep it high (no decay) before injecting the buffer to bring it back to basal
+
+##########TEST 1: Block dispersion (no pSynden)
+
+expect: lower ERK activity due to higher level of pSynGap (pSynGap have higher activity than SynGap towards RasGTP and RapGTP)
+
+
+Result:
+_lower ERK without pSynden (from 17 to 12 nM (for 10 sec)
+_less prolong (from around 2200 to around 1600 sec)
+_due to a lower Rap1 activity and shorter sustained pSynGAP
+_ERK follows SynGap activity because about 2/3 of syngap stays bound to CamKII 
+
+Conclusion: dispersion of syngap is needed for high level of ppERK 
+
+##########TEST 2: Block CK activity towards SynGap (no pSynGap but CamKII autophosphorylation)
+Expect: High level of ERK since SynGap has a lower activity than pSynGap 
+
+Result:
+_no change in Rap1GTP (control and dispersion_knockout has a change in Rap1GTP level)
+_Lower production of RasGTP because no interaction with syngap increase as RasGTP increase.
+_higher Syngap activity:
+	_syngap activity towards RasGTP and RapGTP increase because more is available to bind since no longer attached to CamKII
+
+
+##########TEST3: block all CK activity (no autophosphorylation of CamKII)
+Expect: Transient ERK activity because all Cam will be available to RasGRF (no cam trapping by CamKII) 
+
+Result:
+_brief transient activation of ERK due  to RasGRF
+
+*****************************Conclusion****************
+Hypothesis is proven right at some point
+prolong and sustained ERK is due to CamKII activity 
+even though CK is not directly activating ERK, plays and important role in ERK activation
+SynGap dispersion: increase prolong time (duration) and amplitude
+
+*******unclear****
+Test2 resuslt was not expected:
+_1: Was CamKII affinity to Syngap high?
+_2: did the system changed to follow the Ca pulse (concentration or duration)?
+  ((((test this in folder 'hypothesis1_test' in hypothesis1))))))
+
+
+
