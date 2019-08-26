@@ -37,7 +37,7 @@ time_args=args[2]
 
 #automatically name the output file
 input_name=os.path.split(input_filename)[-1]
-outfile=input_name.split('.')[0]+'_basald.xml'
+outfile=input_name.split('.')[0]+'_basal-'+args[1].split('-')[-1]+'.xml'
 
 
 
