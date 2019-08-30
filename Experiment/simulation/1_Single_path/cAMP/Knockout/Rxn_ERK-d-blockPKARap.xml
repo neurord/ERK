@@ -841,9 +841,9 @@ phosphatase reactions take from revision of Gs to improve Ca dep dphos of Dp32--
         <Reactant specieID="Ca"/>
         <Reactant specieID="CB"/>
         <Product specieID="CaB"/>
-
-        <forwardRate>0.4e-3</forwardRate>
-        <reverseRate>20</reverseRate>
+	
+	<forwardRate>0.02e-3</forwardRate>
+        <reverseRate>1</reverseRate>
        
 </Reaction>
 

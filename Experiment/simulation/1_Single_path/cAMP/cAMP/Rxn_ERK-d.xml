@@ -718,20 +718,11 @@ phosphatase reactions take from revision of Gs to improve Ca dep dphos of Dp32--
               <Reactant specieID="buff"/>
 	      <Product specieID="cAMPbuff"/>
 
-        <forwardRate> 1e-3 </forwardRate>
+        <forwardRate> 0.01e-3 </forwardRate>
 	<reverseRate> 0 </reverseRate>
 </Reaction>
 
 
-    <!-- Inactivation of cAMP -->
-<Reaction name ="cAMP+buff--cAMPbuff" id="cAMP+buff--cAMPbuff">
-              <Reactant specieID="cAMP"/>
-              <Reactant specieID="buffslow"/>
-	      <Product specieID="cAMPbuffslow"/>
-
-        <forwardRate> 0.001e-3 </forwardRate>
-	<reverseRate> 0 </reverseRate>
-</Reaction>
 
 
 <!-- Calcium binding -->
@@ -752,7 +743,7 @@ phosphatase reactions take from revision of Gs to improve Ca dep dphos of Dp32--
               <Reactant specieID="Caext"/>
 	      <Product specieID="Caextbuffslow"/>
 
-        <forwardRate> 0.001e-3 </forwardRate>
+        <forwardRate>10e-6 </forwardRate>
 	<reverseRate> 0 </reverseRate>
 </Reaction>
 
@@ -841,8 +832,8 @@ phosphatase reactions take from revision of Gs to improve Ca dep dphos of Dp32--
         <Reactant specieID="CB"/>
         <Product specieID="CaB"/>
 
-        <forwardRate>0.4e-3</forwardRate>
-        <reverseRate>20</reverseRate>
+        <forwardRate>0.02e-3</forwardRate>
+        <reverseRate>1</reverseRate>
        
 </Reaction>
 

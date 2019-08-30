@@ -44,7 +44,7 @@
     <NanoMolarity specieID="AMP" value="41473.1" />
 
     <NanoMolarity specieID="Epac" value="154.898" />
-    <NanoMolarity specieID="EpacRap1" value="nan" />
+    <NanoMolarity specieID="EpacRap1" value="9.08" />
     <NanoMolarity specieID="EpacAMP" value="35.994" />
 
     <NanoMolarity specieID="PKAcAMP2" value="118.581" />
@@ -133,7 +133,7 @@
     <NanoMolarity specieID="bRafRaspMEK" value="7.794" />
 
     <NanoMolarity specieID="Ca" value="51.235" />
-    <NanoMolarity specieID="Caext" value="nan" />
+    <NanoMolarity specieID="Caext" value="1059787.65" />
     <NanoMolarity specieID="Calbin" value="149227.575" />
     <NanoMolarity specieID="CalbinC" value="10772.407" />
     <NanoMolarity specieID="CB" value="2996971.771" />

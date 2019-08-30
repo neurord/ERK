@@ -3,11 +3,12 @@
 <!--onset and duration in ms, rate in particles/ms-->
 <!--fast injection to have sharp increase-->
 <InjectionStim specieID="cAMP" injectionSite="pointA">
-        <onset>               11000          </onset>
-        <duration>        100         </duration> 
-       	<rate>               755      </rate>
+           <onset>               11000          </onset>
+        <duration>        10         </duration> 
+       	<rate>               758      </rate>
+   
    	<period>        1100             </period>
-	<end>         12100           </end>
+	<end>          12100           </end>
    <interTrainInterval>  20000           </interTrainInterval>
     <numTrains>           4               </numTrains>
 		
@@ -17,17 +18,14 @@
 <!--maintained desire concentration-->
 
 
-
  <InjectionStim specieID="cAMP" injectionSite="pointA">
-        <onset>               11100          </onset>
-        <duration>       900        </duration> 
-       	<rate>              79       </rate>
-   	<period>        1100             </period>
-	<end>          12100           </end>
-   <interTrainInterval>  20000           </interTrainInterval>
+        <onset>               11020          </onset>
+        <duration>       10        </duration> 
+       	<rate>              30       </rate>
+	<period>        40             </period>
+	<end>          12000           </end>
+	<interTrainInterval>  20000           </interTrainInterval>
     <numTrains>           4               </numTrains>
-	
-	
 </InjectionStim>
 
 
@@ -37,10 +35,10 @@
 <InjectionStim specieID="buff" injectionSite="pointA">
 
     <onset>               12000          </onset>
-        <duration>        10         </duration> 
-     	<rate>            7000        </rate>
+        <duration>        5         </duration> 
+     	<rate>            2000        </rate>
 	<period>        1100             </period>
-	<end>          13100           </end>
+	<end>          12900           </end>
    <interTrainInterval>  20000           </interTrainInterval>
     <numTrains>           4               </numTrains>
 	

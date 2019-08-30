@@ -18,3 +18,12 @@ So we use Sos affinit for Ras: a thenth of all rates and kept Km the same
  _Production of cAMP to mimic AC production (only product  of cAMP, no reactant)
  _PDE2 and PDE4, true buffers to maintain the basal level of cAMP 
 
+
+
+NEW UPDATE AUGUST
+-CHANGED DEPTH FROM 4 RO 0.4
+-INCREASE PUMP AND LEAK NEW CA BASAL IS 50 INSTEAD OF 45
+-LOWER CB RATE (20x LOWER)
+
+
+WHAT CAUSES CHANGES IN STIM FILE? 

@@ -7,7 +7,7 @@
 <InjectionStim specieID="Gbg" injectionSite="pointA">
         <onset>               11000     </onset>
         <duration>            10      </duration> 
-        <rate>                15     </rate>
+        <rate>                14.5     </rate>
 	<period>        1100             </period>
 	<end>          12000           </end>
 	<interTrainInterval> 1000     </interTrainInterval>
@@ -30,7 +30,7 @@
  <InjectionStim specieID="Gbuff" injectionSite="pointA">
         <onset>               12000          </onset>
         <duration>            5         </duration> 
-        <rate>                30      </rate>
+        <rate>                31      </rate>
 	<period>        1100             </period>
 	<end>          12900           </end>
 	<interTrainInterval> 1000     </interTrainInterval>

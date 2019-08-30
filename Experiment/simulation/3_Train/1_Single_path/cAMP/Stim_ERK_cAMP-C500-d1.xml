@@ -1,62 +1,35 @@
 <StimulationSet>
 
 <!--onset and duration in ms, rate in particles/ms-->
-<!--fast injection to have sharp increase-->
+
 <InjectionStim specieID="cAMP" injectionSite="pointA">
-        <onset>               1000          </onset>
-        <duration>        100         </duration> 
-       	<rate>               750      </rate>
-	<period>        1100             </period>
-	<end>          2000           </end>
-   <interTrainInterval>  3000           </interTrainInterval>
-    <numTrains>           4               </numTrains>
+        <onset>               11000          </onset>
+        <duration>        10         </duration> 
+       	<rate>               758      </rate>
+   
 	
 </InjectionStim>
 
 
-<!--maintained desire concentration-->
+
  <InjectionStim specieID="cAMP" injectionSite="pointA">
-        <onset>               1100          </onset>
-        <duration>       900        </duration> 
-       	<rate>              78       </rate>
-	<period>        1100             </period>
-	<end>          2000           </end>
-   <interTrainInterval>  3000           </interTrainInterval>
-    <numTrains>           4    </numTrains>
-	 
+        <onset>               11020          </onset>
+        <duration>       10        </duration> 
+       	<rate>              30       </rate>
+	<period>        40             </period>
+	<end>          12000           </end>
+	
 </InjectionStim>
 
 
-<!--buff to bring back cAMP to basal. -->
+
 <InjectionStim specieID="buff" injectionSite="pointA">
 
-    <onset>               2000          </onset>
-        <duration>        10         </duration> 
-     	<rate>            7000        </rate>
-	<period>        2100             </period>
-	<end>          2020           </end>
-   <interTrainInterval>  3000           </interTrainInterval>
-    <numTrains>           4    </numTrains>
-	 
+    <onset>               12000          </onset>
+        <duration>        5         </duration> 
+     	<rate>            2000        </rate>
    </InjectionStim>
 
-<!--add buffslow to keep cAMP to basal after dissociation plus remaining buff (same amount to cAMP injected -->
-<InjectionStim specieID="buff" injectionSite="pointA">
-
-    <onset>               2000          </onset>
-        <duration>        10         </duration> 
-     	<rate>          7520     </rate>
-	<period>        2100             </period>
-	<end>          2020           </end>
-   <interTrainInterval>  3000           </interTrainInterval>
-    <numTrains>           4    </numTrains>
-	 
-</InjectionStim>
-
-
-
 
    
-   
-
 </StimulationSet>
