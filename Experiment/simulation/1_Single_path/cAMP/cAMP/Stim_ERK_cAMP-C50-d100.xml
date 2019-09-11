@@ -59,21 +59,12 @@
 	
 </InjectionStim>
 
- <InjectionStim specieID="cAMP" injectionSite="pointA">
-        <onset>               111040          </onset>
-        <duration>       10        </duration> 
-       	<rate>              1.1       </rate>
-	<period>        40             </period>
-	<end>          1011000           </end>
-	
-</InjectionStim>
-
 
 <InjectionStim specieID="buff" injectionSite="pointA">
 
-    <onset>               1011000          </onset>
+    <onset>               111000          </onset>
         <duration>        5         </duration> 
-     	<rate>            228        </rate>
+     	<rate>            225        </rate>
    </InjectionStim>
 
 
