@@ -17,22 +17,51 @@
 	<period>        40             </period>
 	<end>          12000           </end>
 	
- </InjectionStim>
- 
-<InjectionStim specieID="cAMP" injectionSite="pointA">
+</InjectionStim>
+
+ <InjectionStim specieID="cAMP" injectionSite="pointA">
         <onset>               12040          </onset>
         <duration>       10        </duration> 
-       	<rate>              23       </rate>
+       	<rate>              27       </rate>
+	<period>        50             </period>
+	<end>          13000           </end>
+	
+</InjectionStim>
+
+ <InjectionStim specieID="cAMP" injectionSite="pointA">
+        <onset>               13040     </onset>
+        <duration>       10            </duration> 
+       	<rate>              24       </rate>
 	<period>        50             </period>
 	<end>          15000           </end>
 	
 </InjectionStim>
 
 
+
  <InjectionStim specieID="cAMP" injectionSite="pointA">
         <onset>               15050          </onset>
         <duration>       10        </duration> 
-       	<rate>              16       </rate>
+       	<rate>              19       </rate>
+	<period>        50             </period>
+	<end>          17000           </end>
+	
+</InjectionStim>
+
+ <InjectionStim specieID="cAMP" injectionSite="pointA">
+        <onset>               17050          </onset>
+        <duration>       10        </duration> 
+       	<rate>              14       </rate>
+	<period>        50             </period>
+	<end>          19000           </end>
+	
+</InjectionStim>
+
+
+ <InjectionStim specieID="cAMP" injectionSite="pointA">
+        <onset>               19050          </onset>
+        <duration>       10        </duration> 
+       	<rate>              12       </rate>
 	<period>        50             </period>
 	<end>          21000           </end>
 	
@@ -43,7 +72,7 @@
 
     <onset>               21000          </onset>
         <duration>        5         </duration> 
-     	<rate>            2320        </rate>
+     	<rate>            2520        </rate>
    </InjectionStim>
 
 

@@ -10,7 +10,6 @@
 	
 </InjectionStim>
 
-
  <InjectionStim specieID="cAMP" injectionSite="pointA">
         <onset>               11020          </onset>
         <duration>       10        </duration> 
@@ -20,11 +19,20 @@
 	
 </InjectionStim>
 
+ <InjectionStim specieID="cAMP" injectionSite="pointA">
+        <onset>               12040          </onset>
+        <duration>       10        </duration> 
+       	<rate>           27          </rate>
+	<period>        40             </period>
+	<end>          13000           </end>
+
+
+ 
 
  <InjectionStim specieID="cAMP" injectionSite="pointA">
-        <onset>               12040     </onset>
+        <onset>               13040     </onset>
         <duration>       10            </duration> 
-       	<rate>              23       </rate>
+       	<rate>              24       </rate>
 	<period>        50             </period>
 	<end>          15000           </end>
 	
@@ -36,7 +44,7 @@
 
     <onset>               15000      </onset>
         <duration>        5         </duration> 
-     	<rate>            2200        </rate>
+     	<rate>            2100        </rate>
    </InjectionStim>
 
 

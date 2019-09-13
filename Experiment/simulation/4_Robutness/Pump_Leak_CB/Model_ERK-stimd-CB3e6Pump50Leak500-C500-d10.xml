@@ -5,7 +5,7 @@
 
           <xi:include href="Rxn_ERK-d.xml" />
           <xi:include href="Morph.xml" />        
-          <xi:include href="IC_ERK-Test_basald.xml" />
+          <xi:include href="IC_ERK-Test_basal-CB3e6Pump50Leak500.xml" />
           <xi:include href="Out_ERK-Test.xml" />
 	   <xi:include href="Stim_ERK_Ca-C500-d10.xml" />
  
