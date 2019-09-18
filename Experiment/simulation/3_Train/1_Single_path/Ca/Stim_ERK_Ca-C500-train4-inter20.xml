@@ -9,7 +9,7 @@
   
         <onset>               11000          </onset>
         <duration>        10         </duration> 
-        <rate>             82000       </rate>
+        <rate>             95000       </rate>
    	<period>        1100             </period>
 	<end>          12000           </end>
 	<interTrainInterval> 20000     </interTrainInterval>
@@ -24,8 +24,8 @@
   
         <onset>               11000          </onset>
         <duration>        10         </duration> 
-        <rate>             1250       </rate>
-	<period>        25         </period>
+        <rate>             10000       </rate>
+	<period>        310         </period>
 	<end>        12000        </end>
 	<interTrainInterval> 20000     </interTrainInterval>
 	<numTrains>           4       </numTrains>
@@ -38,7 +38,7 @@
 
         <onset>               12000          </onset>
         <duration>        5         </duration> 
-      	<rate>       230000 </rate>
+      	<rate>       240000 </rate>
 	<period>        1000             </period>
 	<end>          12900           </end>
 	<interTrainInterval> 20000     </interTrainInterval>
@@ -53,7 +53,7 @@
 
         <onset>               11000          </onset>
         <duration>        1000        </duration> 
-	<rate>   150           </rate>
+	<rate>   300           </rate>
 	<period>        1100             </period>
 	<end>          12000           </end>
 	<interTrainInterval> 20000     </interTrainInterval>
