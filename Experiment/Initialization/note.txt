@@ -12,6 +12,7 @@ So we use Sos affinit for Ras: a thenth of all rates and kept Km the same
  _20X lower rates for CB because it was too fast and slowing simulation. Plus lower rate do not affect our result
  _two type of calcium, internal and external Ca exchange through leak
  _add a pool of NgCam in order to have available Cam for RasGRF
+ Increase Pump and Leak to have calcium come down within 2sec and match data (cormier et al 2001) 
 
 
 4.Troubleshoot for cAMP
@@ -19,11 +20,3 @@ So we use Sos affinit for Ras: a thenth of all rates and kept Km the same
  _PDE2 and PDE4, true buffers to maintain the basal level of cAMP 
 
 
-
-NEW UPDATE AUGUST
--CHANGED DEPTH FROM 4 RO 0.4
--INCREASE PUMP AND LEAK NEW CA BASAL IS 50 INSTEAD OF 45
--LOWER CB RATE (20x LOWER)
-
-
-WHAT CAUSES CHANGES IN STIM FILE? 

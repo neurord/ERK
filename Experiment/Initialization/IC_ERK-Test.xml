@@ -139,7 +139,7 @@
     <NanoMolarity specieID="CB"           value="3e6"/>
     <NanoMolarity specieID="CaB"           value="0"/>
 
-    <NanoMolarity specieID="Leak" value="800" />
+    <NanoMolarity specieID="Leak" value="700" />
     <NanoMolarity specieID="CaextLeak" value="0.0" />
     <NanoMolarity specieID="pmca" value="500" />
     <NanoMolarity specieID="pmcaCa" value="0" />
