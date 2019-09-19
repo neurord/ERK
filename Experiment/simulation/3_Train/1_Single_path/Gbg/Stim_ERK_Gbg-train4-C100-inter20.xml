@@ -8,7 +8,7 @@
         <onset>               11000     </onset>
         <duration>            10      </duration> 
         <rate>                155     </rate>
-	<period>        11100             </period>
+	<period>        1100             </period>
 	<end>          12000           </end>
 	<interTrainInterval> 20000     </interTrainInterval>
 	<numTrains>           4       </numTrains>
@@ -20,7 +20,7 @@
         <onset>               11010         </onset>
         <duration>            990       </duration> 
         <rate>               0.001        </rate>
-	<period>        11100             </period>
+	<period>        1100             </period>
 	<end>          12000           </end>
 	<interTrainInterval> 20000     </interTrainInterval>
 	<numTrains>           4       </numTrains>
@@ -32,8 +32,8 @@
         <onset>               12000          </onset>
         <duration>            5         </duration> 
         <rate>                300      </rate>
-	<period>        11100             </period>
-	<end>          12900           </end>
+	<period>        1100             </period>
+	<end>          13000           </end>
 	<interTrainInterval> 20000     </interTrainInterval>
 	<numTrains>           4       </numTrains>
  </InjectionStim>

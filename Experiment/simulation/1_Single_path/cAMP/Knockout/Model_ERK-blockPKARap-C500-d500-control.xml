@@ -4,9 +4,9 @@
 	 reaction data brought in from other files --> 
 
           <xi:include href="Rxn_ERK-d-PKARap.xml" />
-          <xi:include href="Morph.xml" />        
-          <xi:include href="IC_ERK-Test_basald.xml" />
-          <xi:include href="Out_ERK-Test.xml" />
+          <xi:include href="../Morph.xml" />        
+          <xi:include href="IC_ERK-Test.xml" />
+          <xi:include href="../Out_ERK-Test.xml" />
 	   <xi:include href="Stim_ERK_cAMP-C500-d500.xml" />
  
  
@@ -14,7 +14,7 @@
 	roundworms. The 2D case is good for testing as it is easy to visualize the
 results. depth 2D units are microns  -->
     <geometry>          2D           </geometry>
-    <depth2D>           4.0          </depth2D>
+    <depth2D>           0.40          </depth2D>
     <distribution>      BINOMIAL     </distribution>
     <algorithm>         INDEPENDENT  </algorithm>
     <simulationSeed>    123       </simulationSeed>

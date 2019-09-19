@@ -27,7 +27,7 @@
 
     <onset>               12000          </onset>
         <duration>        5         </duration> 
-     	<rate>            2100        </rate>
+     	<rate>            2000        </rate>
    </InjectionStim>
 
 
