@@ -662,10 +662,9 @@ phosphatase reactions take from revision of Gs to improve Ca dep dphos of Dp32--
 
         <forwardRate>  12e-3   </forwardRate>
 
-	
-      
     </Reaction>
- <!-- PDE2 buff for cAMP, two steps-->
+
+    <!-- PDE2 buff for cAMP, two steps-->
 <Reaction name = "PDE2+cAMP--PDE2cAMP" id="PDE2+cAMP--PDE2cAMP">
         <Reactant specieID="PDE2"                  />
         <Reactant specieID="cAMP"                   />
@@ -711,14 +710,13 @@ phosphatase reactions take from revision of Gs to improve Ca dep dphos of Dp32--
 </Reaction>
 
 
-
     <!-- Inactivation of cAMP -->
 <Reaction name ="cAMP+buff--cAMPbuff" id="cAMP+buff--cAMPbuff">
               <Reactant specieID="cAMP"/>
               <Reactant specieID="buff"/>
 	      <Product specieID="cAMPbuff"/>
 
-        <forwardRate> 0.01e-3 </forwardRate>
+        <forwardRate> 0.001e-3 </forwardRate>
 	<reverseRate> 0 </reverseRate>
 </Reaction>
 

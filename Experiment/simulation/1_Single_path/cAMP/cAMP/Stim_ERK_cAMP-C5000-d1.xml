@@ -23,13 +23,6 @@
 
 
 
-<InjectionStim specieID="buff" injectionSite="pointA">
-
-    <onset>               12000          </onset>
-        <duration>        5         </duration> 
-     	<rate>            3000        </rate>
-   </InjectionStim>
-
 
    
 </StimulationSet>

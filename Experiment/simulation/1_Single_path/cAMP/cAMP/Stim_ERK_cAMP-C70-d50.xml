@@ -23,7 +23,7 @@
         <onset>               12040          </onset>
         <duration>       10        </duration> 
        	<rate>              2.6       </rate>
-	<period>        40             </period>
+	<period>        60             </period>
 	<end>          15000           </end>
 	
 </InjectionStim>
@@ -33,7 +33,7 @@
         <onset>               15040          </onset>
         <duration>       10        </duration> 
        	<rate>           1.9          </rate>
-	<period>        40             </period>
+	<period>        60             </period>
 	<end>          21000           </end>
 	
 </InjectionStim>
@@ -42,18 +42,11 @@
         <onset>               21040          </onset>
         <duration>       10        </duration> 
        	<rate>          1.1           </rate>
-	<period>        40             </period>
+	<period>        60             </period>
 	<end>          61000           </end>
 	
 </InjectionStim>
 
-
-<InjectionStim specieID="buff" injectionSite="pointA">
-
-    <onset>               61000          </onset>
-        <duration>        5         </duration> 
-     	<rate>            210        </rate>
-   </InjectionStim>
 
 
 </StimulationSet>
