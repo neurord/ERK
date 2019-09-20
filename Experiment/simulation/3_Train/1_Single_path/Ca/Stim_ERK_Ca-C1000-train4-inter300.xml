@@ -41,7 +41,7 @@
         <duration>        5         </duration> 
       	<rate>       450000 </rate>
 	<period>        1000             </period>
-	<end>          12900           </end>
+	<end>          13000           </end>
 	<interTrainInterval> 300000     </interTrainInterval>
 	<numTrains>           4       </numTrains>
    

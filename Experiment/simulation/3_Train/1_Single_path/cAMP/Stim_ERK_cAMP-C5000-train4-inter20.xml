@@ -27,17 +27,5 @@
 
 
 
-<InjectionStim specieID="buff" injectionSite="pointA">
-
-    <onset>               12000          </onset>
-        <duration>        5         </duration> 
-     	<rate>            3000        </rate>
-	<period>        1100             </period>
-	<end>          13000           </end>
-   <interTrainInterval>  20000           </interTrainInterval>
-    <numTrains>           4               </numTrains>
-   </InjectionStim>
-
-
    
 </StimulationSet>

@@ -1,3 +1,16 @@
 train
 Ca- C100o looks more than 100o even if in 1path is 1000, why?
+(not done yet)
 
+single
+ Ca-nodecay
+ c500 goes beyond 500 after 4 sec, fixed
+ c1000 d4 higher Ca--fixed
+  then added long ca stim for 500
+
+(next do low concen (maybe 200 or 100 nM))
+
+cAMP (I changed the buff rate) 
+C70 has not back to basal, fixed
+
+was fixing cAMP c500, not done yetatq
