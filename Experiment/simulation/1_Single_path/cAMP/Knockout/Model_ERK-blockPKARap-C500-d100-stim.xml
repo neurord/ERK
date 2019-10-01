@@ -3,11 +3,11 @@
     <!-- this file defines a single run of the calculation, using morphology and 
 	 reaction data brought in from other files --> 
 
-          <xi:include href="Rxn_ERK-d-blockPKACbl.xml" />
+          <xi:include href="Rxn_ERK-d-blockPKARap.xml" />
           <xi:include href="../Morph.xml" />        
-          <xi:include href="IC_ERK-Test_basal-BPKACbl.xml" />
+          <xi:include href="IC_ERK-Test_basal-BPKARap.xml" />
           <xi:include href="../Out_ERK-Test.xml" />
-	   <xi:include href="Stim_ERK_cAMP-C500-d500.xml" />
+	   <xi:include href="Stim_ERK_cAMP-C500-d100.xml" />
  
  
     <!--2D means the morphology is interpreted like a flatworm, 3D for
