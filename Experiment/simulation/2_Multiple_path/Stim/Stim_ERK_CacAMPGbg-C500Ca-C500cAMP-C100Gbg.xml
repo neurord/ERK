@@ -67,7 +67,31 @@
 
 
 
-   
+
+   <!--Gbg-->
+
+<InjectionStim specieID="Gbg" injectionSite="pointA">
+        <onset>               11000     </onset>
+        <duration>            10      </duration> 
+        <rate>                155     </rate>
+</InjectionStim>
+
+
+
+<InjectionStim specieID="Gbg" injectionSite="pointA">
+        <onset>               11010         </onset>
+        <duration>            990       </duration> 
+        <rate>               0.001        </rate>
+</InjectionStim>
+
+
+
+ <InjectionStim specieID="Gbuff" injectionSite="pointA">
+        <onset>               12000          </onset>
+        <duration>            5         </duration> 
+        <rate>                304      </rate>
+ </InjectionStim>
+ 
 </StimulationSet>
 
 
