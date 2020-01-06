@@ -5,11 +5,11 @@
   <!--onset and duration in ms, rate in particles/ms-->
   
 <InjectionStim specieID="Gbg" injectionSite="pointA">
-        <onset>               11000     </onset>
+        <onset>               101000     </onset>
         <duration>            10      </duration> 
         <rate>                155     </rate>
-	<period>        1100             </period>
-	<end>          12000           </end>
+	<period>        11100             </period>
+	<end>          102000           </end>
 	<interTrainInterval> 40000     </interTrainInterval>
 	<numTrains>           4       </numTrains>
 </InjectionStim>
@@ -17,11 +17,11 @@
 
 
 <InjectionStim specieID="Gbg" injectionSite="pointA">
-        <onset>               11010         </onset>
+        <onset>               101010         </onset>
         <duration>            990       </duration> 
         <rate>               0.001        </rate>
-	<period>        1100             </period>
-	<end>          12000           </end>
+	<period>        11100             </period>
+	<end>          102000           </end>
 	<interTrainInterval> 40000     </interTrainInterval>
 	<numTrains>           4       </numTrains>
 </InjectionStim>
@@ -29,11 +29,11 @@
 
 
  <InjectionStim specieID="Gbuff" injectionSite="pointA">
-        <onset>               12000          </onset>
+        <onset>               102000          </onset>
         <duration>            5         </duration> 
-        <rate>                300      </rate>
-	<period>        1100             </period>
-	<end>          13000           </end>
+        <rate>                302      </rate>
+	<period>        11100             </period>
+	<end>          103000           </end>
 	<interTrainInterval> 40000     </interTrainInterval>
 	<numTrains>           4       </numTrains>
  </InjectionStim>

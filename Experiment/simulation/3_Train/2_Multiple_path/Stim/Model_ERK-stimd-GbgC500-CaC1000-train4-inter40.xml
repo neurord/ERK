@@ -7,7 +7,7 @@
           <xi:include href="../Morph.xml" />        
           <xi:include href="../IC_ERK-Test_basald.xml" />
           <xi:include href="../Out_ERK-Test.xml" />
-	   <xi:include href="../Stim_ERK_GbgC500-CaC1000-train4-inter40.xml" />
+	   <xi:include href="Stim_ERK_GbgC500-CaC1000-train4-inter40.xml" />
  
  
     <!--2D means the morphology is interpreted like a flatworm, 3D for

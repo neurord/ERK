@@ -7,12 +7,12 @@
 <!--fast injection to have sharp increase-->
 <InjectionStim specieID="Ca" injectionSite="pointA">
   
-        <onset>               11000          </onset>
+        <onset>               101000          </onset>
         <duration>        10         </duration> 
         <rate>             95000       </rate>
    
 	<period>        1100             </period>
-	<end>          12000           </end>
+	<end>          102000           </end>
 	<interTrainInterval> 80000     </interTrainInterval>
 	<numTrains>           4       </numTrains>
    
@@ -23,11 +23,11 @@
 <!--maintained desire concentration-->
 <InjectionStim specieID="Ca" injectionSite="pointA">
   
-        <onset>               11000          </onset>
+        <onset>               101000          </onset>
         <duration>        10         </duration> 
         <rate>             10000       </rate>
 	<period>        310         </period>
-	<end>        12000        </end>
+	<end>        102000        </end>
 	<interTrainInterval> 80000     </interTrainInterval>
 	<numTrains>           4       </numTrains>
    
@@ -37,11 +37,11 @@
 <!--buff to bring back Ca to basal. repeated -->
 <InjectionStim specieID="Cbuff" injectionSite="pointA">
 
-        <onset>               12000          </onset>
+        <onset>               102000          </onset>
         <duration>        5         </duration> 
       	<rate>       240000 </rate>
 	<period>        1000             </period>
-	<end>          12900           </end>
+	<end>          102900           </end>
 	<interTrainInterval> 80000     </interTrainInterval>
 	<numTrains>           4       </numTrains>
    
@@ -52,11 +52,11 @@
 <!--slow buff for external Ca, keep basal -->   
    <InjectionStim specieID="Cbuffslow" injectionSite="pointA">
 
-        <onset>               11000          </onset>
+        <onset>               101000          </onset>
         <duration>        1000        </duration> 
 	<rate>   300           </rate>
 	<period>        1100             </period>
-	<end>          12000           </end>
+	<end>          102000           </end>
 	<interTrainInterval> 80000     </interTrainInterval>
 	<numTrains>           4       </numTrains>
    </InjectionStim>
