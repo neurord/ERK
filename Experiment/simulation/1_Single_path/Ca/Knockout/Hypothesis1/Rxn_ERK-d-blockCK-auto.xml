@@ -972,7 +972,8 @@ phosphatase reactions take from revision of Gs to improve Ca dep dphos of Dp32--
 
 	<forwardRate> 0   </forwardRate>
         <!--forwardRate> 0.0008e-3 </forwardRate-->
-        <reverseRate> 0.01e-3   </reverseRate>
+        <!--reverseRate> 0.01e-3   </reverseRate-->
+	<reverseRate> 0   </reverseRate>
     </Reaction>
 
 <!-- Km=5.1 uM  from foulkes et. al.,  et al., Eur. JBiochem.1983 132(309-313))

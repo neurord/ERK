@@ -5,7 +5,7 @@
 
           <xi:include href="Rxn_ERK-d-blockpSynGap.xml" />
           <xi:include href="../Morph.xml" />        
-          <xi:include href="IC_ERK-Test_basal-BpSynGAP.xml" />
+          <xi:include href="IC_ERK-Test_basal-BpSynGap.xml" />
           <xi:include href="../Out_ERK-Test.xml" />
 	   <xi:include href="Stim_ERK_Ca-C2000-d1.xml" />
  

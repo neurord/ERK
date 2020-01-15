@@ -500,8 +500,9 @@ phosphatase reactions take from revision of Gs to improve Ca dep dphos of Dp32--
         <Product  specieID="CRKC3GpCblRap1"     />
 
 	<forwardRate> 0 </forwardRate>
+	<reverseRate> 0  </reverseRate>
         <!--forwardRate> 0.0101e-3  </forwardRate-->
-        <reverseRate> 0.0800e-3  </reverseRate>
+        <!--reverseRate> 0.0800e-3  </reverseRate-->
      
     </Reaction> 
     <Reaction name = "CRKC3GpCblRap1--Rap1GTP+CRKC3GpCbl" id="CRKC3GpCblRap1--Rap1GTP+CRKC3GpCbl">

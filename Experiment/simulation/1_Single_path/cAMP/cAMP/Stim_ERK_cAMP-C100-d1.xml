@@ -1,0 +1,26 @@
+<StimulationSet>
+
+<!--onset and duration in ms, rate in particles/ms-->
+
+<InjectionStim specieID="cAMP" injectionSite="pointA">
+        <onset>               0          </onset>
+        <duration>        10         </duration> 
+       	<rate>               127      </rate>
+   
+	
+</InjectionStim>
+
+
+
+ <InjectionStim specieID="cAMP" injectionSite="pointA">
+        <onset>               20          </onset>
+        <duration>       10        </duration> 
+       	<rate>              5       </rate>
+	<period>        40             </period>
+	<end>          1000           </end>
+	
+</InjectionStim>
+
+
+ 
+</StimulationSet>

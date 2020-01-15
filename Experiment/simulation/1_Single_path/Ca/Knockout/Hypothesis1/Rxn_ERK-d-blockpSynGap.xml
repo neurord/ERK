@@ -588,9 +588,10 @@ phosphatase reactions take from revision of Gs to improve Ca dep dphos of Dp32--
   <Reactant specieID="SynGap" />
   <Product specieID="CKpCamCa4SynGap" />
 
-  <forwardRate> 0</forwardRate>
+    	<forwardRate> 0   </forwardRate>
+	<reverseRate> 0   </reverseRate>
   <!--forwardRate> 0.3067258192987457e-3</forwardRate-->
-  <reverseRate> 0.058715155531797236 </reverseRate>
+  <!--reverseRate> 0.058715155531797236 </reverseRate-->
 
  </Reaction>
 

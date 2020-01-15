@@ -370,8 +370,8 @@ phosphatase reactions take from revision of Gs to improve Ca dep dphos of Dp32--
         <Reactant  specieID="Raf1"               />
         <Product  specieID="Raf1Rap1"               />
 
-	<forwardRate> 0   </forwardRate>
-	 <!--forwardRate> 0.006e-3   </forwardRate-->
+
+	 <forwardRate> 0.006e-3   </forwardRate>
        <reverseRate> 0.5e-3   </reverseRate>
     </Reaction>
 
@@ -401,8 +401,11 @@ phosphatase reactions take from revision of Gs to improve Ca dep dphos of Dp32--
         <Reactant specieID="Rap1GDP"              />
         <Product  specieID="EpacRap1"               />
 
-       <forwardRate> 0.0012e-3   </forwardRate>
-       <reverseRate> 0.960e-3   </reverseRate>
+	
+	<forwardRate> 0   </forwardRate>
+	 <reverseRate> 0   </reverseRate>
+       <!--forwardRate> 0.0012e-3   </forwardRate-->
+       <!--reverseRate> 0.960e-3   </reverseRate-->
      
     </Reaction> 
     <Reaction name = "EpacRap1--EpacAMP+Rap1GTP" id="EpacRap1--EpacAMP+Rap1GTP">

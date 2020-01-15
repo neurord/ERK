@@ -890,8 +890,9 @@ phosphatase reactions take from revision of Gs to improve Ca dep dphos of Dp32--
         <Product  specieID="CKCamCa4"               />
 	
 	<forwardRate> 0   </forwardRate>
+	<reverseRate> 0   </reverseRate>
         <!--forwardRate> 0.01e-3   </forwardRate-->
-            <reverseRate> 1.5e-3      </reverseRate>
+            <!--reverseRate> 1.5e-3      </reverseRate-->
         <!--0.8 from ode file
 	    reverseRate> 0.8e-3      </reverseRate-->
     </Reaction>
@@ -964,8 +965,10 @@ phosphatase reactions take from revision of Gs to improve Ca dep dphos of Dp32--
         <Product  specieID="CamCa4"                 />
         <Product  specieID="CKp"                    />
 
-        <forwardRate> 0.0008e-3 </forwardRate>
-        <reverseRate> 0.01e-3   </reverseRate>
+	<forwardRate> 0   </forwardRate>
+        <!--forwardRate> 0.0008e-3 </forwardRate-->
+        <!--reverseRate> 0.01e-3   </reverseRate-->
+	<reverseRate> 0   </reverseRate>
     </Reaction>
 
 <!-- Km=5.1 uM  from foulkes et. al.,  et al., Eur. JBiochem.1983 132(309-313))
