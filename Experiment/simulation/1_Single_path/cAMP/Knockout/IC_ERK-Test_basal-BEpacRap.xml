@@ -140,7 +140,7 @@
     <NanoMolarity specieID="CaB" value="2587.312" />
 
     <NanoMolarity specieID="Leak" value="1.021" />
-    <NanoMolarity specieID="CaextLeak" value="6.98" />
+    <NanoMolarity specieID="CaextLeak" value="698.88" />
     <NanoMolarity specieID="pmca" value="414.81" />
     <NanoMolarity specieID="pmcaCa" value="85.168" />
     <NanoMolarity specieID="ncx" value="1917.434" />

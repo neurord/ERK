@@ -3,7 +3,7 @@
 <!--onset and duration in ms, rate in particles/ms-->
 
 <InjectionStim specieID="cAMP" injectionSite="pointA">
-        <onset>               0          </onset>
+        <onset>               111000          </onset>
         <duration>        10         </duration> 
        	<rate>               760      </rate>
    
@@ -11,7 +11,7 @@
 </InjectionStim>
 
  <InjectionStim specieID="cAMP" injectionSite="pointA">
-        <onset>               20          </onset>
+        <onset>               111020          </onset>
         <duration>       10        </duration> 
        	<rate>              33       </rate>
 	<period>        40             </period>
@@ -19,39 +19,31 @@
 	
  </InjectionStim>
  <InjectionStim specieID="cAMP" injectionSite="pointA">
-        <onset>               1040          </onset>
+        <onset>               112040          </onset>
         <duration>       100        </duration> 
        	<rate>             10       </rate>
 	<period>        200             </period>
-	<end>          7000           </end>
+	<end>          118000           </end>
 	
 </InjectionStim>
 
-<InjectionStim specieID="cAMP" injectionSite="pointA">
-        <onset>               7200      </onset>
-        <duration>       100        </duration> 
-       	<rate>             7.5    </rate>
-	<period>        200             </period>
-	<end>          7000          </end>
-	
-</InjectionStim>
 
 <InjectionStim specieID="cAMP" injectionSite="pointA">
-        <onset>               7200      </onset>
+        <onset>               118200      </onset>
         <duration>       100        </duration> 
        	<rate>             6.5    </rate>
 	<period>        200             </period>
-	<end>          15000        </end>
+	<end>          126000        </end>
 	
 </InjectionStim>
 
  
 <InjectionStim specieID="cAMP" injectionSite="pointA">
-        <onset>               15200      </onset>
+        <onset>               126200      </onset>
         <duration>       100        </duration> 
        	<rate>             5.5    </rate>
 	<period>        200             </period>
-	<end>          30000        </end>
+	<end>          141000        </end>
 	
 </InjectionStim>
 

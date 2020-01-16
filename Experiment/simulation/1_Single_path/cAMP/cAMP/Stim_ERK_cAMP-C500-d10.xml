@@ -3,7 +3,7 @@
 <!--onset and duration in ms, rate in particles/ms-->
 
 <InjectionStim specieID="cAMP" injectionSite="pointA">
-        <onset>               11000          </onset>
+        <onset>               111000          </onset>
         <duration>        10         </duration> 
        	<rate>               760      </rate>
    
@@ -11,20 +11,20 @@
 </InjectionStim>
 
  <InjectionStim specieID="cAMP" injectionSite="pointA">
-        <onset>               11020     </onset>
+        <onset>               111020     </onset>
         <duration>       10        </duration> 
        	<rate>              31.5       </rate>
 	<period>        40             </period>
-	<end>          12000           </end>
+	<end>          112000           </end>
 	
 </InjectionStim>
 
  <InjectionStim specieID="cAMP" injectionSite="pointA">
-        <onset>               12040          </onset>
+        <onset>               112040          </onset>
         <duration>       100        </duration> 
        	<rate>              8.5       </rate>
 	<period>        200             </period>
-	<end>          21000           </end>
+	<end>          121000           </end>
 	
 </InjectionStim>
 
