@@ -1,8 +1,9 @@
-#in python, type ARGS="IC_file name,h5_file name ,sstart ssend" then execfile('path/to/file/Update_IC')
+#in python, type ARGS="IC_file name,h5_file name ,sstart ssend" then execfile('path/to/file/Update_IC.py')
 ##DO NOT PUT ANY SPACES NEXT TO THE COMMAS, DO NOT USE TABS
 #IC_file name is the exact name of the Initial condition file that you wish to update
 #h5_file name is the file that have the new data that you desire to use
 #sstart ssend are the time array you desire to avarage the data
+#choose specific oufile name based on name preference, excat name , one args or 2 args chooses
 
 from lxml import etree
 from xml.etree import ElementTree as ET
@@ -28,18 +29,6 @@ try:
     data.close()
 except Exception:
     pass
-
-    
-#define params file and time
-input_filename=args[0].split('.')[0]
-h5filename=args[1].split('.')[0]
-time_args=args[2]
-
-#automatically name the output file
-input_name=os.path.split(input_filename)[-1]
-outfile=input_name.split('.')[0]+'_basald.xml'
-
-
 
 def decode(table):
     return np.array([s.decode('utf-8') for s in table])
@@ -83,6 +72,18 @@ def get_mol_index(simData,outputset,molecule):
         return indices[0]
     else:
         return -1
+
+    
+#define params file and time
+input_filename=args[0].split('.')[0]
+h5filename=args[1].split('.')[0]
+time_args=args[2]
+
+#automatically name the output file
+input_name=os.path.split(input_filename)[-1]
+#outfile=input_name.split('.')[0]+'_basald.xml'
+outfile=input_name.split('.')[0]+'_basal-'+args[1].split('-')[-2]+'.xml' #if only wants the args before the last 
+#outfile=input_name.split('.')[0]+'_basal-'+args[1].split('-')[-2]+'-'+args[1].split('-')[-1]+'.xml' #if would like to carry 2 differnt args
 
 
 #1 get list of molecules
@@ -144,7 +145,7 @@ if len(problems_list):
     for item in problems_list:
         print(item)
     
-
+#errore if nan found write error code
 
 #write the new xml file
 with open(outfile, 'wb') as out:
