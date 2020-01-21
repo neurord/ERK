@@ -14,11 +14,9 @@ root=ET.parse(input_filename+'.xml').getroot()
 elems=[]
 for elem in root:
     for subelem in elem:
-        elems=dict(subelem.items())
-        oldval=float(elems['value'])
-        newval=str(np.random.uniform(.9,1.1)*oldval+oldval) #np.randon(low, high)
-        elems['value']=newval
-        print(elems['specieID'],newval)
-        
+        oldval=float(subelem.attrib['value'])
+        newval=str(np.random.uniform(.9,1.1)*oldval) #np.randon(low, high)
+        subelem.attrib['value']=newval
+                
 with open(outfile, 'wb') as out:
     out.write(ET.tostring(root))
