@@ -1,4 +1,4 @@
-#in python, type ARGS="IC_file name,h5_file name ,sstart ssend" then execfile('path/to/file/Update_IC.py')
+#in python, type ARGS="IC_file name,h5_file name ,sstart ssend" then execfile('path/to/file/UpdateIC_basal.py')
 ##DO NOT PUT ANY SPACES NEXT TO THE COMMAS, DO NOT USE TABS
 #IC_file name is the exact name of the Initial condition file that you wish to update
 #h5_file name is the file that have the new data that you desire to use
