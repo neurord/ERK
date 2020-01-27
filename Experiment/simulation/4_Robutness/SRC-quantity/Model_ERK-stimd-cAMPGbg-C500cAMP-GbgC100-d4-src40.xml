@@ -4,11 +4,11 @@
 	 reaction data brought in from other files --> 
 
 
-          <xi:include href="../Rxn_ERK-d-oldCam.xml" />
-          <xi:include href="../Morph.xml" />        
-          <xi:include href="../IC_ERK-Test_basald-oldCam.xml" />
-          <xi:include href="../Out_ERK-Test.xml" />
-	   <xi:include href="Stim_ERK_Ca-C500-d1.xml" />
+          <xi:include href="Rxn_ERK-d.xml" />
+          <xi:include href="Morph.xml" />        
+          <xi:include href="IC_ERK-Test_basald-src40.xml" />
+          <xi:include href="Out_ERK-Test.xml" />
+	   <xi:include href="Stim_ERK_cAMPC500-GbgC100-d4.xml" />
  
  
     <!--2D means the morphology is interpreted like a flatworm, 3D for
