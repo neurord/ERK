@@ -59,7 +59,7 @@
         <duration>        10         </duration> 
         <rate>            20000       </rate>
 	<period>        320         </period>
-	<end>        12000        </end>
+	<end>        102000        </end>
 	<interTrainInterval> 300000     </interTrainInterval>
 	<numTrains>           4       </numTrains>
    
