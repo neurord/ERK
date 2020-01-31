@@ -82,9 +82,9 @@ time_args=args[2]
 #automatically name the output file
 input_name=os.path.split(input_filename)[-1]
 #outfile=input_name.split('.')[0]+'_basald.xml'
-outfile=input_name.split('.')[0]+'_basal-'+args[1].split('-')[-2]+'.xml' #if only wants the args before the last 
+#outfile=input_name.split('.')[0]+'_basal-'+args[1].split('-')[-1]+'.xml' #if only wants the last args 
 #outfile=input_name.split('.')[0]+'_basal-'+args[1].split('-')[-2]+'-'+args[1].split('-')[-1]+'.xml' #if would like to carry 2 differnt args
-
+outfile=input_name.split('-')[0]+'-Test'+'_basal-'+args[1].split('-')[-1]+'.xml'
 
 #1 get list of molecules
 data=h5.File(h5filename+'.h5',"r")
@@ -121,6 +121,7 @@ for mol in molecules:
 #read in the xml file
 tree=ET.parse(input_filename+'.xml')
 root=tree.getroot()
+'''
 for elem in root:
             if elem.tag=='ConcentrationSet':
                         for subelem in elem:
@@ -129,13 +130,13 @@ for elem in root:
             elif elem.tag=='SurfaceDensitySet':
                         for subelem in elem:
                                     print('SurfaceDens',subelem.attrib)  
-
+'''
 #loop over all molecules in conc_IC dictionary and update values
 problems_list=[]
 for mol,val in molec_conc_ic.items():
             elems=tree.findall('.//NanoMolarity[@specieID="'+mol+'"]')
             if len(elems)==1:
-                print(mol,elems[0].attrib,'new value', val)
+                #print(mol,elems[0].attrib,'new value', val)
                 elems[0].attrib['value']=str(val)
                 print('updated elems',elems[0].attrib)
             else:
@@ -145,7 +146,7 @@ if len(problems_list):
     for item in problems_list:
         print(item)
     
-#errore if nan found write error code
+#error if nan found write error code
 
 #write the new xml file
 with open(outfile, 'wb') as out:

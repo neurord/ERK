@@ -1,4 +1,5 @@
 import os
+import glob
 
 #set up args
 try:
@@ -20,47 +21,22 @@ except Exception:
 PATH="./"
 prog_path_name='/home/Nadia/Softwares/neurord-3.2.4-all-deps.jar'
 
-
-outfname=args[0]#'test.bat'
+text='java -jar'+' '+prog_path_name+'  '+'-Dneurord.trial=3'+'  '+'-t 36000000'
+outfname='test.bat'
 f=open(outfname,'w')
 
-Dneurord=args[1]#'Dneurord=3'
-time=args[2]#'-t 36000000'
 
-suffix=args[3]#'random'
-suffix2=args[4]'Model'
+suffix_name=args[2]#'random' already in randon, in set is called factor
 
+pattern_batch=PATH+'Model'+'*'+suffix_name+'*.xml'
 
+fileNames=glob.glob(pattern_batch)
 
-fileNames=os.listdir(PATH)
-
-for file in fileNames:
-    if suffix2 in file and suffix in file:
-        pattern=file
-        textline='java -jar'+' '+prog_path_name+'  '+Dneurord+'  '+time+'   '+pattern+'\n'
+def bat_file(fileNames,text,file):
+    for file in fileNames:
+        print(file)
+        textline=text+'   '+file.split('/')[-1]+'\n'
         f.write(textline)
-f.close()
-'''
-
-
-
-suffix='random'
-
-
-pattern=dir+'*.py'
-filenames=glob.glob(pattern)
-
-
-
-
-for fullname in filenames:
-    fname=fullname.split('/')[1]
-    textline='java -jar /home/Nadia/Softwares/neurord-3.2.4-all-deps.jar'+' '+'-t 5000'+' '+fname+'\n'
-    f.write(textline)
-f.close()
-
-'''
-
-#myBat=open(r'/home/Nadia/ERK/test2.py','w+')
-#myBat.write(
-###[0:find(fname,suffix)]+
+    f.close()
+        
+bat_file(fileNames,text,file)

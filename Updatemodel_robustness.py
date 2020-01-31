@@ -5,7 +5,9 @@
 #suffix_name is the specific tag name find in the replace filename
 #file_type is the type of model. e.g: IC or Rxn, or Model
 
-import os
+
+import glob
+import os 
 ##############################################
 
 #set up args
@@ -24,26 +26,29 @@ except Exception:
     pass
 
 
-#args for file to change IC 
-input_filename=args[0]#'Model_ERK-d.xml'
-find_filename='IC_ERK-Test.xml'#cannot use agrs ????
+    #args for file to change IC 
+input_filename=args[0].split('.')[0]#'Model_ERK-d.xml'
+find_filename=args[1].split('.')[0]#'IC_ERK-Test.xml'#cannot use agrs ????
 suffix_name=args[2]#'random'
-file_type=args[3]#'IC_ERK'
+#file_type=args[3]#'IC_ERK'NO NEED ANYMORE 
+    
+
+#init(input_filename,find_filename,suffix_name,file_type)
 
 #set path then fetch all files in path then filter require files
 PATH='./'
-fileNames=os.listdir(PATH)
-for file in fileNames:
-    if file_type in file and suffix_name in file:
-        replace_filename=file
-        with open (input_filename,'r') as input:
+pattern_model=PATH+'IC'+'*'+suffix_name+'*.xml'
+fileNames=glob.glob(pattern_model)
+def modelrobust_file(fileNames):
+    for replace_filename in fileNames:
+        with open (input_filename+'.xml','r') as input:
             filedata=input.read()
-            filedata=filedata.replace(find_filename,replace_filename)
-            out_filename=input_filename.split('.')[0]+'-'+replace_filename.split('-')[-1]
+            filedata=filedata.replace(find_filename+'.xml',replace_filename)
+            out_filename=input_filename+'-'+replace_filename.split('-')[-1]
         with open (out_filename,'w') as out:
             out.write(filedata)
         
-  
+modelrobust_file(fileNames)
 
    
 

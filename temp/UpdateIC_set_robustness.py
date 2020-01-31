@@ -38,8 +38,8 @@ factor=args[1]
 
 
 root=ET.parse(find_filename+'.xml').getroot()
-for mol in species.keys():
-    for molecules in species[mol]: 
+for mol in mol_change.keys():
+    for molecules in mol_change[mol]: 
             for elem in root:
                 for subelem in elem:
                      if molecules== subelem.attrib['specieID']:
