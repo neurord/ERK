@@ -33,10 +33,10 @@ pattern_batch=PATH+'Model'+'*'+suffix_name+'*.xml'
 fileNames=glob.glob(pattern_batch)
 
 def bat_file(fileNames,text,file):
-    for file in fileNames:
-        print(file)
-        textline=text+'   '+file.split('/')[-1]+'\n'
+    for files in fileNames:
+        print(files)
+        textline=text+'   '+files.split('/')[-1]+'\n'
         f.write(textline)
     f.close()
         
-bat_file(fileNames,text,file)
+bat_file(fileNames,text,files)
