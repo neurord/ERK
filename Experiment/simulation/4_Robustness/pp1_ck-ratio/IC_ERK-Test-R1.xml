@@ -75,8 +75,6 @@
     <NanoMolarity specieID="CKp"                          value="630"/>
     <NanoMolarity specieID="CKCamCa4"                     value="0"/>
     <NanoMolarity specieID="CKpCamCa4"                    value="0"/>
-    <NanoMolarity specieID="Complex"                    value="0"/>
-    <NanoMolarity specieID="pComplex"                    value="0"/>  
     <NanoMolarity specieID="CKpCamCa4SynGap"              value="0"/>
     <NanoMolarity specieID="PP1"                    value="20000"/>
     <NanoMolarity specieID="CKpPP1"                    value="0"/>

@@ -17,8 +17,8 @@ results. depth 2D units are microns  -->
     <depth2D>           0.40          </depth2D>
     <distribution>      BINOMIAL     </distribution>
     <algorithm>         INDEPENDENT  </algorithm>
-    <simulationSeed>    123       </simulationSeed>
-
+    <simulationSeed>    2593       </simulationSeed>
+    <!--simulationSeed>    123       </simulationSeed-->
 
     <!-- run time for the calculation, milliseconds -->
     <runtime>          3600000      </runtime>

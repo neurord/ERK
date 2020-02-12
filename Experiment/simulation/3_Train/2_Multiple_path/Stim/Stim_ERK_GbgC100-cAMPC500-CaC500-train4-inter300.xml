@@ -44,8 +44,9 @@
     <onset>               101000          </onset>
         <duration>        10         </duration> 
         <rate>             95000       </rate>
-	<end>          102000           </end>
+	
 	<period>        1100             </period>
+	<end>          102000           </end>
 	<interTrainInterval> 300000     </interTrainInterval>
 	<numTrains>           4       </numTrains>
    
