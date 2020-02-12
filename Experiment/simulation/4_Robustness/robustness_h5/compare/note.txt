@@ -1,0 +1,18 @@
+PKA robustness:
+
+ppERK is insensitive to faster PKA talaitic activity (even though has a lower basal, delta is still the same)
+same observation with higher Src.
+
+
+
+
+
+Ca robustness:
+Result are somewhat differnt and similar:
+ 1. higher peak ERK than control
+ 2. but both have a threshold: it is none or all
+ 3.both follows CKpCamCa (bound to synagap shape)
+ 3. old have higher GRF contribution (peak varies in oldCam) 
+
+
+(I believe we will have same result with LTP, low ca massed preference and high ca spaced preference 
