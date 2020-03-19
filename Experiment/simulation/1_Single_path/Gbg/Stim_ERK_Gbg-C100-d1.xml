@@ -14,17 +14,10 @@
 <InjectionStim specieID="Gbg" injectionSite="pointA">
         <onset>               111010         </onset>
         <duration>            990       </duration> 
-        <rate>               0.001        </rate>
+        <rate>               1.3        </rate>
 </InjectionStim>
 
 
-
- <InjectionStim specieID="Gbuff" injectionSite="pointA">
-        <onset>               112000          </onset>
-        <duration>            5         </duration> 
-        <rate>                302      </rate>
- </InjectionStim>
- 
 </StimulationSet> 
 
 
