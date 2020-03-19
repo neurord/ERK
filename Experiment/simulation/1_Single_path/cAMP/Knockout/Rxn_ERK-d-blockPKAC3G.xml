@@ -40,10 +40,6 @@ phosphatase reactions take from revision of Gs to improve Ca dep dphos of Dp32--
 <Specie name="EpacAMP"                             id="EpacAMP"                kdiff="10"    kdiffunit="mu2/s"/>
 
 <Specie name="cAMP"                                id="cAMP"                kdiff="86.4"    kdiffunit="mu2/s"/>
-<Specie name="buff"                                id="buff"                kdiff="86.4"    kdiffunit="mu2/s"/>
-<Specie name="cAMPbuff"                                id="cAMPbuff"                kdiff="86.4"    kdiffunit="mu2/s"/>
-<Specie name="buffslow"                                id="buffslow"                kdiff="86.4"    kdiffunit="mu2/s"/>
-<Specie name="cAMPbuffslow"                                id="cAMPbuffslow"                kdiff="86.4"    kdiffunit="mu2/s"/>
 <Specie name="PDE2"                                  id="PDE2"                 kdiff="86.4"    kdiffunit="mu2/s"/>
 <Specie name="PDE2cAMP"                              id="PDE2cAMP"                 kdiff="86.4"    kdiffunit="mu2/s"/>
 <Specie name="PDE2cAMP2"                             id="PDE2cAMP2"                 kdiff="86.4"    kdiffunit="mu2/s"/>
@@ -95,8 +91,6 @@ phosphatase reactions take from revision of Gs to improve Ca dep dphos of Dp32--
 <Specie name="NgCam"                              id="NgCam"                kdiff="0"     kdiffunit="mu2/s"/>
 
 <Specie name="Gbg" id="Gbg"                                               kdiff="0"    kdiffunit="mu2/s"/>
-<Specie name="Gbuff" id="Gbuff"                                               kdiff="0"    kdiffunit="mu2/s"/>
-<Specie name="Gbgbuff" id="Gbgbuff"                                               kdiff="0"    kdiffunit="mu2/s"/>
 <Specie name="SrcGbg" id="SrcGbg"                                         kdiff="0"    kdiffunit="mu2/s"/>
 <Specie name="Grb2" id="Grb2"                                             kdiff="0"    kdiffunit="mu2/s"/>
 <Specie name="Sos" id="Sos"                                               kdiff="0"    kdiffunit="mu2/s"/>
@@ -1286,20 +1280,9 @@ phosphatase reactions take from revision of Gs to improve Ca dep dphos of Dp32--
               <Reactant specieID="Gbg"/>
               
 
-        <forwardRate> 0.001e-3 </forwardRate>
+        <forwardRate> 1e-3 </forwardRate>
 	<reverseRate> 0 </reverseRate>
     </Reaction>
-    
-<!-- Inactivation of Gbg -->
-<Reaction name ="Gbg+Gbuff--Gbgbuff" id="Gbg+Gbuff--Gbgbuff">
-              <Reactant specieID="Gbg"/>
-              <Reactant specieID="Gbuff"/>
-	      <Product specieID="Gbgbuff"/>
-
-        <forwardRate> 10e-3 </forwardRate>
-	<reverseRate> 0 </reverseRate>
-</Reaction>
-
 
 
    <!--(Gbg binds to Src) Gbg+Src <->SrcGbg -->
