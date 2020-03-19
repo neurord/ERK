@@ -56,8 +56,6 @@
     <OutputSpecie name="Epac"/>
     <OutputSpecie name="EpacRap1"/>
 
-    <OutputSpecie name="buff"/>
-    <OutputSpecie name="cAMPbuff"/>
     <OutputSpecie name="PDE2"/>
     <OutputSpecie name="PDE2cAMP"/>
     <OutputSpecie name="PDE2cAMP2"/>
@@ -106,8 +104,6 @@
     <OutputSpecie name="NgCam"/>
 
     <OutputSpecie name="Gbg"/>
-    <OutputSpecie name="Gbuff"/>
-    <OutputSpecie name="Gbgbuff"/>
     <OutputSpecie name="SrcGbg"/>
     <OutputSpecie name="Shc"/>
     <OutputSpecie name="pShc"/>
