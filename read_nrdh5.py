@@ -1,17 +1,17 @@
 import glob
 import os
-
+outfname="analysis"+".bat"
 PATH="./"
-suffix="set"
 pattern=PATH+"*.h5"
 fileNames=glob.glob(pattern)
-outfname="analysis"+".bat"
-f=open(outfname, "w")
 for fullname in fileNames:
-    fname=fullname.split("/")[1]
-    textline='python3 '+"/home/nadia/NeuroRDanal//NeuroRDanal/nrdh5_anal.py"+" fullname [inter set] [ppERK]"+"\n"
+    fname=os.path.basename(fullname).split('.')[0]
+    fileroot=fname.split('-')[0]
+    print(fileroot)
+    par_change=fname.split('-')[-1]
+    #print(par_change)
+    f=open(outfname,'w')
+    textline='python3 '+"/home/nadia/NeuroRDanal/NeuroRDanal/nrdh5_anal.py "+fileroot+" [inter "+par_change+"]"+" "+"[ppERK]"+"\n"
+    #print(textline)
     f.write(textline)
-f.close()
-  
-#looks like it is working.
-#now bette way to write the par
+    f.close()

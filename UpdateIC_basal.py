@@ -84,7 +84,7 @@ input_name=os.path.split(input_filename)[-1]
 #outfile=input_name.split('.')[0]+'_basald.xml'
 #outfile=input_name.split('.')[0]+'_basal-'+args[1].split('-')[-1]+'.xml' #if only wants the last args 
 #outfile=input_name.split('.')[0]+'_basal-'+args[1].split('-')[-2]+'-'+args[1].split('-')[-1]+'.xml' #if would like to carry 2 differnt args
-outfile=input_name.split('-')[0]+'-Test'+'_basal-'+args[1].split('-')[-1]+'.xml'
+outfile=input_name.split('-')[0]+'-Test'+'_basal-'+args[1].split('-')[-2]+'.xml'
 
 #1 get list of molecules
 data=h5.File(h5filename+'.h5',"r")
