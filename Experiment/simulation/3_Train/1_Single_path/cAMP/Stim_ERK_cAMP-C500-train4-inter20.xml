@@ -3,12 +3,12 @@
 <!--onset and duration in ms, rate in particles/ms-->
 <!--fast injection to have sharp increase-->
 <InjectionStim specieID="cAMP" injectionSite="pointA">
-           <onset>               101000          </onset>
+           <onset>               201000          </onset>
         <duration>        10         </duration> 
        	<rate>               758      </rate>
    
    	<period>        1100             </period>
-	<end>          102000           </end>
+	<end>          202000           </end>
    <interTrainInterval>  20000           </interTrainInterval>
     <numTrains>           4               </numTrains>
 		
@@ -19,11 +19,11 @@
 
 
  <InjectionStim specieID="cAMP" injectionSite="pointA">
-        <onset>               101020          </onset>
+        <onset>               201020          </onset>
         <duration>       10        </duration> 
        	<rate>              30       </rate>
 	<period>        40             </period>
-	<end>          102000           </end>
+	<end>          202000           </end>
 	<interTrainInterval>  20000           </interTrainInterval>
     <numTrains>           4               </numTrains>
 </InjectionStim>
