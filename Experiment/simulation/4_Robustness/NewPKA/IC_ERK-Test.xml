@@ -34,8 +34,6 @@
 
 
     <NanoMolarity specieID="cAMP"                         value="1000"/>
-    <NanoMolarity specieID="buff"                         value="0"/>
-    <NanoMolarity specieID="cAMPbuff"                     value="0"/>
     <NanoMolarity specieID="PDE2"           value="160" />
     <NanoMolarity specieID="PDE2cAMP"          value="0" />
     <NanoMolarity specieID="PDE2cAMP2"           value="0" />
@@ -87,8 +85,6 @@
 
 
     <NanoMolarity specieID="Gbg"              value="0"/>
-    <NanoMolarity specieID="Gbuff"              value="0"/>
-    <NanoMolarity specieID="Gbgbuff"              value="0"/>
     <NanoMolarity specieID="SrcGbg"              value="0"/>
     <NanoMolarity specieID="Sos"              value="100"/>
     <NanoMolarity specieID="pSos"              value="0"/>
