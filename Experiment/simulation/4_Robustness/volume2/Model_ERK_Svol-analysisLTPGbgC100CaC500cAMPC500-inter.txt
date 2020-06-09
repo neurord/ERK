@@ -1,0 +1,5 @@
+LTPGbgC100CaC500cAMPC500-inter  Ca_auc_mean Ca_auc_std  Ca_amplitude_mean Ca_amplitude_std  cAMP_auc_mean cAMP_auc_std  cAMP_amplitude_mean cAMP_amplitude_std  Gbg_auc_mean Gbg_auc_std  Gbg_amplitude_mean Gbg_amplitude_std 
+-3.0     -15.908     -10.03     -0.129     6.511     15.622     0.15     nan     nan     nan     nan     nan     nan
+-20.0     -7.18     -64.296     -0.238     6.7     19.419     0.011     nan     nan     nan     nan     nan     nan
+-40.0     -7.344     -17.246     -0.791     4.528     5.771     0.685     nan     nan     nan     nan     nan     nan
+-300.0     -7.061     -15.47     -0.987     1.473     4.026     0.141     nan     nan     nan     nan     nan     nan
