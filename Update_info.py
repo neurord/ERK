@@ -9,7 +9,7 @@ import glob
 import sys
 import robustness_function as rf
 ##############################################
-randon=0 #if change conc randomly
+random=0 #if change conc randomly
 frange=10 #range for random
 modelrobust=1 #create model from change conc 
 factor=1.1#write desire factor for set change
@@ -49,7 +49,7 @@ pattern_mod=PATH+'Model'+'*'+'inter*'+'*.xml'
 input_filename=sorted(glob.glob(pattern_mod)) #set of files
 replace_filename=[]
 
-if randon==1:
+if random==1:
     suffix_name='random'
     rf.random_file(suffix_name,frange,find_filename,mol_change)
 else:

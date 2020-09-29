@@ -63,7 +63,7 @@ class nrdh5_output(object):
         else:
             arg=None
         #Which "rows" should be used for baseline value, specifed in args[3].  If different for each file then will have problems later
-        sstart,ssend=h5utils.sstart_end(molecules,self.out_location,self.dt,self.rows,arg)
+        sstart,ssend=h5utils.sstart_end(self.molecules,self.out_location,self.dt,self.rows,arg)
         self.sstart=sstart
         self.ssend=ssend
         
@@ -118,8 +118,9 @@ class nrdh5_output(object):
             f.write(output_header)
             np.savetxt(f, np.column_stack((self.time[mol],output_means,output_std)), fmt='%.4f', delimiter=' ')
             f.close()
-            
-    def total_subspecies(self,tot_species,sub_species,outset='__main__'):
+    #FOR SIGNATURE:
+    #add option to baseline subtract - separate function?
+    def total_subspecies(self,tot_species,sub_species,outset='__main__',weights={}):
         samples=len(self.data['trial0']['output'][outset]['times'])
         self.endtime=self.data['trial0']['output'][outset]['times'][-1]
         self.ss_tot=np.zeros((len(tot_species),len(self.trials),samples))
@@ -129,7 +130,7 @@ class nrdh5_output(object):
         if self.spinelist:
             self.head_tot=np.zeros((len(tot_species),len(self.trials),samples))
         for imol,mol in enumerate(tot_species):
-            mol_set=[]
+            mol_set=[];tot_wt=0
             #first set up arrays of all species (sub_species) that are a form of the molecule
             if mol in sub_species.keys():
                 mol_set=sub_species[mol]
@@ -138,15 +139,25 @@ class nrdh5_output(object):
             self.tot_species[mol]=mol_set
             #second, find molecule index of the sub_species and total them
             for subspecie in mol_set:
+                wt=weights[subspecie] if subspecie in weights.keys() else 1
+                tot_wt+=wt
                 mol_index=h5utils.get_mol_index(self.data,outset,subspecie)
                 for trialnum,trial in enumerate(self.trials):
                     mol_pop=self.data[trial]['output'][outset]['population'][:,:,mol_index]
-                    self.ss_tot[imol,trialnum,:]+=np.sum(mol_pop,axis=1)/self.TotVol/mol_per_nM_u3
+                    self.ss_tot[imol,trialnum,:]+=wt*np.sum(mol_pop,axis=1)/self.TotVol/mol_per_nM_u3
                     #then total sub_species in submembrane and spine head, if they exist
                     if self.dsm_vox:
-                        self.dsm_tot[imol,trialnum,:]+=np.sum(mol_pop[:,self.dsm_vox['vox']],axis=1)/self.dsm_vox['vol']*self.dsm_vox['depth']/mol_per_nM_u3
+                        self.dsm_tot[imol,trialnum,:]+=wt*np.sum(mol_pop[:,self.dsm_vox['vox']],axis=1)/self.dsm_vox['vol']*self.dsm_vox['depth']/mol_per_nM_u3
                     if self.spinelist: 
-                        self.head_tot[imol,trialnum,:]+=np.sum(mol_pop[:,self.region_dict[self.head]['vox']],axis=1)/self.region_dict[self.head]['vol']/mol_per_nM_u3
+                        self.head_tot[imol,trialnum,:]+=wt*np.sum(mol_pop[:,self.region_dict[self.head]['vox']],axis=1)/self.region_dict[self.head]['vol']/mol_per_nM_u3
+            '''
+            if len(weights):
+                self.ss_tot[imol,:,:]/=tot_wt
+            if self.dsm_vox:
+                self.dsm_tot[imol,:,:]/=tot_wt
+            if self.spinelist:
+                self.head_tot[imol,:,:]/=tot_wt 
+            '''
             outputline=str(self.parval)+' TOTAL: '+str(np.round(self.ss_tot[imol,0,0],3))+' nM'
             if self.dsm_vox:
                 outputline +=',  sp: '+str(np.round(self.head_tot[imol,0,0],3))+' nM'

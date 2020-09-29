@@ -10,8 +10,8 @@ file_data=args[0]#'-LTPGbgC100CaC500inter.txt'
 cdata=args[1]#'Model_ERK-analysis-LTPGbgC100CaC500inter.txt'
 
 #directories
-file_dir='/run/media/nadia/NADIA_BLUE/Paper#2/LTP/ltp/'
-crtlfile_dir='/run/media/nadia/NADIA_BLUE/Paper#2/LTP/ltp/'
+file_dir='/home/nadia/ERK/Experiment/simulation/3_Train/LTP_h5_2'
+crtlfile_dir='/home/nadia/ERK/Experiment/simulation/4_Robustness/analysis/Randon'
 
 
 fileNames=glob.glob(file_dir+'Model'+'*'+'analysis'+args[0])

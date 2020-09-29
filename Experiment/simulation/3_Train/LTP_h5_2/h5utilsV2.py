@@ -48,12 +48,13 @@ def get_mol_info(simData,plot_molecules):
     outputsets=list(simData['model']['output'].keys())
     dt=np.zeros((len(plot_molecules)))
     samples=np.zeros((len(plot_molecules)),dtype=int)
+    num_outsets=len(outputsets)
     out_location={}
     for imol,molecule in enumerate(plot_molecules):
         temp_dict={}
         tot_voxels=0
         for setnum,outset in enumerate(reversed(outputsets)): #will be problem if molecule in several sets that have different dt
-            if setnum>0 or len(temp_dict)==0:
+            if setnum<num_outsets-1 or len(temp_dict)==0:
                 mol_index=get_mol_index(simData,outset,molecule)
                 if mol_index>-1:
                     samples[imol]=len(simData['trial0']['output'][outset]['times'])

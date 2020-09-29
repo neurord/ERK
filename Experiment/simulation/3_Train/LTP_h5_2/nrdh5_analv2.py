@@ -29,20 +29,22 @@ dendname="dend"
 spinehead="head"
 stimspine=['sa1[0]'] #list of stimulated spines
 spatial_bins=0  #number of spatial bins to subdivide dendrite to look at spatial gradients
-window_size=10  #number of msec on either side of peak value to average for maximum
+window_size=0.1  #number of msec on either side of peak value to average for maximum
 num_LTP_stim=4 #number of 100Hz trains - used to determine when stimulation is over and to search for molecule decay
 #These control what output is printed or written
 show_inject=0
 write_output=0 #one file per molecules per input file
-output_auc=0 #one file per molecule per set of input files
+output_auc=1 #one file per molecule per set of input files
+write_trials=1
 showplot=1 #0 for none, 1 for overall average, 2 for spine concentration
-show_mol_totals=0
+show_mol_totals=1
 print_head_stats=0
 textsize=14
-feature_list=['auc']#['auc','amplitude']
+feature_list=['amplitude']#['auc']#,'amplitude']
 #these molecules MUST be specified as plot_molecules
-mol_pairs=[]#[['CKpCamCa4','ppERK'],['ppERK','pSynGap']]
+mol_pairs=[]#[['CKpCamCa4','ppERK']]#,['ppERK','pSynGap']]
 pairs_timeframe=[200,2000] #units are sec
+basestart_time=2200 #make this value 0 to calculate AUC using baseline calculated from initial time period
 
 #for totaling subspecies, the default outputset is _main_, 
 #can specify outset= something (line 84) to use different outputset
@@ -63,7 +65,11 @@ sub_species={'ras':['rasGap','RasGTPGap'],
 
 #subspecies of tot_species do NOT need to be specified as plot_molecules 
 tot_species=[]#['erk','free_Syn']
-   
+sub_species={'syn_act':['RasSynGap', 'RaspSynGap','Rap1SynGap', 'Rap1pSynGap','SynGap','pSynGap'],'syn_inact':['pSynden','CKpCamCa4SynGap']}
+#weights are multiplies for calculating weighted sum, i.e., signature
+weight={'RasSynGap':1, 'RaspSynGap':1.4,'Rap1SynGap':1, 'Rap1pSynGap':1.9,'SynGap':1,'pSynGap':1.6,'pSynden':-1,'CKpCamCa4SynGap':-1}
+#weight={}  setting weight to empty dictionary will make all weights = 1
+tot_species=[]#['syn_act','syn_inact']   
 ############## END OF PARAMETERS #################
 try:
     args = ARGS.split(",")
@@ -93,36 +99,41 @@ for fnum,ftuple in enumerate(og.ftuples):
         data.average_over_voxels()
     # need to add another total array for different regions (to use for signature)
     #Default outputset is _main_, can specify outset= something
-    data.total_subspecies(tot_species,sub_species)
+    data.total_subspecies(tot_species,sub_species,weights=weight)
     og.conc_arrays(data)
     #Now, print or write some optional outputs
     if write_output:
         data.write_average()
     if 'event_statistics' in data.data['trial0']['output'].keys() and show_inject:
         print ("seeds", data.seeds," injection stats:")
-        for inject_sp,inject_num in zip(data.data['model']['event_statistics'][:],data.data['trial0']['output']['event_statistics'][0]):
-            print (inject_sp.split()[-1].rjust(20),inject_num[:])
+        print('molecule             '+'    '.join(data.trials))
+        for imol,inject_sp in enumerate(data.data['model']['event_statistics'][:]):
+            inject_num=np.column_stack([data.data[t]['output']['event_statistics'][0] for t in data.trials])
+            print (inject_sp.split()[-1].rjust(20),inject_num[imol])
     if print_head_stats:
         data.print_head_stats()
 #extract some features from the group of data files
 #EXTRACT FEATURES OF total array to add in sig.py functionality
 #Default numstim = 1, so that parameter not needed for single pulse
-og.trace_features(data.trials,window_size,numstim=num_LTP_stim)
+#other parameter defaults:  lo_thresh_factor=0.2,hi_thresh_factor=0.8, std_factor=1
+#another parameter default: end_baseline_start=0 (uses initial baseline to calculate auc).
+#Specify specific sim time near end of sim if initialization not sufficient for a good baseline for auc calculation
+og.trace_features(data.trials,window_size,std_factor=0,numstim=num_LTP_stim,end_baseline_start=basestart_time)
 
 if len(feature_list):
     og.write_features(feature_list,args[0])
 
 #################
 #print all the features in nice format.
-features=[k for k in og.feature_dict.keys()]
-print("file-params       molecule " +'  '.join(features)+'  ratio')
+features=[k[0:7] for k in og.feature_dict.keys()]
+print("file-params       molecule " +' '.join(features)+' ratio')
 for fnum,ftuple in enumerate(og.ftuples):
     for imol,mol in enumerate(og.molecules):
-        outputvals=[str(np.round(odict[fnum,imol],3)) for feat,odict in og.mean_feature.items()]
-        if og.mean_feature['baseline'][fnum,imol]>1e-5:
-            outputvals.append(str(np.round(og.mean_feature['amplitude'][fnum,imol]/og.mean_feature['baseline'][fnum,imol])).rjust(8))
+        outputvals=[str(np.round(odict[imol,fnum],3)) for feat,odict in og.mean_feature.items()]
+        if og.mean_feature['baseline'][imol,fnum]>1e-5:
+            outputvals.append(str(np.round(og.mean_feature['amplitude'][imol,fnum]/og.mean_feature['baseline'][imol,fnum],2)).rjust(8))
         else:
-            outputvals.append(np.inf)
+            outputvals.append('inf')
         print(ftuple[1],mol.rjust(16),'  ','  '.join(outputvals))
 
 ######################### Plots
@@ -147,7 +158,8 @@ if showplot:
 '''
 5. Move Nadia's pairs plots into plot_h5V2
 7. Possibly bring in signature code from sig.py or sig2.py and eliminate one or both of those.
-    Create separate class?
+    Create separate class?  Or add weight into total_species.  Add in baseline subtract as option?
+    perhaps separate function to compare to thresholds
     pu5.plot3D is used for signatures in sig.py.  How does this differ from spatial_plot?
     lines 341-360 calculates the signature
     lines 370-387 compares to thresholds

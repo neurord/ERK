@@ -85,7 +85,7 @@ input_name=os.path.split(input_filename)[-1]
 #outfile=input_name.split('.')[0]+'_basal-'+args[1].split('-')[-1]+'.xml' #if only wants the last args 
 #outfile=input_name.split('.')[0]+'_basal-'+args[1].split('-')[-2]+'-'+args[1].split('-')[-1]+'.xml' #if would like to carry 2 differnt args
 #outfile=input_name.split('-')[0]+'-Test'+'_basal-'+args[1].split('-')[-2]+'.xml'
-outfile='IC_new.xml'
+outfile='IC_Cof-new.xml'
 
 #1 get list of molecules
 data=h5.File(h5filename+'.h5',"r")
@@ -139,7 +139,7 @@ for mol,val in molec_conc_ic.items():
             if len(elems)==1:
                 #print(mol,elems[0].attrib,'new value', val)
                 elems[0].attrib['value']=str(val)
-                print('updated elems',elems[0].attrib)
+                #print('updated elems',elems[0].attrib)
             else:
                 problems_list.append((mol,elems))
 if len(problems_list):

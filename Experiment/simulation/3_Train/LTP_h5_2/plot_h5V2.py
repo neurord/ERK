@@ -39,15 +39,15 @@ def plot_features(dataset,feature,title):
         if len(p): #reshape feature values for plotting if 2 params and all combos
             labels=p['labels'];xval_index=p['xindex'];label_index=p['lindex']
             new_yvals=np.zeros((len(xvals),len(labels)))
-            for i,(fname,param) in enumerate(dataset.ftuples):
+            for fnum,(fname,param) in enumerate(dataset.ftuples):
                 row=xvals.index(param[xval_index])
                 col=labels.index(param[label_index])
-                new_yvals[row,col]=dataset.mean_feature[feature][i,imol]
+                new_yvals[row,col]=dataset.mean_feature[feature][imol,fnum]
             for col,label in enumerate(labels):
                 pyplot.scatter(xvals,new_yvals[:,col],label=dataset.params[label_index]+' '+label)
             pyplot.xlabel(dataset.params[xval_index])
         else: #just plot feature values vs param or param combo            
-            pyplot.scatter(xvals,dataset.mean_feature[feature][:,imol], label=mol)
+            pyplot.scatter(xvals,dataset.mean_feature[feature][imol,:], label=mol)
             pyplot.xlabel('-'.join(dataset.params))
         pyplot.ylabel(mol+' '+feature)
         pyplot.legend()
