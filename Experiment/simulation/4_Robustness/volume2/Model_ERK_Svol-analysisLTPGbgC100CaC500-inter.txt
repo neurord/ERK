@@ -1,5 +1,0 @@
-LTPGbgC100CaC500-inter  ppERK_auc_mean ppERK_auc_std  ppERK_amplitude_mean ppERK_amplitude_std  Ca_auc_mean Ca_auc_std  Ca_amplitude_mean Ca_amplitude_std 
-cAMPC500-3.0     -0.761     -15.908     1.4     6.511     nan     nan     nan     nan
-cAMPC500-20.0     -0.717     -7.18     1.996     6.7     nan     nan     nan     nan
-cAMPC500-40.0     0.403     -7.344     1.057     4.528     nan     nan     nan     nan
-cAMPC500-300.0     -0.269     -7.061     1.196     1.473     nan     nan     nan     nan

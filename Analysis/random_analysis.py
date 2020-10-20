@@ -7,7 +7,8 @@ import csv
 ####find ccontrol data first
 crtl_raw=[5.286,5.917,6.395,7.489,6.747]##cAMPCa1000
 crtl_data=(max (crtl_raw)-min(crtl_raw))/max(crtl_raw)
-crtl=max(crtl_raw)-min(crtl_raw)
+crtlMaxMin=max(crtl_raw)-min(crtl_raw)
+crtlbest=crtl_raw[4]-crtl_raw[3]
 #trials and param
 num_trials=3 #change if more than 3 trials 
 ITIs=[3,20,40,80,300]
@@ -25,7 +26,6 @@ with open (fil,'r') as infile:
         results[frange]={trialnum:trialdata[trialnum] for trialnum in range(len(trialdata))}
         
 summary={}#{f: {} for f  in results.keys()}
-worstITI={}
 for random in results.keys():
     summary[random]={}
     worstITI[random]={}
@@ -37,20 +37,12 @@ for random in results.keys():
         min_index=np.argmin(rows)
         summary[random][trial]['slope']=(float(rows[best])-float(rows[min_index]))/float(rows[best])
         summary[random][trial]['slope_norm']=((float(rows[best])-float(rows[min_index]))/float(rows[best]))/crtl_data
-        summary[random][trial]['deltabest']=((float(rows[4])-float(rows[3])))
-        summary[random][trial]['deltaMaxMin']=((float(rows[best])-float(rows[min_index])))/crtl
-        if min_index==4:
-            worstITI[random][trial]=float(rows[min_index])
-            print('********************',random,trial,'*******************')
-           
-#outfname='RandomAnalysis_data'
-#np.savez(outfname,summary)
-import pandas as pd
-from matplotlib import pyplot as plt
-plt.ion()
-import seaborn as sns
-
-
+        summary[random][trial]['deltabest']=((float(rows[4])-float(rows[3])))/crtlbest
+        summary[random][trial]['deltaMaxMin']=((float(rows[best])-float(rows[min_index])))/crtlMaxMin
+        summary[random][trial]['MinITI']=ITIs[min_index]
+        
+outfname='RandomAnalysis_data'
+np.savez(outfname,summary)
 
 '''
 #analysis

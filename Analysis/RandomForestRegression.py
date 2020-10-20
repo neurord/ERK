@@ -48,7 +48,7 @@ df.columns #print the column names
 df.index #print index - fname,trial
 #count bestITIs
 best=df.groupby('bestITI').count()
-print(best)
+
 
 '''
 #if you want to select a subset of the data
@@ -64,34 +64,36 @@ print(corr_df)
 
 #plot of mean and std
 xcol='bestITI'
-ycol=['slope_norm','deltabest','deltaMaxMin']
-for i,ii in enumerate (ycol):
-        ycolnorm_mean=df.groupby('filename').mean()[ii]
-        stdnorm=df.groupby('filename').std()[ii]
+ycol=['slope_norm','deltaMaxMin']
+plt.figure()
+df.groupby('filename').mean()['deltabest'].plot.bar()
+for j,jj in enumerate (ycol):
+        ycolnorm_mean=df.groupby('filename').mean()[jj]
+        stdnorm=df.groupby('filename').std()[jj]
         plt.figure()
-        plt.title(ii+'vs filename')
+        plt.title(jj+'vs filename')
         plt.plot(ycolnorm_mean)
         plt.fill_between(range(len(ycolnorm_mean)),ycolnorm_mean+stdnorm,ycolnorm_mean-stdnorm,alpha=.2)#replace range with list of filenaem out of df 
         plt.xlabel('File Name')
-        plt.ylabel(ii)
+        plt.ylabel(jj)
 
 #scatter plot     WHEN THIS ON, THE REST ARE NOT GRAPHING
         import seaborn as sns
-        jg = sns.jointplot(df['bestITI'].astype('int'),df['slope_norm'].astype('int'),ratio=5,xlim=(0,df['bestITI'].min()*1.1),ylim=(0,df['slope_norm'].max()*1.1),s=10,alpha=.8,edgecolor='0.2',linewidth=.2,color='k')
-        plt.title(ii+" vs bestITI")
+        jg = sns.jointplot(df[xcol].astype('int'),df[jj].round(2),ratio=5,xlim=(0,df[xcol].max()*1.1),ylim=(df[jj].min()*0.9,df[jj].max()*1.1),s=10,alpha=.8,edgecolor='0.2',linewidth=.2,color='k',marginal_kws=dict(bins=40))
+        plt.title(jj+" vs " +xcol)
         #jg.set_axis_labels('bestITI','slope_norm')
 
         plt.figure()
-        df[ii].plot.bar()
+        df[jj].plot.bar()
         plt.xlabel('File Name')
-        plt.ylabel(ii)
-        hist,bin_edges=np.histogram(df['slope_norm'],bins=50)
+        plt.ylabel(jj)
+        hist,bin_edges=np.histogram(df[jj],bins=50)
         plot_bins=[(bin_edges[i]+bin_edges[i+1])/2 for i in range (len(hist))]
         plt.figure()
-        plt.title('Histogram of '+ii+' per file')
+        plt.title('Histogram of '+jj+' per file')
         plt.plot(plot_bins,hist)
         plt.ylabel('Count')
-        plt.xlabel(ii) 
+        plt.xlabel(jj) 
 
         ##########################################
         from sklearn import datasets, linear_model
@@ -101,11 +103,11 @@ for i,ii in enumerate (ycol):
         from sklearn.ensemble import RandomForestRegressor
         from sklearn.svm import SVR
 
-        X = df.drop(['slope_norm','bestITI','filename','trial','slope','deltabest','deltaMaxMin'], axis=1)
-        Yslope = df[ii]
+        X = df.drop(['slope_norm','bestITI','filename','trial','slope','deltabest','deltaMaxMin','MinITI'], axis=1)
+        Yslope = df[jj]
         Yiti = df[xcol]
 
-        for y,label in zip([Yslope,Yiti],[ii,xcol]):
+        for y,label in zip([Yslope,Yiti],[jj,xcol]):
             X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.33, random_state=42)
             regr = RandomForestRegressor(n_estimators=100)
             regr.fit(X_train, y_train)
@@ -129,14 +131,14 @@ for i,ii in enumerate (ycol):
                     plt.scatter(X_test[mol], y_test,alpha=.4,label='actual'+mol)
                     plt.scatter(X_test[mol], y_pred,alpha=.4,label='prediction'+mol)
                     plt.legend()
-                    plt.xlabel(ii)
+                    plt.xlabel(jj)
                     plt.ylabel('ITIs')
 ############# Standard multiple linear regresion
         from sklearn.feature_selection import f_regression
         import statsmodels.formula.api as smf
         import statsmodels.api as sm
         # Create linear regression object.  Do one at a time
-        y=Yslope;label=ii#'slope'#is this correct?
+        y=Yslope;label=jj#'slope'#is this correct?
         #y=Y300;label='delta300'
         X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.33, random_state=42)
         regr = linear_model.LinearRegression()
@@ -171,7 +173,7 @@ for i,ii in enumerate (ycol):
         ITIs=list(np.unique(Y.values))
         num_feat=len(X.columns)
         MAXPLOTS=2
-        epochs=10
+        epochs=100
 
         collectionBestFeatures = {}
         collectionTopFeatures = {}
@@ -197,7 +199,7 @@ for i,ii in enumerate (ycol):
         listTopFeatures=sorted(collectionTopFeatures.items(),key=operator.itemgetter(1),reverse=True)
 
         if MAXPLOTS:
-            plot_features(listBestFeatures,str(epochs),'Total Weight')
-            plot_features(listTopFeatures,str(epochs),'Count')
-            plt.title(ii) 
+            plot_features(listBestFeatures,str(epochs),'Total Weight '+jj)
+            plot_features(listTopFeatures,str(epochs),'Count '+jj)
+            
 

@@ -3,7 +3,7 @@ import numpy as np
 import glob
 #import csv
 import seaborn as sns
-save=0
+save=1
 #need this because can't plot together 
 
 
@@ -19,7 +19,9 @@ else:
     f='analysisfactor1000.npy'
     pattern='./'+'cAMPCaC1000_mol-*'+"*.txt"
 crtl_data=(max (crtl_raw)-min(crtl_raw))/max(crtl_raw)
-crtl=max(crtl_raw)-min(crtl_raw)
+crtlMaxMin=max(crtl_raw)-min(crtl_raw)
+crtlbest=crtl_raw[4]-crtl_raw[3]
+
 
 #where and how to find the experiment files from pattern (up)
 files_set=glob.glob(pattern)
@@ -57,11 +59,10 @@ for files in results.keys():
             min_index=np.argmin(rows)
             summary[files][(molecules,trial)]['slope']=((float(rows[best])-float(rows[min_index]))/float(rows[best]))
             summary[files][(molecules,trial)]['slope_norm']=(((float(rows[best])-float(rows[min_index]))/float(rows[best]))/crtl_data)
-            summary[files][(molecules,trial)]['deltabest']=((float(rows[4])-float(rows[3])))
-            summary[files][(molecules,trial)]['deltaMaxMin']=((float(rows[best])-float(rows[min_index])))/crtl
-            if min_index==4:
-                summary[files][(molecules,trial)]['worstITI']=float(rows[min_index])
-                print('********************',files, molecules, trial,'*******************')
+            summary[files][(molecules,trial)]['deltabest']=((float(rows[4])-float(rows[3])))/crtlbest
+            summary[files][(molecules,trial)]['deltaMaxMin']=((float(rows[best])-float(rows[min_index])))/crtlMaxMin
+            summary[files][(molecules,trial)]['MinITI']=float(rows[min_index])
+                
 #np.save(f,results)
 
 
@@ -75,6 +76,8 @@ from matplotlib import pyplot as plt
 plt.ion()
 import seaborn as sns
 
+col=['slope_norm','deltaMaxMin']
+
 for files,data in summary.items():
     df=pd.DataFrame.from_dict(data,orient='index')
     #df.index.set_names(['mol','trial'])
@@ -85,38 +88,32 @@ for files,data in summary.items():
     #correlation
     #corr_df = df.corr()[['slope_norm','slope','bestITI']].sort_values('bestITI',axis=0)#why do we need that???
     #print(corr_df)
-    #get mean and std
-    sm_mean=pd.DataFrame(df['slope_norm'].mean(level=0)-1)
-    sm_mean['std']=df['slope_norm'].std(level=0)
-     
-    jg = sns.jointplot(df['bestITI'],df['slope_norm'].astype('int'),ratio=3,xlim=(0,df['bestITI'].max()*1.1),ylim=(0,df['slope_norm'].max()*1.1),s=10,alpha=.8,edgecolor='0.2',linewidth=.2,color='k')
-    plt.title("slope vs bestITI")
-    #plot data for slope
-    sm_mean.plot(y='slope_norm',kind='bar',yerr='std',capsize=2,title=files)
-    plt.ylabel("norm/crtl_slope")
-    plt.figure()
-    df.worstITI.mean(level=0).dropna().plot(kind='bar',title=files)
     #plot data for bestITI
     plt.figure()
     best.plot.bar(y='bestITI',title=files)
-    #plot deltabest
-    delta=pd.DataFrame(df['deltabest'].mean(level=0)-1)
-    delta['std']=df['deltabest'].std(level=0)
-    delta['MaxMin']=df['deltaMaxMin'].mean(level=0)-1
-    delta['stdMaxMin']=df['deltaMaxMin'].std(level=0)
+    deltabest_mean=pd.DataFrame(df['deltabest'].mean(level=0))
     plt.figure()
-    delta.plot.bar(y='deltabest',yerr='std',capsize=2,title=files)
-    plt.figure()
-    delta.plot.bar(y='MaxMin',title=files)
+    deltabest_mean.plot.bar(title=files)
+    plt.ylabel('deltabest')
+    plt.tight_layout()
+    for j,jj in enumerate (col):
+        data_param=pd.DataFrame(df[jj].mean(level=0)-1)
+        data_param['std']=df[jj].std(level=0)/np.sqrt(3)
+  
+        jg = sns.jointplot(df['bestITI'],df[jj].round(2),ratio=3,xlim=(0,df['bestITI'].max()*1.1),ylim=(df[jj].min()*0.9,df[jj].max()*1.1),s=10,alpha=.8,edgecolor='0.2',linewidth=.2,color='k',marginal_kws=dict(bins=40))#might want to adjust depending of your data (bin, xlim and ylim) 
+        plt.title(jj+" vs bestITI")
+        #plot data 
+        data_param.plot(y=jj,kind='bar',yerr='std',capsize=2,title=files)
+        plt.ylabel(jj)
+        plt.tight_layout()     
+       
+        outfname=files+'.txt'
+        outfname2=files+'_best.txt'
+        outfname3=files+'_deltaMaxMin.txt'
+        if save==1:
+            data_param.to_csv(outfname)###it is only saving one file 
+            
 
-    jg2 = sns.jointplot(df['bestITI'],df['deltabest'].astype('int'),ratio=3,xlim=(0,df['bestITI'].max()*1.1),ylim=(0,df['deltabest'].max()*1.1),s=10,alpha=.8,edgecolor='0.2',linewidth=.2,color='k')
-    plt.title("deltabest vs bestITI")
-    outfname=files+'.txt'
-    outfname2=files+'_best.txt'
-    outfname3=files+'_deltabest.txt'
-    if save==1:
-        sm_mean.to_csv(outfname)###it is only saving one file 
-        best.to_csv(outfname2)
-        
+
  
 

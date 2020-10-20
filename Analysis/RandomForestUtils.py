@@ -23,6 +23,7 @@ def plotPredictions(max_feat, train_test, predict_dict, class_labels, feature_or
     plt.ion()
     edgecolors=['k','none']
     feature_axes=[(i,i+1) for i in range(0,max_feat,2)]
+    print(feature_axes)
     for cols in feature_axes:
         plt.figure()
         plt.title('Epoch '+str(epoch))
@@ -48,6 +49,7 @@ def plot_features(list_features,epochs,ylabel):
     plt.ylabel(ylabel)
     plt.xlabel('Feature')
     plt.title(ylabel+' over '+epochs+' epochs')
+    plt.tight_layout()
 
 def runClusterAnalysis(param_values, labels, num_features, class_labels,epoch,MAXPLOTS):
 
