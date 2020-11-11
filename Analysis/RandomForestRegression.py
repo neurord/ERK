@@ -77,7 +77,6 @@ for j,jj in enumerate (ycol):
         plt.xlabel('File Name')
         plt.ylabel(jj)
 
-#scatter plot     WHEN THIS ON, THE REST ARE NOT GRAPHING
         import seaborn as sns
         jg = sns.jointplot(df[xcol].astype('int'),df[jj].round(2),ratio=5,xlim=(0,df[xcol].max()*1.1),ylim=(df[jj].min()*0.9,df[jj].max()*1.1),s=10,alpha=.8,edgecolor='0.2',linewidth=.2,color='k',marginal_kws=dict(bins=40))
         plt.title(jj+" vs " +xcol)
@@ -104,44 +103,43 @@ for j,jj in enumerate (ycol):
         from sklearn.svm import SVR
 
         X = df.drop(['slope_norm','bestITI','filename','trial','slope','deltabest','deltaMaxMin','MinITI'], axis=1)
-        Yslope = df[jj]
-        Yiti = df[xcol]
+        y=Yslope = df[jj];label=jj
+        #Yiti = df[xcol]
+                
+        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.33, random_state=42)
+        regr = RandomForestRegressor(n_estimators=100)#;
+        regr.fit(X_train, y_train)
+        y_pred = regr.predict(X_test)
+        #print & plot some results
+        print('*****************','train',regr.score(X_train,y_train),'test',regr.score(X_test,y_test),'*********************')
+        feature_importance_df = pd.DataFrame(regr.feature_importances_,X.columns,columns=['Random_Forest_Feature_Importance']).sort_values('Random_Forest_Feature_Importance',ascending=False)
+        axes = feature_importance_df.plot.barh()
+        axes.legend_.set_visible(False)
+        f = plt.gcf()
+        f.set_size_inches((6,6))
+        axes.set_xlim([0,feature_importance_df.max()[0]])
+        plt.title('Feature Importance for '+label)
 
-        for y,label in zip([Yslope,Yiti],[jj,xcol]):
-            X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.33, random_state=42)
-            regr = RandomForestRegressor(n_estimators=100)
-            regr.fit(X_train, y_train)
-            y_pred = regr.predict(X_test)
-            #print & plot some results
-            print('*****************','train',regr.score(X_train,y_train),'test',regr.score(X_test,y_test),'*********************')
-            feature_importance_df = pd.DataFrame(regr.feature_importances_,X.columns,columns=['Random_Forest_Feature_Importance']).sort_values('Random_Forest_Feature_Importance',ascending=False)
-            axes = feature_importance_df.plot.barh()
-            axes.legend_.set_visible(False)
-            f = plt.gcf()
-            f.set_size_inches((6,6))
-            axes.set_xlim([0,feature_importance_df.max()[0]])
-            plt.title('Feature Importance for '+label)
-
-            ######## Substitute important features for nmda_gbar
-            num_plots=2
-            mols=[feature_importance_df.index[i] for i in range(num_plots)]
-            plt.figure()
-            plt.title('Prediction '+label)
-            for mol in mols:
-                    plt.scatter(X_test[mol], y_test,alpha=.4,label='actual'+mol)
-                    plt.scatter(X_test[mol], y_pred,alpha=.4,label='prediction'+mol)
-                    plt.legend()
-                    plt.xlabel(jj)
-                    plt.ylabel('ITIs')
-############# Standard multiple linear regresion
+        ######## Substitute important features for nmda_gbar
+        num_plots=2
+        mols=[feature_importance_df.index[i] for i in range(num_plots)]
+        plt.figure()
+        plt.title('Prediction '+label)
+        for mol in mols:
+            plt.scatter(X_test[mol], y_test,alpha=.4,label='actual'+mol)
+            plt.scatter(X_test[mol], y_pred,alpha=.4,label='prediction'+mol)
+            plt.legend()
+            plt.xlabel(jj)
+            plt.ylabel('ITIs')
+        ############# Standard multiple linear regresion
         from sklearn.feature_selection import f_regression
         import statsmodels.formula.api as smf
         import statsmodels.api as sm
         # Create linear regression object.  Do one at a time
-        y=Yslope;label=jj#'slope'#is this correct?
+        #y=Yslope;label=jj
         #y=Y300;label='delta300'
-        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.33, random_state=42)
-        regr = linear_model.LinearRegression()
+        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.33)#, random_state=42)
+        regr = linear_model.LinearRegression();random_state = 1000
         # Train the model using the training sets
         regr.fit(X_train, y_train)
         # Make predictions using the testing set
@@ -166,13 +164,13 @@ for j,jj in enumerate (ycol):
         res = mod.fit()
         print(res.summary())
 
-##################### Random Forest clutser on bestITI
+        ##################### Random Forest clutser on bestITI
         from RandomForestUtils import plotPredictions, plot_features, runClusterAnalysis
 
         Y = df[xcol]
         ITIs=list(np.unique(Y.values))
         num_feat=len(X.columns)
-        MAXPLOTS=2
+        MAXPLOTS=0
         epochs=100
 
         collectionBestFeatures = {}
@@ -181,7 +179,7 @@ for j,jj in enumerate (ycol):
             features, max_feat = runClusterAnalysis(X,Y.astype('int'),num_feat,ITIs,epoch,MAXPLOTS)
             print()
             #pass in parameter to control plotting
-            print('##### BEST FEATURES for EPOCH '+str(epoch)+' #######')
+            print('######### BEST FEATURES for EPOCH '+str(epoch)+' #######')
             for i,(feat, weight) in enumerate(features):
                 print(i,feat,weight) #monitor progress 
                 if feat not in collectionBestFeatures:          # How is the weight scaled? caution
