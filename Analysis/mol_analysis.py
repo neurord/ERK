@@ -34,30 +34,3 @@ for file_name in IC_filename:
 outfname='RandomAnalysis_molnew'
 np.savez(outfname,all_list)
 
-'''
-#to check data
-dat=np.load(outfname+'.npz',allow_pickle=True)
-dat.keys()
-dat['ctrl'].item()  
-'''
-'''
-import pandas as pd
-from matplotlib import pyplot as plt
-plt.ion()
-import math
-
-df=pd.DataFrame.from_dict(all_list,orient='index')
-df.to_csv('mol_list.txt')
-
-
-ncols=6
-nrows=math.ceil(len(df.columns)/ncols)
-
-fig,axes=plt.subplots(nrows,ncols)
-for i, col in enumerate(df.columns):
-     for r in range(nrows):
-          for c in range(ncols):
-               df[col].plot.bar(ax=axes[r,c],title=col)
-               ###plt.title(col)
-'''
-

@@ -4,7 +4,6 @@ import glob
 #import csv
 import seaborn as sns
 save=1
-#need this because can't plot together 
 
 
 ####find ccontrol data first
