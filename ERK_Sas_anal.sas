@@ -1,0 +1,110 @@
+LIBNAME erk 'C:\Documents and Settings\kblackw1\My Documents\hippoakap\erk';
+DATA erk.erk;
+    INFILE 'C:\Documents and Settings\kblackw1\My Documents\hippoakap\erk\ERK_linearity_test.txt' firstobs=2;
+    INPUT ITI  Trial $6. Ca5 Ca5cAMP Ca10cAMP Ca10 cAMP500 ca5ampsum ca10ampsum;
+run;
+
+DATA erk.erkextra;
+	set erk.erk;
+	diff5=Ca5cAMP-ca5ampsum;
+	diff10=Ca10cAMP-ca10ampsum;
+run;	
+proc means data=erk.erk mean std stderr;
+title 'summary';
+class iti;
+var diff5 diff10 Ca5cAMP ca5ampsum ca10cAMP ca10ampsum;
+run;
+
+proc GLM data=erk.erk;
+title 'Does the difference between sum and comb differ based on ITI?';
+class iti;
+model diff5 diff10 = iti;
+run;
+/* RESULTS show diff5 doesn't differ by ITI, but diff 10 does */
+/* follow up: diff5 - simple ttest on all data */
+/* follow up: diff10 - post hoc test to determine which one is different */
+proc ttest data=erk.erk;
+title 'Ca500: is sum different than combo?';
+var diff5;
+run;
+
+proc GLM data=erk.erk;
+title 'Ca1000: which ITI is different ?';
+class iti;
+model diff10 = iti / solution noint;
+MEANS iti / tukey lines;
+contrast '80 vs others' iti 0.25 0.25 0.25 -1 0.25;
+contrast '300 vs others' iti 0.25 0.25 0.25 0.25 -1 ;
+contrast '80 vs 3,20,40' iti 1 1 1 -3 0;
+contrast '300 vs 3,20,40' iti 1 1 1 0 -3  ;
+run;
+
+/* reshape data for 2-way ANOVA */
+data sum;
+set erk.erk (drop= Ca5 Ca5cAMP Ca10cAMP Ca10 cAMP500 diff5 diff10);
+rename ca5ampsum=Ca5cAMP ca10ampsum=Ca10cAMP;
+type='sum  ';
+run;
+data combo;
+set erk.erk (drop=Ca5 Ca10 cAMP500 ca5ampsum ca10ampsum diff5 diff10);
+type='combo';
+run;
+
+proc GLM data=erk.erk2way;
+title 'Does combo differ from sum?';
+class type;
+model Ca5cAMP Ca10cAMP=logiti type;
+run;
+proc GLM data=erk.erk2way;
+title 'Does combo differ from sum? No for Ca500';
+class type;
+model Ca5cAMP =logiti;
+run;
+proc GLM data=erk.erk2way;
+title 'Does combo differ from sum? Yes for Ca1000';
+class type;
+model Ca5cAMP =logiti type;
+run;
+proc GLM data=erk.erk2way;
+title 'Does combo differ from sum?';
+class iti type;
+model Ca5cAMP Ca10cAMP=iti type ;
+MEANS iti / tukey lines;
+run;
+DATA erk.erk50PP1;
+    INFILE 'C:\Documents and Settings\kblackw1\My Documents\hippoakap\erk\ERK_linearPP1_test.txt' firstobs=2;
+    INPUT ITI  Trial $6. pp50Ca10cAMP pp50Ca10 pp50cAMP;
+	cacAMPsum=pp50Ca10+pp50cAMP;
+	pp50CacAMPdiff=pp50Ca10cAMP-cacAMPsum;
+run;
+run;
+proc GLM data=erk.erk50PP1;
+title 'Effect of ITI on linear combo for PP1=50%CK, Ca=1000 nM';
+class iti;
+model pp50CacAMPdiff = iti /solution;
+MEANS iti / tukey lines;
+run;
+proc means data=erk.erk50PP1 mean std stderr;
+title 'summary';
+class iti;
+var pp50Ca10cAMP pp50Ca10 pp50cAMP;
+run;
+data sum;
+set erk.erk50PP1 (keep= cacAMPsum);
+rename cacAMPsum=pp50Ca10cAMP;
+type='sum  ';
+run;
+data combo;
+set erk.erk50PP1 (keep=pp50Ca10cAMP);
+type='combo';
+run;
+data erk.erk50PP1_2way;
+set sum combo;
+run;
+proc GLM data=erk.erk50PP1_2way;
+title 'Does combo differ from sum for PP1=50%CK, Ca=1000 nM?';
+class iti type;
+model pp50Ca10cAMP=iti type /solution ;
+MEANS iti / tukey lines; 
+run;
+
