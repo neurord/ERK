@@ -1,6 +1,0 @@
-inter  ppERK_amplitude_mean ppERK_amplitude_std  PKAc_amplitude_mean PKAc_amplitude_std  CKpCamCa4_amplitude_mean CKpCamCa4_amplitude_std 
-3.0     0.011     0.002     13.437     0.001     0.0     0.019
-20.0     0.011     0.002     12.787     0.0     0.0     0.021
-40.0     0.011     0.002     12.099     0.001     0.0     0.028
-80.0     0.011     0.002     11.098     0.001     0.0     0.019
-300.0     0.009     0.002     0.955     0.0     0.0     0.061
