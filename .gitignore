@@ -10,3 +10,5 @@
 *.bat
 *.
 *.txt
+*.pyc
+*.csv
