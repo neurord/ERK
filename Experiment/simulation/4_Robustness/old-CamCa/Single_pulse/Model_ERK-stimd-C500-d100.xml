@@ -3,11 +3,12 @@
     <!-- this file defines a single run of the calculation, using morphology and 
 	 reaction data brought in from other files --> 
 
+
           <xi:include href="../Rxn_ERK-d-oldCam.xml" />
           <xi:include href="../Morph.xml" />        
-          <xi:include href="../IC_ERK-Testold.xml" />
+          <xi:include href="../IC_ERK-Test_basald-oldCam.xml" />
           <xi:include href="../Out_ERK-Test.xml" />
-	  
+	   <xi:include href="Stim_ERK_Ca-C500-d100.xml" />
  
  
     <!--2D means the morphology is interpreted like a flatworm, 3D for
