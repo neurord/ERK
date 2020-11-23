@@ -34,8 +34,6 @@
 
 
     <NanoMolarity specieID="cAMP" value="27.767" />
-    <NanoMolarity specieID="buff" value="0.0" />
-    <NanoMolarity specieID="cAMPbuff" value="0.0" />
     <NanoMolarity specieID="PDE2" value="159.801" />
     <NanoMolarity specieID="PDE2cAMP" value="0.212" />
     <NanoMolarity specieID="PDE2cAMP2" value="0.005" />
@@ -44,7 +42,7 @@
     <NanoMolarity specieID="AMP" value="40346.116" />
 
     <NanoMolarity specieID="Epac" value="154.542" />
-    <NanoMolarity specieID="EpacRap1" value="nan" />
+    <NanoMolarity specieID="EpacRap1" value="9.20" />
     <NanoMolarity specieID="EpacAMP" value="36.257" />
 
     <NanoMolarity specieID="PKAcAMP2" value="119.544" />
@@ -87,8 +85,6 @@
 
 
     <NanoMolarity specieID="Gbg" value="0.0" />
-    <NanoMolarity specieID="Gbuff" value="0.0" />
-    <NanoMolarity specieID="Gbgbuff" value="0.0" />
     <NanoMolarity specieID="SrcGbg" value="0.0" />
     <NanoMolarity specieID="Sos" value="7.021" />
     <NanoMolarity specieID="pSos" value="0.0" />
@@ -140,7 +136,7 @@
     <NanoMolarity specieID="CaB" value="2589.954" />
 
     <NanoMolarity specieID="Leak" value="1.021" />
-    <NanoMolarity specieID="CaextLeak" value="nan" />
+    <NanoMolarity specieID="CaextLeak" value="698.88" />
     <NanoMolarity specieID="pmca" value="414.784" />
     <NanoMolarity specieID="pmcaCa" value="85.259" />
     <NanoMolarity specieID="ncx" value="1917.255" />
