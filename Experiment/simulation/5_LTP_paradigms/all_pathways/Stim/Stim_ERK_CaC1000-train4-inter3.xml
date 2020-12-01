@@ -27,7 +27,7 @@
  <InjectionStim specieID="cAMP" injectionSite="pointA">
    <onset>               201020          </onset>
    <duration>       10        </duration> 
-   <rate>              60       </rate>
+   <rate>              100       </rate>
    <period>        40             </period>
    <end>          202000           </end>
    <interTrainInterval>  3000           </interTrainInterval>
