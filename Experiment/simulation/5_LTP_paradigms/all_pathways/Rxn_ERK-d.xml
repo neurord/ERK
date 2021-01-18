@@ -1267,13 +1267,13 @@ phosphatase reactions take from revision of Gs to improve Ca dep dphos of Dp32--
 
   <!-- Gbgext binding to Gbg to balance the baseline -->
     
-    <Reaction name ="Gbg--Gbgext" id="Gbg--Gbgext">
-              <Reactant specieID="Gbg"/>
+    <!-- <Reaction name ="Gbg-\-Gbgext" id="Gbg-\-Gbgext"> -->
+    <!--           <Reactant specieID="Gbg"/> -->
               
 
-        <forwardRate> 1e-3 </forwardRate>
-	<reverseRate> 0 </reverseRate>
-    </Reaction>
+    <!--     <forwardRate> 1e-3 </forwardRate> -->
+    <!-- 	<reverseRate> 0 </reverseRate> -->
+    <!-- </Reaction> -->
     
 
    <!--(Gbg binds to Src) Gbg+Src <->SrcGbg -->

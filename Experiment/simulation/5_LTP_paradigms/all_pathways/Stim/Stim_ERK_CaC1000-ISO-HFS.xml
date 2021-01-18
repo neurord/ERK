@@ -99,8 +99,8 @@
 
 <InjectionStim specieID="Gbg" injectionSite="pointA">
         <onset>               300000         </onset>
-        <duration>            1500000       </duration> 
-        <rate>               50        </rate>
+        <duration>            150000       </duration> 
+        <rate>               0.33        </rate>
 	<end>          1800000           </end>
 </InjectionStim>
 
