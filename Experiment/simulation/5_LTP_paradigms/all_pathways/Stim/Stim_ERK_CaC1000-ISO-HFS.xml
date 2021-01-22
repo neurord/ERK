@@ -55,7 +55,7 @@
   
         <onset>               401000          </onset>
         <duration>        10         </duration> 
-        <rate>             180000       </rate>
+        <rate>             216000.0       </rate>
    
 	<period>        1100             </period>
 	<end>          402000           </end>
@@ -66,7 +66,7 @@
   
         <onset>               401020          </onset>
         <duration>        10         </duration> 
-        <rate>            20000       </rate>
+        <rate>            24000       </rate>
 	<period>        320         </period>
 	<end>        402000        </end>
 </InjectionStim>
@@ -76,9 +76,9 @@
 
         <onset>               402000          </onset>
         <duration>        5         </duration> 
-      	<rate>       450000 </rate>
+      	<rate>       200000 </rate>
 	<period>        1000             </period>
-	<end>          403000           </end>
+	<end>          404000           </end>
 </InjectionStim>
 
 
@@ -87,10 +87,10 @@
    <InjectionStim specieID="Cbuffslow" injectionSite="pointA">
 
         <onset>               401000          </onset>
-        <duration>        1000        </duration> 
-	<rate>   600           </rate>
+        <duration>        250        </duration> 
+	<rate>   1200           </rate>
 	<period>        1100             </period>
-	<end>          402000           </end>
+	<end>          403000           </end>
    </InjectionStim>
 
  <!--Gbg -->
@@ -98,9 +98,9 @@
 
 
 <InjectionStim specieID="Gbg" injectionSite="pointA">
-        <onset>               300000         </onset>
-        <duration>            150000       </duration> 
-        <rate>               0.33        </rate>
+        <onset>               250000         </onset>
+        <duration>            200000       </duration> 
+        <rate>               0.2        </rate>
 	<end>          1800000           </end>
 </InjectionStim>
 
