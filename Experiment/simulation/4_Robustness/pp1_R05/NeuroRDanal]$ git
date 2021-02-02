@@ -1,0 +1,221 @@
+[1mdiff --git a/h5utils.py b/h5utils.py[m
+[1mindex 7932265..2ffa842 100644[m
+[1m--- a/h5utils.py[m
+[1m+++ b/h5utils.py[m
+[36m@@ -158,19 +158,27 @@[m [mdef argparse(args):[m
+     #    ans = ftuple[1][m
+     #    #print 'sort', ftuple, '->', ans[m
+     #    return ans[m
+[31m-    def sort_param(ftuples,parlist):[m
+[31m-        if [i in '0123456789.' for item in parlist[1] for i in item ]:[m
+[32m+[m[32m    def sort_paramNum(ftuples,parlist,par):[m
+[32m+[m[32m        print('**********************1:',parlist[1],parlist[0], 'sort_paraNum')[m
+[32m+[m[32m        if np.all([i in '0123456789.' for item in parlist[1] for i in item ]):[m
+             parlist[1]=[float(item) for item in parlist[1]][m
+[31m-            if len(params)>1:[m
+[31m-                 newftuples=[(tup[0],(tup[1][0],float(tup[1][1]))) for tup in ftuples][m
+[32m+[m[32m            if len(par)>1:[m
+[32m+[m[32m                newftuples=[(tup[0],(tup[1][0],float(tup[1][1]))) for tup in ftuples][m
+             else:[m
+[31m-                 newftuples=[(tup[0],float(tup[1])) for tup in ftuples][m
+[32m+[m[32m                newftuples=[(tup[0],float(tup[1])) for tup in ftuples][m
+             ftuples=sorted(newftuples,key=lambda x:x[1])[m
+[31m-            parlist[1]=sorted(parlist[1],key=lambda x:x)[m
+[31m-            #parlist[1]=[str(p) for p in parlist[1]][m
+[31m-            parlist[0]=sorted(parlist[0],key=lambda x:x)[m
+[32m+[m[32m        parlist[1]=sorted(parlist[1],key=lambda x:x)[m
+[32m+[m[32m        parlist[0]=sorted(parlist[0],key=lambda x:x)[m
+         return ftuples,parlist[m
+ [m
+[32m+[m[32m    #sort par[m
+[32m+[m[32mparfloat=[0 for p in params][m
+[32m+[m[32mfor i in range (len(par)):[m
+[32m+[m[32m    if np.all([i in '0123456789.' for item in parlist[i]for i in item ]):[m
+[32m+[m[32m        parlist[i]=[float(item) for item in parlist[i]][m
+[32m+[m[32m        parfloat[i]=True[m
+[32m+[m[32m    if len(par)==1 and parfloat[i]=True:[m
+[32m+[m[32m        newftuples=[(tup[0],float(tup[1])) for tup in ftuples][m
+     #1st and 2nd arguements used to construct pattern for reading in multiple files[m
+     pattern=args[0][m
+     if len(args[1]):[m
+[36m@@ -182,12 +190,9 @@[m [mdef argparse(args):[m
+     whole_pattern=pattern+'.h5'[m
+     print("pattern:", whole_pattern)[m
+ [m
+[31m-    lastslash=str.rfind(pattern,'/')[m
+[31m-    if lastslash > -1:[m
+[31m-        subdir=pattern[0:lastslash][m
+[31m-    else:[m
+[32m+[m[32m    subdir=os.path.dirname(pattern)[m
+[32m+[m[32m    if len(subdir)==0:[m
+         subdir='.'[m
+[31m-[m
+     fnames = glob.glob(whole_pattern)[m
+ [m
+     print("files:", fnames)[m
+[36m@@ -200,7 +205,9 @@[m [mdef argparse(args):[m
+     if len(args[1]):[m
+         ftuples,parlist=pu5.file_tuple(fnames,params)[m
+         ftuples = sorted(ftuples, key=lambda x:x[1])[m
+[31m-        ftuples,parlist=sort_param(ftuples,parlist)[m
+[32m+[m[32m        print('**********************2:',parlist[1],parlist[0], ftuples, par)[m
+[32m+[m[32m        if len(parlist[1]):[m
+[32m+[m[32m            ftuples,parlist=sort_paramNum(ftuples,parlist,par)[m
+     else:[m
+         star=str.find(pattern,'*')[m
+         if star>-1:[m
+[1mdiff --git a/nrdh5_anal.py b/nrdh5_anal.py[m
+[1mindex ff7ac45..09d5c9f 100644[m
+[1m--- a/nrdh5_anal.py[m
+[1m+++ b/nrdh5_anal.py[m
+[36m@@ -41,24 +41,30 @@[m [mspatialaverage=0[m
+ bins=10[m
+ #how much info to print[m
+ showss=0[m
+[31m-plateau=0[m
+[32m+[m[32mshowplateau=1[m
+ show_inject=0[m
+ print_head_stats=0[m
+ #outputavg determines whether output files are written[m
+ outputavg=0[m
+[32m+[m[32moutputavg2=1[m
+ showplot=1    #2 indicates plot the head conc, 0 means no plots[m
+ stimspine='sa1[0]' #"name" of (stimulated) spine[m
+ auc_mol='2ag'[m
+ endtime=150 #time to stop calculating AUC - make shorter than entire duration if simulations are dropping below basal[m
+[31m-textsize=12 #for plots.  Make bigger for presentations[m
+[32m+[m[32mtextsize=20 #for plots.  Make bigger for presentations[m
+ [m
+ #Example of how to total some molecule forms; turn off with tot_species={}[m
+ #No need to specify subspecies if uniquely determined by string[m
+[31m-sub_species={'ras':['rasGap','RasGTPGap'], 'rap':['rap1Gap', 'Rap1GTPGap'],'Ras': ['pShcGrb2SosRas', 'CamCa4GRFRas', 'Raf1Ras', 'dRaf1Ras','dRaf1RasMEK', 'dRaf1RaspMEK','dRaf1bRaf','dRaf1bRafMEK','dRaf1bRafpMEK', 'bRafRas', 'bRafRasMEK','bRafRaspMEK', 'RasGTP', 'RasGDP', 'RasSynGap', 'RasGTPGap', 'RaspSynGap'],'Rap1GTP':['bRafRap1MEK', 'bRafRap1pMEK', 'bRafRap1', 'Raf1Rap1', 'Rap1GTP','dRaf1bRaf','dRaf1bRafMEK','dRaf1bRafpMEK'],'PKA':['PKA', 'PKAcAMP2', 'PKAcAMP4', 'PKAr'], 'erk':['ppERK','pERK'], 'RasGTP':['Raf1Ras', 'dRaf1Ras', 'dRaf1RasMEK', 'dRaf1RaspMEK', 'bRafRas', 'bRafRasMEK', 'bRafRaspMEK', 'RasGTP','dRaf1bRaf','dRaf1bRafMEK','dRaf1bRafpMEK'], 'RasSyn':['RasSynGap', 'RaspSynGap'], 'Rap1Syn':['Rap1SynGap', 'Rap1pSynGap'],'cAMP': ['EpacAMP', 'cAMP','PDE4cAMP','PDE2cAMP', 'PDE2cAMP2', 'PKAcAMP2', 'PKAcAMP4'], 'Ca':['Ca'],'ERK':['pERK', 'ppERK', 'pERKMKP1', 'ppERKMKP1', 'ppMEKERK', 'ppMEKpERK', 'ppERKpShcGrb2Sos']}[m
+[32m+[m[32msub_species={'ras':['rasGap','RasGTPGap'], 'rap':['rap1Gap', 'Rap1GTPGap'],'Ras': ['pShcGrb2SosRas', 'CamCa4GRFRas', 'Raf1Ras', 'dRaf1Ras','dRaf1RasMEK', 'dRaf1RaspMEK','dRaf1bRaf','dRaf1bRafMEK','dRaf1bRafpMEK', 'bRafRas', 'bRafRasMEK','bRafRaspMEK', 'RasGTP', 'RasGDP', 'RasSynGap', 'RasGTPGap', 'RaspSynGap'],'Rap1GTP':['bRafRap1MEK', 'bRafRap1pMEK', 'bRafRap1', 'Raf1Rap1', 'Rap1GTP','dRaf1bRaf','dRaf1bRafMEK','dRaf1bRafpMEK'],'PKA':['PKA', 'PKAcAMP2', 'PKAcAMP4', 'PKAr'], 'erk':['ppERK','pERK'], 'RasGTP':['Raf1Ras', 'dRaf1Ras', 'dRaf1RasMEK', 'dRaf1RaspMEK', 'bRafRas', 'bRafRasMEK', 'bRafRaspMEK', 'RasGTP','dRaf1bRaf','dRaf1bRafMEK','dRaf1bRafpMEK'], 'RasSyn':['RasSynGap', 'RaspSynGap'], 'Rap1Syn':['Rap1SynGap', 'Rap1pSynGap'],'cAMP': ['EpacAMP', 'cAMP','PDE4cAMP','PDE2cAMP', 'PDE2cAMP2', 'PKAcAMP2', 'PKAcAMP4'], 'Ca':['Ca'],'ERK':['pERK', 'ppERK', 'pERKMKP1', 'ppERKMKP1', 'ppMEKERK', 'ppMEKpERK', 'ppERKpShcGrb2Sos'], 'free_Syn':['SynGap', 'pSynGap']}[m
+ [m
+ tot_species=[][m
+ [m
+[31m-mol_pairs=[][m
+[32m+[m[32m#molecules that we want to check if there is any correlation by plotting them together[m[41m [m
+[32m+[m[32mmol_pairs=[]#[['ppERK','Ca'], ['ppERK','CKpCamCa4'],['cAMP','ppERK']][m
+[32m+[m[32m#starting time for pairing[m[41m [m
+[32m+[m[32mplot_start_time=10[m
+[32m+[m[32m#ending time for paring[m
+[32m+[m[32mplot_end_time=300[m
+ ###################################################[m
+ [m
+ Avogadro=6.023e14 #to convert to nanoMoles[m
+[36m@@ -89,6 +95,7 @@[m [mwhole_space_array=[][m
+ whole_time_array=[][m
+ for fnum,ftuple in enumerate(ftuples):[m
+     data,maxvols,TotVol,trials,seeds,arraysize,p=h5utils.initialize(ftuple,numfiles,parval)[m
+[32m+[m[32m    print (ftuple, 'volume',TotVol)[m
+     if len(p):[m
+         params=p[0][m
+         parval=p[1][m
+[36m@@ -444,6 +451,7 @@[m [mif spatialaverage:[m
+ #pyplot.ylabel('ppERK (nM)', fontweight='bold')[m
+ [m
+ #plot plateau[m
+[32m+[m
+ if len(parlist[0])>len(parlist[1]):[m
+     par_index=0[m
+ else:[m
+[36m@@ -455,6 +463,12 @@[m [mfor imol,mol in enumerate(plot_molecules):[m
+     pyplot.ylabel('duration'+'_'+ mol)[m
+ pyplot.legend()[m
+ [m
+[32m+[m[32mfor imol,mol in enumerate(plot_molecules):[m
+[32m+[m[32m    pyplot.figure(figtitle)[m
+[32m+[m[32m    pyplot.plot(parlist[par_index],amplitude[imol:], label=mol)[m
+[32m+[m[32m    pyplot.xlabel('Inj_dur')[m
+[32m+[m[32m    pyplot.ylabel('Amplitude'+'_'+ mol)[m
+[32m+[m[32mpyplot.legend()[m
+ [m
+ #This code is very specific for the Uchi sims where there are two parameters: dhpg and duration[m
+ #it will work with other parameters, as long as there are two of them. Just change the auc_mol[m
+[36m@@ -498,8 +512,10 @@[m [mif showss:[m
+ [m
+ [m
+ [m
+[31m-plot_start=int(1000/dt[0])[m
+[32m+[m[32mplot_start=int(plot_start_time/dt[0])[m
+[32m+[m[32mplot_end=int(plot_end_time/dt[0])[m
+ for pair in mol_pairs:[m
+[32m+[m[32m    print(pair)[m
+     do_plot=True[m
+     if pair[0] in plot_molecules:[m
+         molY=plot_molecules.index(pair[0])[m
+[36m@@ -511,22 +527,27 @@[m [mfor pair in mol_pairs:[m
+          do_plot=False[m
+     if do_plot:[m
+         pyplot.figure()[m
+[32m+[m[32m        pyplot.title('---'.join(pair))[m
+         for pnum in range(arraysize):[m
+[31m-            pyplot.plot(whole_plot_array[molX][pnum][plot_start:],whole_plot_array[molY][pnum][plot_start:], label=xval[pnum], marker='.',linestyle='None')[m
+[32m+[m[32m            X=whole_plot_array[molX][pnum][m
+[32m+[m[32m            Y=whole_plot_array[molY][pnum][m
+[32m+[m[32m            time_vectorY=np.linspace(0,whole_time_array[0][0][-1],len(Y))[m
+[32m+[m[32m            time_vectorX=np.linspace(0,whole_time_array[0][0][-1],len(X))[m
+[32m+[m[32m            # check if molX & moly same length[m
+[32m+[m[32m            if len(X)==len(Y):[m
+[32m+[m[32m                pyplot.plot(X[plot_start:plot_end],Y[plot_start:plot_end], label=xval[pnum], linestyle='--')[m
+[32m+[m[32m            if len(X)>len(Y):[m
+[32m+[m[32m                molX_interp=np.interp(time_vectorY,time_vectorX,X)[m
+[32m+[m[32m                pyplot.plot(molX_interp[plot_start:plot_end],Y[plot_start:plot_end], label=xval[pnum], linestyle='--')[m
+[32m+[m[32m            if len(Y)>len(X):[m
+[32m+[m[32m                molY_interp=np.interp(time_vectorX,time_vectorY,Y)[m
+[32m+[m[32m                pyplot.plot(X[plot_start:plot_end],molY_interp[plot_start:plot_end], label=xval[pnum], linestyle='--')[m
+[32m+[m[41m                [m
+[32m+[m[41m           [m
+[32m+[m[41m            [m
+         pyplot.legend()[m
+         pyplot.xlabel(pair[1])[m
+         pyplot.ylabel(pair[0])[m
+     else:[m
+[31m-        print('***************Molecule not in ARGS****************', pair)[m
+[31m-    [m
+[32m+[m[32m        print('*********************Molecule not in ARGS****************', pair)[m
+     [m
+[31m-    [m
+[31m-'''[m
+[31m-Traceback (most recent call last):[m
+[31m-  File "<stdin>", line 1, in <module>[m
+[31m-  File "<string>", line 462, in <module>[m
+[31m-  File "/home/avrama/python/NeuroRDanal/plot_h5.py", line 99, in plotss[m
+[31m-    if max(xparval)/min(xparval)>100:[m
+[31m-TypeError: unsupported operand type(s) for /: 'str' and 'str'[m
+[31m-'''[m
+[31m-[m
+[1mdiff --git a/plot_h5.py b/plot_h5.py[m
+[1mindex c3273b3..252e6b9 100644[m
+[1m--- a/plot_h5.py[m
+[1m+++ b/plot_h5.py[m
+[36m@@ -3,7 +3,7 @@[m [mfrom __future__ import division[m
+ import numpy as np[m
+ from matplotlib import pyplot[m
+ [m
+[31m-legtextsize=8[m
+[32m+[m[32mlegtextsize=15[m
+      [m
+ colors=pyplot.get_cmap('viridis')[m
+ #colors=pyplot.get_cmap('plasma')[m
+[36m@@ -84,9 +84,9 @@[m [mdef plottrace(plotmol,timearray,plotarray,parval,fig,colinc,scale,parlist,textsi[m
+                                          label=plotlabel+sp.split('[')[-1][0:-1],color=new_col)[m
+                else:[m
+                     axis[imol].plot(timearray[imol][pnum][0:maxpoint],plotarray[imol][pnum][0:maxpoint],label=plotlabel,color=mycolor)[m
+[31m-               axis[imol].set_ylabel(plotmol[imol]+' (nM)',fontsize=textsize)[m
+[32m+[m[32m               axis[imol].set_ylabel(plotmol[imol]+' (nM)',fontsize=textsize, fontweight='bold')[m
+                axis[imol].tick_params(labelsize=textsize)[m
+[31m-          axis[imol].set_xlabel('Time (sec)',fontsize=textsize)[m
+[32m+[m[32m          axis[imol].set_xlabel('Time (sec)',fontsize=textsize, fontweight='bold')[m
+      axis[imol].legend(fontsize=legtextsize, loc='best')[m
+      fig.canvas.draw()[m
+      return[m
+[36m@@ -98,7 +98,7 @@[m [mdef plotss(plot_mol,xparval,ss):[m
+         axes[imol].set_ylabel('nM')[m
+         if max(xparval)/min(xparval)>100:[m
+             axes[imol].set_xscale("log")[m
+[31m-        axes[imol].legend(fontsize=legtextsize, loc='best')[m
+[32m+[m[32m        axes[imol].legend(fontsize=legtextsize, loc='best',  fontweight='bold')[m
+     fig.canvas.draw()[m
+     return[m
+ [m

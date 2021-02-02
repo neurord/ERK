@@ -1,0 +1,119 @@
+<StimulationSet>
+
+  <!--onset and duration in ms, rate in particles/ms-->
+
+      
+
+ <!--cAMP -->
+
+<!--fast injection to have sharp increase-->
+<InjectionStim specieID="cAMP" injectionSite="pointA">
+           <onset>               101000          </onset>
+        <duration>        10         </duration> 
+       	<rate>               30.32      </rate>
+   
+   	<period>        1100             </period>
+	<end>          102000           </end>
+   <interTrainInterval>  300000           </interTrainInterval>
+    <numTrains>           4               </numTrains>
+		
+</InjectionStim>
+
+
+<!--maintained desire concentration-->
+
+
+ <InjectionStim specieID="cAMP" injectionSite="pointA">
+        <onset>               101020          </onset>
+        <duration>       10        </duration> 
+       	<rate>              1.2      </rate>
+	<period>        40             </period>
+	<end>          102000           </end>
+	<interTrainInterval>  300000           </interTrainInterval>
+    <numTrains>           4               </numTrains>
+</InjectionStim>
+
+ <!--Ca -->
+
+  
+<!--fast injection to have sharp increase-->
+<InjectionStim specieID="Ca" injectionSite="pointA">
+  
+        <onset>               101000          </onset>
+        <duration>        10         </duration> 
+        <rate>             7200       </rate>
+   
+	<period>        1100             </period>
+	<end>          102000           </end>
+	<interTrainInterval> 300000     </interTrainInterval>
+	<numTrains>           4       </numTrains>
+   
+   
+	
+</InjectionStim>
+
+<!--maintained desire concentration-->
+<InjectionStim specieID="Ca" injectionSite="pointA">
+  
+        <onset>               101020          </onset>
+        <duration>        10         </duration> 
+        <rate>            800       </rate>
+	<period>        320         </period>
+	<end>        102000        </end>
+	<interTrainInterval> 300000     </interTrainInterval>
+	<numTrains>           4       </numTrains>
+   
+	
+</InjectionStim>
+
+<!--buff to bring back Ca to basal. repeated -->
+<InjectionStim specieID="Cbuff" injectionSite="pointA">
+
+        <onset>               102000          </onset>
+        <duration>        5         </duration> 
+      	<rate>       18000 </rate>
+	<period>        1000             </period>
+	<end>          103000           </end>
+	<interTrainInterval> 300000     </interTrainInterval>
+	<numTrains>           4       </numTrains>
+   
+</InjectionStim>
+
+
+
+<!--slow buff for external Ca, keep basal -->   
+   <InjectionStim specieID="Cbuffslow" injectionSite="pointA">
+
+        <onset>               101000          </onset>
+        <duration>        1000        </duration> 
+	<rate>   24           </rate>
+	<period>        1100             </period>
+	<end>          102000           </end>
+	<interTrainInterval> 300000     </interTrainInterval>
+	<numTrains>           4       </numTrains>
+   </InjectionStim>
+
+    <!--Gbg -->
+<InjectionStim specieID="Gbg" injectionSite="pointA">
+        <onset>               101000     </onset>
+        <duration>            10      </duration> 
+        <rate>                6.2     </rate>
+	<period>        11100             </period>
+	<end>          102000           </end>
+	<interTrainInterval> 300000     </interTrainInterval>
+	<numTrains>           4       </numTrains>
+</InjectionStim>
+
+
+
+<InjectionStim specieID="Gbg" injectionSite="pointA">
+        <onset>               101010         </onset>
+        <duration>            990       </duration> 
+        <rate>               0.06        </rate>
+	<period>        11100             </period>
+	<end>          102000           </end>
+	<interTrainInterval> 300000     </interTrainInterval>
+	<numTrains>           4       </numTrains>
+</InjectionStim>
+
+</StimulationSet>
