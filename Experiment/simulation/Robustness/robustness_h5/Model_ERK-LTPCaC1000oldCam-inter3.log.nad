@@ -1,0 +1,19 @@
+16:16:47.728 WARN  n.m.Reaction - no reactants in reaction cAMP
+16:16:47.953 NOTICE n.n.g.GridCalc - Trial 2: running from 0.0 to 3600000.0 ms
+16:16:48.163 NOTICE n.n.g.GridCalc - Trial 0: running from 0.0 to 3600000.0 ms
+16:16:48.171 NOTICE n.n.g.GridCalc - Trial 1: running from 0.0 to 3600000.0 ms
+01:19:32.526 NOTICE n.n.g.GridCalc - Trial 0: total run time 32564362 ms
+01:19:32.526 NOTICE n.n.g.StochasticGridCalc - Used up 49868220441 random numbers
+01:19:32.527 NOTICE n.n.g.AdaptiveGridCalc - Accuracy control parameter ε=0.01
+01:19:32.527 NOTICE n.n.g.AdaptiveGridCalc - Leapt 71466265976 (23654332894 firings, 3.021275903076838 f/l average), waited 491658531 times
+01:19:32.528 NOTICE n.n.g.AdaptiveGridCalc - Real simulation took 9:02:44 (32564580 ms, 110.54956028912395 ms/s)
+01:20:22.638 NOTICE n.n.g.GridCalc - Trial 1: total run time 32614467 ms
+01:20:22.639 NOTICE n.n.g.StochasticGridCalc - Used up 49880172068 random numbers
+01:20:22.639 NOTICE n.n.g.AdaptiveGridCalc - Accuracy control parameter ε=0.01
+01:20:22.639 NOTICE n.n.g.AdaptiveGridCalc - Leapt 71539189340 (23653695480 firings, 3.0244402782850064 f/l average), waited 491592934 times
+01:20:22.639 NOTICE n.n.g.AdaptiveGridCalc - Real simulation took 9:03:34 (32614687 ms, 110.37971941904578 ms/s)
+01:37:19.673 NOTICE n.n.g.GridCalc - Trial 2: total run time 33631717 ms
+01:37:19.674 NOTICE n.n.g.StochasticGridCalc - Used up 49863044637 random numbers
+01:37:19.674 NOTICE n.n.g.AdaptiveGridCalc - Accuracy control parameter ε=0.01
+01:37:19.674 NOTICE n.n.g.AdaptiveGridCalc - Leapt 71322705128 (23654200154 firings, 3.015223709263283 f/l average), waited 491728646 times
+01:37:19.674 NOTICE n.n.g.AdaptiveGridCalc - Real simulation took 9:20:31 (33631730 ms, 107.04177275447918 ms/s)
