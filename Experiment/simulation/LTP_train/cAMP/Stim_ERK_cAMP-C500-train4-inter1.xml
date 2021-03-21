@@ -19,7 +19,7 @@
 
 
  <InjectionStim specieID="cAMP" injectionSite="pointA">
-        <onset>               101020          </onset>
+        <onset>               101010          </onset>
         <duration>       10        </duration> 
        	<rate>              30       </rate>
 	<period>        40             </period>

@@ -1,40 +1,31 @@
 <StimulationSet>
 
   <!--onset and duration in ms, rate in particles/ms-->
-
-      
-
  <!--cAMP -->
 
 <!--fast injection to have sharp increase-->
 <InjectionStim specieID="cAMP" injectionSite="pointA">
            <onset>               201000          </onset>
-        <duration>        10         </duration> 
-       	<rate>               758      </rate>
-   
+        <duration>        1         </duration> 
+       	<rate>               7500      </rate>
    	<period>        1100             </period>
 	<end>          202000           </end>
    <interTrainInterval>  1800000           </interTrainInterval>
-    <numTrains>           4               </numTrains>
-		
+    <numTrains>           4               </numTrains>		
 </InjectionStim>
 
-
 <!--maintained desire concentration-->
-
-
  <InjectionStim specieID="cAMP" injectionSite="pointA">
-        <onset>               201020          </onset>
-        <duration>       10        </duration> 
-       	<rate>              30       </rate>
-	<period>        40             </period>
+        <onset>               201010          </onset>
+        <duration>       1        </duration> 
+       	<rate>              70       </rate>
+	<period>        10             </period>
 	<end>          202000           </end>
 	<interTrainInterval>  1800000           </interTrainInterval>
     <numTrains>           4               </numTrains>
 </InjectionStim>
 
  <!--Ca -->
-
   
 <!--fast injection to have sharp increase-->
 <InjectionStim specieID="Ca" injectionSite="pointA">
@@ -42,28 +33,21 @@
         <onset>               201000          </onset>
         <duration>        10         </duration> 
         <rate>             180000       </rate>
-   
-	<period>        1100             </period>
+   	<period>        1100             </period>
 	<end>          202000           </end>
 	<interTrainInterval> 1800000     </interTrainInterval>
 	<numTrains>           4       </numTrains>
-   
-   
-	
-</InjectionStim>
+  </InjectionStim>
 
 <!--maintained desire concentration-->
 <InjectionStim specieID="Ca" injectionSite="pointA">
-  
         <onset>               201020          </onset>
         <duration>        10         </duration> 
-        <rate>            20000       </rate>
+        <rate>            20010       </rate>
 	<period>        320         </period>
 	<end>        202000        </end>
 	<interTrainInterval> 1800000     </interTrainInterval>
 	<numTrains>           4       </numTrains>
-   
-	
 </InjectionStim>
 
 <!--buff to bring back Ca to basal. repeated -->
@@ -71,22 +55,19 @@
 
         <onset>               202000          </onset>
         <duration>        5         </duration> 
-      	<rate>       450000 </rate>
+      	<rate>       420000 </rate>
 	<period>        1000             </period>
 	<end>          203000           </end>
 	<interTrainInterval> 1800000     </interTrainInterval>
 	<numTrains>           4       </numTrains>
-   
-</InjectionStim>
-
-
+ </InjectionStim>
 
 <!--slow buff for external Ca, keep basal -->   
    <InjectionStim specieID="Cbuffslow" injectionSite="pointA">
 
         <onset>               201000          </onset>
         <duration>        1000        </duration> 
-	<rate>   600           </rate>
+	<rate>   615           </rate>
 	<period>        1100             </period>
 	<end>          202000           </end>
 	<interTrainInterval> 1800000     </interTrainInterval>
@@ -97,14 +78,12 @@
 <InjectionStim specieID="Gbg" injectionSite="pointA">
         <onset>               201000     </onset>
         <duration>            10      </duration> 
-        <rate>                155     </rate>
+        <rate>                156     </rate>
 	<period>        11100             </period>
 	<end>          202000           </end>
 	<interTrainInterval> 1800000     </interTrainInterval>
 	<numTrains>           4       </numTrains>
 </InjectionStim>
-
-
 
 <InjectionStim specieID="Gbg" injectionSite="pointA">
         <onset>               201010         </onset>

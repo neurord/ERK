@@ -19,7 +19,7 @@
   
         <onset>               201020          </onset>
         <duration>        10         </duration> 
-        <rate>            20000       </rate>
+        <rate>            20010       </rate>
 	<period>        320         </period>
 	<end>        202000        </end>
 	<interTrainInterval> 80000     </interTrainInterval>
@@ -31,7 +31,7 @@
 
         <onset>               202000          </onset>
         <duration>        5         </duration> 
-      	<rate>       450000 </rate>
+      	<rate>       420000 </rate>
 	<period>        1000             </period>
 	<end>          203000           </end>
 	<interTrainInterval> 80000     </interTrainInterval>
@@ -43,7 +43,7 @@
 
         <onset>               201000          </onset>
         <duration>        1000        </duration> 
-	<rate>   600           </rate>
+	<rate>   615           </rate>
 	<period>        1100             </period>
 	<end>          202000           </end>
 	<interTrainInterval> 80000     </interTrainInterval>

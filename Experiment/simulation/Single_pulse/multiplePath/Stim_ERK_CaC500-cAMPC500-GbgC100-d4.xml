@@ -2,103 +2,81 @@
 
  <!--GBG-->  
 <InjectionStim specieID="Gbg" injectionSite="pointA">
-        <onset>               301000     </onset>
+        <onset>               201000     </onset>
         <duration>            10      </duration> 
-        <rate>                155     </rate>
+        <rate>                156     </rate>
 </InjectionStim>
 
-
 <InjectionStim specieID="Gbg" injectionSite="pointA">
-        <onset>               301010         </onset>
+        <onset>               201010         </onset>
         <duration>            990       </duration> 
-        <rate>               1.3        </rate>
+        <rate>               1.5        </rate>
 	<period>       1000             </period>
-	<end>          305000           </end>
+	<end>          205000           </end>
 	</InjectionStim>
 
 <!--calcium-->
 <!--onset and duration in ms, rate in particles/ms-->
 
 <InjectionStim specieID="Ca" injectionSite="pointA">
-        <onset>               301000          </onset>
+        <onset>               201000          </onset>
         <duration>        10         </duration> 
         <rate>             95000       </rate>
-   
-	
-</InjectionStim>
-
-
+   </InjectionStim>
 
 <InjectionStim specieID="Ca" injectionSite="pointA">
-        <onset>               301020          </onset>
+        <onset>               201020          </onset>
         <duration>        10         </duration> 
-        <rate>             10000       </rate>
-	<period>        310         </period>
-	<end>        302000        </end>
-	
+        <rate>             11000       </rate>
+	<period>        300         </period>
+	<end>        202000        </end>
 </InjectionStim>
 
-
 <InjectionStim specieID="Ca" injectionSite="pointA">
-        <onset>               302300          </onset>
+        <onset>               202300          </onset>
         <duration>        10         </duration> 
-        <rate>             9500       </rate>
+        <rate>             9510       </rate>
 	<period>        500         </period>
-	<end>        305000        </end>
-	
+	<end>        205000        </end>
 </InjectionStim>
-
-
-
 
 <InjectionStim specieID="Cbuff" injectionSite="pointA">
 
-        <onset>               305000          </onset>
+        <onset>               205000          </onset>
         <duration>        5         </duration> 
       	<rate>       295000 </rate>
    </InjectionStim>
-
-
-   
-
    
    <InjectionStim specieID="Cbuffslow" injectionSite="pointA">
 
-    <onset>               301000          </onset>
+    <onset>               201000          </onset>
         <duration>        4000        </duration> 
-	<rate>   300           </rate>
-      </InjectionStim>
-
-
+	<rate>   218           </rate>
+   </InjectionStim>
 
 <!--cAMP-->
 
-
 <InjectionStim specieID="cAMP" injectionSite="pointA">
-        <onset>               301000          </onset>
-        <duration>        10         </duration> 
-       	<rate>               760      </rate>
-   
-	
-</InjectionStim>
-
+        <onset>               201000          </onset>
+        <duration>        1         </duration> 
+       	<rate>               7500      </rate>
+ </InjectionStim>
 
  <InjectionStim specieID="cAMP" injectionSite="pointA">
-        <onset>               301020          </onset>
-        <duration>       10        </duration> 
-       	<rate>              31.5       </rate>
-	<period>        40             </period>
-	<end>          302000           </end>
-	
+        <onset>               201010          </onset>
+        <duration>       1        </duration> 
+       	<rate>              70       </rate>
+	<period>        10             </period>
+	<end>          202000           </end>
  </InjectionStim>
  
  <InjectionStim specieID="cAMP" injectionSite="pointA">
-        <onset>               302040          </onset>
-        <duration>       100        </duration> 
-       	<rate>           10          </rate>
-	<period>        200             </period>
-	<end>          305000           </end>
- </InjectionStim>
+        <onset>               202010          </onset>
+        <duration>       1        </duration> 
+       	<rate>           55          </rate>
+	<period>        10             </period>
+	<end>          205000           </end>
+</InjectionStim>
    
 </StimulationSet>
 

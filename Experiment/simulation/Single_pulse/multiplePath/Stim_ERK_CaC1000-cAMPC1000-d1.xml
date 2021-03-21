@@ -38,17 +38,11 @@
       </InjectionStim>
 
 <!--cAMP-->
-
-
 <InjectionStim specieID="cAMP" injectionSite="pointA">
         <onset>               301000          </onset>
         <duration>        10         </duration> 
        	<rate>               1520      </rate>
-   
-	
-</InjectionStim>
-
-
+  </InjectionStim>
 
  <InjectionStim specieID="cAMP" injectionSite="pointA">
         <onset>              301020          </onset>
@@ -56,11 +50,7 @@
        	<rate>              60       </rate>
 	<period>        40             </period>
 	<end>          301000           </end>
-	
 </InjectionStim>
-
-
-
    
 </StimulationSet>
 

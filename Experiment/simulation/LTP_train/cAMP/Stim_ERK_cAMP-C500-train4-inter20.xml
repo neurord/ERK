@@ -4,25 +4,20 @@
 <!--fast injection to have sharp increase-->
 <InjectionStim specieID="cAMP" injectionSite="pointA">
            <onset>               201000          </onset>
-        <duration>        10         </duration> 
-       	<rate>               758      </rate>
-   
-   	<period>        1100             </period>
+        <duration>        1         </duration> 
+       	<rate>               7500      </rate>
+      	<period>        1100             </period>
 	<end>          202000           </end>
    <interTrainInterval>  20000           </interTrainInterval>
     <numTrains>           4               </numTrains>
-		
 </InjectionStim>
 
-
 <!--maintained desire concentration-->
-
-
  <InjectionStim specieID="cAMP" injectionSite="pointA">
-        <onset>               201020          </onset>
-        <duration>       10        </duration> 
-       	<rate>              30       </rate>
-	<period>        40             </period>
+        <onset>               201010          </onset>
+        <duration>       1        </duration> 
+       	<rate>              70       </rate>
+	<period>        10             </period>
 	<end>          202000           </end>
 	<interTrainInterval>  20000           </interTrainInterval>
     <numTrains>           4               </numTrains>

@@ -6,8 +6,8 @@
 
           <xi:include href="../../../Rxn_ERK-d.xml" />
           <xi:include href="../../../Morph.xml" />        
-          <xi:include href="../../../IC_ERK-Test_basald.xml" />
-          <xi:include href="../../../Out_ERK-Test.xml" />
+          <xi:include href="../../../IC_ERK_basald.xml" />
+          <xi:include href="../../../Out_ERK.xml" />
 	   <xi:include href="../Stim_ERK_Ca-C500-train4-inter3.xml" />
  
  

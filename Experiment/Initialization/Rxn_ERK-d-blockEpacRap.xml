@@ -114,12 +114,6 @@ phosphatase reactions take from revision of Gs to improve Ca dep dphos of Dp32--
 <Specie name="dRaf1RasMEK" id="dRaf1RasMEK"                       kdiff="0"    kdiffunit="mu2/s"/>
 <Specie name="dRaf1RaspMEK" id="dRaf1RaspMEK"                     kdiff="0"    kdiffunit="mu2/s"/>
 
-
-<Specie name="dRaf1bRaf" id="dRaf1bRaf"                                 kdiff="0"    kdiffunit="mu2/s"/>
-<Specie name="dRaf1bRafMEK" id="dRaf1bRafMEK"                       kdiff="0"    kdiffunit="mu2/s"/>
-<Specie name="dRaf1bRafpMEK" id="dRaf1bRafpMEK"                     kdiff="0"    kdiffunit="mu2/s"/>
-
-
 <Specie name="bRafRas" id="bRafRas"                                 kdiff="0"    kdiffunit="mu2/s"/>
 <Specie name="bRafRasMEK" id="bRafRasMEK"                       kdiff="0"    kdiffunit="mu2/s"/>
 <Specie name="bRafRaspMEK" id="bRafRaspMEK"                     kdiff="0"    kdiffunit="mu2/s"/>
@@ -726,7 +720,7 @@ phosphatase reactions take from revision of Gs to improve Ca dep dphos of Dp32--
               <Reactant specieID="Caext"/>
 	      <Product specieID="Caextbuffslow"/>
 
-        <forwardRate> 0.001e-3 </forwardRate>
+        <forwardRate> 10e-6 </forwardRate>
 	<reverseRate> 0 </reverseRate>
 </Reaction>
 
@@ -1072,57 +1066,6 @@ phosphatase reactions take from revision of Gs to improve Ca dep dphos of Dp32--
       
     </Reaction>
 
-
-    
-     <!--MAPKK ACTIVATION BY dRaf1bRaf (dimer)-->
-    
-<!--(MAPKK phos by  dRaf1bRaf) MAPKK + dRaf1bRaf <->  dRaf1bRafMAPKK <-> pMAPKK +  dRaf1bRaf-->
-    <Reaction name = "MAPKK+dRaf1bRaf--dRaf1bRafMAPKK" id="MAPKK+dRaf1bRaf--dRaf1bRafMAPKK">
-        <Reactant specieID="MEK"           />
-        <Reactant specieID="dRaf1bRaf"              />
-        <Product  specieID="dRaf1bRafMEK"               />
-
-       	<forwardRate> 0 </forwardRate>
-	<!--forwardRate> 0.018857251e-3  </forwardRate-->
-	<reverseRate> 2.4e-3  </reverseRate>
-	
-    </Reaction>
-    
-     <Reaction name = "MAPKK+dRaf1bRaf--dRaf1bRafMAPKK" id="MAPKK+dRaf1bRaf--dRaf1bRafMAPKK">
-        <Reactant specieID="dRaf1bRafMEK"           />
-        <Product  specieID="pMEK"               />
-        <Product  specieID="dRaf1bRaf"               />
-
-        <forwardRate> 0.6e-3 </forwardRate>
-        <reverseRate> 0  </reverseRate>
-      
-    </Reaction>
-    
-   <!--(MAPKK phos by  dRaf1bRaf) MAPKK + dRaf1bRaf <->  dRaf1bRafMAPKK <-> pMAPKK +  dRaf1bRaf-->
-    
-    <Reaction name = "MAPKK+dRaf1bRaf--dRaf1bRafMAPKK" id="MAPKK+dRaf1bRaf--dRaf1bRafMAPKK">
-        <Reactant specieID="pMEK"           />
-        <Reactant specieID="dRaf1bRaf"              />
-        <Product  specieID="dRaf1bRafpMEK"               />
-
-	<forwardRate> 0 </forwardRate>
-	<!--forwardRate> 0.018857251e-3  </forwardRate-->
-        <reverseRate> 2.4e-3  </reverseRate>
-      
-    </Reaction>
-    
-     <Reaction name = "MAPKK+dRaf1bRaf--dRaf1bRafMAPKK" id="MAPKK+dRaf1bRaf--dRaf1bRafMAPKK">
-        <Reactant specieID="dRaf1bRafpMEK"           />
-        <Product  specieID="ppMEK"               />
-        <Product  specieID="dRaf1bRaf"               />
-
-        <forwardRate> 0.6e-3   </forwardRate>
-        <reverseRate> 0  </reverseRate>
-      
-    </Reaction>
-
-
-    
   
     <!--MAPKK ACTIVATION BY bRafRasGTP-->
     
@@ -1168,8 +1111,6 @@ phosphatase reactions take from revision of Gs to improve Ca dep dphos of Dp32--
       
     </Reaction>
 
-
-
     <!-- RasGTP activates Raf1 -->
     
     <!-- (Raf1 binds to Ras, step 1) RasGTP + Raf1 <-> RasGTPRaf1 -->
@@ -1179,8 +1120,7 @@ phosphatase reactions take from revision of Gs to improve Ca dep dphos of Dp32--
         <Product  specieID="Raf1Ras"               />
 
         <forwardRate> 0.06e-3   </forwardRate>
-	 <!-- forwardRate> 0 </forwardRate -->
-        <reverseRate> 1e-3   </reverseRate>
+	<reverseRate> 1e-3   </reverseRate>
 	
     </Reaction>
 
@@ -1189,24 +1129,10 @@ phosphatase reactions take from revision of Gs to improve Ca dep dphos of Dp32--
         <Reactant specieID="Raf1Ras"      n="2"     />
         <Product  specieID="dRaf1Ras"               />
 
-        <forwardRate> 0.00999e-3   </forwardRate>
-	 <!-- forwardRate> 0 </forwardRate -->
-        <reverseRate> 0.5e-3   </reverseRate>
+        <forwardRate> 0.02e-3   </forwardRate>
+	<reverseRate> 0.5e-3   </reverseRate>
 	
       </Reaction>
-
-        <!-- (Raf1Ras dimerize with bRafRap1) RasGTPRaf+bRafRap1 <->dRaf1bRaf  -->
-    <Reaction name = "RasGTPRaf+bRafRap1--dRaf1bRaf" id="RasGTPRaf+bRafRap1--dRaf1bRaf">
-      <Reactant specieID="Raf1Ras"          />
-       <Reactant specieID="bRafRap1"          />
-        <Product  specieID="dRaf1bRaf"               />
-
-        <forwardRate>  0 </forwardRate>
-	 <!-- forwardRate> 0.00999e-3  </forwardRate -->
-        <reverseRate> 0.5e-3   </reverseRate>
-	
-    </Reaction>
-
    
     
  <!-- RasGTP binding to bRaf -->
@@ -1218,8 +1144,7 @@ phosphatase reactions take from revision of Gs to improve Ca dep dphos of Dp32--
         <Product  specieID="bRafRas"               />
 
         <forwardRate> 0.006e-3   </forwardRate>
-	 <!--forwardRate> 0   </forwardRate-->
-        <reverseRate> 0.5e-3   </reverseRate>
+	<reverseRate> 0.5e-3   </reverseRate>
     </Reaction>
    
      <!--Two pathways to activate Ras-->
@@ -1243,8 +1168,8 @@ phosphatase reactions take from revision of Gs to improve Ca dep dphos of Dp32--
         <Reactant specieID="RasGDP"              />
         <Product  specieID="CamCa4GRFRas"               />
 
-        <forwardRate> 0.019e-3  </forwardRate>
-        <reverseRate> 0.8e-3 </reverseRate>
+        <forwardRate> 0.0019e-3  </forwardRate>
+        <reverseRate> 0.08e-3 </reverseRate>
         
         
     </Reaction>
@@ -1254,7 +1179,7 @@ phosphatase reactions take from revision of Gs to improve Ca dep dphos of Dp32--
         <Product specieID="CamCa4GRF"             />
         <Product specieID="RasGTP"               />
 
-        <forwardRate> 0.2e-3  </forwardRate>
+        <forwardRate> 0.02e-3  </forwardRate>
         <reverseRate> 0 </reverseRate>
        
 </Reaction>

@@ -7,14 +7,12 @@
 <InjectionStim specieID="Gbg" injectionSite="pointA">
         <onset>               201000     </onset>
         <duration>            10      </duration> 
-        <rate>                155     </rate>
+        <rate>                156     </rate>
 	<period>        11100             </period>
 	<end>          202000           </end>
 	<interTrainInterval> 40000     </interTrainInterval>
 	<numTrains>           4       </numTrains>
 </InjectionStim>
-
-
 
 <InjectionStim specieID="Gbg" injectionSite="pointA">
         <onset>               201010         </onset>

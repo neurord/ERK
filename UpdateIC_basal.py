@@ -10,11 +10,12 @@ from xml.etree import ElementTree as ET
 import os
 import numpy as np
 import h5py as h5
-
+from NeuroRDanal import h5utils
 
 
 
 ##################################################################
+#height=2#micron
 #set up args
 try:
     args = ARGS.split(",")
@@ -73,7 +74,8 @@ def get_mol_index(simData,outputset,molecule):
     else:
         return -1
 
-    
+
+
 #define params file and time
 input_filename=args[0].split('.')[0]
 h5filename=args[1].split('.')[0]
@@ -81,11 +83,7 @@ time_args=args[2]
 
 #automatically name the output file
 input_name=os.path.split(input_filename)[-1]
-#outfile=input_name.split('.')[0]+'_basald.xml'
-#outfile=input_name.split('.')[0]+'_basal-'+args[1].split('-')[-1]+'.xml' #if only wants the last args 
-#outfile=input_name.split('.')[0]+'_basal-'+args[1].split('-')[-2]+'-'+args[1].split('-')[-1]+'.xml' #if would like to carry 2 differnt args
-#outfile=input_name.split('-')[0]+'-Test'+'_basal-'+args[1].split('-')[-2]+'.xml'
-outfile='IC_Cof-new.xml'
+outfile=input_name.split('.')[0]+'_basald-BPKARap.xml'
 
 #1 get list of molecules
 data=h5.File(h5filename+'.h5',"r")
@@ -131,17 +129,16 @@ for elem in root:
             elif elem.tag=='SurfaceDensitySet':
                         for subelem in elem:
                                     print('SurfaceDens',subelem.attrib)  
+
 '''
 #loop over all molecules in conc_IC dictionary and update values
 problems_list=[]
 for mol,val in molec_conc_ic.items():
-            elems=tree.findall('.//NanoMolarity[@specieID="'+mol+'"]')
-            if len(elems)==1:
-                #print(mol,elems[0].attrib,'new value', val)
-                elems[0].attrib['value']=str(val)
-                #print('updated elems',elems[0].attrib)
-            else:
-                problems_list.append((mol,elems))
+    elems=tree.findall('.//NanoMolarity[@specieID="'+mol+'"]')
+    if len(elems)==1:
+        elems[0].attrib['value']=str(val)
+    else:
+        problems_list.append((mol,elems))
 if len(problems_list):
     print('***********************zero or more than 1 species found*************************')
     for item in problems_list:

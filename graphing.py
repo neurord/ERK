@@ -19,11 +19,11 @@ for file in fileNames:
     df = pd.read_csv(PATH + file, index_col = 0)### Read .csv file and append to list
     plt.plot(df,label=file.split('.csv')[0], lw=2)  ### Create line for every file
 
-fig.suptitle('Total ppERK fold_change over time', fontweight='bold', fontsize=3)
-plt.xticks(fontsize=35)
-plt.yticks(fontsize=35)
-plt.xlabel('time (min)', fontsize=35, fontweight='bold')
-plt.ylabel('Fold_change (ppERK)', fontsize=35, fontweight='bold')
-plt.legend(fontsize=30)
+fig.suptitle('Total ppERK fold_change over time', fontweight='bold', fontsize=30)
+plt.xticks(fontsize=15)
+plt.yticks(fontsize=15)
+plt.xlabel('time (sec)', fontsize=20, fontweight='bold')
+plt.ylabel('Fold_change (ppERK)', fontsize=20, fontweight='bold')
+plt.legend(fontsize=20)
 plt.show()
 

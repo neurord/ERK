@@ -5,8 +5,8 @@
 
          <xi:include href="../../Rxn_ERK-d-oldCam.xml" />
           <xi:include href="../../Morph.xml" />        
-          <xi:include href="../../IC_ERK-Test_basald-oldCam.xml" />
-          <xi:include href="../../Out_ERK-Test-oldCam.xml" />
+          <xi:include href="../../IC_ERK_basald-oldCam.xml" />
+          <xi:include href="../../Out_ERK-oldCam.xml" />
 	   <xi:include href="../Stim_ERK_Ca-C1000-train4-inter80.xml" />
  
  
