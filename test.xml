@@ -1,0 +1,61 @@
+<InitialConditions>
+  <ConcentrationSet>
+
+    <NanoMolarity specieID="Ca" value="73.56479389031855" />
+    <NanoMolarity specieID="Caext" value="992461.5740718362" />
+
+    <NanoMolarity specieID="PKAc" value="0.0" />
+    <NanoMolarity specieID="PDE4" value="1818.7216477166535" />
+    <NanoMolarity specieID="pPDE4" value="2085.4129595414047" />
+    <NanoMolarity specieID="PDE4cAMP" value="0.0" />
+    <NanoMolarity specieID="pPDE4cAMP" value="0.0" />
+    <NanoMolarity specieID="PKAc_PDE4_cAMP" value="0.0" />
+    <NanoMolarity specieID="PKAcPDE4" value="0.0" />
+
+  </ConcentrationSet>
+
+    <ConcentrationSet region="head">
+    
+    <NanoMolarity specieID="PKA" value="390.39326448863625" />
+    <NanoMolarity specieID="PKAr" value="0.0" />
+    <NanoMolarity specieID="PKAcAMP2" value="22.87223859458771" />
+    <NanoMolarity specieID="PKAcAMP4" value="0.25245296462017347" />
+    <NanoMolarity specieID="cAMP" value="0.0" />
+    <NanoMolarity specieID="AMP" value="5.755927593339956" />
+       
+  </ConcentrationSet>
+
+  
+     <ConcentrationSet region="PSD">
+    <NanoMolarity specieID="Leak" value="131.88142871757861" />
+    <NanoMolarity specieID="CaextLeak" value="90194.88048170786" />   
+    
+      
+     
+     </ConcentrationSet>
+
+  <ConcentrationSet region="neck">
+    <NanoMolarity specieID="pmca" value="6918.725948380473" />
+    <NanoMolarity specieID="pmcaCa" value="2475.351808693725" />
+    <NanoMolarity specieID="ncx" value="209652.64439499142" />
+    <NanoMolarity specieID="ncxCa" value="15172.473664265348" />
+  </ConcentrationSet>
+
+  
+
+<SurfaceDensitySet region="dend">
+ 
+    <PicoSD specieID="PKA" value="1107.8907193913813" />
+    <PicoSD specieID="PKAr" value="0.0" />
+    <PicoSD specieID="PKAcAMP2" value="7.783775546075276" />
+    <PicoSD specieID="PKAcAMP4" value="0.0" />
+
+    <PicoSD specieID="CaextLeak" value="356484.46596937405" />
+    <PicoSD specieID="Leak" value="536.5615943094557" />
+    <PicoSD specieID="ncx" value="825176.2077823811" />
+    <PicoSD specieID="ncxCa" value="62968.14957590032" />
+    <PicoSD specieID="pmca" value="27057.960553266883" />
+    <PicoSD specieID="pmcaCa" value="9930.54084168284" />
+  </SurfaceDensitySet>
+
+</InitialConditions>
