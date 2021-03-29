@@ -33,7 +33,7 @@ results. depth 2D units are microns  -->
     <!-- surfaceLayers> 0.1 </surfaceLayers -->
     </discretization>
 
-    <outputInterval>      2000.0   </outputInterval>
+    <outputInterval>      200.0   </outputInterval>
 
     <!-- the tolerace is used for adaptive sims -->
     <tolerance>           0.01       </tolerance>
