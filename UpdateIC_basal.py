@@ -83,7 +83,7 @@ time_args=args[2]
 
 #automatically name the output file
 input_name=os.path.split(input_filename)[-1]
-outfile=input_name.split('.')[0]+'_basald-BPKARap.xml'
+outfile=input_name.split('.')[0]+'_basald-BSynden.xml'
 
 #1 get list of molecules
 data=h5.File(h5filename+'.h5',"r")

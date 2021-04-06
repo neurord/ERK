@@ -1168,8 +1168,8 @@ phosphatase reactions take from revision of Gs to improve Ca dep dphos of Dp32--
         <Reactant specieID="RasGDP"              />
         <Product  specieID="CamCa4GRFRas"               />
 
-        <forwardRate> 0.019e-3  </forwardRate>
-        <reverseRate> 0.8e-3 </reverseRate>
+        <forwardRate> 0.0019e-3  </forwardRate>
+        <reverseRate> 0.08e-3 </reverseRate>
         
         
     </Reaction>
@@ -1179,7 +1179,7 @@ phosphatase reactions take from revision of Gs to improve Ca dep dphos of Dp32--
         <Product specieID="CamCa4GRF"             />
         <Product specieID="RasGTP"               />
 
-        <forwardRate> 0.2e-3  </forwardRate>
+        <forwardRate> 0.02e-3  </forwardRate>
         <reverseRate> 0 </reverseRate>
        
 </Reaction>

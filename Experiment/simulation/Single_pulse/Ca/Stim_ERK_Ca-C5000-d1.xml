@@ -5,15 +5,15 @@
 <InjectionStim specieID="Ca" injectionSite="pointA">
         <onset>               201000          </onset>
         <duration>        10         </duration> 
-        <rate>            643000       </rate>
+        <rate>            643050       </rate>
 	
 </InjectionStim>
 
 <InjectionStim specieID="Ca" injectionSite="pointA">
-        <onset>               201020          </onset>
+        <onset>               201010          </onset>
         <duration>        10         </duration> 
-        <rate>             18010       </rate>
-	<period>        420         </period>
+        <rate>             18800       </rate>
+	<period>        400         </period>
 	<end>        202000        </end>
 	
 </InjectionStim>
@@ -22,7 +22,7 @@
 
         <onset>               202000          </onset>
         <duration>        5         </duration> 
-      	<rate>       1309000 </rate>
+      	<rate>       1000000 </rate>
    </InjectionStim>
 
    
@@ -30,7 +30,7 @@
 
     <onset>               201000          </onset>
         <duration>        1000        </duration> 
-	<rate>   420           </rate>
+	<rate>   400           </rate>
       </InjectionStim>
  
 </StimulationSet>

@@ -29,7 +29,7 @@
 <InjectionStim specieID="Ca" injectionSite="pointA">
         <onset>               211500          </onset>
         <duration>        10         </duration> 
-        <rate>             3090       </rate>
+        <rate>             3100       </rate>
 	<period>        500         </period>
 	<end>        231000        </end>
 </InjectionStim>
@@ -38,14 +38,14 @@
 
         <onset>               231000          </onset>
         <duration>        5         </duration> 
-      	<rate>       250000 </rate>
+      	<rate>       230000 </rate>
    </InjectionStim>
 
    <InjectionStim specieID="Cbuffslow" injectionSite="pointA">
 
     <onset>               201000          </onset>
         <duration>        30000        </duration> 
-	<rate>   100           </rate>
+	<rate>   90           </rate>
    </InjectionStim>
  
 </StimulationSet>

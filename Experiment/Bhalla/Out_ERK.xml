@@ -127,11 +127,6 @@
     <OutputSpecie name="Raf1Ras"/>
     <OutputSpecie name="Raf1"/>
 
-
-    <OutputSpecie name="dRaf1bRafMEK"/>
-    <OutputSpecie name="dRaf1bRafpMEK"/>
-    <OutputSpecie name="dRaf1bRaf"/>
-
     <OutputSpecie name="bRafRas"/>
     <OutputSpecie name="bRafRasMEK"/>
     <OutputSpecie name="bRafRaspMEK"/>
