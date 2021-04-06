@@ -4,10 +4,10 @@
 ####Ca
 
 #200
-java -jar /home/nadia/neurord-3.2.4-all-deps.jar -t 1200000 -Dneurord.trials=5   Single_pulse/Ca/Ca/Model_ERK-stimd-C200-d1.xml        Single_h5/Model_ERKCa-C200-d1
+java -jar /home/nadia/neurord-3.2.4-all-deps.jar -t 1200000 -Dneurord.trials=5   Single_pulse/Ca/Ca/Model_ERK-stimd-C200-d1.xml        Single_h5/Model_ERKCa-C200-d1&
 
 #300
-#java -jar /home/nadia/neurord-3.2.4-all-deps.jar -t 1200000 -Dneurord.trials=5   Single_pulse/Ca/Ca/Model_ERK-stimd-C300-d1.xml        Single_h5/Model_ERKCa-C300-d1
+java -jar /home/nadia/neurord-3.2.4-all-deps.jar -t 1200000 -Dneurord.trials=5   Single_pulse/Ca/Ca/Model_ERK-stimd-C300-d1.xml        Single_h5/Model_ERKCa-C300-d1
 
 
 #500
@@ -18,8 +18,8 @@ java -jar /home/nadia/neurord-3.2.4-all-deps.jar -t 1200000 -Dneurord.trials=5  
 #java -jar /home/nadia/neurord-3.2.4-all-deps.jar -t 1200000 -Dneurord.trials=5   Single_pulse/Ca/Ca/Model_ERK-stimd-C500-d6.xml        Single_h5/Model_ERKCa-C500-d6
 #java -jar /home/nadia/neurord-3.2.4-all-deps.jar -t 1200000 -Dneurord.trials=5   Single_pulse/Ca/Ca/Model_ERK-stimd-C500-d8.xml        Single_h5/Model_ERKCa-C500-d8
 #java -jar /home/nadia/neurord-3.2.4-all-deps.jar -t 1200000 -Dneurord.trials=5   Single_pulse/Ca/Ca/Model_ERK-stimd-C500-d10.xml       Single_h5/Model_ERKCa-C500-d10
-#java -jar /home/nadia/neurord-3.2.4-all-deps.jar -t 1200000 -Dneurord.trials=5   Single_pulse/Ca/Ca/Model_ERK-stimd-C500-d30.xml       Single_h5/Model_ERKCa-C500-d30
-#java -jar /home/nadia/neurord-3.2.4-all-deps.jar -t 1200000 -Dneurord.trials=5   Single_pulse/Ca/Ca/Model_ERK-stimd-C500-d60.xml       Single_h5/Model_ERKCa-C500-d60
+java -jar /home/nadia/neurord-3.2.4-all-deps.jar -t 1200000 -Dneurord.trials=5   Single_pulse/Ca/Ca/Model_ERK-stimd-C500-d30.xml       Single_h5/Model_ERKCa-C500-d30&
+java -jar /home/nadia/neurord-3.2.4-all-deps.jar -t 1200000 -Dneurord.trials=5   Single_pulse/Ca/Ca/Model_ERK-stimd-C500-d60.xml       Single_h5/Model_ERKCa-C500-d60
 #java -jar /home/nadia/neurord-3.2.4-all-deps.jar -t 1200000 -Dneurord.trials=5   Single_pulse/Ca/Ca/Model_ERK-stimd-C500-d100.xml      Single_h5/Model_ERKCa-C500-d100
 
 #1000
@@ -48,14 +48,14 @@ java -jar /home/nadia/neurord-3.2.4-all-deps.jar -t 1200000 -Dneurord.trials=5  
 #java -jar /home/nadia/neurord-3.2.4-all-deps.jar -t 1200000 -Dneurord.trials=5    Single_pulse/Ca/Knockout/Model_ERK-blockCK-C2000-d1-stim.xml          Knockout_h5/Model_ERK-BCK-stimC2000d1
 #java -jar /home/nadia/neurord-3.2.4-all-deps.jar -t 1200000 -Dneurord.trials=5    Single_pulse/Ca/Knockout/Model_ERK-blockCK-auto-C2000-d1-stim.xml     Knockout_h5/Model_ERK-BCKauto-stimC2000d1
 #java -jar /home/nadia/neurord-3.2.4-all-deps.jar -t 1200000 -Dneurord.trials=5    Single_pulse/Ca/Knockout/Model_ERK-blockpSynGap-C2000-d1-stim.xml     Knockout_h5/Model_ERK-BpSynGap-stimC2000d1
-java -jar /home/nadia/neurord-3.2.4-all-deps.jar -t 1200000 -Dneurord.trials=5    Single_pulse/Ca/Knockout/Model_ERK-blockpSynGapKcat-C2000-d1-stim.xml Knockout_h5/Model_ERK-BpSynGapKcat-stimC2000d1
+#java -jar /home/nadia/neurord-3.2.4-all-deps.jar -t 1200000 -Dneurord.trials=5    Single_pulse/Ca/Knockout/Model_ERK-blockpSynGapKcat-C2000-d1-stim.xml Knockout_h5/Model_ERK-BpSynGapKcat-stimC2000d1
 #java -jar /home/nadia/neurord-3.2.4-all-deps.jar -t 1200000 -Dneurord.trials=5    Single_pulse/Ca/Knockout/Model_ERK-blockSynden-C2000-d1-stim.xml      Knockout_h5/Model_ERK-BSynden-stimC2000d1
 
 
 #java -jar /home/nadia/neurord-3.2.4-all-deps.jar -t 1200000 -Dneurord.trials=5    Single_pulse/Ca/Knockout/Model_ERK-blockCK-auto-C500-d1.xml Knockout_h5/Model_ERK-BCKauto-stimC500d1
 #java -jar /home/nadia/neurord-3.2.4-all-deps.jar -t 1200000 -Dneurord.trials=5    Single_pulse/Ca/Knockout/Model_ERK-blockCK-auto-C500-d4.xml Knockout_h5/Model_ERK-BCKauto-stimC500d4
 #java -jar /home/nadia/neurord-3.2.4-all-deps.jar -t 1200000 -Dneurord.trials=5   Single_pulse/Ca/Knockout/Model_ERK-blockCK-auto-C500-d10.xml Knockout_h5/Model_ERK-BCKauto-stimC500d10
-#java -jar /home/nadia/neurord-3.2.4-all-deps.jar -t 1200000 -Dneurord.trials=5    Single_pulse/Ca/Knockout/Model_ERK-blockCK-auto-C500-d30.xml Knockout_h5/Model_ERK-BCKauto-stimC500d30
+java -jar /home/nadia/neurord-3.2.4-all-deps.jar -t 1200000 -Dneurord.trials=5    Single_pulse/Ca/Knockout/Model_ERK-blockCK-auto-C500-d30.xml Knockout_h5/Model_ERK-BCKauto-stimC500d30
 #java -jar /home/nadia/neurord-3.2.4-all-deps.jar -t 1200000 -Dneurord.trials=5    Single_pulse/Ca/Knockout/Model_ERK-blockCK-auto-C500-d100.xml Knockout_h5/Model_ERK-BCKauto-stimC500d100
 
 #java -jar /home/nadia/neurord-3.2.4-all-deps.jar -t 1200000 -Dneurord.trials=5    Single_pulse/Ca/Knockout/Model_ERK-blockCK-auto-C1000-d1.xml Knockout_h5/Model_ERK-BCKauto-stimC1000d1
