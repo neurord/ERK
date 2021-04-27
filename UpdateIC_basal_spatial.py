@@ -8,7 +8,7 @@
 python3 UpdateIC_basal_spatial.py h5file '' ''  'stime etime' ICfile Rxnfile
 do not include file extensions in the filenames
 e.g.
-python3 -i UpdateIC_basal_spatial.py Model_SPNspineAChm4R_Gshydr5_GapD-nostim '' '' "450 500" IC_SPNspine_noATP ../Rxn_SPNspine_noATP
+python3 -i UpdateIC_basal_spatial.py Model_SPNspineAChm4R_Gshydr5_GapD-nostim '' '' "450 500" IC_SPNspine_noATP Rxn_SPNspine_noATP
 '''
 from lxml import etree
 from xml.etree import ElementTree as ET
@@ -121,7 +121,7 @@ for rt in root:
                 print('updated elems',region,mol,e.attrib)
                 IC_molecules.append(mol)
             else:
-                print('NOT updating', region,mol,e.attrib)
+                print('NOT updating ', region,' for diffusible', mol,e.attrib)
     elif rt.tag=='ConcentrationSet':
         elems=subtree.findall('.//NanoMolarity')
         for e in elems:
@@ -162,7 +162,7 @@ if len(IC_file_mols-both_mols)>0:
     print('************** molecules',IC_file_mols-both_mols, 'in conc file but not in IC file')
 
 #write the new IC file
-with open('test.xml', 'wb') as out:
+with open(IC_filename+'h5_update.xml', 'wb') as out:
     out.write(ET.tostring(root))            
 '''
 '''
