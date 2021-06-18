@@ -75,7 +75,6 @@ def get_mol_index(simData,outputset,molecule):
         return -1
 
 
-
 #define params file and time
 input_filename=args[0].split('.')[0]
 h5filename=args[1].split('.')[0]
@@ -83,7 +82,7 @@ time_args=args[2]
 
 #automatically name the output file
 input_name=os.path.split(input_filename)[-1]
-outfile=input_name.split('.')[0]+'_basald-BSynden.xml'
+outfile=input_name.split('.')[0]+'_basald-R10.xml'
 
 #1 get list of molecules
 data=h5.File(h5filename+'.h5',"r")
