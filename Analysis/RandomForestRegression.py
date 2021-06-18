@@ -12,10 +12,12 @@ plt.ion()
 import pickle
 import csv
 import operator
+random=False
+cluster=False
 
 
-paramsfile='RandomAnalysis_molnew.npz'
-resultsfile='RandomAnalysis_data.npz'
+paramsfile='RandomAnalysis_mol.npz'
+resultsfile='RandomAnalysis_data_mean.npz'
 ######## Read data into list #############
 dataparams=np.load(paramsfile,'r',allow_pickle=True)
 dataresults=np.load(resultsfile,'r',allow_pickle=True)
@@ -27,12 +29,14 @@ measures=list(data[list(data.keys())[0]][0])
 #if paramsfile has a second entry - which is list of molecule names, extract that, e.g.
 molConc=dataparams['arr_0'].item()
 molnames=list(molConc[list(molConc.keys())[0]].keys())
+#column_names=['filename','trial']+molnames+measures
 column_names=['filename','trial']+molnames+measures
 ##create empty dataframe, but need to know column names
-df = pd.DataFrame(columns = column_names) 
+df=pd.DataFrame(columns = column_names) 
 
 
 for i,f in enumerate(molConc.keys()): #random1, etc
+        #print(i,f)
         datakeys=str(i)
         for trial in data[datakeys].keys():
                 params=molConc[f] #keys=mol and values=change in conc
@@ -48,7 +52,13 @@ df.columns #print the column names
 df.index #print index - fname,trial
 #count bestITIs
 best=df.groupby('bestITI').count()
-
+worse=df.groupby('MinITI').count()
+print(best,'************************',worse)
+plt.figure()
+best.plot.pie(y='ERK')
+#df.groupby('filename').Count()['ERK'].plot.pie()
+group_data=df.groupby('bestITI')
+print((group_data.get_group(3).deltaMaxMin).mean())
 
 '''
 #if you want to select a subset of the data
@@ -57,40 +67,41 @@ df_filt = df[df.dur>60e-3]
 '''
 
 #correlation
-corr_df = df.corr()[['slope','slope_norm']]#,'bestITI']]#.sort_values('bestITI',axis=0)
+corr_df = df.corr()[['slope_norm','Meandata','deltaMaxMin']]#,'bestITI']]#.sort_values('bestITI',axis=0)
 #from tabulate import tabulate
 #print(tabulate(corr_df, tablefmt="pipe", headers="keys"))
 print(corr_df)
 
 #plot of mean and std
 xcol='bestITI'
-ycol=['slope_norm','deltaMaxMin']
-plt.figure()
-df.groupby('filename').mean()['deltabest'].plot.bar()
+ycol=['percentslope','percentdelta','percentMeandata']
+#plt.figure()
+save_hist={}
 for j,jj in enumerate (ycol):
         ycolnorm_mean=df.groupby('filename').mean()[jj]
         stdnorm=df.groupby('filename').std()[jj]
-        plt.figure()
-        plt.title(jj+'vs filename')
-        plt.plot(ycolnorm_mean)
-        plt.fill_between(range(len(ycolnorm_mean)),ycolnorm_mean+stdnorm,ycolnorm_mean-stdnorm,alpha=.2)#replace range with list of filenaem out of df 
-        plt.xlabel('File Name')
-        plt.ylabel(jj)
-
+        if not random:
+                plt.figure()
+                plt.title(jj+'vs filename')
+                plt.plot(ycolnorm_mean)
+                plt.fill_between(range(len(ycolnorm_mean)),ycolnorm_mean+stdnorm,ycolnorm_mean-stdnorm,alpha=.2)#replace range with list of filenaem out of df 
+                plt.xlabel('File Name')
+                plt.ylabel(jj)
+                plt.figure()
+                plt.title('Bar')
+                df[jj].plot.bar()
+                plt.xlabel('File Name')
+                plt.ylabel(jj)
         import seaborn as sns
         jg = sns.jointplot(df[xcol].astype('int'),df[jj].round(2),ratio=5,xlim=(0,df[xcol].max()*1.1),ylim=(df[jj].min()*0.9,df[jj].max()*1.1),s=10,alpha=.8,edgecolor='0.2',linewidth=.2,color='k',marginal_kws=dict(bins=40))
         plt.title(jj+" vs " +xcol)
         #jg.set_axis_labels('bestITI','slope_norm')
-
-        plt.figure()
-        df[jj].plot.bar()
-        plt.xlabel('File Name')
-        plt.ylabel(jj)
-        hist,bin_edges=np.histogram(df[jj],bins=50)
+        hist,bin_edges=np.histogram(df[jj],bins=100)
         plot_bins=[(bin_edges[i]+bin_edges[i+1])/2 for i in range (len(hist))]
+        save_hist[jj]=np.column_stack((hist,plot_bins))
         plt.figure()
         plt.title('Histogram of '+jj+' per file')
-        plt.plot(plot_bins,hist)
+        plt.bar(plot_bins,hist,width=(plot_bins[1]-plot_bins[0]))
         plt.ylabel('Count')
         plt.xlabel(jj) 
 
@@ -101,17 +112,17 @@ for j,jj in enumerate (ycol):
         from sklearn.preprocessing import normalize
         from sklearn.ensemble import RandomForestRegressor
         from sklearn.svm import SVR
-
-        X = df.drop(['slope_norm','bestITI','filename','trial','slope','deltabest','deltaMaxMin','MinITI'], axis=1)
+        
+        X = df.drop(['slope_norm','bestITI','filename','trial','slope','deltaMaxMin','Meandata','MinITI','percentslope','percentdelta','percentMeandata'], axis=1)
         y=Yslope = df[jj];label=jj
         #Yiti = df[xcol]
                 
         X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.33, random_state=42)
-        regr = RandomForestRegressor(n_estimators=100)#;
+        regr = RandomForestRegressor(n_estimators=1000)
         regr.fit(X_train, y_train)
         y_pred = regr.predict(X_test)
         #print & plot some results
-        print('*****************','train',regr.score(X_train,y_train),'test',regr.score(X_test,y_test),'*********************')
+        print('*****************',jj,'train',regr.score(X_train,y_train),'test',regr.score(X_test,y_test),'*********************')
         feature_importance_df = pd.DataFrame(regr.feature_importances_,X.columns,columns=['Random_Forest_Feature_Importance']).sort_values('Random_Forest_Feature_Importance',ascending=False)
         axes = feature_importance_df.plot.barh()
         axes.legend_.set_visible(False)
@@ -119,6 +130,7 @@ for j,jj in enumerate (ycol):
         f.set_size_inches((6,6))
         axes.set_xlim([0,feature_importance_df.max()[0]])
         plt.title('Feature Importance for '+label)
+        feature_importance_df.to_csv(jj+'FeatImport_random.txt')
 
         ######## Substitute important features for nmda_gbar
         num_plots=2
@@ -167,37 +179,46 @@ for j,jj in enumerate (ycol):
         ##################### Random Forest clutser on bestITI
         from RandomForestUtils import plotPredictions, plot_features, runClusterAnalysis
 
-        Y = df[xcol]
-        ITIs=list(np.unique(Y.values))
-        num_feat=len(X.columns)
-        MAXPLOTS=0
-        epochs=100
+        if cluster==True:
+                Y = df[xcol]
+                ITIs=list(np.unique(Y.values))
+                num_feat=len(X.columns)
+                MAXPLOTS=0
+                epochs=100
 
-        collectionBestFeatures = {}
-        collectionTopFeatures = {}
-        for epoch in range(0, epochs):
-            features, max_feat = runClusterAnalysis(X,Y.astype('int'),num_feat,ITIs,epoch,MAXPLOTS)
-            print()
-            #pass in parameter to control plotting
-            print('######### BEST FEATURES for EPOCH '+str(epoch)+' #######')
-            for i,(feat, weight) in enumerate(features):
-                print(i,feat,weight) #monitor progress 
-                if feat not in collectionBestFeatures:          # How is the weight scaled? caution
-                    collectionBestFeatures[feat] = weight
-                else:
-                    collectionBestFeatures[feat] += weight
+                collectionBestFeatures = {}
+                collectionTopFeatures = {}
+                for epoch in range(0, epochs):
+                    features, max_feat = runClusterAnalysis(X,Y.astype('int'),num_feat,ITIs,epoch,MAXPLOTS)
+                    print()
+                    #pass in parameter to control plotting
+                    print('######### BEST FEATURES for EPOCH '+str(epoch)+' #######')
+                    for i,(feat, weight) in enumerate(features):
+                        print(i,feat,weight) #monitor progress 
+                        if feat not in collectionBestFeatures:          # How is the weight scaled? caution
+                            collectionBestFeatures[feat] = weight
+                        else:
+                            collectionBestFeatures[feat] += weight
 
-            f, w = features[0]
-            if f not in collectionTopFeatures:
-                collectionTopFeatures[f] = 1
-            else:
-                collectionTopFeatures[f] += 1
+                    f, w = features[0]
+                    if f not in collectionTopFeatures:
+                        collectionTopFeatures[f] = 1
+                    else:
+                        collectionTopFeatures[f] += 1
 
-        listBestFeatures=sorted(collectionBestFeatures.items(),key=operator.itemgetter(1),reverse=True)
-        listTopFeatures=sorted(collectionTopFeatures.items(),key=operator.itemgetter(1),reverse=True)
+                listBestFeatures=sorted(collectionBestFeatures.items(),key=operator.itemgetter(1),reverse=True)
+                listTopFeatures=sorted(collectionTopFeatures.items(),key=operator.itemgetter(1),reverse=True)
 
-        if MAXPLOTS:
-            plot_features(listBestFeatures,str(epochs),'Total Weight '+jj)
-            plot_features(listTopFeatures,str(epochs),'Count '+jj)
-            
+                if MAXPLOTS:
+                    plot_features(listBestFeatures,str(epochs),'Total Weight '+jj)
+                    plot_features(listTopFeatures,str(epochs),'Count '+jj)
+
+
+hist_txt=np.empty((len(plot_bins),0),int)
+header=''
+for k,v in save_hist.items():
+    hist_txt=np.column_stack((hist_txt,v))
+    header=header+k+'  '+'bin'+k+'  '
+np.savetxt('RandomHis.txt',hist_txt,header=header,fmt='%.3f',comments='')
+
 
