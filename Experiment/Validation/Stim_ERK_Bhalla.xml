@@ -33,23 +33,24 @@
 	<rate>   980          </rate>
       </InjectionStim>
 
-<!--cAMP 1000 and d1-->
+<!--cAMP -->
       
 <InjectionStim specieID="cAMP" injectionSite="pointA">
         <onset>               201000          </onset>
-        <duration>        1         </duration> 
-       	<rate>               15210      </rate>
+        <duration>        60000         </duration> 
+       	<rate>             0.4845        </rate>
    
 </InjectionStim>
 
- <InjectionStim specieID="cAMP" injectionSite="pointA">
-        <onset>              201010          </onset>
-        <duration>       1        </duration> 
-       	<rate>              140       </rate>
-	<period>        10             </period>
-	<end>          202000           </end>
-	
+ <!--IP35 -->
+      
+<InjectionStim specieID="cAMP" injectionSite="pointA">
+        <onset>               201000          </onset>
+        <duration>        100000         </duration> 
+       	<rate>             0.4845        </rate>
+   
 </InjectionStim>
+
 
 </StimulationSet> 
 
