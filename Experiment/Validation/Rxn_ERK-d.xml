@@ -154,6 +154,10 @@ phosphatase reactions take from revision of Gs to improve Ca dep dphos of Dp32--
     <Specie name="Cam"               id="Cam"               kdiff="11"    kdiffunit="mu2/s"/>
     <Specie name="CamCa2C"           id="CamCa2C"           kdiff="11"    kdiffunit="mu2/s"/>
     <Specie name="CamCa2N"           id="CamCa2N"           kdiff="11"    kdiffunit="mu2/s"/>
+<!-- X out IP35 -->
+<Specie name="XIp35"           id="XIp35"           kdiff="11"    kdiffunit="mu2/s"/>
+<Specie name="Xout"           id="Xout"           kdiff="11"    kdiffunit="mu2/s"/>
+    
 
 <!--****************************************************************************
     Now, the reactions themselves
@@ -1003,6 +1007,17 @@ phosphatase reactions take from revision of Gs to improve Ca dep dphos of Dp32--
 	
     <forwardRate> 1.00e-6 </forwardRate>
         <reverseRate> 1.10e-6 </reverseRate>
+    </Reaction>
+ <!-- remove PP1 inhibitor -->
+    <!-- Ip35 + Xout <-> XIp35 -->
+    <Reaction name = "Ip35+Xout" id="Ip35+Xout">
+	<Reactant specieID="Ip35"/>
+        <Reactant specieID="Xout"/>
+`	<Product specieID="XIp35"/>
+
+	
+    <forwardRate> 1.00e-3 </forwardRate>
+        <reverseRate> 0 </reverseRate>
     </Reaction>
 
     
