@@ -43,7 +43,7 @@
         <onset>               201020          </onset>
         <duration>        10         </duration> 
         <rate>             11000       </rate>
-	<period>        30         </period>
+	<period>        300         </period>
 	<end>        202000        </end>
 	<interTrainInterval> 300000     </interTrainInterval>
 	<numTrains>           4       </numTrains>

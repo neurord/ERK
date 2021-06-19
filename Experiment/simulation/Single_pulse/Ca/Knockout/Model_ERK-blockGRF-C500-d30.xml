@@ -4,7 +4,7 @@
 
           <xi:include href="../../../Rxn_ERK-d-blockGRF.xml" />
           <xi:include href="../../../Morph.xml" />        
-          <xi:include href="../../../IC_ERK_basald-blockGRF.xml" />
+          <xi:include href="../../../IC_ERK_basald-BGRF.xml" />
           <xi:include href="../../../Out_ERK.xml" />
 	  <xi:include href="../Stim_ERK_Ca-C500-d30.xml" />
  
