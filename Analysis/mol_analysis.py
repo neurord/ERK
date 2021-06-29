@@ -1,4 +1,4 @@
-mol_change={'ERK':['ERK'], 'MEK':['MEK'],'MKP1':['MKP1'],'PP2A':['PP2A'],'CRaf':['Raf1'],'BRaf':['bRaf'],'PDE2':['PDE2'],'PDE4':['PDE4'],'PKA':['PKA'],'Src':['Src'],'Cbl':['Cbl'],'CRKC3G':['CRKC3G'],'CamKII':['CK'],'PP1':['PP1'],'Cam':['Cam'],'Ng':['Ng'],'NgCam':['NgCam'],'Grb2':['Grb2'],'Sos':['Sos'],'Shc':['Shc'],'RasGRF':['RasGRF'],'Epac':['Epac'],'Ras':['RasGDP'],'Rap1':['Rap1GDP'],'pmca':['pmca'],'ncx':['ncx'],'Calbin':['Calbin'],'FixBuff':['CB'],'rasGap':['rasGap'],'rapGap':['rap1Gap'],'SynGap':['SynGap']}
+mol_change={'ERK':['ERK'], 'MEK':['MEK'],'MKP1':['MKP1'],'PP2A':['PP2A'],'CRaf':['Raf1'],'BRaf':['bRaf'],'PDE2':['PDE2'],'PDE4':['PDE4'],'PKA':['PKA'],'Src':['Src'],'Cbl':['Cbl'],'CRKC3G':['CRKC3G'],'CamKII':['CK'],'PP1':['PP1'],'Cam':['Cam'],'Ng':['Ng'],'Grb2':['Grb2'],'Sos':['Sos'],'Shc':['Shc'],'RasGRF':['RasGRF'],'Epac':['Epac'],'Ras':['RasGDP'],'Rap1':['Rap1GDP'],'pmca':['pmca'],'ncx':['ncx'],'Calbin':['Calbin'],'FixBuff':['CB'],'rasGap':['rasGap'],'rapGap':['rap1Gap'],'SynGap':['SynGap']}
 import glob
 import os
 from lxml import etree
