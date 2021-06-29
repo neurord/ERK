@@ -3,28 +3,33 @@
 ===========
 
 ERK signaling pathway include:
-a. Calcium:
+1. Calcium:
    * Calcium activation of RasGRF followed by RasGTP production
    * CamKII modulation of SynGap followed by increase RasGTP and Rap1GTP lifetime
-b. cAMP
+2. cAMP
    * cAMP activation of Epac activation followed Rap1GTP
    * PKA phorylation of Src family kinase leading to Rap1GTP production
    * Gβγ recruitment of Src family kinase followed by activation of RasGTP
+   
+.. figure:: C:\Users\nminingo\OneDrive - George Mason University\Desktop/ERK_diagram.jpg
+    :alt: alternate text
+    :figclass: align-center
 
+    ERK signaling pathwway diagram
 
 The repository contains several types of simulation files (in Experiment) and python scripts for analysis of output (in Analysis).  All output files were first processed using nrdh5_analv2 in https://github.com/neurord/NeuroRDanal
 
 Model_ERK-stimdxxx.xml contain the entire model specification, which combines Reaction file (*Rxn_ERK_xxx.xml*), Morphology file (*Morph.xml*), initial conditions file (*IC_ERK_xxx.xml*), output file (*Out_ERK_xxx.xml*) and stimulation (*Stim_ERK_xxx.xml*).  To run simulations, use NeuroRDv3.2.4 as follow:
 
-``java -jar /path/to/neurord-3.2.3-all-deps.jar /path/to/Mdel_ERK-stimd***.xml``
+``java -jar /path/to/neurord-3.2.3-all-deps.jar /path/to/Model_ERK-stimd***.xml``
 
 -------------
 **subfolders**
 -------------
 1. **Experiment/Initialization/**:
-To match the in *vitro* data on basal concentration, the model for about an hour to obtain steady-state concentrations for all molecules
-To copy basal quantity, run
-         ``ARGS="IC_file name,h5_file name ,sstart ssend"`` then ``execfile('path/to/file/UpdateIC_basal.py')``
+* To match the in *vitro* data on basal concentration, the model for about an hour to obtain steady-state concentrations for all molecules
+* To copy basal quantities of molecules, run:
+         ``ARGS="IC_filename,h5_filename ,sstart ssend"`` then ``execfile('path/to/file/UpdateIC_basal.py')``
 
 
 2. **Experiment/simulation/**:
