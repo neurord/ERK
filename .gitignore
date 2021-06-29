@@ -7,12 +7,10 @@
 *.npz
 *.sasparams
 *.png
-#*.bat
+*.bat
 *.
 *.txt
 *.pyc
-<<<<<<< HEAD
 *.csv
-=======
 #*.py
->>>>>>> fe277d0117fa5c79bf703f014260d648405bf36d
+
