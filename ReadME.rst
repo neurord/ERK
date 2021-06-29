@@ -17,11 +17,11 @@ ERK signaling pathway include:
    
 .. figure:: C:\Users\nminingo\OneDrive - George Mason University\Desktop\ERK_diagram.jpg
     :alt: ERK signaling pathwway diagram
-    :figclass: align-center
-
+    :figclass: align-center 
     
+The repository contains several types of simulation files (in Experiment) and python scripts for analysis of output (in Analysis). 
+All output files were first processed using nrdh5_analV2 in https://github.com/neurord/NeuroRDanal
 
-The repository contains several types of simulation files (in Experiment) and python scripts for analysis of output (in Analysis).  All output files were first processed using nrdh5_analv2 in https://github.com/neurord/NeuroRDanal
 
 Model_ERK-stimdxxx.xml contain the entire model specification, which combines Reaction file (*Rxn_ERK_xxx.xml*), Morphology file (*Morph.xml*), initial conditions file (*IC_ERK_xxx.xml*), output file (*Out_ERK_xxx.xml*) and stimulation (*Stim_ERK_xxx.xml*).  To run simulations, use NeuroRDv3.2.4 as follow:
 
