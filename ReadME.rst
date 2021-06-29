@@ -15,17 +15,17 @@ ERK signaling pathway include:
    * PKA phorylation of Src family kinase leading to Rap1GTP production
    * Gβγ recruitment of Src family kinase followed by activation of RasGTP
    
-.. figure:: C:\Users\nminingo\OneDrive - George Mason University\Desktop/ERK_diagram.jpg
-    :alt: alternate text
+.. figure:: C:\Users\nminingo\OneDrive - George Mason University\Desktop\ERK_diagram.jpg
+    :alt: ERK signaling pathwway diagram
     :figclass: align-center
 
-    ERK signaling pathwway diagram
+    
 
 The repository contains several types of simulation files (in Experiment) and python scripts for analysis of output (in Analysis).  All output files were first processed using nrdh5_analv2 in https://github.com/neurord/NeuroRDanal
 
 Model_ERK-stimdxxx.xml contain the entire model specification, which combines Reaction file (*Rxn_ERK_xxx.xml*), Morphology file (*Morph.xml*), initial conditions file (*IC_ERK_xxx.xml*), output file (*Out_ERK_xxx.xml*) and stimulation (*Stim_ERK_xxx.xml*).  To run simulations, use NeuroRDv3.2.4 as follow:
 
-``java -jar /path/to/neurord-3.2.3-all-deps.jar /path/to/Model_ERK-stimd_xxx.xml``
+``java -jar /path/to/neurord-3.2.3-all-deps.jar  /path/to/Model_ERK-stimd_xxx.xml``
 
 -------------
 **Subfolders**
