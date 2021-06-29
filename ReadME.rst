@@ -65,6 +65,7 @@ Model_ERK-stimdxxx.xml contain the entire model specification, which combines Re
 6. **Experiment/simulation/Robustness/**:simulation to ensure the robustness of results to variation in parameter values
 
 	*Model_ERK-stimd-xxx.xml* and *Stim_ERK_xxx.xml* and *IC_ERK_xxx.xml* (Experiment/simulation/Robustness/analysis) modify rate constants or molecule quantity to assess effect on ERK
+	*The files in Experiment/simulation/Robustness/analysis were generated using robustness_anal.py which uses robustness_function.py
 
 7. **Experiment/Analysis/**:
 
