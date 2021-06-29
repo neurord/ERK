@@ -8,11 +8,11 @@ Python programs for analysis of linearity and robustness:
 	* Do ERK pathways combine linearly
 	* Does ppERK increase linearly with concentration or duration
 	
-4. **mol_analysis.py**: calculate change of molecule concentration used for the simulations
+4. **mol_analysis.py**: calculate change of molecule concentration used for the robustness simulations.  Input is the .xml file
 
-5. **factor_analysis.py**: read in and calculate changes in ppERK AUC for individual molecules changes
+5. **factor_analysis.py**: read in and calculate changes in ppERK AUC for individual molecules changes.  Input is the output from nrdh5_analV2.py
 
-6. **random_analysis.py**: read in and calculate changes in ppERK AUC from sets of molecules changes  
+6. **random_analysis.py**: read in and calculate changes in ppERK AUC from sets of molecules changes. Input is the output from nrdh5_analV2.py  
 
 7. **RandomForestRegression.py**: Main program to analyze results of robustness simulations
 	* First, create file with the change in molcule concentration used for the simulations (mol_analysis.py)
