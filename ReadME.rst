@@ -25,7 +25,7 @@ The repository contains several types of simulation files (in Experiment) and py
 All output files were first processed using nrdh5_analv2 in https://github.com/neurord/NeuroRDanal
 
 
-Model_ERK-stimdxxx.xml contain the entire model specification, which combines Reaction file (*Rxn_ERK_xxx.xml*), Morphology file (*Morph.xml*), initial conditions file (*IC_ERK_xxx.xml*), output file (*Out_ERK_xxx.xml*) and stimulation (*Stim_ERK_xxx.xml*).  To run simulations, use NeuroRDv3.2.4 as follow:
+Model_ERK-stimdxxx.xml contain the entire model specification, which combines Reaction file (*Rxn_ERK_xxx.xml*), Morphology file (*Morph.xml*), initial conditions file (*IC_ERK_xxx.xml*), output file (*Out_ERK_xxx.xml*) and stimulation (*Stim_ERK_xxx.xml*).  To run simulations, use NeuroRDv3.2.4 (https://github.com/neurord/stochdiff/releases/tag/v3.2.4) as follows:
 
 ``java -jar /path/to/neurord-3.2.4-all-deps.jar  /path/to/Model_ERK-stimd_xxx.xml``
 
