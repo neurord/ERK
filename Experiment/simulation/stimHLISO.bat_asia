@@ -1,0 +1,143 @@
+
+
+#done
+nohup /usr/lib/jvm/java-8-openjdk-amd64/bin/java -jar ~/new_neurord/neurord-3.2.3-all-deps.jar -t 2100000 -Dneurord.trials=5 LFS_ISO_HFS/ctrl/Model_ERK-stimd-CaC1000-ISO-HFS.xml  paradigms_h5/Model_ERK-LTPISOHFS&
+
+nohup /usr/lib/jvm/java-8-openjdk-amd64/bin/java -jar ~/new_neurord/neurord-3.2.3-all-deps.jar -t 2100000 -Dneurord.trials=5 LFS_ISO_HFS/ctrl/Model_ERK-stimd-CaC1000-train1.xml  paradigms_h5/Model_ERK-LTPHFS&
+
+nohup /usr/lib/jvm/java-8-openjdk-amd64/bin/java -jar ~/new_neurord/neurord-3.2.3-all-deps.jar -t 2100000 -Dneurord.trials=5 LFS_ISO_HFS/ctrl/Model_ERK-stimd-ISO-LFS.xml  paradigms_h5/Model_ERK-LTPISOLFS&
+
+nohup /usr/lib/jvm/java-8-openjdk-amd64/bin/java -jar ~/new_neurord/neurord-3.2.3-all-deps.jar -t 2100000 -Dneurord.trials=5 LFS_ISO_HFS/ctrl/Model_ERK-stimd-ISO.xml  paradigms_h5/Model_ERK-LTPGbgISO&
+
+nohup /usr/lib/jvm/java-8-openjdk-amd64/bin/java -jar ~/new_neurord/neurord-3.2.3-all-deps.jar -t 2100000 -Dneurord.trials=5 LFS_ISO_HFS/ctrl/Model_ERK-stimd-LFS.xml  paradigms_h5/Model_ERK-LTPLFS&
+
+
+
+#do we need that? 
+nohup /usr/lib/jvm/java-8-openjdk-amd64/bin/java -jar ~/new_neurord/neurord-3.2.3-all-deps.jar -t 2100000 -Dneurord.trials=5 LFS_ISO_HFS/ctrl/Model_ERK-stimd-CaC1000-Gbg1000-ISO-HFS.xml  paradigms_h5/Model_ERK-LTPGbg1000ISOHFS&
+
+nohup /usr/lib/jvm/java-8-openjdk-amd64/bin/java -jar ~/new_neurord/neurord-3.2.3-all-deps.jar -t 2100000 -Dneurord.trials=5 LFS_ISO_HFS/ctrl/Model_ERK-stimd-CaC1000-Gbg500-ISO-HFS.xml  paradigms_h5/Model_ERK-LTPGbg500ISOHFS&
+
+nohup /usr/lib/jvm/java-8-openjdk-amd64/bin/java -jar ~/new_neurord/neurord-3.2.3-all-deps.jar -t 2100000 -Dneurord.trials=5 LFS_ISO_HFS/ctrl/Model_ERK-stimd-Gbg1000-ISO-LFS.xml  paradigms_h5/Model_ERK-LTPGbg1000ISOLFS&
+
+nohup /usr/lib/jvm/java-8-openjdk-amd64/bin/java -jar ~/new_neurord/neurord-3.2.3-all-deps.jar -t 2100000 -Dneurord.trials=5 LFS_ISO_HFS/ctrl/Model_ERK-stimd-Gbg500-ISO-LFS.xml  paradigms_h5/Model_ERK-LTPGbg500ISOLFS&
+
+nohup /usr/lib/jvm/java-8-openjdk-amd64/bin/java -jar ~/new_neurord/neurord-3.2.3-all-deps.jar -t 2100000 -Dneurord.trials=5 LFS_ISO_HFS/ctrl/Model_ERK-stimd-Gbg500-ISO.xml  paradigms_h5/Model_ERK-LTPGbg500ISO&
+
+nohup /usr/lib/jvm/java-8-openjdk-amd64/bin/java -jar ~/new_neurord/neurord-3.2.3-all-deps.jar -t 2100000 -Dneurord.trials=5 LFS_ISO_HFS/ctrl/Model_ERK-stimd-Gbg250-ISO.xml  paradigms_h5/Model_ERK-LTPGbg250ISO&
+
+
+#done
+nohup /usr/lib/jvm/java-8-openjdk-amd64/bin/java -jar ~/new_neurord/neurord-3.2.3-all-deps.jar -t 2100000 -Dneurord.trials=5 LFS_ISO_HFS/block_Epac_cAMP/Model_ERK-block_EpaccAMP-stimd-CaC1000-ISO-HFS.xml  paradigms_h5/Model_ERK-blockEpaccAMP-LTPISOHFS&
+
+nohup /usr/lib/jvm/java-8-openjdk-amd64/bin/java -jar ~/new_neurord/neurord-3.2.3-all-deps.jar -t 2100000 -Dneurord.trials=5 LFS_ISO_HFS/block_Epac_cAMP/Model_ERK-block_EpaccAMP-stimd-CaC1000-train1.xml  paradigms_h5/Model_ERK-blockEpaccAMP-LTPHFS&
+
+nohup /usr/lib/jvm/java-8-openjdk-amd64/bin/java -jar ~/new_neurord/neurord-3.2.3-all-deps.jar -t 2100000 -Dneurord.trials=5 LFS_ISO_HFS/block_Epac_cAMP/Model_ERK-block_EpaccAMP-stimd-ISO-LFS.xml  paradigms_h5/Model_ERK-blockEpaccAMP-LTPISOLFS&
+
+nohup /usr/lib/jvm/java-8-openjdk-amd64/bin/java -jar ~/new_neurord/neurord-3.2.3-all-deps.jar -t 2100000 -Dneurord.trials=5 LFS_ISO_HFS/block_Epac_cAMP/Model_ERK-block_EpaccAMP-stimd-ISO.xml  paradigms_h5/Model_ERK-blockEpaccAMP-LTPGbgISO&
+
+nohup /usr/lib/jvm/java-8-openjdk-amd64/bin/java -jar ~/new_neurord/neurord-3.2.3-all-deps.jar -t 2100000 -Dneurord.trials=5 LFS_ISO_HFS/block_Epac_cAMP/Model_ERK-block_EpaccAMP-stimd-LFS.xml  paradigms_h5/Model_ERK-blockEpaccAMP-LTPLFS&
+
+
+
+#do we need that?
+#done
+nohup /usr/lib/jvm/java-8-openjdk-amd64/bin/java -jar ~/new_neurord/neurord-3.2.3-all-deps.jar -t 2100000 -Dneurord.trials=5 LFS_ISO_HFS/block_Epac_cAMP/Model_ERK-block_EpaccAMP-stimd-CaC1000-Gbg1000-ISO-HFS.xml  paradigms_h5/Model_ERK-blockEpaccAMP-LTPGbg1000ISOHFS&
+
+nohup /usr/lib/jvm/java-8-openjdk-amd64/bin/java -jar ~/new_neurord/neurord-3.2.3-all-deps.jar -t 2100000 -Dneurord.trials=5 LFS_ISO_HFS/block_Epac_cAMP/Model_ERK-block_EpaccAMP-stimd-CaC1000-Gbg500-ISO-HFS.xml  paradigms_h5/Model_ERK-blockEpaccAMP-LTPGbg500ISOHFS&
+
+nohup /usr/lib/jvm/java-8-openjdk-amd64/bin/java -jar ~/new_neurord/neurord-3.2.3-all-deps.jar -t 2100000 -Dneurord.trials=5 LFS_ISO_HFS/block_Epac_cAMP/Model_ERK-block_EpaccAMP-stimd-Gbg1000-ISO-LFS.xml  paradigms_h5/Model_ERK-blockEpaccAMP-LTPGbg1000ISOLFS&
+
+nohup /usr/lib/jvm/java-8-openjdk-amd64/bin/java -jar ~/new_neurord/neurord-3.2.3-all-deps.jar -t 2100000 -Dneurord.trials=5 LFS_ISO_HFS/block_Epac_cAMP/Model_ERK-block_EpaccAMP-stimd-Gbg500-ISO-LFS.xml  paradigms_h5/Model_ERK-blockEpaccAMP-LTPGbg500ISOLFS&
+
+nohup /usr/lib/jvm/java-8-openjdk-amd64/bin/java -jar ~/new_neurord/neurord-3.2.3-all-deps.jar -t 2100000 -Dneurord.trials=5 LFS_ISO_HFS/block_Epac_cAMP/Model_ERK-block_EpaccAMP-stimd-Gbg500-ISO.xml  paradigms_h5/Model_ERK-blockEpaccAMP-LTPGbg500ISO&
+
+nohup /usr/lib/jvm/java-8-openjdk-amd64/bin/java -jar ~/new_neurord/neurord-3.2.3-all-deps.jar -t 2100000 -Dneurord.trials=5 LFS_ISO_HFS/block_Epac_cAMP/Model_ERK-block_EpaccAMP-stimd-Gbg250-ISO.xml  paradigms_h5/Model_ERK-blockEpaccAMP-LTPGbg250ISO&
+
+
+
+
+nohup /usr/lib/jvm/java-8-openjdk-amd64/bin/java -jar ~/new_neurord/neurord-3.2.3-all-deps.jar -t 2100000 -Dneurord.trials=5 LFS_ISO_HFS/block_PKA_cAMP/Model_ERK-block_PKAcAMP-stimd-CaC1000-ISO-HFS.xml  paradigms_h5/Model_ERK-block_PKAcAMP-LTPISOHFS&
+
+nohup /usr/lib/jvm/java-8-openjdk-amd64/bin/java -jar ~/new_neurord/neurord-3.2.3-all-deps.jar -t 2100000 -Dneurord.trials=5 LFS_ISO_HFS/block_PKA_cAMP/Model_ERK-block_PKAcAMP-stimd-CaC1000-train1.xml  paradigms_h5/Model_ERK-block_PKAcAMP-LTPHFS&
+
+nohup /usr/lib/jvm/java-8-openjdk-amd64/bin/java -jar ~/new_neurord/neurord-3.2.3-all-deps.jar -t 2100000 -Dneurord.trials=5 LFS_ISO_HFS/block_PKA_cAMP/Model_ERK-block_PKAcAMP-stimd-ISO-LFS.xml  paradigms_h5/Model_ERK-block_PKAcAMP-LTPISOLFS&
+
+nohup /usr/lib/jvm/java-8-openjdk-amd64/bin/java -jar ~/new_neurord/neurord-3.2.3-all-deps.jar -t 2100000 -Dneurord.trials=5 LFS_ISO_HFS/block_PKA_cAMP/Model_ERK-block_PKAcAMP-stimd-ISO.xml  paradigms_h5/Model_ERK-block_PKAcAMP-LTPGbgISO&
+
+nohup /usr/lib/jvm/java-8-openjdk-amd64/bin/java -jar ~/new_neurord/neurord-3.2.3-all-deps.jar -t 2100000 -Dneurord.trials=5 LFS_ISO_HFS/block_PKA_cAMP/Model_ERK-block_PKAcAMP-stimd-LFS.xml  paradigms_h5/Model_ERK-block_PKAcAMP-LTPLFS&
+
+
+
+#do we need that? 
+nohup /usr/lib/jvm/java-8-openjdk-amd64/bin/java -jar ~/new_neurord/neurord-3.2.3-all-deps.jar -t 2100000 -Dneurord.trials=5 LFS_ISO_HFS/block_PKA_cAMP/Model_ERK-block_PKAcAMP-stimd-CaC1000-Gbg1000-ISO-HFS.xml  paradigms_h5/Model_ERK-block_PKAcAMP-LTPGbg1000ISOHFS&
+
+nohup /usr/lib/jvm/java-8-openjdk-amd64/bin/java -jar ~/new_neurord/neurord-3.2.3-all-deps.jar -t 2100000 -Dneurord.trials=5 LFS_ISO_HFS/block_PKA_cAMP/Model_ERK-block_PKAcAMP-stimd-CaC1000-Gbg500-ISO-HFS.xml  paradigms_h5/Model_ERK-block_PKAcAMP-LTPGbg500ISOHFS&
+
+nohup /usr/lib/jvm/java-8-openjdk-amd64/bin/java -jar ~/new_neurord/neurord-3.2.3-all-deps.jar -t 2100000 -Dneurord.trials=5 LFS_ISO_HFS/block_PKA_cAMP/Model_ERK-block_PKAcAMP-stimd-Gbg1000-ISO-LFS.xml  paradigms_h5/Model_ERK-block_PKAcAMP-LTPGbg1000ISOLFS&
+
+nohup /usr/lib/jvm/java-8-openjdk-amd64/bin/java -jar ~/new_neurord/neurord-3.2.3-all-deps.jar -t 2100000 -Dneurord.trials=5 LFS_ISO_HFS/block_PKA_cAMP/Model_ERK-block_PKAcAMP-stimd-Gbg500-ISO-LFS.xml  paradigms_h5/Model_ERK-block_PKAcAMP-LTPGbg500ISOLFS&
+
+nohup /usr/lib/jvm/java-8-openjdk-amd64/bin/java -jar ~/new_neurord/neurord-3.2.3-all-deps.jar -t 2100000 -Dneurord.trials=5 LFS_ISO_HFS/block_PKA_cAMP/Model_ERK-block_PKAcAMP-stimd-Gbg500-ISO.xml  paradigms_h5/Model_ERK-block_PKAcAMP-LTPGbg500ISO&
+
+nohup /usr/lib/jvm/java-8-openjdk-amd64/bin/java -jar ~/new_neurord/neurord-3.2.3-all-deps.jar -t 2100000 -Dneurord.trials=5 LFS_ISO_HFS/block_PKA_cAMP/Model_ERK-block_PKAcAMP-stimd-Gbg250-ISO.xml  paradigms_h5/Model_ERK-block_PKAcAMP-LTPGbg250ISO&
+
+
+
+
+
+nohup /usr/lib/jvm/java-8-openjdk-amd64/bin/java -jar ~/new_neurord/neurord-3.2.3-all-deps.jar -t 2100000 -Dneurord.trials=5 LFS_ISO_HFS/block_Rap/Model_ERK-block_Rap-stimd-CaC1000-ISO-HFS.xml  paradigms_h5/Model_ERK-block_Rap-LTPISOHFS&
+
+nohup /usr/lib/jvm/java-8-openjdk-amd64/bin/java -jar ~/new_neurord/neurord-3.2.3-all-deps.jar -t 2100000 -Dneurord.trials=5 LFS_ISO_HFS/block_Rap/Model_ERK-block_Rap-stimd-CaC1000-train1.xml  paradigms_h5/Model_ERK-block_Rap-LTPHFS&
+
+nohup /usr/lib/jvm/java-8-openjdk-amd64/bin/java -jar ~/new_neurord/neurord-3.2.3-all-deps.jar -t 2100000 -Dneurord.trials=5 LFS_ISO_HFS/block_Rap/Model_ERK-block_Rap-stimd-ISO-LFS.xml  paradigms_h5/Model_ERK-block_Rap-LTPISOLFS&
+
+nohup /usr/lib/jvm/java-8-openjdk-amd64/bin/java -jar ~/new_neurord/neurord-3.2.3-all-deps.jar -t 2100000 -Dneurord.trials=5 LFS_ISO_HFS/block_Rap/Model_ERK-block_Rap-stimd-ISO.xml  paradigms_h5/Model_ERK-block_Rap-LTPGbgISO&
+
+nohup /usr/lib/jvm/java-8-openjdk-amd64/bin/java -jar ~/new_neurord/neurord-3.2.3-all-deps.jar -t 2100000 -Dneurord.trials=5 LFS_ISO_HFS/block_Rap/Model_ERK-block_Rap-stimd-LFS.xml  paradigms_h5/Model_ERK-block_Rap-LTPLFS&
+
+
+
+#do we need that? 
+nohup /usr/lib/jvm/java-8-openjdk-amd64/bin/java -jar ~/new_neurord/neurord-3.2.3-all-deps.jar -t 2100000 -Dneurord.trials=5 LFS_ISO_HFS/block_Rap/Model_ERK-block_Rap-stimd-CaC1000-Gbg1000-ISO-HFS.xml  paradigms_h5/Model_ERK-block_Rap-LTPGbg1000ISOHFS&
+
+nohup /usr/lib/jvm/java-8-openjdk-amd64/bin/java -jar ~/new_neurord/neurord-3.2.3-all-deps.jar -t 2100000 -Dneurord.trials=5 LFS_ISO_HFS/block_Rap/Model_ERK-block_Rap-stimd-CaC1000-Gbg500-ISO-HFS.xml  paradigms_h5/Model_ERK-block_Rap-LTPGbg500ISOHFS&
+
+nohup /usr/lib/jvm/java-8-openjdk-amd64/bin/java -jar ~/new_neurord/neurord-3.2.3-all-deps.jar -t 2100000 -Dneurord.trials=5 LFS_ISO_HFS/block_Rap/Model_ERK-block_Rap-stimd-Gbg1000-ISO-LFS.xml  paradigms_h5/Model_ERK-block_Rap-LTPGbg1000ISOLFS&
+
+nohup /usr/lib/jvm/java-8-openjdk-amd64/bin/java -jar ~/new_neurord/neurord-3.2.3-all-deps.jar -t 2100000 -Dneurord.trials=5 LFS_ISO_HFS/block_Rap/Model_ERK-block_Rap-stimd-Gbg500-ISO-LFS.xml  paradigms_h5/Model_ERK-block_Rap-LTPGbg500ISOLFS&
+
+nohup /usr/lib/jvm/java-8-openjdk-amd64/bin/java -jar ~/new_neurord/neurord-3.2.3-all-deps.jar -t 2100000 -Dneurord.trials=5 LFS_ISO_HFS/block_Rap/Model_ERK-block_Rap-stimd-Gbg500-ISO.xml  paradigms_h5/Model_ERK-block_Rap-LTPGbg500ISO&
+
+nohup /usr/lib/jvm/java-8-openjdk-amd64/bin/java -jar ~/new_neurord/neurord-3.2.3-all-deps.jar -t 2100000 -Dneurord.trials=5 LFS_ISO_HFS/block_Rap/Model_ERK-block_Rap-stimd-Gbg250-ISO.xml  paradigms_h5/Model_ERK-block_Rap-LTPGbg250ISO&
+
+
+
+
+nohup /usr/lib/jvm/java-8-openjdk-amd64/bin/java -jar ~/new_neurord/neurord-3.2.3-all-deps.jar -t 2100000 -Dneurord.trials=5 LFS_ISO_HFS/block_Ras/Model_ERK-block_Ras-stimd-CaC1000-ISO-HFS.xml  paradigms_h5/Model_ERK-block_Ras-LTPISOHFS&
+
+nohup /usr/lib/jvm/java-8-openjdk-amd64/bin/java -jar ~/new_neurord/neurord-3.2.3-all-deps.jar -t 2100000 -Dneurord.trials=5 LFS_ISO_HFS/block_Ras/Model_ERK-block_Ras-stimd-CaC1000-train1.xml  paradigms_h5/Model_ERK-block_Ras-LTPHFS&
+
+nohup /usr/lib/jvm/java-8-openjdk-amd64/bin/java -jar ~/new_neurord/neurord-3.2.3-all-deps.jar -t 2100000 -Dneurord.trials=5 LFS_ISO_HFS/block_Ras/Model_ERK-block_Ras-stimd-ISO-LFS.xml  paradigms_h5/Model_ERK-block_Ras-LTPISOLFS&
+
+nohup /usr/lib/jvm/java-8-openjdk-amd64/bin/java -jar ~/new_neurord/neurord-3.2.3-all-deps.jar -t 2100000 -Dneurord.trials=5 LFS_ISO_HFS/block_Ras/Model_ERK-block_Ras-stimd-ISO.xml  paradigms_h5/Model_ERK-block_Ras-LTPGbgISO&
+
+nohup /usr/lib/jvm/java-8-openjdk-amd64/bin/java -jar ~/new_neurord/neurord-3.2.3-all-deps.jar -t 2100000 -Dneurord.trials=5 LFS_ISO_HFS/block_Ras/Model_ERK-block_Ras-stimd-LFS.xml  paradigms_h5/Model_ERK-block_Ras-LTPLFS&
+
+
+
+#do we need that? 
+nohup /usr/lib/jvm/java-8-openjdk-amd64/bin/java -jar ~/new_neurord/neurord-3.2.3-all-deps.jar -t 2100000 -Dneurord.trials=5 LFS_ISO_HFS/block_Ras/Model_ERK-block_Ras-stimd-CaC1000-Gbg1000-ISO-HFS.xml  paradigms_h5/Model_ERK-block_Ras-LTPGbg1000ISOHFS&
+
+nohup /usr/lib/jvm/java-8-openjdk-amd64/bin/java -jar ~/new_neurord/neurord-3.2.3-all-deps.jar -t 2100000 -Dneurord.trials=5 LFS_ISO_HFS/block_Ras/Model_ERK-block_Ras-stimd-CaC1000-Gbg500-ISO-HFS.xml  paradigms_h5/Model_ERK-block_Ras-LTPGbg500ISOHFS&
+
+nohup /usr/lib/jvm/java-8-openjdk-amd64/bin/java -jar ~/new_neurord/neurord-3.2.3-all-deps.jar -t 2100000 -Dneurord.trials=5 LFS_ISO_HFS/block_Ras/Model_ERK-block_Ras-stimd-Gbg1000-ISO-LFS.xml  paradigms_h5/Model_ERK-block_Ras-LTPGbg1000ISOLFS&
+
+nohup /usr/lib/jvm/java-8-openjdk-amd64/bin/java -jar ~/new_neurord/neurord-3.2.3-all-deps.jar -t 2100000 -Dneurord.trials=5 LFS_ISO_HFS/block_Ras/Model_ERK-block_Ras-stimd-Gbg500-ISO-LFS.xml  paradigms_h5/Model_ERK-block_Ras-LTPGbg500ISOLFS&
+
+nohup /usr/lib/jvm/java-8-openjdk-amd64/bin/java -jar ~/new_neurord/neurord-3.2.3-all-deps.jar -t 2100000 -Dneurord.trials=5 LFS_ISO_HFS/block_Ras/Model_ERK-block_Ras-stimd-Gbg500-ISO.xml  paradigms_h5/Model_ERK-block_Ras-LTPGbg500ISO&
+
+nohup /usr/lib/jvm/java-8-openjdk-amd64/bin/java -jar ~/new_neurord/neurord-3.2.3-all-deps.jar -t 2100000 -Dneurord.trials=5 LFS_ISO_HFS/block_Ras/Model_ERK-block_Ras-stimd-Gbg250-ISO.xml  paradigms_h5/Model_ERK-block_Ras-LTPGbg250ISO&
+
+
+
