@@ -1,0 +1,3731 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sbml xmlns="http://www.sbml.org/sbml/level3/version1/core" level="3" version="1">
+  <model substanceUnits="nM" timeUnits="ms" extentUnits="mole">
+    <listOfUnitDefinitions>
+      <unitDefinition id="per_second">
+        <listOfUnits>
+          <unit kind="second" exponent="-1" scale="0" multiplier="1"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition id="ms">
+        <listOfUnits>
+          <unit kind="second" exponent="1" scale="-3" multiplier="1"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition id="nM">
+        <listOfUnits>
+          <unit kind="mole" exponent="1" scale="-9" multiplier="1"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition id="per_ms">
+        <listOfUnits>
+          <unit kind="second" exponent="-1" scale="-3" multiplier="1"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition id="per_nM_per_ms">
+        <listOfUnits>
+          <unit kind="mole" exponent="-1" scale="-9" multiplier="1"/>
+          <unit kind="second" exponent="-1" scale="-3" multiplier="1"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition id="per_nM2_per_ms">
+        <listOfUnits>
+          <unit kind="mole" exponent="-2" scale="-9" multiplier="1"/>
+          <unit kind="second" exponent="-1" scale="-3" multiplier="1"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition id="per_nM3_per_ms">
+        <listOfUnits>
+          <unit kind="mole" exponent="-3" scale="-9" multiplier="1"/>
+          <unit kind="second" exponent="-1" scale="-3" multiplier="1"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition id="per_nM4_per_ms">
+        <listOfUnits>
+          <unit kind="mole" exponent="-3" scale="-9" multiplier="1"/>
+          <unit kind="second" exponent="-1" scale="-3" multiplier="1"/>
+        </listOfUnits>
+      </unitDefinition>
+    </listOfUnitDefinitions>
+    <listOfCompartments>
+      <compartment id="c1" spatialDimensions="3" size="1" units="litre" constant="true"/>
+      <compartment id="compartment" name="compartment" spatialDimensions="3" size="5e-16" units="litre" constant="true"/>
+    </listOfCompartments>
+    <listOfSpecies>
+      <species id="ERK" compartment="compartment" initialConcentration="129.405" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="pERK" compartment="compartment" initialConcentration="43.433" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="ppERK" compartment="compartment" initialConcentration="14.527" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="MKP1" compartment="compartment" initialConcentration="27.931" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="pERKMKP1" compartment="compartment" initialConcentration="9.11" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="ppERKMKP1" compartment="compartment" initialConcentration="3.046" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="ppMEKERK" compartment="compartment" initialConcentration="119.912" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="ppMEKpERK" compartment="compartment" initialConcentration="40.567" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="MEK" compartment="compartment" initialConcentration="257.476" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="pMEK" compartment="compartment" initialConcentration="104.744" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="ppMEK" compartment="compartment" initialConcentration="43.428" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="PP2A" compartment="compartment" initialConcentration="544.803" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="pMEKPP2A" compartment="compartment" initialConcentration="3.675" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="ppMEKPP2A" compartment="compartment" initialConcentration="1.511" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="bRaf" compartment="compartment" initialConcentration="157.614" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="bRafRap1MEK" compartment="compartment" initialConcentration="36.475" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="bRafRap1pMEK" compartment="compartment" initialConcentration="14.797" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="bRafRap1" compartment="compartment" initialConcentration="22.6" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="Raf1Rap1" compartment="compartment" initialConcentration="4.546" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="Rap1GTP" compartment="compartment" initialConcentration="2.391" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="Rap1GDP" compartment="compartment" initialConcentration="300.166" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="Epac" compartment="compartment" initialConcentration="775.345" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="EpacRap1" compartment="compartment" initialConcentration="5.498" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="EpacAMP" compartment="compartment" initialConcentration="18.911" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="cAMP" compartment="compartment" initialConcentration="28.693" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="PDE2" compartment="compartment" initialConcentration="159.983" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="PDE2cAMP" compartment="compartment" initialConcentration="0.164" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="PDE2cAMP2" compartment="compartment" initialConcentration="0.003" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="PDE4" compartment="compartment" initialConcentration="99.306" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="PDE4cAMP" compartment="compartment" initialConcentration="0.716" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="AMP" compartment="compartment" initialConcentration="71559.297" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="PKAcAMP2" compartment="compartment" initialConcentration="119.578" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="PKAcAMP4" compartment="compartment" initialConcentration="1.904" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="PKA" compartment="compartment" initialConcentration="994.494" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="PKAc" compartment="compartment" initialConcentration="0" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="PKAr" compartment="compartment" initialConcentration="0" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="Src" compartment="compartment" initialConcentration="17.134" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="PKAcSrc" compartment="compartment" initialConcentration="2.04" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="pSrc" compartment="compartment" initialConcentration="0.405" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="Cbl" compartment="compartment" initialConcentration="487.524" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="CblpSrc" compartment="compartment" initialConcentration="0.4" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="pCbl" compartment="compartment" initialConcentration="0.157" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="CRKC3G" compartment="compartment" initialConcentration="488.081" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="CRKC3GpCbl" compartment="compartment" initialConcentration="0.372" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="CRKC3GpCblRap1" compartment="compartment" initialConcentration="11.46" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="Rap1SynGap" compartment="compartment" initialConcentration="1.898" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="Rap1pSynGap" compartment="compartment" initialConcentration="0.001" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="rap1Gap" compartment="compartment" initialConcentration="11.904" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="Rap1GTPGap" compartment="compartment" initialConcentration="0.031" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="SynGap" compartment="compartment" initialConcentration="986.516" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="pSynGap" compartment="compartment" initialConcentration="1.02" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="pSynden" compartment="compartment" initialConcentration="0.91" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="CK" compartment="compartment" initialConcentration="19891.108" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="CKp" compartment="compartment" initialConcentration="0" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="CamCa4" compartment="compartment" initialConcentration="1.109" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="CKCamCa4" compartment="compartment" initialConcentration="147.062" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="CKpCamCa4" compartment="compartment" initialConcentration="0.291" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="CKpCamCa4SynGap" compartment="compartment" initialConcentration="1.512" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="PP1" compartment="compartment" initialConcentration="3099.988" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="CKpPP1" compartment="compartment" initialConcentration="0" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="CKpCamCa4PP1" compartment="compartment" initialConcentration="0.071" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="Ip35" compartment="compartment" initialConcentration="0.17" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="Ip35PP1" compartment="compartment" initialConcentration="499.872" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="Ng" compartment="compartment" initialConcentration="2623.125" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="NgCam" compartment="compartment" initialConcentration="18376.917" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="Gbg" compartment="compartment" initialConcentration="0" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="SrcGbg" compartment="compartment" initialConcentration="0" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="Grb2" compartment="compartment" initialConcentration="906.792" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="Sos" compartment="compartment" initialConcentration="6.793" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="pSos" compartment="compartment" initialConcentration="0" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="Grb2Sos" compartment="compartment" initialConcentration="93.164" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="ppERKpShcGrb2Sos" compartment="compartment" initialConcentration="0" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="pShcGrb2" compartment="compartment" initialConcentration="0" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="SrcGbgShc" compartment="compartment" initialConcentration="0" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="Shc" compartment="compartment" initialConcentration="499.978" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="pShc" compartment="compartment" initialConcentration="0" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="pShcGrb2Sos" compartment="compartment" initialConcentration="0" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="pShcGrb2SosRas" compartment="compartment" initialConcentration="0" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="RasGRF" compartment="compartment" initialConcentration="428.529" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="CamCa4GRF" compartment="compartment" initialConcentration="31.183" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="CamCa4GRFRas" compartment="compartment" initialConcentration="140.287" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="Raf1" compartment="compartment" initialConcentration="160.935" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="Raf1Ras" compartment="compartment" initialConcentration="106.258" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="dRaf1Ras" compartment="compartment" initialConcentration="4.296" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="dRaf1RasMEK" compartment="compartment" initialConcentration="7.022" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="dRaf1RaspMEK" compartment="compartment" initialConcentration="2.78" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="bRafRas" compartment="compartment" initialConcentration="20.924" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="bRafRasMEK" compartment="compartment" initialConcentration="33.781" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="bRafRaspMEK" compartment="compartment" initialConcentration="13.809" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="RasGTP" compartment="compartment" initialConcentration="10.948" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="RasGDP" compartment="compartment" initialConcentration="237.074" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="RasSynGap" compartment="compartment" initialConcentration="8.345" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="rasGap" compartment="compartment" initialConcentration="9.82" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="RasGTPGap" compartment="compartment" initialConcentration="0.104" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="RaspSynGap" compartment="compartment" initialConcentration="0.009" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="Ca" compartment="compartment" initialConcentration="43.463" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="Caext" compartment="compartment" initialConcentration="1000334.025" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="CaextLeak" compartment="compartment" initialConcentration="698.938" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="Leak" compartment="compartment" initialConcentration="1.018" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="pmca" compartment="compartment" initialConcentration="415.068" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="ncx" compartment="compartment" initialConcentration="1917.285" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="pmcaCa" compartment="compartment" initialConcentration="84.91" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="ncxCa" compartment="compartment" initialConcentration="82.757" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="Calbin" compartment="compartment" initialConcentration="150679.075" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="CalbinC" compartment="compartment" initialConcentration="9320.907" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="CB" compartment="compartment" initialConcentration="2997403.456" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="CaB" compartment="compartment" initialConcentration="2596.548" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="Cabuff" compartment="compartment" initialConcentration="0" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="Cbuff" compartment="compartment" initialConcentration="0" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="Cbuffslow" compartment="compartment" initialConcentration="0" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="Caextbuffslow" compartment="compartment" initialConcentration="0" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="Cam" compartment="compartment" initialConcentration="9013.023" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="CamCa2C" compartment="compartment" initialConcentration="256.764" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="CamCa2N" compartment="compartment" initialConcentration="39.041" substanceUnits="nM" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+    </listOfSpecies>
+    <listOfParameters>
+      <parameter id="kon_1" value="3.2e-05" units="per_nM_per_ms" constant="false"/>
+      <parameter id="koff_1" value="0.0012" units="per_ms" constant="false"/>
+      <parameter id="kon_2" value="0.0003" units="per_ms" constant="false"/>
+      <parameter id="koff_2" value="0" units="per_nM_per_ms" constant="false"/>
+      <parameter id="kon_3" value="3.2e-05" units="per_nM_per_ms" constant="false"/>
+      <parameter id="koff_3" value="0.0012" units="per_ms" constant="false"/>
+      <parameter id="kon_4" value="0.0003" units="per_ms" constant="false"/>
+      <parameter id="koff_4" value="0" units="per_nM_per_ms" constant="false"/>
+      <parameter id="kon_5" value="0.00015" units="per_nM_per_ms" constant="false"/>
+      <parameter id="koff_5" value="0.016" units="per_ms" constant="false"/>
+      <parameter id="kon_6" value="0.004" units="per_ms" constant="false"/>
+      <parameter id="koff_6" value="0" units="per_nM_per_ms" constant="false"/>
+      <parameter id="kon_7" value="0.00015" units="per_nM_per_ms" constant="false"/>
+      <parameter id="koff_7" value="0.016" units="per_ms" constant="false"/>
+      <parameter id="kon_8" value="0.004" units="per_ms" constant="false"/>
+      <parameter id="koff_8" value="0" units="per_nM_per_ms" constant="false"/>
+      <parameter id="kon_9" value="9.42863e-06" units="per_nM_per_ms" constant="false"/>
+      <parameter id="koff_9" value="0.0012" units="per_ms" constant="false"/>
+      <parameter id="kon_10" value="0.0003" units="per_ms" constant="false"/>
+      <parameter id="koff_10" value="0" units="per_nM_per_ms" constant="false"/>
+      <parameter id="kon_11" value="9.42863e-06" units="per_nM_per_ms" constant="false"/>
+      <parameter id="koff_11" value="0.0012" units="per_ms" constant="false"/>
+      <parameter id="kon_12" value="0.0003" units="per_ms" constant="false"/>
+      <parameter id="koff_12" value="0" units="per_nM_per_ms" constant="false"/>
+      <parameter id="kon_13" value="1.9168e-06" units="per_nM_per_ms" constant="false"/>
+      <parameter id="koff_13" value="0.024" units="per_ms" constant="false"/>
+      <parameter id="kon_14" value="0.006" units="per_ms" constant="false"/>
+      <parameter id="koff_14" value="0" units="per_nM_per_ms" constant="false"/>
+      <parameter id="kon_15" value="1.9168e-06" units="per_nM_per_ms" constant="false"/>
+      <parameter id="koff_15" value="0.024" units="per_ms" constant="false"/>
+      <parameter id="kon_16" value="0.006" units="per_ms" constant="false"/>
+      <parameter id="koff_16" value="0" units="per_nM_per_ms" constant="false"/>
+      <parameter id="kon_17" value="6e-05" units="per_nM_per_ms" constant="false"/>
+      <parameter id="koff_17" value="0.001" units="per_ms" constant="false"/>
+      <parameter id="kon_18" value="6e-06" units="per_nM_per_ms" constant="false"/>
+      <parameter id="koff_18" value="0.0005" units="per_ms" constant="false"/>
+      <parameter id="kon_19" value="1.21e-07" units="per_nM_per_ms" constant="false"/>
+      <parameter id="koff_19" value="0.0001452" units="per_ms" constant="false"/>
+      <parameter id="kon_20" value="1.2e-06" units="per_nM_per_ms" constant="false"/>
+      <parameter id="koff_20" value="0.00096" units="per_ms" constant="false"/>
+      <parameter id="kon_21" value="0.00024" units="per_ms" constant="false"/>
+      <parameter id="koff_21" value="0" units="per_nM_per_ms" constant="false"/>
+      <parameter id="kon_22" value="0.002041" units="per_nM_per_ms" constant="false"/>
+      <parameter id="koff_22" value="0.08" units="per_ms" constant="false"/>
+      <parameter id="kon_23" value="0.02" units="per_ms" constant="false"/>
+      <parameter id="koff_23" value="0" units="per_nM_per_ms" constant="false"/>
+      <parameter id="kon_24" value="0.1" units="per_ms" constant="false"/>
+      <parameter id="koff_24" value="0" units="per_ms" constant="false"/>
+      <parameter id="kon_25" value="0.0004" units="per_nM_per_ms" constant="false"/>
+      <parameter id="koff_25" value="0.16" units="per_ms" constant="false"/>
+      <parameter id="kon_26" value="0.04" units="per_ms" constant="false"/>
+      <parameter id="koff_26" value="0" units="per_nM_per_ms" constant="false"/>
+      <parameter id="kon_27" value="0.1" units="per_ms" constant="false"/>
+      <parameter id="koff_27" value="0" units="per_ms" constant="false"/>
+      <parameter id="kon_28" value="1e-06" units="per_nM_per_ms" constant="false"/>
+      <parameter id="koff_28" value="0.0002" units="per_ms" constant="false"/>
+      <parameter id="kon_29" value="1.01e-05" units="per_nM_per_ms" constant="false"/>
+      <parameter id="koff_29" value="8e-05" units="per_ms" constant="false"/>
+      <parameter id="kon_30" value="2e-05" units="per_ms" constant="false"/>
+      <parameter id="koff_30" value="0" units="per_nM_per_ms" constant="false"/>
+      <parameter id="kon_31" value="0.0002" units="per_nM_per_ms" constant="false"/>
+      <parameter id="koff_31" value="0.2" units="per_ms" constant="false"/>
+      <parameter id="kon_32" value="0.002" units="per_ms" constant="false"/>
+      <parameter id="koff_32" value="0" units="per_nM_per_ms" constant="false"/>
+      <parameter id="kon_33" value="3.2e-06" units="per_nM_per_ms" constant="false"/>
+      <parameter id="koff_33" value="0.0032" units="per_ms" constant="false"/>
+      <parameter id="kon_34" value="0.0008" units="per_ms" constant="false"/>
+      <parameter id="koff_34" value="0" units="per_nM_per_ms" constant="false"/>
+      <parameter id="kon_35" value="6.14e-06" units="per_nM_per_ms" constant="false"/>
+      <parameter id="koff_35" value="0.00614" units="per_ms" constant="false"/>
+      <parameter id="kon_36" value="0.00153" units="per_ms" constant="false"/>
+      <parameter id="koff_36" value="0" units="per_nM_per_ms" constant="false"/>
+      <parameter id="kon_37" value="0.000306725819298746" units="per_nM_per_ms" constant="false"/>
+      <parameter id="koff_37" value="0.0587151555317972" units="per_ms" constant="false"/>
+      <parameter id="kon_38" value="0.000648433041068053" units="per_ms" constant="false"/>
+      <parameter id="koff_38" value="0" units="per_nM_per_ms" constant="false"/>
+      <parameter id="kon_39" value="2.5e-05" units="per_ms" constant="false"/>
+      <parameter id="koff_39" value="2.5e-05" units="per_ms" constant="false"/>
+      <parameter id="kon_40" value="0.001" units="per_ms" constant="false"/>
+      <parameter id="koff_40" value="0" units="per_ms" constant="false"/>
+      <parameter id="kon_41" value="2.61e-07" units="per_nM_per_ms" constant="false"/>
+      <parameter id="koff_41" value="6e-05" units="per_ms" constant="false"/>
+      <parameter id="kon_42" value="3.5e-07" units="per_nM_per_ms" constant="false"/>
+      <parameter id="koff_42" value="0.0006" units="per_ms" constant="false"/>
+      <parameter id="kon_43" value="0.00024" units="per_ms" constant="false"/>
+      <parameter id="koff_43" value="2.55e-05" units="per_nM_per_ms" constant="false"/>
+      <parameter id="kon_45" value="2e-08" units="per_nM_per_ms" constant="false"/>
+      <parameter id="koff_45" value="0.0005" units="per_ms" constant="false"/>
+      <parameter id="kon_46" value="5.9e-06" units="per_nM_per_ms" constant="false"/>
+      <parameter id="koff_46" value="0.0005" units="per_ms" constant="false"/>
+      <parameter id="kon_47" value="0.0054" units="per_ms" constant="false"/>
+      <parameter id="koff_47" value="0" units="per_nM_per_ms" constant="false"/>
+      <parameter id="kon_48" value="2.16e-05" units="per_nM_per_ms" constant="false"/>
+      <parameter id="koff_48" value="0.06895" units="per_ms" constant="false"/>
+      <parameter id="kon_49" value="0.017233" units="per_ms" constant="false"/>
+      <parameter id="koff_49" value="0" units="per_nM_per_ms" constant="false"/>
+      <parameter id="kon_50" value="0.0001" units="per_nM_per_ms" constant="false"/>
+      <parameter id="koff_50" value="0" units="per_ms" constant="false"/>
+      <parameter id="kon_51" value="1e-05" units="per_nM_per_ms" constant="false"/>
+      <parameter id="koff_51" value="0" units="per_ms" constant="false"/>
+      <parameter id="kon_52" value="5e-05" units="per_nM_per_ms" constant="false"/>
+      <parameter id="koff_52" value="0.007" units="per_ms" constant="false"/>
+      <parameter id="kon_53" value="0.0035" units="per_ms" constant="false"/>
+      <parameter id="koff_53" value="0" units="per_nM_per_ms" constant="false"/>
+      <parameter id="kon_54" value="1.68e-05" units="per_nM_per_ms" constant="false"/>
+      <parameter id="koff_54" value="0.0112" units="per_ms" constant="false"/>
+      <parameter id="kon_55" value="0.0056" units="per_ms" constant="false"/>
+      <parameter id="koff_55" value="0" units="per_nM_per_ms" constant="false"/>
+      <parameter id="kon_56" value="1.5e-06" units="per_nM_per_ms" constant="false"/>
+      <parameter id="koff_56" value="0.0011" units="per_ms" constant="false"/>
+      <parameter id="kon_57" value="0.0011" units="per_ms" constant="false"/>
+      <parameter id="koff_57" value="0" units="per_nM_per_ms" constant="false"/>
+      <parameter id="kon_58" value="2.8e-05" units="per_nM_per_ms" constant="false"/>
+      <parameter id="koff_58" value="0.0196" units="per_ms" constant="false"/>
+      <parameter id="kon_59" value="2e-05" units="per_nM_per_ms" constant="false"/>
+      <parameter id="koff_59" value="1" units="per_ms" constant="false"/>
+      <parameter id="kon_60" value="6e-06" units="per_nM_per_ms" constant="false"/>
+      <parameter id="koff_60" value="0.0091" units="per_ms" constant="false"/>
+      <parameter id="kon_61" value="0.0001" units="per_nM_per_ms" constant="false"/>
+      <parameter id="koff_61" value="1" units="per_ms" constant="false"/>
+      <parameter id="kon_62" value="0.0001" units="per_nM_per_ms" constant="false"/>
+      <parameter id="koff_62" value="1" units="per_ms" constant="false"/>
+      <parameter id="kon_63" value="6e-06" units="per_nM_per_ms" constant="false"/>
+      <parameter id="koff_63" value="0.0091" units="per_ms" constant="false"/>
+      <parameter id="kon_64" value="1e-05" units="per_nM_per_ms" constant="false"/>
+      <parameter id="koff_64" value="0.0015" units="per_ms" constant="false"/>
+      <parameter id="kon_65" value="3.83119676007e-10" units="per_nM_per_ms" constant="false"/>
+      <parameter id="koff_65" value="0" units="per_nM_per_ms" constant="false"/>
+      <parameter id="kon_66" value="3.55792141502e-13" units="per_nM2_per_ms" constant="false"/>
+      <parameter id="koff_66" value="0" units="per_nM2_per_ms" constant="false"/>
+      <parameter id="kon_67" value="2.23694832822e-16" units="per_nM3_per_ms" constant="false"/>
+      <parameter id="koff_67" value="0" units="per_nM3_per_ms" constant="false"/>
+      <parameter id="kon_68" value="1.10450093247e-18" units="per_nM3_per_ms" constant="false"/>
+      <parameter id="koff_68" value="0" units="per_nM3_per_ms" constant="false"/>
+      <parameter id="kon_69" value="3.0330636368e-13" units="per_nM2_per_ms" constant="false"/>
+      <parameter id="koff_69" value="0" units="per_nM2_per_ms" constant="false"/>
+      <parameter id="kon_70" value="2.39399544094e-13" units="per_nM3_per_ms" constant="false"/>
+      <parameter id="koff_70" value="0" units="per_nM3_per_ms" constant="false"/>
+      <parameter id="kon_71" value="8e-07" units="per_ms" constant="false"/>
+      <parameter id="koff_71" value="1e-05" units="per_nM_per_ms" constant="false"/>
+      <parameter id="kon_72" value="4e-08" units="per_nM_per_ms" constant="false"/>
+      <parameter id="koff_72" value="0.00034" units="per_ms" constant="false"/>
+      <parameter id="kon_73" value="8.6e-05" units="per_ms" constant="false"/>
+      <parameter id="koff_73" value="0" units="per_nM_per_ms" constant="false"/>
+      <parameter id="kon_74" value="4e-08" units="per_nM_per_ms" constant="false"/>
+      <parameter id="koff_74" value="0.00034" units="per_ms" constant="false"/>
+      <parameter id="kon_75" value="8.6e-05" units="per_ms" constant="false"/>
+      <parameter id="koff_75" value="0" units="per_nM_per_ms" constant="false"/>
+      <parameter id="kon_76" value="1e-06" units="per_nM_per_ms" constant="false"/>
+      <parameter id="koff_76" value="1.1e-06" units="per_ms" constant="false"/>
+      <parameter id="kon_77" value="2.8e-05" units="per_nM_per_ms" constant="false"/>
+      <parameter id="koff_77" value="0.036" units="per_ms" constant="false"/>
+      <parameter id="kon_78" value="1.8857251e-05" units="per_nM_per_ms" constant="false"/>
+      <parameter id="koff_78" value="0.0024" units="per_ms" constant="false"/>
+      <parameter id="kon_79" value="0.0006" units="per_ms" constant="false"/>
+      <parameter id="koff_79" value="0" units="per_nM_per_ms" constant="false"/>
+      <parameter id="kon_80" value="1.8857251e-05" units="per_nM_per_ms" constant="false"/>
+      <parameter id="koff_80" value="0.0024" units="per_ms" constant="false"/>
+      <parameter id="kon_81" value="0.0006" units="per_ms" constant="false"/>
+      <parameter id="koff_81" value="0" units="per_nM_per_ms" constant="false"/>
+      <parameter id="kon_82" value="6.28575e-06" units="per_nM_per_ms" constant="false"/>
+      <parameter id="koff_82" value="0.0008" units="per_ms" constant="false"/>
+      <parameter id="kon_83" value="0.0002" units="per_ms" constant="false"/>
+      <parameter id="koff_83" value="0" units="per_nM_per_ms" constant="false"/>
+      <parameter id="kon_84" value="6.28575e-06" units="per_nM_per_ms" constant="false"/>
+      <parameter id="koff_84" value="0.0008" units="per_ms" constant="false"/>
+      <parameter id="kon_85" value="0.0002" units="per_ms" constant="false"/>
+      <parameter id="koff_85" value="0" units="per_nM_per_ms" constant="false"/>
+      <parameter id="kon_86" value="6e-05" units="per_nM_per_ms" constant="false"/>
+      <parameter id="koff_86" value="0.001" units="per_ms" constant="false"/>
+      <parameter id="kon_87" value="2e-05" units="per_ms" constant="false"/>
+      <parameter id="koff_87" value="0.0005" units="per_ms" constant="false"/>
+      <parameter id="kon_88" value="6e-06" units="per_nM_per_ms" constant="false"/>
+      <parameter id="koff_88" value="0.0005" units="per_ms" constant="false"/>
+      <parameter id="kon_89" value="6e-05" units="per_nM_per_ms" constant="false"/>
+      <parameter id="koff_89" value="0.000924" units="per_ms" constant="false"/>
+      <parameter id="kon_90" value="1.9e-06" units="per_nM_per_ms" constant="false"/>
+      <parameter id="koff_90" value="8e-05" units="per_ms" constant="false"/>
+      <parameter id="kon_91" value="2e-05" units="per_ms" constant="false"/>
+      <parameter id="koff_91" value="0" units="per_nM_per_ms" constant="false"/>
+      <parameter id="kon_92" value="0.001" units="per_ms" constant="false"/>
+      <parameter id="kon_93" value="2e-07" units="per_nM_per_ms" constant="false"/>
+      <parameter id="koff_93" value="0.0001" units="per_ms" constant="false"/>
+      <parameter id="kon_94" value="8e-06" units="per_nM_per_ms" constant="false"/>
+      <parameter id="koff_94" value="0.000128" units="per_ms" constant="false"/>
+      <parameter id="kon_95" value="3.2e-05" units="per_ms" constant="false"/>
+      <parameter id="koff_95" value="0" units="per_nM_per_ms" constant="false"/>
+      <parameter id="kon_96" value="0.0002" units="per_ms" constant="false"/>
+      <parameter id="koff_96" value="0" units="per_ms" constant="false"/>
+      <parameter id="kon_97" value="2.5e-07" units="per_nM_per_ms" constant="false"/>
+      <parameter id="koff_97" value="1.68e-05" units="per_ms" constant="false"/>
+      <parameter id="kon_98" value="0.005" units="per_nM_per_ms" constant="false"/>
+      <parameter id="koff_98" value="0.0001" units="per_ms" constant="false"/>
+      <parameter id="kon_99" value="1.98e-05" units="per_nM_per_ms" constant="false"/>
+      <parameter id="koff_99" value="0.0008" units="per_ms" constant="false"/>
+      <parameter id="kon_100" value="0.0002" units="per_ms" constant="false"/>
+      <parameter id="koff_100" value="0" units="per_nM_per_ms" constant="false"/>
+      <parameter id="kon_101" value="1.953e-05" units="per_nM_per_ms" constant="false"/>
+      <parameter id="koff_101" value="0.04" units="per_ms" constant="false"/>
+      <parameter id="kon_102" value="0.01" units="per_ms" constant="false"/>
+      <parameter id="koff_102" value="0" units="per_nM2_per_ms" constant="false"/>
+      <parameter id="kon_103" value="0.001" units="per_ms" constant="false"/>
+      <parameter id="koff_103" value="0" units="per_ms" constant="false"/>
+      <parameter id="kon_104" value="8.2e-07" units="per_nM_per_ms" constant="false"/>
+      <parameter id="koff_104" value="0.00082" units="per_ms" constant="false"/>
+      <parameter id="kon_105" value="0.000205" units="per_ms" constant="false"/>
+      <parameter id="koff_105" value="0" units="per_nM_per_ms" constant="false"/>
+      <parameter id="kon_106" value="1.12e-06" units="per_nM_per_ms" constant="false"/>
+      <parameter id="koff_106" value="0.001112" units="per_ms" constant="false"/>
+      <parameter id="kon_107" value="0.000279" units="per_ms" constant="false"/>
+      <parameter id="koff_107" value="0" units="per_nM_per_ms" constant="false"/>
+      <parameter id="kon_108" value="4.95e-05" units="per_nM_per_ms" constant="false"/>
+      <parameter id="koff_108" value="0.04" units="per_ms" constant="false"/>
+      <parameter id="kon_109" value="0.01" units="per_ms" constant="false"/>
+      <parameter id="koff_109" value="0" units="per_nM_per_ms" constant="false"/>
+    </listOfParameters>
+    <listOfReactions>
+      <reaction id="r1" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="ppMEK" stoichiometry="1" constant="true"/>
+          <speciesReference species="ERK" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ppMEKERK" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_1 </ci>
+                  <ci> ppMEK </ci>
+                  <ci> ERK </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_1 </ci>
+                  <ci> ppMEKERK </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r2" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="ppMEKERK" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="pERK" stoichiometry="1" constant="true"/>
+          <speciesReference species="ppMEK" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_2 </ci>
+                  <ci> ppMEKERK </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_2 </ci>
+                  <ci> pERK </ci>
+                  <ci> ppMEK </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r3" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="ppMEK" stoichiometry="1" constant="true"/>
+          <speciesReference species="pERK" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ppMEKpERK" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_3 </ci>
+                  <ci> ppMEK </ci>
+                  <ci> pERK </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_3 </ci>
+                  <ci> ppMEKpERK </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r4" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="ppMEKpERK" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ppERK" stoichiometry="1" constant="true"/>
+          <speciesReference species="ppMEK" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_4 </ci>
+                  <ci> ppMEKpERK </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_4 </ci>
+                  <ci> ppERK </ci>
+                  <ci> ppMEK </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r5" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="ppERK" stoichiometry="1" constant="true"/>
+          <speciesReference species="MKP1" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ppERKMKP1" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_5 </ci>
+                  <ci> ppERK </ci>
+                  <ci> MKP1 </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_5 </ci>
+                  <ci> ppERKMKP1 </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r6" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="ppERKMKP1" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="pERK" stoichiometry="1" constant="true"/>
+          <speciesReference species="MKP1" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_6 </ci>
+                  <ci> ppERKMKP1 </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_6 </ci>
+                  <ci> pERK </ci>
+                  <ci> MKP1 </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r7" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="pERK" stoichiometry="1" constant="true"/>
+          <speciesReference species="MKP1" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="pERKMKP1" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_7 </ci>
+                  <ci> pERK </ci>
+                  <ci> MKP1 </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_7 </ci>
+                  <ci> pERKMKP1 </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r8" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="pERKMKP1" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ERK" stoichiometry="1" constant="true"/>
+          <speciesReference species="MKP1" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_8 </ci>
+                  <ci> pERKMKP1 </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_8 </ci>
+                  <ci> ERK </ci>
+                  <ci> MKP1 </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r9" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="MEK" stoichiometry="1" constant="true"/>
+          <speciesReference species="bRafRap1" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="bRafRap1MEK" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_9 </ci>
+                  <ci> MEK </ci>
+                  <ci> bRafRap1 </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_9 </ci>
+                  <ci> bRafRap1MEK </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r10" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="bRafRap1MEK" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="pMEK" stoichiometry="1" constant="true"/>
+          <speciesReference species="bRafRap1" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_10 </ci>
+                  <ci> bRafRap1MEK </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_10 </ci>
+                  <ci> pMEK </ci>
+                  <ci> bRafRap1 </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r11" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="pMEK" stoichiometry="1" constant="true"/>
+          <speciesReference species="bRafRap1" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="bRafRap1pMEK" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_11 </ci>
+                  <ci> pMEK </ci>
+                  <ci> bRafRap1 </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_11 </ci>
+                  <ci> bRafRap1pMEK </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r12" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="bRafRap1pMEK" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ppMEK" stoichiometry="1" constant="true"/>
+          <speciesReference species="bRafRap1" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_12 </ci>
+                  <ci> bRafRap1pMEK </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_12 </ci>
+                  <ci> ppMEK </ci>
+                  <ci> bRafRap1 </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r13" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="ppMEK" stoichiometry="1" constant="true"/>
+          <speciesReference species="PP2A" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ppMEKPP2A" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_13 </ci>
+                  <ci> ppMEK </ci>
+                  <ci> PP2A </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_13 </ci>
+                  <ci> ppMEKPP2A </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r14" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="ppMEKPP2A" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="pMEK" stoichiometry="1" constant="true"/>
+          <speciesReference species="PP2A" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_14 </ci>
+                  <ci> ppMEKPP2A </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_14 </ci>
+                  <ci> pMEK </ci>
+                  <ci> PP2A </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r15" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="pMEK" stoichiometry="1" constant="true"/>
+          <speciesReference species="PP2A" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="pMEKPP2A" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_15 </ci>
+                  <ci> pMEK </ci>
+                  <ci> PP2A </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_15 </ci>
+                  <ci> pMEKPP2A </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r16" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="pMEKPP2A" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="MEK" stoichiometry="1" constant="true"/>
+          <speciesReference species="PP2A" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_16 </ci>
+                  <ci> pMEKPP2A </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_16 </ci>
+                  <ci> MEK </ci>
+                  <ci> PP2A </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r17" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="Rap1GTP" stoichiometry="1" constant="true"/>
+          <speciesReference species="bRaf" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="bRafRap1" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_17 </ci>
+                  <ci> Rap1GTP </ci>
+                  <ci> bRaf </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_17 </ci>
+                  <ci> bRafRap1 </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r18" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="Rap1GTP" stoichiometry="1" constant="true"/>
+          <speciesReference species="Raf1" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Raf1Rap1" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_18 </ci>
+                  <ci> Rap1GTP </ci>
+                  <ci> Raf1 </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_18 </ci>
+                  <ci> Raf1Rap1 </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r19" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="Epac" stoichiometry="1" constant="true"/>
+          <speciesReference species="cAMP" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="EpacAMP" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_19 </ci>
+                  <ci> Epac </ci>
+                  <ci> cAMP </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_19 </ci>
+                  <ci> EpacAMP </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r20" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="EpacAMP" stoichiometry="1" constant="true"/>
+          <speciesReference species="Rap1GDP" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="EpacRap1" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_20 </ci>
+                  <ci> EpacAMP </ci>
+                  <ci> Rap1GDP </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_20 </ci>
+                  <ci> EpacRap1 </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r21" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="EpacRap1" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="EpacAMP" stoichiometry="1" constant="true"/>
+          <speciesReference species="Rap1GTP" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_21 </ci>
+                  <ci> EpacRap1 </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_21 </ci>
+                  <ci> EpacAMP </ci>
+                  <ci> Rap1GTP </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r22" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="PKAc" stoichiometry="1" constant="true"/>
+          <speciesReference species="Src" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="PKAcSrc" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_22 </ci>
+                  <ci> PKAc </ci>
+                  <ci> Src </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_22 </ci>
+                  <ci> PKAcSrc </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r23" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="PKAcSrc" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="PKAc" stoichiometry="1" constant="true"/>
+          <speciesReference species="pSrc" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_23 </ci>
+                  <ci> PKAcSrc </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_23 </ci>
+                  <ci> PKAc </ci>
+                  <ci> pSrc </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r24" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="pSrc" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Src" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_24 </ci>
+                  <ci> pSrc </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_24 </ci>
+                  <ci> Src </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r25" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="Cbl" stoichiometry="1" constant="true"/>
+          <speciesReference species="pSrc" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="CblpSrc" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_25 </ci>
+                  <ci> Cbl </ci>
+                  <ci> pSrc </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_25 </ci>
+                  <ci> CblpSrc </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r26" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="CblpSrc" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="pCbl" stoichiometry="1" constant="true"/>
+          <speciesReference species="pSrc" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_26 </ci>
+                  <ci> CblpSrc </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_26 </ci>
+                  <ci> pCbl </ci>
+                  <ci> pSrc </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r27" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="pCbl" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Cbl" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_27 </ci>
+                  <ci> pCbl </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_27 </ci>
+                  <ci> Cbl </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r28" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="CRKC3G" stoichiometry="1" constant="true"/>
+          <speciesReference species="pCbl" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="CRKC3GpCbl" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_28 </ci>
+                  <ci> CRKC3G </ci>
+                  <ci> pCbl </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_28 </ci>
+                  <ci> CRKC3GpCbl </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r29" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="Rap1GDP" stoichiometry="1" constant="true"/>
+          <speciesReference species="CRKC3GpCbl" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="CRKC3GpCblRap1" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_29 </ci>
+                  <ci> Rap1GDP </ci>
+                  <ci> CRKC3GpCbl </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_29 </ci>
+                  <ci> CRKC3GpCblRap1 </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r30" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="CRKC3GpCblRap1" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Rap1GTP" stoichiometry="1" constant="true"/>
+          <speciesReference species="CRKC3GpCbl" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_30 </ci>
+                  <ci> CRKC3GpCblRap1 </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_30 </ci>
+                  <ci> Rap1GTP </ci>
+                  <ci> CRKC3GpCbl </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r31" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="Rap1GTP" stoichiometry="1" constant="true"/>
+          <speciesReference species="rap1Gap" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Rap1GTPGap" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_31 </ci>
+                  <ci> Rap1GTP </ci>
+                  <ci> rap1Gap </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_31 </ci>
+                  <ci> Rap1GTPGap </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r32" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="Rap1GTPGap" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="rap1Gap" stoichiometry="1" constant="true"/>
+          <speciesReference species="Rap1GDP" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_32 </ci>
+                  <ci> Rap1GTPGap </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_32 </ci>
+                  <ci> rap1Gap </ci>
+                  <ci> Rap1GDP </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r33" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="Rap1GTP" stoichiometry="1" constant="true"/>
+          <speciesReference species="SynGap" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Rap1SynGap" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_33 </ci>
+                  <ci> Rap1GTP </ci>
+                  <ci> SynGap </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_33 </ci>
+                  <ci> Rap1SynGap </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r34" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="Rap1SynGap" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="SynGap" stoichiometry="1" constant="true"/>
+          <speciesReference species="Rap1GDP" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_34 </ci>
+                  <ci> Rap1SynGap </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_34 </ci>
+                  <ci> SynGap </ci>
+                  <ci> Rap1GDP </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r35" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="Rap1GTP" stoichiometry="1" constant="true"/>
+          <speciesReference species="pSynGap" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Rap1pSynGap" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_35 </ci>
+                  <ci> Rap1GTP </ci>
+                  <ci> pSynGap </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_35 </ci>
+                  <ci> Rap1pSynGap </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r36" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="Rap1pSynGap" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="pSynGap" stoichiometry="1" constant="true"/>
+          <speciesReference species="Rap1GDP" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_36 </ci>
+                  <ci> Rap1pSynGap </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_36 </ci>
+                  <ci> pSynGap </ci>
+                  <ci> Rap1GDP </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r37" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="CKpCamCa4" stoichiometry="1" constant="true"/>
+          <speciesReference species="SynGap" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="CKpCamCa4SynGap" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_37 </ci>
+                  <ci> CKpCamCa4 </ci>
+                  <ci> SynGap </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_37 </ci>
+                  <ci> CKpCamCa4SynGap </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r38" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="CKpCamCa4SynGap" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="pSynGap" stoichiometry="1" constant="true"/>
+          <speciesReference species="CKpCamCa4" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_38 </ci>
+                  <ci> CKpCamCa4SynGap </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_38 </ci>
+                  <ci> pSynGap </ci>
+                  <ci> CKpCamCa4 </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r39" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="pSynGap" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="pSynden" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_39 </ci>
+                  <ci> pSynGap </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_39 </ci>
+                  <ci> pSynden </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r40" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="pSynGap" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="SynGap" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_40 </ci>
+                  <ci> pSynGap </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_40 </ci>
+                  <ci> SynGap </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r41" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="PKA" stoichiometry="1" constant="true"/>
+          <speciesReference species="cAMP" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="PKAcAMP2" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_41 </ci>
+                  <ci> PKA </ci>
+                  <ci> cAMP </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_41 </ci>
+                  <ci> PKAcAMP2 </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r42" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="PKAcAMP2" stoichiometry="1" constant="true"/>
+          <speciesReference species="cAMP" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="PKAcAMP4" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_42 </ci>
+                  <ci> PKAcAMP2 </ci>
+                  <ci> cAMP </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_42 </ci>
+                  <ci> PKAcAMP4 </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r43" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="PKAcAMP4" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="PKAr" stoichiometry="1" constant="true"/>
+          <speciesReference species="PKAc" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_43 </ci>
+                  <ci> PKAcAMP4 </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_43 </ci>
+                  <ci> PKAr </ci>
+                  <ci> PKAc </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r45" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="PDE2" stoichiometry="1" constant="true"/>
+          <speciesReference species="cAMP" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="PDE2cAMP" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_45 </ci>
+                  <ci> PDE2 </ci>
+                  <ci> cAMP </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_45 </ci>
+                  <ci> PDE2cAMP </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r46" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="PDE2cAMP" stoichiometry="1" constant="true"/>
+          <speciesReference species="cAMP" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="PDE2cAMP2" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_46 </ci>
+                  <ci> PDE2cAMP </ci>
+                  <ci> cAMP </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_46 </ci>
+                  <ci> PDE2cAMP2 </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r47" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="PDE2cAMP2" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="PDE2cAMP" stoichiometry="1" constant="true"/>
+          <speciesReference species="AMP" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_47 </ci>
+                  <ci> PDE2cAMP2 </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_47 </ci>
+                  <ci> PDE2cAMP </ci>
+                  <ci> AMP </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r48" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="PDE4" stoichiometry="1" constant="true"/>
+          <speciesReference species="cAMP" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="PDE4cAMP" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_48 </ci>
+                  <ci> PDE4 </ci>
+                  <ci> cAMP </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_48 </ci>
+                  <ci> PDE4cAMP </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r49" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="PDE4cAMP" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="PDE4" stoichiometry="1" constant="true"/>
+          <speciesReference species="AMP" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_49 </ci>
+                  <ci> PDE4cAMP </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_49 </ci>
+                  <ci> PDE4 </ci>
+                  <ci> AMP </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r50" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="Ca" stoichiometry="1" constant="true"/>
+          <speciesReference species="Cbuff" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Cabuff" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_50 </ci>
+                  <ci> Ca </ci>
+                  <ci> Cbuff </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_50 </ci>
+                  <ci> Cabuff </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r51" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="Cbuffslow" stoichiometry="1" constant="true"/>
+          <speciesReference species="Caext" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Caextbuffslow" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_51 </ci>
+                  <ci> Cbuffslow </ci>
+                  <ci> Caext </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_51 </ci>
+                  <ci> Caextbuffslow </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r52" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="Ca" stoichiometry="1" constant="true"/>
+          <speciesReference species="pmca" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="pmcaCa" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_52 </ci>
+                  <ci> Ca </ci>
+                  <ci> pmca </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_52 </ci>
+                  <ci> pmcaCa </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r53" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="pmcaCa" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="pmca" stoichiometry="1" constant="true"/>
+          <speciesReference species="Caext" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_53 </ci>
+                  <ci> pmcaCa </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_53 </ci>
+                  <ci> pmca </ci>
+                  <ci> Caext </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r54" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="Ca" stoichiometry="1" constant="true"/>
+          <speciesReference species="ncx" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ncxCa" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_54 </ci>
+                  <ci> Ca </ci>
+                  <ci> ncx </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_54 </ci>
+                  <ci> ncxCa </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r55" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="ncxCa" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ncx" stoichiometry="1" constant="true"/>
+          <speciesReference species="Caext" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_55 </ci>
+                  <ci> ncxCa </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_55 </ci>
+                  <ci> ncx </ci>
+                  <ci> Caext </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r56" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="Caext" stoichiometry="1" constant="true"/>
+          <speciesReference species="Leak" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="CaextLeak" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_56 </ci>
+                  <ci> Caext </ci>
+                  <ci> Leak </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_56 </ci>
+                  <ci> CaextLeak </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r57" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="CaextLeak" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Ca" stoichiometry="1" constant="true"/>
+          <speciesReference species="Leak" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_57 </ci>
+                  <ci> CaextLeak </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_57 </ci>
+                  <ci> Ca </ci>
+                  <ci> Leak </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r58" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="Ca" stoichiometry="1" constant="true"/>
+          <speciesReference species="Calbin" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="CalbinC" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_58 </ci>
+                  <ci> Ca </ci>
+                  <ci> Calbin </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_58 </ci>
+                  <ci> CalbinC </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r59" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="Ca" stoichiometry="1" constant="true"/>
+          <speciesReference species="CB" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="CaB" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_59 </ci>
+                  <ci> Ca </ci>
+                  <ci> CB </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_59 </ci>
+                  <ci> CaB </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r60" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="Cam" stoichiometry="1" constant="true"/>
+          <speciesReference species="Ca" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="CamCa2C" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_60 </ci>
+                  <ci> Cam </ci>
+                  <ci> Ca </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_60 </ci>
+                  <ci> CamCa2C </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r61" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="CamCa2C" stoichiometry="1" constant="true"/>
+          <speciesReference species="Ca" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="CamCa4" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_61 </ci>
+                  <ci> CamCa2C </ci>
+                  <ci> Ca </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_61 </ci>
+                  <ci> CamCa4 </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r62" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="Cam" stoichiometry="1" constant="true"/>
+          <speciesReference species="Ca" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="CamCa2N" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_62 </ci>
+                  <ci> Cam </ci>
+                  <ci> Ca </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_62 </ci>
+                  <ci> CamCa2N </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r63" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="CamCa2N" stoichiometry="1" constant="true"/>
+          <speciesReference species="Ca" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="CamCa4" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_63 </ci>
+                  <ci> CamCa2N </ci>
+                  <ci> Ca </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_63 </ci>
+                  <ci> CamCa4 </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r64" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="CamCa4" stoichiometry="1" constant="true"/>
+          <speciesReference species="CK" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="CKCamCa4" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_64 </ci>
+                  <ci> CamCa4 </ci>
+                  <ci> CK </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_64 </ci>
+                  <ci> CKCamCa4 </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r65" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="CKCamCa4" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="CKCamCa4" stoichiometry="1" constant="true"/>
+          <speciesReference species="CKpCamCa4" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_65 </ci>
+                  <apply>
+                    <power/>
+                    <ci> CKCamCa4 </ci>
+                    <cn type="integer"> 2 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_65 </ci>
+                  <ci> CKCamCa4 </ci>
+                  <ci> CKpCamCa4 </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r66" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="CKCamCa4" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="CKCamCa4" stoichiometry="1" constant="true"/>
+          <speciesReference species="CKpCamCa4" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_66 </ci>
+                  <apply>
+                    <power/>
+                    <ci> CKCamCa4 </ci>
+                    <cn type="integer"> 3 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_66 </ci>
+                  <ci> CKCamCa4 </ci>
+                  <ci> CKpCamCa4 </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r67" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="CKCamCa4" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="CKCamCa4" stoichiometry="1" constant="true"/>
+          <speciesReference species="CKpCamCa4" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_67 </ci>
+                  <apply>
+                    <power/>
+                    <ci> CKCamCa4 </ci>
+                    <cn type="integer"> 4 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_67 </ci>
+                  <ci> CKCamCa4 </ci>
+                  <ci> CKpCamCa4 </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r68" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="CKpCamCa4" stoichiometry="1" constant="true"/>
+          <speciesReference species="CKCamCa4" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="CKCamCa4" stoichiometry="1" constant="true"/>
+          <speciesReference species="CKpCamCa4" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_68 </ci>
+                  <apply>
+                    <power/>
+                    <ci> CKpCamCa4 </ci>
+                    <cn type="integer"> 2 </cn>
+                  </apply>
+                  <apply>
+                    <power/>
+                    <ci> CKCamCa4 </ci>
+                    <cn type="integer"> 2 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_68 </ci>
+                  <ci> CKCamCa4 </ci>
+                  <ci> CKpCamCa4 </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r69" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="CKpCamCa4" stoichiometry="1" constant="true"/>
+          <speciesReference species="CKCamCa4" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="CKpCamCa4" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_69 </ci>
+                  <apply>
+                    <power/>
+                    <ci> CKpCamCa4 </ci>
+                    <cn type="integer"> 2 </cn>
+                  </apply>
+                  <ci> CKCamCa4 </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_69 </ci>
+                  <ci> CKpCamCa4 </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r70" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="CKpCamCa4" stoichiometry="1" constant="true"/>
+          <speciesReference species="CKCamCa4" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="CKpCamCa4" stoichiometry="1" constant="true"/>
+          <speciesReference species="CKCamCa4" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_70 </ci>
+                  <apply>
+                    <power/>
+                    <ci> CKpCamCa4 </ci>
+                    <cn type="integer"> 2 </cn>
+                  </apply>
+                  <apply>
+                    <power/>
+                    <ci> CKCamCa4 </ci>
+                    <cn type="integer"> 2 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_70 </ci>
+                  <ci> CKpCamCa4 </ci>
+                  <ci> CKCamCa4 </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r71" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="CKpCamCa4" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="CamCa4" stoichiometry="1" constant="true"/>
+          <speciesReference species="CKp" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_71 </ci>
+                  <ci> CKpCamCa4 </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_71 </ci>
+                  <ci> CamCa4 </ci>
+                  <ci> CKp </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r72" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="CKp" stoichiometry="1" constant="true"/>
+          <speciesReference species="PP1" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="CKpPP1" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_72 </ci>
+                  <ci> CKp </ci>
+                  <ci> PP1 </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_72 </ci>
+                  <ci> CKpPP1 </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r73" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="CKpPP1" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="PP1" stoichiometry="1" constant="true"/>
+          <speciesReference species="CK" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_73 </ci>
+                  <ci> CKpPP1 </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_73 </ci>
+                  <ci> PP1 </ci>
+                  <ci> CK </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r74" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="CKpCamCa4" stoichiometry="1" constant="true"/>
+          <speciesReference species="PP1" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="CKpCamCa4PP1" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_74 </ci>
+                  <ci> CKpCamCa4 </ci>
+                  <ci> PP1 </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_74 </ci>
+                  <ci> CKpCamCa4PP1 </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r75" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="CKpCamCa4PP1" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="PP1" stoichiometry="1" constant="true"/>
+          <speciesReference species="CKCamCa4" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_75 </ci>
+                  <ci> CKpCamCa4PP1 </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_75 </ci>
+                  <ci> PP1 </ci>
+                  <ci> CKCamCa4 </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r76" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="Ip35" stoichiometry="1" constant="true"/>
+          <speciesReference species="PP1" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Ip35PP1" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_76 </ci>
+                  <ci> Ip35 </ci>
+                  <ci> PP1 </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_76 </ci>
+                  <ci> Ip35PP1 </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r77" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="Ng" stoichiometry="1" constant="true"/>
+          <speciesReference species="Cam" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="NgCam" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_77 </ci>
+                  <ci> Ng </ci>
+                  <ci> Cam </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_77 </ci>
+                  <ci> NgCam </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r78" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="MEK" stoichiometry="1" constant="true"/>
+          <speciesReference species="dRaf1Ras" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="dRaf1RasMEK" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_78 </ci>
+                  <ci> MEK </ci>
+                  <ci> dRaf1Ras </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_78 </ci>
+                  <ci> dRaf1RasMEK </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r79" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="dRaf1RasMEK" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="pMEK" stoichiometry="1" constant="true"/>
+          <speciesReference species="dRaf1Ras" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_79 </ci>
+                  <ci> dRaf1RasMEK </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_79 </ci>
+                  <ci> pMEK </ci>
+                  <ci> dRaf1Ras </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r80" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="pMEK" stoichiometry="1" constant="true"/>
+          <speciesReference species="dRaf1Ras" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="dRaf1RaspMEK" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_80 </ci>
+                  <ci> pMEK </ci>
+                  <ci> dRaf1Ras </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_80 </ci>
+                  <ci> dRaf1RaspMEK </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r81" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="dRaf1RaspMEK" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ppMEK" stoichiometry="1" constant="true"/>
+          <speciesReference species="dRaf1Ras" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_81 </ci>
+                  <ci> dRaf1RaspMEK </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_81 </ci>
+                  <ci> ppMEK </ci>
+                  <ci> dRaf1Ras </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r82" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="MEK" stoichiometry="1" constant="true"/>
+          <speciesReference species="bRafRas" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="bRafRasMEK" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_82 </ci>
+                  <ci> MEK </ci>
+                  <ci> bRafRas </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_82 </ci>
+                  <ci> bRafRasMEK </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r83" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="bRafRasMEK" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="pMEK" stoichiometry="1" constant="true"/>
+          <speciesReference species="bRafRas" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_83 </ci>
+                  <ci> bRafRasMEK </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_83 </ci>
+                  <ci> pMEK </ci>
+                  <ci> bRafRas </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r84" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="pMEK" stoichiometry="1" constant="true"/>
+          <speciesReference species="bRafRas" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="bRafRaspMEK" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_84 </ci>
+                  <ci> pMEK </ci>
+                  <ci> bRafRas </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_84 </ci>
+                  <ci> bRafRaspMEK </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r85" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="bRafRaspMEK" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ppMEK" stoichiometry="1" constant="true"/>
+          <speciesReference species="bRafRas" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_85 </ci>
+                  <ci> bRafRaspMEK </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_85 </ci>
+                  <ci> ppMEK </ci>
+                  <ci> bRafRas </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r86" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="RasGTP" stoichiometry="1" constant="true"/>
+          <speciesReference species="Raf1" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Raf1Ras" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_86 </ci>
+                  <ci> RasGTP </ci>
+                  <ci> Raf1 </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_86 </ci>
+                  <ci> Raf1Ras </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r87" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="Raf1Ras" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="dRaf1Ras" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_87 </ci>
+                  <ci> Raf1Ras </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_87 </ci>
+                  <ci> dRaf1Ras </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r88" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="RasGTP" stoichiometry="1" constant="true"/>
+          <speciesReference species="bRaf" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="bRafRas" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_88 </ci>
+                  <ci> RasGTP </ci>
+                  <ci> bRaf </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_88 </ci>
+                  <ci> bRafRas </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r89" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="CamCa4" stoichiometry="1" constant="true"/>
+          <speciesReference species="RasGRF" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="CamCa4GRF" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_89 </ci>
+                  <ci> CamCa4 </ci>
+                  <ci> RasGRF </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_89 </ci>
+                  <ci> CamCa4GRF </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r90" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="CamCa4GRF" stoichiometry="1" constant="true"/>
+          <speciesReference species="RasGDP" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="CamCa4GRFRas" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_90 </ci>
+                  <ci> CamCa4GRF </ci>
+                  <ci> RasGDP </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_90 </ci>
+                  <ci> CamCa4GRFRas </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r91" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="CamCa4GRFRas" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="CamCa4GRF" stoichiometry="1" constant="true"/>
+          <speciesReference species="RasGTP" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_91 </ci>
+                  <ci> CamCa4GRFRas </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_91 </ci>
+                  <ci> CamCa4GRF </ci>
+                  <ci> RasGTP </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r93" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="Gbg" stoichiometry="1" constant="true"/>
+          <speciesReference species="Src" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="SrcGbg" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_93 </ci>
+                  <ci> Gbg </ci>
+                  <ci> Src </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_93 </ci>
+                  <ci> SrcGbg </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r94" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="SrcGbg" stoichiometry="1" constant="true"/>
+          <speciesReference species="Shc" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="SrcGbgShc" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_94 </ci>
+                  <ci> SrcGbg </ci>
+                  <ci> Shc </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_94 </ci>
+                  <ci> SrcGbgShc </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r95" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="SrcGbgShc" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="pShc" stoichiometry="1" constant="true"/>
+          <speciesReference species="SrcGbg" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_95 </ci>
+                  <ci> SrcGbgShc </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_95 </ci>
+                  <ci> pShc </ci>
+                  <ci> SrcGbg </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r96" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="pShc" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Shc" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_96 </ci>
+                  <ci> pShc </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_96 </ci>
+                  <ci> Shc </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r97" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="Grb2" stoichiometry="1" constant="true"/>
+          <speciesReference species="Sos" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Grb2Sos" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_97 </ci>
+                  <ci> Grb2 </ci>
+                  <ci> Sos </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_97 </ci>
+                  <ci> Grb2Sos </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r98" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="Grb2Sos" stoichiometry="1" constant="true"/>
+          <speciesReference species="pShc" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="pShcGrb2Sos" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_98 </ci>
+                  <ci> Grb2Sos </ci>
+                  <ci> pShc </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_98 </ci>
+                  <ci> pShcGrb2Sos </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r99" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="pShcGrb2Sos" stoichiometry="1" constant="true"/>
+          <speciesReference species="RasGDP" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="pShcGrb2SosRas" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_99 </ci>
+                  <ci> pShcGrb2Sos </ci>
+                  <ci> RasGDP </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_99 </ci>
+                  <ci> pShcGrb2SosRas </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r100" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="pShcGrb2SosRas" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="RasGTP" stoichiometry="1" constant="true"/>
+          <speciesReference species="pShcGrb2Sos" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_100 </ci>
+                  <ci> pShcGrb2SosRas </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_100 </ci>
+                  <ci> RasGTP </ci>
+                  <ci> pShcGrb2Sos </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r101" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="pShcGrb2Sos" stoichiometry="1" constant="true"/>
+          <speciesReference species="ppERK" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ppERKpShcGrb2Sos" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_101 </ci>
+                  <ci> pShcGrb2Sos </ci>
+                  <ci> ppERK </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_101 </ci>
+                  <ci> ppERKpShcGrb2Sos </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r102" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="ppERKpShcGrb2Sos" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ppERK" stoichiometry="1" constant="true"/>
+          <speciesReference species="pSos" stoichiometry="1" constant="true"/>
+          <speciesReference species="pShcGrb2" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_102 </ci>
+                  <ci> ppERKpShcGrb2Sos </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_102 </ci>
+                  <ci> ppERK </ci>
+                  <ci> pSos </ci>
+                  <ci> pShcGrb2 </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r103" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="pSos" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Sos" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_103 </ci>
+                  <ci> pSos </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_103 </ci>
+                  <ci> Sos </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r104" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="RasGTP" stoichiometry="1" constant="true"/>
+          <speciesReference species="SynGap" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="RasSynGap" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_104 </ci>
+                  <ci> RasGTP </ci>
+                  <ci> SynGap </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_104 </ci>
+                  <ci> RasSynGap </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r105" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="RasSynGap" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="SynGap" stoichiometry="1" constant="true"/>
+          <speciesReference species="RasGDP" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_105 </ci>
+                  <ci> RasSynGap </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_105 </ci>
+                  <ci> SynGap </ci>
+                  <ci> RasGDP </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r106" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="RasGTP" stoichiometry="1" constant="true"/>
+          <speciesReference species="pSynGap" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="RaspSynGap" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_106 </ci>
+                  <ci> RasGTP </ci>
+                  <ci> pSynGap </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_106 </ci>
+                  <ci> RaspSynGap </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r107" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="RaspSynGap" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="pSynGap" stoichiometry="1" constant="true"/>
+          <speciesReference species="RasGDP" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_107 </ci>
+                  <ci> RaspSynGap </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_107 </ci>
+                  <ci> pSynGap </ci>
+                  <ci> RasGDP </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r108" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="RasGTP" stoichiometry="1" constant="true"/>
+          <speciesReference species="rasGap" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="RasGTPGap" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_108 </ci>
+                  <ci> RasGTP </ci>
+                  <ci> rasGap </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_108 </ci>
+                  <ci> RasGTPGap </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r109" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="RasGTPGap" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="rasGap" stoichiometry="1" constant="true"/>
+          <speciesReference species="RasGDP" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kon_109 </ci>
+                  <ci> RasGTPGap </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> koff_109 </ci>
+                  <ci> rasGap </ci>
+                  <ci> RasGDP </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+    </listOfReactions>
+  </model>
+</sbml>
