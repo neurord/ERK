@@ -135,10 +135,11 @@
     <NanoMolarity specieID="pmcaCa" value="84.91" />
     <NanoMolarity specieID="ncx" value="1917.285" />
     <NanoMolarity specieID="ncxCa" value="82.757" />
+    <NanoMolarity specieID="Cabuff" value="0" />
+    <NanoMolarity specieID="Caextbuffslow" value="0" />
+    <NanoMolarity specieID="Cbuff" value="0" />
+    <NanoMolarity specieID="Cbuffslow" value="0" />
 
-
-
-    
 
     <NanoMolarity specieID="Cam" value="9013.023" />
     <NanoMolarity specieID="CamCa2C" value="256.764" />
